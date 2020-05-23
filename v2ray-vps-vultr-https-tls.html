@@ -60,7 +60,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://wistbean.github.io/images/v2ray_vultr.png">
 <meta property="og:image" content="https://wistbean.github.io/images/install_v2ray.png">
-<meta property="og:updated_time" content="2020-05-17T13:42:03.755Z">
+<meta property="og:updated_time" content="2020-05-23T17:52:22.377Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="搭建 v2ray 科学上网安装教程, 简单 10 分钟搞定">
 <meta name="twitter:description" content="除了使用 ss 搭建的服务 之外，也有一种新的搭建方式，那就是v2ray, v2ray 的加密方式相对稳定，v2ray 提供了各种协议，可以根据自己的需要进行搭建。 搭建 v2ray 前的准备境外 vps 购买关于云服务器，对性价比要求高的可以考虑 vultr ，vultr 最近在做活动，点击获得 100 美元优惠注册。 个人使用建议选如下配置，选择 ubuntu 系统， 3.5刀/月：">
@@ -185,8 +185,8 @@
         <h1 class="title">搭建 v2ray 科学上网安装教程, 简单 10 分钟搞定</h1>
         <h5 class="subtitle">
             
-                <time datetime="2019-02-09T09:53:55.000Z" itemprop="datePublished" class="page-time">
-  2019-02-09
+                <time datetime="2020-02-09T09:53:55.000Z" itemprop="datePublished" class="page-time">
+  2020-02-09
 </time>
 
 
@@ -207,7 +207,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>目录</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#搭建-v2ray-前的准备"><span class="post-toc-number">1.</span> <span class="post-toc-text">搭建 v2ray 前的准备</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#境外-vps-购买"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">境外 vps 购买</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#vps-连接"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">vps 连接</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#快速搭建-v2ray"><span class="post-toc-number">2.</span> <span class="post-toc-text">快速搭建 v2ray</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#v2ray-一键脚本安装"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">v2ray 一键脚本安装</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#使用-v2ray"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">使用 v2ray</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#开启-v2ray"><span class="post-toc-number">2.2.1.</span> <span class="post-toc-text">开启 v2ray</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#客户端使用-v2ray"><span class="post-toc-number">3.</span> <span class="post-toc-text">客户端使用 v2ray</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Windows-用户"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">Windows 用户</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Linux-用户"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">Linux 用户</span></a></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#搭建-v2ray-前的准备"><span class="post-toc-number">1.</span> <span class="post-toc-text">搭建 v2ray 前的准备</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#境外-vps-购买"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">境外 vps 购买</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#vps-连接"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">vps 连接</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#快速搭建-v2ray"><span class="post-toc-number">2.</span> <span class="post-toc-text">快速搭建 v2ray</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#v2ray-一键脚本安装"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">v2ray 一键脚本安装</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#使用-v2ray"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">使用 v2ray</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#开启-v2ray"><span class="post-toc-number">2.2.1.</span> <span class="post-toc-text">开启 v2ray</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#客户端使用-v2ray"><span class="post-toc-number">3.</span> <span class="post-toc-text">客户端使用 v2ray</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Windows-用户"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">Windows 用户</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Linux-用户"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">Linux 用户</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#v2ray-使用相关问题"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">v2ray 使用相关问题</span></a></li></ol></li></ol>
         </nav>
     </aside>
 
@@ -218,7 +218,7 @@
     <div class="post-card">
         <h1 class="post-card-title">搭建 v2ray 科学上网安装教程, 简单 10 分钟搞定</h1>
         <div class="post-meta">
-            <time class="post-time" title="2019-02-09 17:53:55" datetime="2019-02-09T09:53:55.000Z"  itemprop="datePublished">2019-02-09</time>
+            <time class="post-time" title="2020-02-09 17:53:55" datetime="2020-02-09T09:53:55.000Z"  itemprop="datePublished">2020-02-09</time>
 
             
 	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/vps/">vps</a></li></ul>
@@ -255,6 +255,9 @@
 <h1 id="客户端使用-v2ray"><a href="#客户端使用-v2ray" class="headerlink" title="客户端使用 v2ray"></a>客户端使用 v2ray</h1><h2 id="Windows-用户"><a href="#Windows-用户" class="headerlink" title="Windows 用户"></a>Windows 用户</h2><p>搭建好了之后可以在你的系统使用了，到 <a href="https://github.com/v2ray/v2ray-core/releases" target="_blank" rel="noopener">v2ray 客户端下载</a> ，找到 config.json 文件，修改为以下的内容，并根据你自己的ip、uuid、port自行更改后运行即可。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;log&quot;: &#123;</span><br><span class="line">    &quot;loglevel&quot;: &quot;info&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;inbounds&quot;: [</span><br><span class="line">    &#123;</span><br><span class="line">      &quot;port&quot;: 1080,</span><br><span class="line">      &quot;protocol&quot;: &quot;socks&quot;,</span><br><span class="line">      &quot;sniffing&quot;: &#123;</span><br><span class="line">        &quot;enabled&quot;: true,</span><br><span class="line">        &quot;destOverride&quot;: [</span><br><span class="line">          &quot;http&quot;,</span><br><span class="line">          &quot;tls&quot;</span><br><span class="line">        ]</span><br><span class="line">      &#125;,</span><br><span class="line">      &quot;settings&quot;: &#123;</span><br><span class="line">        &quot;udp&quot;: true</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      &quot;port&quot;: 8080,</span><br><span class="line">      &quot;protocol&quot;: &quot;http&quot;,</span><br><span class="line">      &quot;sniffing&quot;: &#123;</span><br><span class="line">        &quot;enabled&quot;: true,</span><br><span class="line">        &quot;destOverride&quot;: [</span><br><span class="line">          &quot;http&quot;,</span><br><span class="line">          &quot;tls&quot;</span><br><span class="line">        ]</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  ],</span><br><span class="line">  &quot;outbounds&quot;: [</span><br><span class="line">    &#123;</span><br><span class="line">      &quot;tag&quot;: &quot;proxy-vmess&quot;,</span><br><span class="line">      &quot;protocol&quot;: &quot;vmess&quot;,</span><br><span class="line">      &quot;settings&quot;: &#123;</span><br><span class="line">        &quot;vnext&quot;: [</span><br><span class="line">          &#123;</span><br><span class="line">            &quot;address&quot;: &quot;你的服务器ip地址&quot;,</span><br><span class="line">            &quot;port&quot;: 你的v2ray端口,</span><br><span class="line">            &quot;users&quot;: [</span><br><span class="line">              &#123;</span><br><span class="line">                &quot;id&quot;: &quot;你的uuid&quot;,</span><br><span class="line">                &quot;alterId&quot;: 4</span><br><span class="line">              &#125;</span><br><span class="line">            ]</span><br><span class="line">          &#125;</span><br><span class="line">        ]</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      &quot;tag&quot;: &quot;direct&quot;,</span><br><span class="line">      &quot;settings&quot;: &#123;&#125;,</span><br><span class="line">      &quot;protocol&quot;: &quot;freedom&quot;</span><br><span class="line">    &#125;</span><br><span class="line">  ],</span><br><span class="line">  &quot;dns&quot;: &#123;</span><br><span class="line">    &quot;server&quot;: [</span><br><span class="line">      &quot;8.8.8.8&quot;,</span><br><span class="line">      &quot;1.1.1.1&quot;</span><br><span class="line">    ]</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  &quot;routing&quot;: &#123;</span><br><span class="line">    &quot;domainStrategy&quot;: &quot;IPOnDemand&quot;,</span><br><span class="line">    &quot;rules&quot;: [</span><br><span class="line">      &#123;</span><br><span class="line">        &quot;type&quot;: &quot;field&quot;,</span><br><span class="line">        &quot;outboundTag&quot;: &quot;proxy-vmess&quot;</span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        &quot;type&quot;: &quot;field&quot;,</span><br><span class="line">        &quot;domain&quot;: [</span><br><span class="line">          &quot;geosite:cn&quot;</span><br><span class="line">        ],</span><br><span class="line">        &quot;outboundTag&quot;: &quot;direct&quot;</span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        &quot;type&quot;: &quot;field&quot;,</span><br><span class="line">        &quot;outboundTag&quot;: &quot;direct&quot;,</span><br><span class="line">        &quot;ip&quot;: [</span><br><span class="line">          &quot;geoip:cn&quot;,</span><br><span class="line">          &quot;geoip:private&quot;</span><br><span class="line">        ]</span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="Linux-用户"><a href="#Linux-用户" class="headerlink" title="Linux 用户"></a>Linux 用户</h2><p>在客户端按照上述方法安装 v2ray ，安装完之后将 config.json 文件更改为上述的内容，将服务器的配置信息更改后运行即可。</p>
+<h2 id="v2ray-使用相关问题"><a href="#v2ray-使用相关问题" class="headerlink" title="v2ray 使用相关问题"></a>v2ray 使用相关问题</h2><ul>
+<li>客户端突然无法访问了<br>解决：<a href="https://github.com/v2ray/v2ray-core/issues/1871" target="_blank" rel="noopener">https://github.com/v2ray/v2ray-core/issues/1871</a><br>（更换端口）</li>
+</ul>
 
         </div>
 
@@ -263,7 +266,7 @@
     <div class="content">
       <!--  
 <span class="post-time">
-    最后更新时间：<time datetime="2020-05-17T13:42:03.755Z" itemprop="dateUpdated">2020-05-17 21:42:03</time>
+    最后更新时间：<time datetime="2020-05-23T17:52:22.377Z" itemprop="dateUpdated">2020-05-24 01:52:22</time>
 </span><br>
 
 
@@ -348,18 +351,18 @@
 <nav class="post-nav flex-row flex-justify-between">
   
     <div class="waves-block waves-effect prev">
-      <a href="/java-ssm-6-3.html" id="post-prev" class="post-nav-link">
+      <a href="/java-xue-xi-lu-xian.html" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">「6-3」使用SSM搭建rest服务系统</h4>
+        <h4 class="title">java程序员的学习路线-java web学习资源及必备书籍清单</h4>
       </a>
     </div>
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/python-spider-tutorial.html" id="post-next" class="post-nav-link">
+      <a href="/shao-guan-zhu-shao-bao-yuan.html" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">从0到1学习python3爬虫教程</h4>
+        <h4 class="title">疫情之下，如何避免惶恐</h4>
       </a>
     </div>
   
