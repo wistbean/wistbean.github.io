@@ -4,36 +4,8 @@
 
     
   <url>
-    <loc>https://wistbean.github.io/shu-ma-chan-pin-zhi-de-mai.html</loc>
-    <lastmod>2020-06-11T16:51:51.740Z</lastmod>
-    <data>
-        <display>
-        <title>有什么数码产品值得买？</title>
-        <pubTime>2020-05-23T18:45:52.000Z</pubTime>
-        
-        <tag>数码产品</tag>
-         
-        <tag>airpods pro</tag>
-         
-        <tag>Apple watch</tag>
-         
-        <tag>电脑扩展显示器</tag>
-         
-        <tag>数码产品推荐</tag>
-         
-         
-           
-             
-              <breadCrumb title="好物推荐" url="https://wistbean.github.io/categories/%E5%A5%BD%E7%89%A9%E6%8E%A8%E8%8D%90/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://wistbean.github.io/v2ray-vps-vultr-https-tls.html</loc>
-    <lastmod>2020-06-11T16:49:24.814Z</lastmod>
+    <lastmod>2020-06-11T17:00:12.794Z</lastmod>
     <data>
         <display>
         <title>搭建 v2ray 科学上网安装教程, 简单 10 分钟搞定</title>
@@ -61,10 +33,48 @@
          
         <tag>ubuntu 安装 v2ray</tag>
          
+        <tag>搭建v2ray机场</tag>
+         
+        <tag>搭建v2ray服务器</tag>
+         
+        <tag>搭建v2ray梯子</tag>
+         
+        <tag>搭建v2ray节点</tag>
+         
+        <tag>v2ray搭建方法</tag>
+         
          
            
              
               <breadCrumb title="vps" url="https://wistbean.github.io/categories/vps/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wistbean.github.io/shu-ma-chan-pin-zhi-de-mai.html</loc>
+    <lastmod>2020-06-11T16:51:51.740Z</lastmod>
+    <data>
+        <display>
+        <title>有什么数码产品值得买？</title>
+        <pubTime>2020-05-23T18:45:52.000Z</pubTime>
+        
+        <tag>数码产品</tag>
+         
+        <tag>airpods pro</tag>
+         
+        <tag>Apple watch</tag>
+         
+        <tag>电脑扩展显示器</tag>
+         
+        <tag>数码产品推荐</tag>
+         
+         
+           
+             
+              <breadCrumb title="好物推荐" url="https://wistbean.github.io/categories/%E5%A5%BD%E7%89%A9%E6%8E%A8%E8%8D%90/"/>
           
         </display>
     </data>
