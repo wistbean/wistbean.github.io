@@ -60,7 +60,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://wistbean.github.io/images/v2ray_vultr.png">
 <meta property="og:image" content="https://wistbean.github.io/images/install_v2ray.png">
-<meta property="og:updated_time" content="2020-05-23T17:52:22.377Z">
+<meta property="og:updated_time" content="2020-06-11T16:49:24.814Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="搭建 v2ray 科学上网安装教程, 简单 10 分钟搞定">
 <meta name="twitter:description" content="除了使用 ss 搭建的服务 之外，也有一种新的搭建方式，那就是v2ray, v2ray 的加密方式相对稳定，v2ray 提供了各种协议，可以根据自己的需要进行搭建。 搭建 v2ray 前的准备境外 vps 购买关于云服务器，对性价比要求高的可以考虑 vultr ，vultr 最近在做活动，点击获得 100 美元优惠注册。 个人使用建议选如下配置，选择 ubuntu 系统， 3.5刀/月：">
@@ -207,7 +207,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>目录</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#搭建-v2ray-前的准备"><span class="post-toc-number">1.</span> <span class="post-toc-text">搭建 v2ray 前的准备</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#境外-vps-购买"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">境外 vps 购买</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#vps-连接"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">vps 连接</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#快速搭建-v2ray"><span class="post-toc-number">2.</span> <span class="post-toc-text">快速搭建 v2ray</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#v2ray-一键脚本安装"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">v2ray 一键脚本安装</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#使用-v2ray"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">使用 v2ray</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#开启-v2ray"><span class="post-toc-number">2.2.1.</span> <span class="post-toc-text">开启 v2ray</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#客户端使用-v2ray"><span class="post-toc-number">3.</span> <span class="post-toc-text">客户端使用 v2ray</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Windows-用户"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">Windows 用户</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Linux-用户"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">Linux 用户</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#v2ray-使用相关问题"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">v2ray 使用相关问题</span></a></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#搭建-v2ray-前的准备"><span class="post-toc-number">1.</span> <span class="post-toc-text">搭建 v2ray 前的准备</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#境外-vps-购买"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">境外 vps 购买</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#vps-连接"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">vps 连接</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#快速搭建-v2ray"><span class="post-toc-number">2.</span> <span class="post-toc-text">快速搭建 v2ray</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#v2ray-一键脚本安装"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">v2ray 一键脚本安装</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#使用-v2ray"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">使用 v2ray</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#开启-v2ray"><span class="post-toc-number">2.2.1.</span> <span class="post-toc-text">开启 v2ray</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#客户端使用-v2ray"><span class="post-toc-number">3.</span> <span class="post-toc-text">客户端使用 v2ray</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Windows-用户"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">Windows 用户</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Linux-用户"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">Linux 用户</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#v2ray-使用相关问题"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">v2ray 使用相关问题</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#V2ray-相关"><span class="post-toc-number">4.</span> <span class="post-toc-text">V2ray 相关</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#v2ray-官网"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">v2ray 官网</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#v2ray-GitHub"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">v2ray GitHub</span></a></li></ol></li></ol>
         </nav>
     </aside>
 
@@ -258,6 +258,12 @@
 <h2 id="v2ray-使用相关问题"><a href="#v2ray-使用相关问题" class="headerlink" title="v2ray 使用相关问题"></a>v2ray 使用相关问题</h2><ul>
 <li>客户端突然无法访问了<br>解决：<a href="https://github.com/v2ray/v2ray-core/issues/1871" target="_blank" rel="noopener">https://github.com/v2ray/v2ray-core/issues/1871</a><br>（更换端口）</li>
 </ul>
+<h1 id="V2ray-相关"><a href="#V2ray-相关" class="headerlink" title="V2ray 相关"></a>V2ray 相关</h1><h2 id="v2ray-官网"><a href="#v2ray-官网" class="headerlink" title="v2ray 官网"></a>v2ray 官网</h2><ul>
+<li><a href="https://www.v2ray.com/" target="_blank" rel="noopener">V2Ray 的使用手册</a></li>
+</ul>
+<h2 id="v2ray-GitHub"><a href="#v2ray-GitHub" class="headerlink" title="v2ray GitHub"></a>v2ray GitHub</h2><ul>
+<li><a href="https://github.com/v2ray/v2ray-core" target="_blank" rel="noopener">v2ray 源码</a></li>
+</ul>
 
         </div>
 
@@ -266,7 +272,7 @@
     <div class="content">
       <!--  
 <span class="post-time">
-    最后更新时间：<time datetime="2020-05-23T17:52:22.377Z" itemprop="dateUpdated">2020-05-24 01:52:22</time>
+    最后更新时间：<time datetime="2020-06-11T16:49:24.814Z" itemprop="dateUpdated">2020-06-12 00:49:24</time>
 </span><br>
 
 
