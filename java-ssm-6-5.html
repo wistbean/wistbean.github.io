@@ -58,7 +58,7 @@
 <meta property="og:site_name" content="肯定会">
 <meta property="og:description" content="我们已经在 rest 系统中实现了商品分类的API，那么接下来我们就可以在 portal 系统中请求 rest 中的分类数据，我们可以使用 httpclient 进行不同系统之间的请求，接着将获取到的数据用 freemarker 进行展示。 创建 HttpClient在 common 模块中依赖相关jar包 12345678910111213141516171819202122&amp;lt;depend">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-01T16:04:44.000Z">
+<meta property="og:updated_time" content="2020-09-09T19:33:48.483Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="「6-5」 httpclient+freemarker实现商城首页分类的导航数据展示">
 <meta name="twitter:description" content="我们已经在 rest 系统中实现了商品分类的API，那么接下来我们就可以在 portal 系统中请求 rest 中的分类数据，我们可以使用 httpclient 进行不同系统之间的请求，接着将获取到的数据用 freemarker 进行展示。 创建 HttpClient在 common 模块中依赖相关jar包 12345678910111213141516171819202122&amp;lt;depend">
@@ -235,7 +235,7 @@
 <h1 id="添加配置路径文件"><a href="#添加配置路径文件" class="headerlink" title="添加配置路径文件"></a>添加配置路径文件</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;bean id=&quot;propertyConfigurer&quot; class=&quot;org.springframework.beans.factory.config.PreferencesPlaceholderConfigurer&quot;&gt;</span><br><span class="line">      &lt;property name=&quot;location&quot;&gt;</span><br><span class="line">          &lt;value&gt;classpath:resource/resource.properties&lt;/value&gt;</span><br><span class="line">      &lt;/property&gt;</span><br><span class="line">  &lt;/bean&gt;</span><br></pre></td></tr></table></figure>
 <h1 id="Service-的具体实现"><a href="#Service-的具体实现" class="headerlink" title="Service 的具体实现"></a>Service 的具体实现</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CategoriesServiceImpl</span> <span class="keyword">implements</span> <span class="title">CategoriesService</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;REST_URL&#125;"</span>)</span><br><span class="line">    <span class="keyword">private</span> String REST_URL;</span><br><span class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;CATEGORY_LIST&#125;"</span>)</span><br><span class="line">    <span class="keyword">private</span> String CATEGORY_LIST;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Res_Categories <span class="title">getCategories</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            String jsonResutlt = HttpClientUtil.httpGet(REST_URL + CATEGORY_LIST);</span><br><span class="line">            Res_Categories res_categories = GsonUtil.fromJson(Res_Categories.class, jsonResutlt);</span><br><span class="line">            <span class="keyword">return</span> res_categories;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
-<li><a href="https://wistbean.github.io/java-ssm-video.html#SSM%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%9B%AE%E5%BD%95">SSM视频教程目录</a></li>
+<li><a href="http://www.ubuntu520.com/java-ssm-video.html#SSM%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%9B%AE%E5%BD%95" target="_blank" rel="noopener">SSM视频教程目录</a></li>
 </ul>
 
         </div>
@@ -245,7 +245,7 @@
     <div class="content">
       <!--  
 <span class="post-time">
-    最后更新时间：<time datetime="2019-03-01T16:04:44.000Z" itemprop="dateUpdated">2019-03-02 00:04:44</time>
+    最后更新时间：<time datetime="2020-09-09T19:33:48.483Z" itemprop="dateUpdated">2020-09-10 03:33:48</time>
 </span><br>
 
 
