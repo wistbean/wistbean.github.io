@@ -2,7 +2,7 @@
 <rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
   <channel>
     <title>肯定会</title>
-    <link>https://wistbean.github.io/</link>
+    <link>http://www.ubuntu520.com/</link>
     <copyright></copyright>
     <itunes:subtitle></itunes:subtitle>
     <itunes:author>wistbean</itunes:author>
@@ -11,7 +11,7 @@
       <itunes:name>wistbean</itunes:name>
       <itunes:email>wistbean.bb@gmail.com</itunes:email>
     </itunes:owner>
-    <itunes:image href="https://wistbean.github.io/coverImage.jpg" />
+    <itunes:image href="http://www.ubuntu520.com/coverImage.jpg" />
     <itunes:category text="Technology">
       <itunes:category text="Technology" />
     </itunes:category>
