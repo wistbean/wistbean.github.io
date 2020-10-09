@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.ubuntu520.com/write-blog.html</loc>
+    
+    <lastmod>2020-10-09T10:13:19.283Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.ubuntu520.com/gongzhonghao-paiban.html</loc>
     
-    <lastmod>2020-10-03T14:26:37.533Z</lastmod>
+    <lastmod>2020-10-05T10:11:37.477Z</lastmod>
     
   </url>
   
@@ -1409,13 +1416,6 @@
   </url>
   
   <url>
-    <loc>http://www.ubuntu520.com/java-error-exception.html</loc>
-    
-    <lastmod>2018-11-02T08:52:36.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.ubuntu520.com/use-Fiddler.html</loc>
     
     <lastmod>2018-11-02T08:52:36.000Z</lastmod>
@@ -1430,14 +1430,21 @@
   </url>
   
   <url>
-    <loc>http://www.ubuntu520.com/spend-money.html</loc>
+    <loc>http://www.ubuntu520.com/java-error-exception.html</loc>
+    
+    <lastmod>2018-11-02T08:52:36.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.ubuntu520.com/object-oriented-programming.html</loc>
     
     <lastmod>2018-11-02T08:52:34.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.ubuntu520.com/object-oriented-programming.html</loc>
+    <loc>http://www.ubuntu520.com/spend-money.html</loc>
     
     <lastmod>2018-11-02T08:52:34.000Z</lastmod>
     

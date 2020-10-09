@@ -4,8 +4,40 @@
 
     
   <url>
+    <loc>http://www.ubuntu520.com/write-blog.html</loc>
+    <lastmod>2020-10-09T10:13:19.283Z</lastmod>
+    <data>
+        <display>
+        <title>写博客，何必呢？</title>
+        <pubTime>2020-10-09T13:55:15.000Z</pubTime>
+        
+        <tag>写作</tag>
+         
+        <tag>积累</tag>
+         
+        <tag>博客</tag>
+         
+        <tag>坚持</tag>
+         
+        <tag>好运</tag>
+         
+        <tag>分享</tag>
+         
+        <tag>流量</tag>
+         
+         
+           
+             
+              <breadCrumb title="写作" url="http://www.ubuntu520.com/categories/%E5%86%99%E4%BD%9C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.ubuntu520.com/gongzhonghao-paiban.html</loc>
-    <lastmod>2020-10-03T14:26:37.533Z</lastmod>
+    <lastmod>2020-10-05T10:11:37.477Z</lastmod>
     <data>
         <display>
         <title>如何实现公众号一键快速排版</title>
@@ -992,11 +1024,11 @@
         
         <tag>码农商城</tag>
          
-        <tag>Spring</tag>
-         
         <tag>FreeMarker</tag>
          
         <tag>SpringMVC</tag>
+         
+        <tag>Spring</tag>
          
         <tag>Portal</tag>
          
@@ -1246,11 +1278,11 @@
          
         <tag>Jqury</tag>
          
+        <tag>easyui-filebox</tag>
+         
         <tag>easyui文件上传</tag>
          
         <tag>ajaxFileUpload</tag>
-         
-        <tag>easyui-filebox</tag>
          
          
            
@@ -2852,19 +2884,19 @@
          
         <tag>Maven</tag>
          
-        <tag>Spring</tag>
-         
-        <tag>Spring MVC</tag>
-         
-        <tag>Mybatis</tag>
-         
         <tag>EasyUI</tag>
          
         <tag>postman</tag>
          
         <tag>UEditor</tag>
          
+        <tag>Spring</tag>
+         
         <tag>SSM视频教程</tag>
+         
+        <tag>Spring MVC</tag>
+         
+        <tag>Mybatis</tag>
          
         <tag>redis</tag>
          
@@ -3172,9 +3204,9 @@
          
         <tag>vpn</tag>
          
-        <tag>搭建ssr</tag>
-         
         <tag>vultr优惠码</tag>
+         
+        <tag>搭建ssr</tag>
          
         <tag>搭建自己的vpn</tag>
          
@@ -3278,6 +3310,8 @@
         
         <tag>vultr</tag>
          
+        <tag>mysql</tag>
+         
         <tag>wordpress</tag>
          
         <tag>wordpress搭建</tag>
@@ -3293,8 +3327,6 @@
         <tag>个人博客</tag>
          
         <tag>php</tag>
-         
-        <tag>mysql</tag>
          
          
            
@@ -3395,9 +3427,9 @@
         
         <tag>码农商城</tag>
          
-        <tag>rest</tag>
-         
         <tag>json</tag>
+         
+        <tag>rest</tag>
          
         <tag>rest接口java</tag>
          
@@ -4820,11 +4852,11 @@
         <title>ubuntu 安装 Mysql</title>
         <pubTime>2020-03-07T13:15:09.000Z</pubTime>
         
-        <tag>mysql</tag>
-         
         <tag>ubuntu安装mysql</tag>
          
         <tag>ubuntu</tag>
+         
+        <tag>mysql</tag>
          
         <tag>安装mysql命令</tag>
          
@@ -5595,13 +5627,13 @@
         
         <tag>码农商城</tag>
          
-        <tag>品详情页</tag>
-         
         <tag>商城首页</tag>
          
         <tag>电商商品数据</tag>
          
         <tag>商品数据</tag>
+         
+        <tag>品详情页</tag>
          
          
            
@@ -6065,30 +6097,6 @@
 
     
   <url>
-    <loc>http://www.ubuntu520.com/java-error-exception.html</loc>
-    <lastmod>2018-11-02T08:52:36.000Z</lastmod>
-    <data>
-        <display>
-        <title>Java中的异常处理，Exception和Error的使用</title>
-        <pubTime>2016-03-01T09:00:13.000Z</pubTime>
-        
-        <tag>Java</tag>
-         
-        <tag>Exception</tag>
-         
-        <tag>Error</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="http://www.ubuntu520.com/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.ubuntu520.com/use-Fiddler.html</loc>
     <lastmod>2018-11-02T08:52:36.000Z</lastmod>
     <data>
@@ -6135,23 +6143,23 @@
 
     
   <url>
-    <loc>http://www.ubuntu520.com/spend-money.html</loc>
-    <lastmod>2018-11-02T08:52:34.000Z</lastmod>
+    <loc>http://www.ubuntu520.com/java-error-exception.html</loc>
+    <lastmod>2018-11-02T08:52:36.000Z</lastmod>
     <data>
         <display>
-        <title>现在已经不像父母那个年代了,花钱也是一种学问</title>
-        <pubTime>2018-09-08T18:17:24.000Z</pubTime>
+        <title>Java中的异常处理，Exception和Error的使用</title>
+        <pubTime>2016-03-01T09:00:13.000Z</pubTime>
         
-        <tag>个人提升</tag>
+        <tag>Java</tag>
          
-        <tag>关于wistbean</tag>
+        <tag>Exception</tag>
          
-        <tag>认知</tag>
+        <tag>Error</tag>
          
          
            
              
-              <breadCrumb title="个人提升" url="http://www.ubuntu520.com/categories/%E4%B8%AA%E4%BA%BA%E6%8F%90%E5%8D%87/"/>
+              <breadCrumb title="Java" url="http://www.ubuntu520.com/categories/Java/"/>
           
         </display>
     </data>
@@ -6176,6 +6184,30 @@
            
              
               <breadCrumb title="Java" url="http://www.ubuntu520.com/categories/Java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.ubuntu520.com/spend-money.html</loc>
+    <lastmod>2018-11-02T08:52:34.000Z</lastmod>
+    <data>
+        <display>
+        <title>现在已经不像父母那个年代了,花钱也是一种学问</title>
+        <pubTime>2018-09-08T18:17:24.000Z</pubTime>
+        
+        <tag>个人提升</tag>
+         
+        <tag>关于wistbean</tag>
+         
+        <tag>认知</tag>
+         
+         
+           
+             
+              <breadCrumb title="个人提升" url="http://www.ubuntu520.com/categories/%E4%B8%AA%E4%BA%BA%E6%8F%90%E5%8D%87/"/>
           
         </display>
     </data>
