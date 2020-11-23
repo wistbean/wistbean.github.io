@@ -4,6 +4,38 @@
 
     
   <url>
+    <loc>http://www.ubuntu520.com/oh-my-zsh.html</loc>
+    <lastmod>2020-11-23T09:49:56.758Z</lastmod>
+    <data>
+        <display>
+        <title>命令行神器：oh-my-zsh</title>
+        <pubTime>2020-11-22T09:09:16.000Z</pubTime>
+        
+        <tag>命令行</tag>
+         
+        <tag>终端</tag>
+         
+        <tag>装逼</tag>
+         
+        <tag>zsh</tag>
+         
+        <tag>bash</tag>
+         
+        <tag>shell</tag>
+         
+        <tag>sh</tag>
+         
+         
+           
+             
+              <breadCrumb title="命令行" url="http://www.ubuntu520.com/categories/%E5%91%BD%E4%BB%A4%E8%A1%8C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.ubuntu520.com/bu-xiang-nu-li-le.html</loc>
     <lastmod>2020-11-21T14:24:28.630Z</lastmod>
     <data>
@@ -1395,15 +1427,15 @@
         
         <tag>vultr</tag>
          
-        <tag>教程</tag>
-         
         <tag>个人网站</tag>
          
-        <tag>Git</tag>
+        <tag>教程</tag>
          
         <tag>hexo</tag>
          
         <tag>blog</tag>
+         
+        <tag>Git</tag>
          
         <tag>Nginx</tag>
          
@@ -1472,17 +1504,17 @@
          
         <tag>EasyUI</tag>
          
+        <tag>商品</tag>
+         
+        <tag>FreeMarker</tag>
+         
+        <tag>Jqury</tag>
+         
         <tag>easyui-filebox</tag>
          
         <tag>easyui文件上传</tag>
          
         <tag>ajaxFileUpload</tag>
-         
-        <tag>Jqury</tag>
-         
-        <tag>商品</tag>
-         
-        <tag>FreeMarker</tag>
          
          
            
@@ -2093,11 +2125,11 @@
          
         <tag>EasyUI</tag>
          
-        <tag>Jqury</tag>
-         
         <tag>商品</tag>
          
         <tag>FreeMarker</tag>
+         
+        <tag>Jqury</tag>
          
          
            
@@ -2226,13 +2258,13 @@
          
         <tag>EasyUI</tag>
          
-        <tag>easyui文件上传</tag>
-         
-        <tag>ajaxFileUpload</tag>
+        <tag>商品</tag>
          
         <tag>Jqury</tag>
          
-        <tag>商品</tag>
+        <tag>easyui文件上传</tag>
+         
+        <tag>ajaxFileUpload</tag>
          
          
            
@@ -2304,9 +2336,9 @@
         
         <tag>教程</tag>
          
-        <tag>GitHub</tag>
-         
         <tag>Git</tag>
+         
+        <tag>GitHub</tag>
          
         <tag>Java</tag>
          
@@ -2374,11 +2406,11 @@
         
         <tag>码农商城</tag>
          
+        <tag>商城首页分类导航</tag>
+         
         <tag>httpclient</tag>
          
         <tag>freemarker</tag>
-         
-        <tag>商城首页分类导航</tag>
          
          
            
@@ -3074,13 +3106,13 @@
          
         <tag>Java</tag>
          
+        <tag>MySQL</tag>
+         
         <tag>项目实战</tag>
          
         <tag>分布式</tag>
          
         <tag>码农商城</tag>
-         
-        <tag>MySQL</tag>
          
         <tag>Maven</tag>
          
@@ -3092,9 +3124,9 @@
          
         <tag>EasyUI</tag>
          
-        <tag>UEditor</tag>
-         
         <tag>postman</tag>
+         
+        <tag>UEditor</tag>
          
         <tag>SSM视频教程</tag>
          
@@ -3510,6 +3542,8 @@
         
         <tag>vultr</tag>
          
+        <tag>mysql</tag>
+         
         <tag>wordpress</tag>
          
         <tag>wordpress搭建</tag>
@@ -3525,8 +3559,6 @@
         <tag>个人博客</tag>
          
         <tag>php</tag>
-         
-        <tag>mysql</tag>
          
          
            
@@ -3627,13 +3659,13 @@
         
         <tag>码农商城</tag>
          
-        <tag>rest</tag>
-         
-        <tag>商城首页分类导航</tag>
-         
         <tag>json</tag>
          
+        <tag>rest</tag>
+         
         <tag>rest接口java</tag>
+         
+        <tag>商城首页分类导航</tag>
          
          
            
@@ -3959,13 +3991,13 @@
          
         <tag>EasyUI</tag>
          
-        <tag>easyui文件上传</tag>
-         
-        <tag>ajaxFileUpload</tag>
+        <tag>商品</tag>
          
         <tag>Jqury</tag>
          
-        <tag>商品</tag>
+        <tag>easyui文件上传</tag>
+         
+        <tag>ajaxFileUpload</tag>
          
          
            
@@ -4494,9 +4526,9 @@
         <title>GitHub是什么？如何使用？</title>
         <pubTime>2018-09-15T11:53:09.000Z</pubTime>
         
-        <tag>GitHub</tag>
-         
         <tag>Git</tag>
+         
+        <tag>GitHub</tag>
          
          
            
@@ -4884,9 +4916,9 @@
         
         <tag>肯定会</tag>
          
-        <tag>个人观点</tag>
-         
         <tag>wistbean</tag>
+         
+        <tag>个人观点</tag>
          
         <tag>系统</tag>
          
@@ -4972,9 +5004,9 @@
         <title>找骂</title>
         <pubTime>2020-04-16T16:39:16.000Z</pubTime>
         
-        <tag>个人观点</tag>
-         
         <tag>学习</tag>
+         
+        <tag>个人观点</tag>
          
          
            
@@ -5052,11 +5084,11 @@
         <title>ubuntu 安装 Mysql</title>
         <pubTime>2020-03-07T13:15:09.000Z</pubTime>
         
-        <tag>mysql</tag>
-         
         <tag>ubuntu安装mysql</tag>
          
         <tag>ubuntu</tag>
+         
+        <tag>mysql</tag>
          
         <tag>安装mysql命令</tag>
          
@@ -5205,8 +5237,6 @@
         <title>wistbean 的 2019 年终总结</title>
         <pubTime>2020-01-24T15:32:29.000Z</pubTime>
         
-        <tag>肯定会</tag>
-         
         <tag>2019</tag>
          
         <tag>年终总结</tag>
@@ -5216,6 +5246,8 @@
         <tag>个人商业模式</tag>
          
         <tag>复盘</tag>
+         
+        <tag>肯定会</tag>
          
         <tag>流量思维</tag>
          
@@ -5499,11 +5531,11 @@
         <title>要有点甲方思维</title>
         <pubTime>2019-10-12T15:07:55.000Z</pubTime>
         
+        <tag>肯定会</tag>
+         
         <tag>个人提升</tag>
          
         <tag>公众号</tag>
-         
-        <tag>肯定会</tag>
          
         <tag>甲方思维指的是什么</tag>
          
@@ -5714,6 +5746,8 @@
         <title>我把自己当做老板之后，我嗨了</title>
         <pubTime>2019-05-10T11:02:33.000Z</pubTime>
         
+        <tag>肯定会</tag>
+         
         <tag>创业</tag>
          
         <tag>生活方式</tag>
@@ -5721,8 +5755,6 @@
         <tag>把自己当做老板</tag>
          
         <tag>公众号</tag>
-         
-        <tag>肯定会</tag>
          
         <tag>自由职业</tag>
          
@@ -5747,9 +5779,9 @@
         <title>隐性叛逆</title>
         <pubTime>2019-05-03T09:13:50.000Z</pubTime>
         
-        <tag>公众号</tag>
-         
         <tag>肯定会</tag>
+         
+        <tag>公众号</tag>
          
         <tag>个人观点</tag>
          
@@ -5799,9 +5831,9 @@
         <title>我从 3 位外卖小哥身上学到的 2 个人生道理</title>
         <pubTime>2019-04-26T09:04:25.000Z</pubTime>
         
-        <tag>公众号</tag>
-         
         <tag>肯定会</tag>
+         
+        <tag>公众号</tag>
          
         <tag>个人观点</tag>
          
@@ -5856,9 +5888,9 @@
         <title>不能再傻逼了</title>
         <pubTime>2019-04-23T09:33:57.000Z</pubTime>
         
-        <tag>公众号</tag>
-         
         <tag>肯定会</tag>
+         
+        <tag>公众号</tag>
          
         <tag>个人观点</tag>
          
@@ -5980,9 +6012,9 @@
         <title>开始认真地做一个计划</title>
         <pubTime>2019-03-14T18:54:30.000Z</pubTime>
         
-        <tag>公众号</tag>
-         
         <tag>肯定会</tag>
+         
+        <tag>公众号</tag>
          
         <tag>个人计划</tag>
          
@@ -6041,11 +6073,11 @@
         
         <tag>肯定会</tag>
          
+        <tag>wistbean</tag>
+         
         <tag>写作</tag>
          
         <tag>肯定会公众号</tag>
-         
-        <tag>wistbean</tag>
          
         <tag>原创</tag>
          
@@ -6067,11 +6099,11 @@
         <title>我的 2018 年终总结</title>
         <pubTime>2019-02-04T15:11:06.000Z</pubTime>
         
-        <tag>公众号</tag>
+        <tag>年终总结</tag>
          
         <tag>肯定会</tag>
          
-        <tag>年终总结</tag>
+        <tag>公众号</tag>
          
         <tag>2018</tag>
          
@@ -6297,23 +6329,23 @@
 
     
   <url>
-    <loc>http://www.ubuntu520.com/use-Fiddler.html</loc>
+    <loc>http://www.ubuntu520.com/java-error-exception.html</loc>
     <lastmod>2018-11-02T08:52:36.000Z</lastmod>
     <data>
         <display>
-        <title>Fiddler 抓包工具完全使用教程</title>
-        <pubTime>2018-10-11T11:49:27.000Z</pubTime>
+        <title>Java中的异常处理，Exception和Error的使用</title>
+        <pubTime>2016-03-01T09:00:13.000Z</pubTime>
         
-        <tag>python</tag>
+        <tag>Java</tag>
          
-        <tag>工具使用</tag>
+        <tag>Exception</tag>
          
-        <tag>Fiddler</tag>
+        <tag>Error</tag>
          
          
            
              
-              <breadCrumb title="教程" url="http://www.ubuntu520.com/categories/%E6%95%99%E7%A8%8B/"/>
+              <breadCrumb title="Java" url="http://www.ubuntu520.com/categories/Java/"/>
           
         </display>
     </data>
@@ -6343,47 +6375,23 @@
 
     
   <url>
-    <loc>http://www.ubuntu520.com/java-error-exception.html</loc>
+    <loc>http://www.ubuntu520.com/use-Fiddler.html</loc>
     <lastmod>2018-11-02T08:52:36.000Z</lastmod>
     <data>
         <display>
-        <title>Java中的异常处理，Exception和Error的使用</title>
-        <pubTime>2016-03-01T09:00:13.000Z</pubTime>
+        <title>Fiddler 抓包工具完全使用教程</title>
+        <pubTime>2018-10-11T11:49:27.000Z</pubTime>
         
-        <tag>Java</tag>
+        <tag>python</tag>
          
-        <tag>Exception</tag>
+        <tag>工具使用</tag>
          
-        <tag>Error</tag>
+        <tag>Fiddler</tag>
          
          
            
              
-              <breadCrumb title="Java" url="http://www.ubuntu520.com/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.ubuntu520.com/object-oriented-programming.html</loc>
-    <lastmod>2018-11-02T08:52:34.000Z</lastmod>
-    <data>
-        <display>
-        <title>谈谈java中的面向对象编程思想</title>
-        <pubTime>2017-09-17T07:26:03.000Z</pubTime>
-        
-        <tag>Java</tag>
-         
-        <tag>面向对象</tag>
-         
-        <tag>编程思想</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="http://www.ubuntu520.com/categories/Java/"/>
+              <breadCrumb title="教程" url="http://www.ubuntu520.com/categories/%E6%95%99%E7%A8%8B/"/>
           
         </display>
     </data>
@@ -6408,6 +6416,30 @@
            
              
               <breadCrumb title="个人提升" url="http://www.ubuntu520.com/categories/%E4%B8%AA%E4%BA%BA%E6%8F%90%E5%8D%87/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.ubuntu520.com/object-oriented-programming.html</loc>
+    <lastmod>2018-11-02T08:52:34.000Z</lastmod>
+    <data>
+        <display>
+        <title>谈谈java中的面向对象编程思想</title>
+        <pubTime>2017-09-17T07:26:03.000Z</pubTime>
+        
+        <tag>Java</tag>
+         
+        <tag>面向对象</tag>
+         
+        <tag>编程思想</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java" url="http://www.ubuntu520.com/categories/Java/"/>
           
         </display>
     </data>
