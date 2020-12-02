@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.ubuntu520.com/learn-code-from-project.html</loc>
+    
+    <lastmod>2020-11-30T10:55:36.120Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.ubuntu520.com/oh-my-zsh.html</loc>
     
     <lastmod>2020-11-23T09:49:56.758Z</lastmod>
@@ -1479,6 +1486,13 @@
   </url>
   
   <url>
+    <loc>http://www.ubuntu520.com/use-Fiddler.html</loc>
+    
+    <lastmod>2018-11-02T08:52:36.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.ubuntu520.com/java-error-exception.html</loc>
     
     <lastmod>2018-11-02T08:52:36.000Z</lastmod>
@@ -1487,13 +1501,6 @@
   
   <url>
     <loc>http://www.ubuntu520.com/learn-jdk-string-source-code.html</loc>
-    
-    <lastmod>2018-11-02T08:52:36.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.ubuntu520.com/use-Fiddler.html</loc>
     
     <lastmod>2018-11-02T08:52:36.000Z</lastmod>
     

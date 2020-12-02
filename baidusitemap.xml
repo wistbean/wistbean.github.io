@@ -4,6 +4,21 @@
 
     
   <url>
+    <loc>http://www.ubuntu520.com/learn-code-from-project.html</loc>
+    <lastmod>2020-11-30T10:55:36.120Z</lastmod>
+    <data>
+        <display>
+        <title>编程中的逆向学习法</title>
+        <pubTime>2020-11-30T09:16:19.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.ubuntu520.com/oh-my-zsh.html</loc>
     <lastmod>2020-11-23T09:49:56.758Z</lastmod>
     <data>
@@ -1508,13 +1523,13 @@
          
         <tag>FreeMarker</tag>
          
-        <tag>Jqury</tag>
-         
         <tag>easyui-filebox</tag>
          
         <tag>easyui文件上传</tag>
          
         <tag>ajaxFileUpload</tag>
+         
+        <tag>Jqury</tag>
          
          
            
@@ -2051,13 +2066,13 @@
          
         <tag>分布式</tag>
          
-        <tag>架构</tag>
-         
         <tag>SSM</tag>
          
         <tag>IntelliJ IDEA</tag>
          
         <tag>码农商城</tag>
+         
+        <tag>架构</tag>
          
          
            
@@ -2260,11 +2275,11 @@
          
         <tag>商品</tag>
          
-        <tag>Jqury</tag>
-         
         <tag>easyui文件上传</tag>
          
         <tag>ajaxFileUpload</tag>
+         
+        <tag>Jqury</tag>
          
          
            
@@ -2406,11 +2421,11 @@
         
         <tag>码农商城</tag>
          
-        <tag>商城首页分类导航</tag>
-         
         <tag>httpclient</tag>
          
         <tag>freemarker</tag>
+         
+        <tag>商城首页分类导航</tag>
          
          
            
@@ -3124,9 +3139,9 @@
          
         <tag>EasyUI</tag>
          
-        <tag>postman</tag>
-         
         <tag>UEditor</tag>
+         
+        <tag>postman</tag>
          
         <tag>SSM视频教程</tag>
          
@@ -3438,8 +3453,6 @@
          
         <tag>vultr优惠码</tag>
          
-        <tag>搭建ssr</tag>
-         
         <tag>搭建自己的vpn</tag>
          
         <tag>国外服务器搭建vpn</tag>
@@ -3451,6 +3464,8 @@
         <tag>自己搭建vpn服务器</tag>
          
         <tag>vultr搭建vpn</tag>
+         
+        <tag>搭建ssr</tag>
          
         <tag>bbr</tag>
          
@@ -3659,13 +3674,13 @@
         
         <tag>码农商城</tag>
          
-        <tag>json</tag>
+        <tag>商城首页分类导航</tag>
          
         <tag>rest</tag>
          
-        <tag>rest接口java</tag>
+        <tag>json</tag>
          
-        <tag>商城首页分类导航</tag>
+        <tag>rest接口java</tag>
          
          
            
@@ -3993,11 +4008,11 @@
          
         <tag>商品</tag>
          
-        <tag>Jqury</tag>
-         
         <tag>easyui文件上传</tag>
          
         <tag>ajaxFileUpload</tag>
+         
+        <tag>Jqury</tag>
          
          
            
@@ -5004,9 +5019,9 @@
         <title>找骂</title>
         <pubTime>2020-04-16T16:39:16.000Z</pubTime>
         
-        <tag>学习</tag>
-         
         <tag>个人观点</tag>
+         
+        <tag>学习</tag>
          
          
            
@@ -6329,6 +6344,30 @@
 
     
   <url>
+    <loc>http://www.ubuntu520.com/use-Fiddler.html</loc>
+    <lastmod>2018-11-02T08:52:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>Fiddler 抓包工具完全使用教程</title>
+        <pubTime>2018-10-11T11:49:27.000Z</pubTime>
+        
+        <tag>python</tag>
+         
+        <tag>工具使用</tag>
+         
+        <tag>Fiddler</tag>
+         
+         
+           
+             
+              <breadCrumb title="教程" url="http://www.ubuntu520.com/categories/%E6%95%99%E7%A8%8B/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.ubuntu520.com/java-error-exception.html</loc>
     <lastmod>2018-11-02T08:52:36.000Z</lastmod>
     <data>
@@ -6368,30 +6407,6 @@
            
              
               <breadCrumb title="Java" url="http://www.ubuntu520.com/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.ubuntu520.com/use-Fiddler.html</loc>
-    <lastmod>2018-11-02T08:52:36.000Z</lastmod>
-    <data>
-        <display>
-        <title>Fiddler 抓包工具完全使用教程</title>
-        <pubTime>2018-10-11T11:49:27.000Z</pubTime>
-        
-        <tag>python</tag>
-         
-        <tag>工具使用</tag>
-         
-        <tag>Fiddler</tag>
-         
-         
-           
-             
-              <breadCrumb title="教程" url="http://www.ubuntu520.com/categories/%E6%95%99%E7%A8%8B/"/>
           
         </display>
     </data>
