@@ -4,6 +4,32 @@
 
     
   <url>
+    <loc>http://www.ubuntu520.com/shang-xue-bu-shi-wei-le-shang-ban.html</loc>
+    <lastmod>2021-01-05T15:39:24.260Z</lastmod>
+    <data>
+        <display>
+        <title>你上了那么多年学，居然跑去上班？</title>
+        <pubTime>2021-01-05T15:38:12.000Z</pubTime>
+        
+        <tag>创业</tag>
+         
+        <tag>学习</tag>
+         
+        <tag>认知</tag>
+         
+        <tag>经验</tag>
+         
+         
+           
+             
+              <breadCrumb title="个人观点" url="http://www.ubuntu520.com/categories/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.ubuntu520.com/li-xiao-lai-box-yao-qing-ma.html</loc>
     <lastmod>2021-01-01T15:17:29.059Z</lastmod>
     <data>
@@ -215,9 +241,9 @@
         <title>使用vultr(vps)搭建ss并开启BBR快速上网教程 超简单10分钟搞定</title>
         <pubTime>2019-02-19T18:40:36.000Z</pubTime>
         
-        <tag>vultr</tag>
-         
         <tag>互联网</tag>
+         
+        <tag>vultr</tag>
          
         <tag>优惠码</tag>
          
@@ -632,9 +658,9 @@
         
         <tag>教程</tag>
          
-        <tag>Java</tag>
-         
         <tag>Intellij IDEA</tag>
+         
+        <tag>Java</tag>
          
         <tag>Java视频教程</tag>
          
@@ -779,9 +805,9 @@
         <title>2019年 vultr vps优惠送50美元</title>
         <pubTime>2019-01-31T16:40:36.000Z</pubTime>
         
-        <tag>vultr</tag>
-         
         <tag>互联网</tag>
+         
+        <tag>vultr</tag>
          
         <tag>搭建ss</tag>
          
@@ -1151,6 +1177,8 @@
          
         <tag>vps</tag>
          
+        <tag>vpn</tag>
+         
         <tag>v2ray</tag>
          
         <tag>v2ray 搭建服务</tag>
@@ -1164,8 +1192,6 @@
         <tag>搭建v2ray节点</tag>
          
         <tag>v2ray搭建方法</tag>
-         
-        <tag>vpn</tag>
          
         <tag>v2ray 客户端</tag>
          
@@ -1279,9 +1305,9 @@
         
         <tag>教程</tag>
          
-        <tag>Java</tag>
-         
         <tag>Intellij IDEA</tag>
+         
+        <tag>Java</tag>
          
         <tag>Java视频教程</tag>
          
@@ -1598,9 +1624,9 @@
         
         <tag>教程</tag>
          
-        <tag>Java</tag>
-         
         <tag>Intellij IDEA</tag>
+         
+        <tag>Java</tag>
          
         <tag>Java视频教程</tag>
          
@@ -1734,9 +1760,9 @@
         <title>hexo搭建个人网站博客完全教程</title>
         <pubTime>2018-08-30T11:38:13.000Z</pubTime>
         
-        <tag>vultr</tag>
-         
         <tag>个人网站</tag>
+         
+        <tag>vultr</tag>
          
         <tag>教程</tag>
          
@@ -1797,9 +1823,9 @@
         
         <tag>教程</tag>
          
-        <tag>Java</tag>
-         
         <tag>Intellij IDEA</tag>
+         
+        <tag>Java</tag>
          
         <tag>Java视频教程</tag>
          
@@ -1817,11 +1843,11 @@
          
         <tag>FreeMarker</tag>
          
-        <tag>Jqury</tag>
-         
         <tag>easyui文件上传</tag>
          
         <tag>ajaxFileUpload</tag>
+         
+        <tag>Jqury</tag>
          
         <tag>easyui-filebox</tag>
          
@@ -2201,9 +2227,9 @@
         
         <tag>教程</tag>
          
-        <tag>Java</tag>
-         
         <tag>Intellij IDEA</tag>
+         
+        <tag>Java</tag>
          
         <tag>Java视频教程</tag>
          
@@ -2380,9 +2406,9 @@
         
         <tag>教程</tag>
          
-        <tag>Java</tag>
-         
         <tag>Intellij IDEA</tag>
+         
+        <tag>Java</tag>
          
         <tag>Java视频教程</tag>
          
@@ -2425,9 +2451,9 @@
         
         <tag>教程</tag>
          
-        <tag>Java</tag>
-         
         <tag>Intellij IDEA</tag>
+         
+        <tag>Java</tag>
          
         <tag>Java视频教程</tag>
          
@@ -2467,9 +2493,9 @@
         
         <tag>教程</tag>
          
-        <tag>Java</tag>
-         
         <tag>Intellij IDEA</tag>
+         
+        <tag>Java</tag>
          
         <tag>Java视频教程</tag>
          
@@ -2485,11 +2511,11 @@
          
         <tag>商品</tag>
          
-        <tag>Jqury</tag>
-         
         <tag>easyui文件上传</tag>
          
         <tag>ajaxFileUpload</tag>
+         
+        <tag>Jqury</tag>
          
          
            
@@ -2514,9 +2540,9 @@
         
         <tag>教程</tag>
          
-        <tag>Java</tag>
-         
         <tag>Intellij IDEA</tag>
+         
+        <tag>Java</tag>
          
         <tag>Java视频教程</tag>
          
@@ -2662,9 +2688,9 @@
          
         <tag>Nginx</tag>
          
-        <tag>Java</tag>
-         
         <tag>Intellij IDEA</tag>
+         
+        <tag>Java</tag>
          
         <tag>Java视频教程</tag>
          
@@ -3240,9 +3266,9 @@
          
         <tag>Nginx</tag>
          
-        <tag>Java</tag>
-         
         <tag>Intellij IDEA</tag>
+         
+        <tag>Java</tag>
          
         <tag>Java视频教程</tag>
          
@@ -3285,9 +3311,9 @@
         
         <tag>教程</tag>
          
-        <tag>Java</tag>
-         
         <tag>Intellij IDEA</tag>
+         
+        <tag>Java</tag>
          
         <tag>Java视频教程</tag>
          
@@ -3606,9 +3632,9 @@
          
         <tag>Nginx</tag>
          
-        <tag>Java</tag>
-         
         <tag>Intellij IDEA</tag>
+         
+        <tag>Java</tag>
          
         <tag>Java视频教程</tag>
          
@@ -3655,9 +3681,9 @@
         <title>优惠购买境外服务器vultr一键快速搭建自己的ssr并开启bbr加速访问vpn教程</title>
         <pubTime>2019-04-03T07:14:40.000Z</pubTime>
         
-        <tag>vultr</tag>
-         
         <tag>互联网</tag>
+         
+        <tag>vultr</tag>
          
         <tag>vpn</tag>
          
@@ -4126,9 +4152,9 @@
         
         <tag>教程</tag>
          
-        <tag>Java</tag>
-         
         <tag>Intellij IDEA</tag>
+         
+        <tag>Java</tag>
          
         <tag>Java视频教程</tag>
          
@@ -4144,11 +4170,11 @@
          
         <tag>商品</tag>
          
-        <tag>Jqury</tag>
-         
         <tag>easyui文件上传</tag>
          
         <tag>ajaxFileUpload</tag>
+         
+        <tag>Jqury</tag>
          
          
            
@@ -4338,9 +4364,9 @@
         
         <tag>教程</tag>
          
-        <tag>Java</tag>
-         
         <tag>Intellij IDEA</tag>
+         
+        <tag>Java</tag>
          
         <tag>Java视频教程</tag>
          
@@ -4608,9 +4634,9 @@
         
         <tag>教程</tag>
          
-        <tag>Java</tag>
-         
         <tag>Intellij IDEA</tag>
+         
+        <tag>Java</tag>
          
         <tag>Java视频教程</tag>
          
@@ -5000,9 +5026,9 @@
         
         <tag>肯定会</tag>
          
-        <tag>个人观点</tag>
-         
         <tag>wistbean</tag>
+         
+        <tag>个人观点</tag>
          
         <tag>系统</tag>
          
@@ -5887,11 +5913,11 @@
         <title>复仇者联盟4原来彩蛋在这里，Google 搜索灭霸会出现如下彩蛋</title>
         <pubTime>2019-04-26T08:51:00.000Z</pubTime>
         
-        <tag>Google</tag>
-         
         <tag>复仇者联盟4</tag>
          
         <tag>灭霸</tag>
+         
+        <tag>Google</tag>
          
         <tag>彩蛋</tag>
          
@@ -6413,6 +6439,30 @@
 
     
   <url>
+    <loc>http://www.ubuntu520.com/java-error-exception.html</loc>
+    <lastmod>2018-11-02T08:52:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>Java中的异常处理，Exception和Error的使用</title>
+        <pubTime>2016-03-01T09:00:13.000Z</pubTime>
+        
+        <tag>Java</tag>
+         
+        <tag>Exception</tag>
+         
+        <tag>Error</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java" url="http://www.ubuntu520.com/categories/Java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.ubuntu520.com/use-Fiddler.html</loc>
     <lastmod>2018-11-02T08:52:36.000Z</lastmod>
     <data>
@@ -6459,23 +6509,23 @@
 
     
   <url>
-    <loc>http://www.ubuntu520.com/java-error-exception.html</loc>
-    <lastmod>2018-11-02T08:52:36.000Z</lastmod>
+    <loc>http://www.ubuntu520.com/spend-money.html</loc>
+    <lastmod>2018-11-02T08:52:34.000Z</lastmod>
     <data>
         <display>
-        <title>Java中的异常处理，Exception和Error的使用</title>
-        <pubTime>2016-03-01T09:00:13.000Z</pubTime>
+        <title>现在已经不像父母那个年代了,花钱也是一种学问</title>
+        <pubTime>2018-09-08T18:17:24.000Z</pubTime>
         
-        <tag>Java</tag>
+        <tag>个人提升</tag>
          
-        <tag>Exception</tag>
+        <tag>关于wistbean</tag>
          
-        <tag>Error</tag>
+        <tag>认知</tag>
          
          
            
              
-              <breadCrumb title="Java" url="http://www.ubuntu520.com/categories/Java/"/>
+              <breadCrumb title="个人提升" url="http://www.ubuntu520.com/categories/%E4%B8%AA%E4%BA%BA%E6%8F%90%E5%8D%87/"/>
           
         </display>
     </data>
@@ -6500,30 +6550,6 @@
            
              
               <breadCrumb title="Java" url="http://www.ubuntu520.com/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.ubuntu520.com/spend-money.html</loc>
-    <lastmod>2018-11-02T08:52:34.000Z</lastmod>
-    <data>
-        <display>
-        <title>现在已经不像父母那个年代了,花钱也是一种学问</title>
-        <pubTime>2018-09-08T18:17:24.000Z</pubTime>
-        
-        <tag>个人提升</tag>
-         
-        <tag>关于wistbean</tag>
-         
-        <tag>认知</tag>
-         
-         
-           
-             
-              <breadCrumb title="个人提升" url="http://www.ubuntu520.com/categories/%E4%B8%AA%E4%BA%BA%E6%8F%90%E5%8D%87/"/>
           
         </display>
     </data>
