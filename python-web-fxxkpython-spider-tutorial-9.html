@@ -367,6 +367,23 @@
 
 
 
+<section class="comments" id="comments">
+    <div id="gitment_thread"></div>
+    <link rel="stylesheet" href="//unpkg.com/gitment/style/default.css">
+    <script src="//unpkg.com/gitment/dist/gitment.browser.js"></script>
+    <script>
+        var gitment = new Gitment({
+            owner: 'wistbean',
+            repo: 'wistbean.github.io',
+            oauth: {
+                client_id: '1a806388de8885cdd82b',
+                client_secret: 'ba6a8ccc6223d41439d398b2d6cf58c57105259e',
+            },
+        })
+        gitment.render('comments')
+    </script>
+</section>
+
 
 
 

@@ -315,7 +315,14 @@
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/xue-xi-ji-hui.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">那些亲手把自己的「学习机会」让人抹杀掉的可怜人们</h4>
+      </a>
+    </div>
   
 
   
@@ -338,6 +345,23 @@
 
 
 
+
+<section class="comments" id="comments">
+    <div id="gitment_thread"></div>
+    <link rel="stylesheet" href="//unpkg.com/gitment/style/default.css">
+    <script src="//unpkg.com/gitment/dist/gitment.browser.js"></script>
+    <script>
+        var gitment = new Gitment({
+            owner: 'wistbean',
+            repo: 'wistbean.github.io',
+            oauth: {
+                client_id: '1a806388de8885cdd82b',
+                client_secret: 'ba6a8ccc6223d41439d398b2d6cf58c57105259e',
+            },
+        })
+        gitment.render('comments')
+    </script>
+</section>
 
 
 
