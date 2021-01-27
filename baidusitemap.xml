@@ -856,34 +856,6 @@
 
     
   <url>
-    <loc>http://www.ubuntu520.com/FEYNMAN-LEARNING.html</loc>
-    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
-    <data>
-        <display>
-        <title>到底怎样才算是学会知识了呢</title>
-        <pubTime>2018-11-30T07:47:57.000Z</pubTime>
-        
-        <tag>个人提升</tag>
-         
-        <tag>学习方法</tag>
-         
-         
-           
-             
-              <breadCrumb title="podcast" url="http://www.ubuntu520.com/categories/podcast/"/>
-          
-             
-              <breadCrumb title="肯定会电台" url="http://www.ubuntu520.com/categories/podcast/%E8%82%AF%E5%AE%9A%E4%BC%9A%E7%94%B5%E5%8F%B0/"/>
-          
-             
-              <breadCrumb title="个人提升" url="http://www.ubuntu520.com/categories/podcast/%E8%82%AF%E5%AE%9A%E4%BC%9A%E7%94%B5%E5%8F%B0/%E4%B8%AA%E4%BA%BA%E6%8F%90%E5%8D%87/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.ubuntu520.com/ai.html</loc>
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     <data>
@@ -906,6 +878,34 @@
           
              
               <breadCrumb title="肯定会电台" url="http://www.ubuntu520.com/categories/podcast/%E8%82%AF%E5%AE%9A%E4%BC%9A%E7%94%B5%E5%8F%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.ubuntu520.com/FEYNMAN-LEARNING.html</loc>
+    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
+    <data>
+        <display>
+        <title>到底怎样才算是学会知识了呢</title>
+        <pubTime>2018-11-30T07:47:57.000Z</pubTime>
+        
+        <tag>个人提升</tag>
+         
+        <tag>学习方法</tag>
+         
+         
+           
+             
+              <breadCrumb title="podcast" url="http://www.ubuntu520.com/categories/podcast/"/>
+          
+             
+              <breadCrumb title="肯定会电台" url="http://www.ubuntu520.com/categories/podcast/%E8%82%AF%E5%AE%9A%E4%BC%9A%E7%94%B5%E5%8F%B0/"/>
+          
+             
+              <breadCrumb title="个人提升" url="http://www.ubuntu520.com/categories/podcast/%E8%82%AF%E5%AE%9A%E4%BC%9A%E7%94%B5%E5%8F%B0/%E4%B8%AA%E4%BA%BA%E6%8F%90%E5%8D%87/"/>
           
         </display>
     </data>
@@ -947,32 +947,6 @@
 
     
   <url>
-    <loc>http://www.ubuntu520.com/algorithm-and-data-structure.html</loc>
-    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
-    <data>
-        <display>
-        <title>修炼内功：数据结构与算法的学习路线</title>
-        <pubTime>2017-01-29T07:41:39.000Z</pubTime>
-        
-        <tag>数据结构</tag>
-         
-        <tag>算法</tag>
-         
-        <tag>修炼内功</tag>
-         
-        <tag>学习路线</tag>
-         
-         
-           
-             
-              <breadCrumb title="数据结构与算法" url="http://www.ubuntu520.com/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.ubuntu520.com/backups.html</loc>
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     <data>
@@ -996,6 +970,32 @@
           
              
               <breadCrumb title="互联网" url="http://www.ubuntu520.com/categories/podcast/%E8%82%AF%E5%AE%9A%E4%BC%9A%E7%94%B5%E5%8F%B0/%E4%BA%92%E8%81%94%E7%BD%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.ubuntu520.com/algorithm-and-data-structure.html</loc>
+    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
+    <data>
+        <display>
+        <title>修炼内功：数据结构与算法的学习路线</title>
+        <pubTime>2017-01-29T07:41:39.000Z</pubTime>
+        
+        <tag>数据结构</tag>
+         
+        <tag>算法</tag>
+         
+        <tag>修炼内功</tag>
+         
+        <tag>学习路线</tag>
+         
+         
+           
+             
+              <breadCrumb title="数据结构与算法" url="http://www.ubuntu520.com/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
           
         </display>
     </data>
@@ -1122,6 +1122,31 @@
 
     
   <url>
+    <loc>http://www.ubuntu520.com/big-data.html</loc>
+    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
+    <data>
+        <display>
+        <title>体面的"大数据"</title>
+        <pubTime>2018-11-16T09:58:44.000Z</pubTime>
+        
+        <tag>肯定会电台</tag>
+         
+        <tag>互联网</tag>
+         
+         
+           
+             
+              <breadCrumb title="podcast" url="http://www.ubuntu520.com/categories/podcast/"/>
+          
+             
+              <breadCrumb title="肯定会电台" url="http://www.ubuntu520.com/categories/podcast/%E8%82%AF%E5%AE%9A%E4%BC%9A%E7%94%B5%E5%8F%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.ubuntu520.com/banwagong-vpn.html</loc>
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     <data>
@@ -1142,31 +1167,6 @@
           
              
               <breadCrumb title="搬瓦工" url="http://www.ubuntu520.com/categories/vpn/%E6%90%AC%E7%93%A6%E5%B7%A5/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.ubuntu520.com/big-data.html</loc>
-    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
-    <data>
-        <display>
-        <title>体面的"大数据"</title>
-        <pubTime>2018-11-16T09:58:44.000Z</pubTime>
-        
-        <tag>肯定会电台</tag>
-         
-        <tag>互联网</tag>
-         
-         
-           
-             
-              <breadCrumb title="podcast" url="http://www.ubuntu520.com/categories/podcast/"/>
-          
-             
-              <breadCrumb title="肯定会电台" url="http://www.ubuntu520.com/categories/podcast/%E8%82%AF%E5%AE%9A%E4%BC%9A%E7%94%B5%E5%8F%B0/"/>
           
         </display>
     </data>
@@ -1202,6 +1202,32 @@
           
              
               <breadCrumb title="教程" url="http://www.ubuntu520.com/categories/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/%E6%95%99%E7%A8%8B/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.ubuntu520.com/dns-cache-poisoning.html</loc>
+    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
+    <data>
+        <display>
+        <title>我的网站域名被DNS投毒了</title>
+        <pubTime>2018-12-30T05:04:24.000Z</pubTime>
+        
+        <tag>dns</tag>
+         
+        <tag>投毒</tag>
+         
+        <tag>域名</tag>
+         
+        <tag>dns污染</tag>
+         
+         
+           
+             
+              <breadCrumb title="个人网站" url="http://www.ubuntu520.com/categories/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/"/>
           
         </display>
     </data>
@@ -1252,32 +1278,6 @@
 
     
   <url>
-    <loc>http://www.ubuntu520.com/dns-cache-poisoning.html</loc>
-    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
-    <data>
-        <display>
-        <title>我的网站域名被DNS投毒了</title>
-        <pubTime>2018-12-30T05:04:24.000Z</pubTime>
-        
-        <tag>dns</tag>
-         
-        <tag>投毒</tag>
-         
-        <tag>域名</tag>
-         
-        <tag>dns污染</tag>
-         
-         
-           
-             
-              <breadCrumb title="个人网站" url="http://www.ubuntu520.com/categories/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.ubuntu520.com/encourage-more.html</loc>
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     <data>
@@ -1291,36 +1291,6 @@
            
              
               <breadCrumb title="个人提升" url="http://www.ubuntu520.com/categories/%E4%B8%AA%E4%BA%BA%E6%8F%90%E5%8D%87/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.ubuntu520.com/how-to-learn-python-spider.html</loc>
-    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
-    <data>
-        <display>
-        <title>python 爬虫应该学习什么知识点？</title>
-        <pubTime>2018-10-18T17:51:03.000Z</pubTime>
-        
-        <tag>肯定会电台</tag>
-         
-        <tag>互联网</tag>
-         
-        <tag>python</tag>
-         
-         
-           
-             
-              <breadCrumb title="podcast" url="http://www.ubuntu520.com/categories/podcast/"/>
-          
-             
-              <breadCrumb title="肯定会电台" url="http://www.ubuntu520.com/categories/podcast/%E8%82%AF%E5%AE%9A%E4%BC%9A%E7%94%B5%E5%8F%B0/"/>
-          
-             
-              <breadCrumb title="python" url="http://www.ubuntu520.com/categories/podcast/%E8%82%AF%E5%AE%9A%E4%BC%9A%E7%94%B5%E5%8F%B0/python/"/>
           
         </display>
     </data>
@@ -1358,19 +1328,29 @@
 
     
   <url>
-    <loc>http://www.ubuntu520.com/java-String.html</loc>
+    <loc>http://www.ubuntu520.com/how-to-learn-python-spider.html</loc>
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     <data>
         <display>
-        <title>Java中的String，StringBuffer，StringBuilder</title>
-        <pubTime>2016-03-04T09:00:13.000Z</pubTime>
+        <title>python 爬虫应该学习什么知识点？</title>
+        <pubTime>2018-10-18T17:51:03.000Z</pubTime>
         
-        <tag>Java</tag>
+        <tag>肯定会电台</tag>
+         
+        <tag>互联网</tag>
+         
+        <tag>python</tag>
          
          
            
              
-              <breadCrumb title="Java" url="http://www.ubuntu520.com/categories/Java/"/>
+              <breadCrumb title="podcast" url="http://www.ubuntu520.com/categories/podcast/"/>
+          
+             
+              <breadCrumb title="肯定会电台" url="http://www.ubuntu520.com/categories/podcast/%E8%82%AF%E5%AE%9A%E4%BC%9A%E7%94%B5%E5%8F%B0/"/>
+          
+             
+              <breadCrumb title="python" url="http://www.ubuntu520.com/categories/podcast/%E8%82%AF%E5%AE%9A%E4%BC%9A%E7%94%B5%E5%8F%B0/python/"/>
           
         </display>
     </data>
@@ -1467,18 +1447,62 @@
 
     
   <url>
-    <loc>http://www.ubuntu520.com/java-ssm-2-2.html</loc>
+    <loc>http://www.ubuntu520.com/java-ssm-1-4.html</loc>
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     <data>
         <display>
-        <title>「2-2」码农商城 SSM 系统所需的 Maven 模块简介</title>
-        <pubTime>2018-08-29T09:25:23.000Z</pubTime>
+        <title>「1-4」GitHub完全使用指南</title>
+        <pubTime>2018-08-29T09:25:21.000Z</pubTime>
         
         <tag>教程</tag>
          
+        <tag>Git</tag>
+         
+        <tag>GitHub</tag>
+         
         <tag>Java</tag>
          
+        <tag>Java视频教程</tag>
+         
+        <tag>项目实战</tag>
+         
+        <tag>分布式</tag>
+         
+        <tag>SSM</tag>
+         
+        <tag>IntelliJ IDEA</tag>
+         
+        <tag>码农商城</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java" url="http://www.ubuntu520.com/categories/Java/"/>
+          
+             
+              <breadCrumb title="Java SSM视频教程" url="http://www.ubuntu520.com/categories/Java/Java-SSM%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B/"/>
+          
+             
+              <breadCrumb title="Git" url="http://www.ubuntu520.com/categories/Java/Java-SSM%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B/Git/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.ubuntu520.com/java-ssm-2-1.html</loc>
+    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
+    <data>
+        <display>
+        <title>「2-1」什么是Maven，Maven的配置</title>
+        <pubTime>2018-08-29T09:25:22.000Z</pubTime>
+        
+        <tag>教程</tag>
+         
         <tag>Intellij IDEA</tag>
+         
+        <tag>Java</tag>
          
         <tag>Java视频教程</tag>
          
@@ -1509,18 +1533,55 @@
 
     
   <url>
-    <loc>http://www.ubuntu520.com/java-ssm-2-1.html</loc>
+    <loc>http://www.ubuntu520.com/java-ssm-1-1.html</loc>
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     <data>
         <display>
-        <title>「2-1」什么是Maven，Maven的配置</title>
-        <pubTime>2018-08-29T09:25:22.000Z</pubTime>
+        <title>「1-1」分布式高并发java web项目实战视频教程介绍</title>
+        <pubTime>2018-08-29T09:25:18.000Z</pubTime>
         
         <tag>教程</tag>
          
         <tag>Java</tag>
          
+        <tag>Java视频教程</tag>
+         
+        <tag>项目实战</tag>
+         
+        <tag>分布式</tag>
+         
+        <tag>SSM</tag>
+         
+        <tag>IntelliJ IDEA</tag>
+         
+        <tag>码农商城</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java" url="http://www.ubuntu520.com/categories/Java/"/>
+          
+             
+              <breadCrumb title="Java SSM视频教程" url="http://www.ubuntu520.com/categories/Java/Java-SSM%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.ubuntu520.com/java-ssm-2-2.html</loc>
+    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
+    <data>
+        <display>
+        <title>「2-2」码农商城 SSM 系统所需的 Maven 模块简介</title>
+        <pubTime>2018-08-29T09:25:23.000Z</pubTime>
+        
+        <tag>教程</tag>
+         
         <tag>Intellij IDEA</tag>
+         
+        <tag>Java</tag>
          
         <tag>Java视频教程</tag>
          
@@ -1544,6 +1605,45 @@
           
              
               <breadCrumb title="Maven" url="http://www.ubuntu520.com/categories/Java/Java-SSM%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B/Maven/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.ubuntu520.com/java-ssm-1-2.html</loc>
+    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
+    <data>
+        <display>
+        <title>「1-2」传统的集群架构和分布式架构区别</title>
+        <pubTime>2018-08-29T09:25:19.000Z</pubTime>
+        
+        <tag>教程</tag>
+         
+        <tag>Java</tag>
+         
+        <tag>Java视频教程</tag>
+         
+        <tag>项目实战</tag>
+         
+        <tag>分布式</tag>
+         
+        <tag>SSM</tag>
+         
+        <tag>IntelliJ IDEA</tag>
+         
+        <tag>码农商城</tag>
+         
+        <tag>架构</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java" url="http://www.ubuntu520.com/categories/Java/"/>
+          
+             
+              <breadCrumb title="Java SSM视频教程" url="http://www.ubuntu520.com/categories/Java/Java-SSM%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B/"/>
           
         </display>
     </data>
@@ -1593,119 +1693,19 @@
 
     
   <url>
-    <loc>http://www.ubuntu520.com/java-ssm-1-4.html</loc>
+    <loc>http://www.ubuntu520.com/java-String.html</loc>
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     <data>
         <display>
-        <title>「1-4」GitHub完全使用指南</title>
-        <pubTime>2018-08-29T09:25:21.000Z</pubTime>
+        <title>Java中的String，StringBuffer，StringBuilder</title>
+        <pubTime>2016-03-04T09:00:13.000Z</pubTime>
         
-        <tag>教程</tag>
-         
-        <tag>Git</tag>
-         
-        <tag>GitHub</tag>
-         
         <tag>Java</tag>
-         
-        <tag>Java视频教程</tag>
-         
-        <tag>项目实战</tag>
-         
-        <tag>分布式</tag>
-         
-        <tag>SSM</tag>
-         
-        <tag>IntelliJ IDEA</tag>
-         
-        <tag>码农商城</tag>
          
          
            
              
               <breadCrumb title="Java" url="http://www.ubuntu520.com/categories/Java/"/>
-          
-             
-              <breadCrumb title="Java SSM视频教程" url="http://www.ubuntu520.com/categories/Java/Java-SSM%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B/"/>
-          
-             
-              <breadCrumb title="Git" url="http://www.ubuntu520.com/categories/Java/Java-SSM%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B/Git/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.ubuntu520.com/java-ssm-1-1.html</loc>
-    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
-    <data>
-        <display>
-        <title>「1-1」分布式高并发java web项目实战视频教程介绍</title>
-        <pubTime>2018-08-29T09:25:18.000Z</pubTime>
-        
-        <tag>教程</tag>
-         
-        <tag>Java</tag>
-         
-        <tag>Java视频教程</tag>
-         
-        <tag>项目实战</tag>
-         
-        <tag>分布式</tag>
-         
-        <tag>SSM</tag>
-         
-        <tag>IntelliJ IDEA</tag>
-         
-        <tag>码农商城</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="http://www.ubuntu520.com/categories/Java/"/>
-          
-             
-              <breadCrumb title="Java SSM视频教程" url="http://www.ubuntu520.com/categories/Java/Java-SSM%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.ubuntu520.com/java-ssm-1-2.html</loc>
-    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
-    <data>
-        <display>
-        <title>「1-2」传统的集群架构和分布式架构区别</title>
-        <pubTime>2018-08-29T09:25:19.000Z</pubTime>
-        
-        <tag>教程</tag>
-         
-        <tag>Java</tag>
-         
-        <tag>Java视频教程</tag>
-         
-        <tag>项目实战</tag>
-         
-        <tag>分布式</tag>
-         
-        <tag>SSM</tag>
-         
-        <tag>IntelliJ IDEA</tag>
-         
-        <tag>码农商城</tag>
-         
-        <tag>架构</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="http://www.ubuntu520.com/categories/Java/"/>
-          
-             
-              <breadCrumb title="Java SSM视频教程" url="http://www.ubuntu520.com/categories/Java/Java-SSM%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B/"/>
           
         </display>
     </data>
@@ -1748,127 +1748,6 @@
           
              
               <breadCrumb title="Maven" url="http://www.ubuntu520.com/categories/Java/Java-SSM%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B/Maven/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.ubuntu520.com/java-ssm-3-3.html</loc>
-    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
-    <data>
-        <display>
-        <title>「3-3」 对商品分类进行增删改查的操作(上)</title>
-        <pubTime>2018-10-01T13:31:12.000Z</pubTime>
-        
-        <tag>教程</tag>
-         
-        <tag>Java</tag>
-         
-        <tag>Intellij IDEA</tag>
-         
-        <tag>Java视频教程</tag>
-         
-        <tag>项目实战</tag>
-         
-        <tag>分布式</tag>
-         
-        <tag>SSM</tag>
-         
-        <tag>码农商城</tag>
-         
-        <tag>EasyUI</tag>
-         
-        <tag>商品分类管理</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="http://www.ubuntu520.com/categories/Java/"/>
-          
-             
-              <breadCrumb title="Java SSM视频教程" url="http://www.ubuntu520.com/categories/Java/Java-SSM%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.ubuntu520.com/java-ssm-3-4.html</loc>
-    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
-    <data>
-        <display>
-        <title>「3-4」 对商品分类进行增删改查的操作(下)</title>
-        <pubTime>2018-10-09T15:00:55.000Z</pubTime>
-        
-        <tag>教程</tag>
-         
-        <tag>Java</tag>
-         
-        <tag>Intellij IDEA</tag>
-         
-        <tag>Java视频教程</tag>
-         
-        <tag>项目实战</tag>
-         
-        <tag>分布式</tag>
-         
-        <tag>SSM</tag>
-         
-        <tag>码农商城</tag>
-         
-        <tag>EasyUI</tag>
-         
-        <tag>商品分类管理</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="http://www.ubuntu520.com/categories/Java/"/>
-          
-             
-              <breadCrumb title="Java SSM视频教程" url="http://www.ubuntu520.com/categories/Java/Java-SSM%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.ubuntu520.com/java-ssm-3-2.html</loc>
-    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
-    <data>
-        <display>
-        <title>「3-2」使用 PowerDesigner 逆向生成 MySQL 数据库</title>
-        <pubTime>2018-09-23T17:42:42.000Z</pubTime>
-        
-        <tag>教程</tag>
-         
-        <tag>Java</tag>
-         
-        <tag>Intellij IDEA</tag>
-         
-        <tag>Java视频教程</tag>
-         
-        <tag>项目实战</tag>
-         
-        <tag>分布式</tag>
-         
-        <tag>SSM</tag>
-         
-        <tag>码农商城</tag>
-         
-        <tag>EasyUI</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="http://www.ubuntu520.com/categories/Java/"/>
-          
-             
-              <breadCrumb title="Java SSM视频教程" url="http://www.ubuntu520.com/categories/Java/Java-SSM%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B/"/>
           
         </display>
     </data>
@@ -1926,20 +1805,18 @@
 
     
   <url>
-    <loc>http://www.ubuntu520.com/java-ssm-4-4.html</loc>
+    <loc>http://www.ubuntu520.com/java-ssm-3-3.html</loc>
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     <data>
         <display>
-        <title>「4-4」SpringMVC整合富文本编辑器百度UEditor的使用</title>
-        <pubTime>2018-12-03T09:28:01.000Z</pubTime>
+        <title>「3-3」 对商品分类进行增删改查的操作(上)</title>
+        <pubTime>2018-10-01T13:31:12.000Z</pubTime>
         
         <tag>教程</tag>
          
-        <tag>Nginx</tag>
+        <tag>Intellij IDEA</tag>
          
         <tag>Java</tag>
-         
-        <tag>Intellij IDEA</tag>
          
         <tag>Java视频教程</tag>
          
@@ -1953,11 +1830,87 @@
          
         <tag>EasyUI</tag>
          
-        <tag>FastDFS</tag>
+        <tag>商品分类管理</tag>
          
-        <tag>UEditor</tag>
          
-        <tag>富文本编辑器</tag>
+           
+             
+              <breadCrumb title="Java" url="http://www.ubuntu520.com/categories/Java/"/>
+          
+             
+              <breadCrumb title="Java SSM视频教程" url="http://www.ubuntu520.com/categories/Java/Java-SSM%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.ubuntu520.com/java-ssm-3-2.html</loc>
+    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
+    <data>
+        <display>
+        <title>「3-2」使用 PowerDesigner 逆向生成 MySQL 数据库</title>
+        <pubTime>2018-09-23T17:42:42.000Z</pubTime>
+        
+        <tag>教程</tag>
+         
+        <tag>Intellij IDEA</tag>
+         
+        <tag>Java</tag>
+         
+        <tag>Java视频教程</tag>
+         
+        <tag>项目实战</tag>
+         
+        <tag>分布式</tag>
+         
+        <tag>SSM</tag>
+         
+        <tag>码农商城</tag>
+         
+        <tag>EasyUI</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java" url="http://www.ubuntu520.com/categories/Java/"/>
+          
+             
+              <breadCrumb title="Java SSM视频教程" url="http://www.ubuntu520.com/categories/Java/Java-SSM%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.ubuntu520.com/java-ssm-3-4.html</loc>
+    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
+    <data>
+        <display>
+        <title>「3-4」 对商品分类进行增删改查的操作(下)</title>
+        <pubTime>2018-10-09T15:00:55.000Z</pubTime>
+        
+        <tag>教程</tag>
+         
+        <tag>Intellij IDEA</tag>
+         
+        <tag>Java</tag>
+         
+        <tag>Java视频教程</tag>
+         
+        <tag>项目实战</tag>
+         
+        <tag>分布式</tag>
+         
+        <tag>SSM</tag>
+         
+        <tag>码农商城</tag>
+         
+        <tag>EasyUI</tag>
+         
+        <tag>商品分类管理</tag>
          
          
            
@@ -1984,9 +1937,9 @@
          
         <tag>Nginx</tag>
          
-        <tag>Java</tag>
-         
         <tag>Intellij IDEA</tag>
+         
+        <tag>Java</tag>
          
         <tag>Java视频教程</tag>
          
@@ -2020,6 +1973,59 @@
 
     
   <url>
+    <loc>http://www.ubuntu520.com/java-ssm-4-3.html</loc>
+    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
+    <data>
+        <display>
+        <title>「4-3」SpringMVC整合FastDFS实现文件上传下载</title>
+        <pubTime>2018-11-28T13:31:40.000Z</pubTime>
+        
+        <tag>教程</tag>
+         
+        <tag>Nginx</tag>
+         
+        <tag>Intellij IDEA</tag>
+         
+        <tag>Java</tag>
+         
+        <tag>Java视频教程</tag>
+         
+        <tag>项目实战</tag>
+         
+        <tag>分布式</tag>
+         
+        <tag>SSM</tag>
+         
+        <tag>码农商城</tag>
+         
+        <tag>EasyUI</tag>
+         
+        <tag>商品分类管理</tag>
+         
+        <tag>FastDFS</tag>
+         
+        <tag>SecureCRT</tag>
+         
+        <tag>文件服务器</tag>
+         
+        <tag>上传下载</tag>
+         
+        <tag>postman</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java" url="http://www.ubuntu520.com/categories/Java/"/>
+          
+             
+              <breadCrumb title="Java SSM视频教程" url="http://www.ubuntu520.com/categories/Java/Java-SSM%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.ubuntu520.com/java-ssm-5-2.html</loc>
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     <data>
@@ -2029,9 +2035,103 @@
         
         <tag>教程</tag>
          
+        <tag>Intellij IDEA</tag>
+         
         <tag>Java</tag>
          
+        <tag>Java视频教程</tag>
+         
+        <tag>项目实战</tag>
+         
+        <tag>分布式</tag>
+         
+        <tag>SSM</tag>
+         
+        <tag>码农商城</tag>
+         
+        <tag>EasyUI</tag>
+         
+        <tag>UEditor</tag>
+         
+        <tag>富文本编辑器</tag>
+         
+        <tag>商品</tag>
+         
+        <tag>FreeMarker</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java" url="http://www.ubuntu520.com/categories/Java/"/>
+          
+             
+              <breadCrumb title="Java SSM视频教程" url="http://www.ubuntu520.com/categories/Java/Java-SSM%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.ubuntu520.com/java-ssm-4-4.html</loc>
+    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
+    <data>
+        <display>
+        <title>「4-4」SpringMVC整合富文本编辑器百度UEditor的使用</title>
+        <pubTime>2018-12-03T09:28:01.000Z</pubTime>
+        
+        <tag>教程</tag>
+         
+        <tag>Nginx</tag>
+         
         <tag>Intellij IDEA</tag>
+         
+        <tag>Java</tag>
+         
+        <tag>Java视频教程</tag>
+         
+        <tag>项目实战</tag>
+         
+        <tag>分布式</tag>
+         
+        <tag>SSM</tag>
+         
+        <tag>码农商城</tag>
+         
+        <tag>EasyUI</tag>
+         
+        <tag>FastDFS</tag>
+         
+        <tag>UEditor</tag>
+         
+        <tag>富文本编辑器</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java" url="http://www.ubuntu520.com/categories/Java/"/>
+          
+             
+              <breadCrumb title="Java SSM视频教程" url="http://www.ubuntu520.com/categories/Java/Java-SSM%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.ubuntu520.com/java-ssm-5-1.html</loc>
+    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
+    <data>
+        <display>
+        <title>「5-1」Java模板引擎FreeMarker整合SSM</title>
+        <pubTime>2018-12-11T13:27:26.000Z</pubTime>
+        
+        <tag>教程</tag>
+         
+        <tag>Intellij IDEA</tag>
+         
+        <tag>Java</tag>
          
         <tag>Java视频教程</tag>
          
@@ -2076,9 +2176,9 @@
         
         <tag>教程</tag>
          
-        <tag>Java</tag>
-         
         <tag>Intellij IDEA</tag>
+         
+        <tag>Java</tag>
          
         <tag>Java视频教程</tag>
          
@@ -2121,9 +2221,9 @@
         
         <tag>教程</tag>
          
-        <tag>Java</tag>
-         
         <tag>Intellij IDEA</tag>
+         
+        <tag>Java</tag>
          
         <tag>Java视频教程</tag>
          
@@ -2157,65 +2257,18 @@
 
     
   <url>
-    <loc>http://www.ubuntu520.com/java-ssm-5-1.html</loc>
+    <loc>http://www.ubuntu520.com/java-ssm-5-5.html</loc>
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     <data>
         <display>
-        <title>「5-1」Java模板引擎FreeMarker整合SSM</title>
-        <pubTime>2018-12-11T13:27:26.000Z</pubTime>
+        <title>「5-5」码农商城实现商品数据提交到Mysql数据库</title>
+        <pubTime>2019-01-05T06:56:43.000Z</pubTime>
         
         <tag>教程</tag>
          
-        <tag>Java</tag>
-         
         <tag>Intellij IDEA</tag>
          
-        <tag>Java视频教程</tag>
-         
-        <tag>项目实战</tag>
-         
-        <tag>分布式</tag>
-         
-        <tag>SSM</tag>
-         
-        <tag>码农商城</tag>
-         
-        <tag>EasyUI</tag>
-         
-        <tag>UEditor</tag>
-         
-        <tag>富文本编辑器</tag>
-         
-        <tag>商品</tag>
-         
-        <tag>FreeMarker</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="http://www.ubuntu520.com/categories/Java/"/>
-          
-             
-              <breadCrumb title="Java SSM视频教程" url="http://www.ubuntu520.com/categories/Java/Java-SSM%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.ubuntu520.com/java-ssm-5-6.html</loc>
-    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
-    <data>
-        <display>
-        <title>「5-6」Mybatis分页，DataGrid使用，实现商品列表分页展示</title>
-        <pubTime>2019-01-07T10:06:44.000Z</pubTime>
-        
-        <tag>教程</tag>
-         
         <tag>Java</tag>
-         
-        <tag>Intellij IDEA</tag>
          
         <tag>Java视频教程</tag>
          
@@ -2260,9 +2313,9 @@
         
         <tag>教程</tag>
          
-        <tag>Java</tag>
-         
         <tag>Intellij IDEA</tag>
+         
+        <tag>Java</tag>
          
         <tag>Java视频教程</tag>
          
@@ -2287,137 +2340,6 @@
         <tag>ajaxFileUpload</tag>
          
         <tag>easyui-filebox</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="http://www.ubuntu520.com/categories/Java/"/>
-          
-             
-              <breadCrumb title="Java SSM视频教程" url="http://www.ubuntu520.com/categories/Java/Java-SSM%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.ubuntu520.com/java-ssm-5-5.html</loc>
-    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
-    <data>
-        <display>
-        <title>「5-5」码农商城实现商品数据提交到Mysql数据库</title>
-        <pubTime>2019-01-05T06:56:43.000Z</pubTime>
-        
-        <tag>教程</tag>
-         
-        <tag>Java</tag>
-         
-        <tag>Intellij IDEA</tag>
-         
-        <tag>Java视频教程</tag>
-         
-        <tag>项目实战</tag>
-         
-        <tag>分布式</tag>
-         
-        <tag>SSM</tag>
-         
-        <tag>码农商城</tag>
-         
-        <tag>EasyUI</tag>
-         
-        <tag>商品</tag>
-         
-        <tag>Jqury</tag>
-         
-        <tag>easyui文件上传</tag>
-         
-        <tag>ajaxFileUpload</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="http://www.ubuntu520.com/categories/Java/"/>
-          
-             
-              <breadCrumb title="Java SSM视频教程" url="http://www.ubuntu520.com/categories/Java/Java-SSM%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.ubuntu520.com/java-ssm-4-3.html</loc>
-    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
-    <data>
-        <display>
-        <title>「4-3」SpringMVC整合FastDFS实现文件上传下载</title>
-        <pubTime>2018-11-28T13:31:40.000Z</pubTime>
-        
-        <tag>教程</tag>
-         
-        <tag>Nginx</tag>
-         
-        <tag>Java</tag>
-         
-        <tag>Intellij IDEA</tag>
-         
-        <tag>Java视频教程</tag>
-         
-        <tag>项目实战</tag>
-         
-        <tag>分布式</tag>
-         
-        <tag>SSM</tag>
-         
-        <tag>码农商城</tag>
-         
-        <tag>EasyUI</tag>
-         
-        <tag>商品分类管理</tag>
-         
-        <tag>FastDFS</tag>
-         
-        <tag>SecureCRT</tag>
-         
-        <tag>文件服务器</tag>
-         
-        <tag>上传下载</tag>
-         
-        <tag>postman</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="http://www.ubuntu520.com/categories/Java/"/>
-          
-             
-              <breadCrumb title="Java SSM视频教程" url="http://www.ubuntu520.com/categories/Java/Java-SSM%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.ubuntu520.com/java-ssm-6-4.html</loc>
-    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
-    <data>
-        <display>
-        <title>「6-4」rest系统提供商城首页分类导航的json数据</title>
-        <pubTime>2019-02-22T11:56:10.000Z</pubTime>
-        
-        <tag>码农商城</tag>
-         
-        <tag>json</tag>
-         
-        <tag>rest</tag>
-         
-        <tag>rest接口java</tag>
-         
-        <tag>商城首页分类导航</tag>
          
          
            
@@ -2466,24 +2388,65 @@
 
     
   <url>
-    <loc>http://www.ubuntu520.com/java-ssm-6-6.html</loc>
+    <loc>http://www.ubuntu520.com/java-ssm-6-2.html</loc>
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     <data>
         <display>
-        <title>「6-6」码农商城首页商品数据的展示</title>
-        <pubTime>2019-03-17T14:46:28.000Z</pubTime>
+        <title>「6-2」门户系统 Portal 所涉及到的功能介绍及静态首页的添加</title>
+        <pubTime>2019-01-17T07:50:36.000Z</pubTime>
         
         <tag>码农商城</tag>
          
-        <tag>httpclient</tag>
+        <tag>Portal</tag>
          
-        <tag>freemarker</tag>
+        <tag>门户系统</tag>
          
-        <tag>商城首页</tag>
          
-        <tag>电商商品数据</tag>
+           
+             
+              <breadCrumb title="Java" url="http://www.ubuntu520.com/categories/Java/"/>
+          
+             
+              <breadCrumb title="Java SSM视频教程" url="http://www.ubuntu520.com/categories/Java/Java-SSM%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.ubuntu520.com/java-ssm-5-6.html</loc>
+    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
+    <data>
+        <display>
+        <title>「5-6」Mybatis分页，DataGrid使用，实现商品列表分页展示</title>
+        <pubTime>2019-01-07T10:06:44.000Z</pubTime>
+        
+        <tag>教程</tag>
          
-        <tag>商品数据</tag>
+        <tag>Intellij IDEA</tag>
+         
+        <tag>Java</tag>
+         
+        <tag>Java视频教程</tag>
+         
+        <tag>项目实战</tag>
+         
+        <tag>分布式</tag>
+         
+        <tag>SSM</tag>
+         
+        <tag>码农商城</tag>
+         
+        <tag>EasyUI</tag>
+         
+        <tag>商品</tag>
+         
+        <tag>Jqury</tag>
+         
+        <tag>easyui文件上传</tag>
+         
+        <tag>ajaxFileUpload</tag>
          
          
            
@@ -2528,47 +2491,24 @@
 
     
   <url>
-    <loc>http://www.ubuntu520.com/java-ssm-6-5.html</loc>
+    <loc>http://www.ubuntu520.com/java-ssm-6-6.html</loc>
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     <data>
         <display>
-        <title>「6-5」 httpclient+freemarker实现商城首页分类的导航数据展示</title>
-        <pubTime>2019-02-23T16:03:33.000Z</pubTime>
+        <title>「6-6」码农商城首页商品数据的展示</title>
+        <pubTime>2019-03-17T14:46:28.000Z</pubTime>
         
         <tag>码农商城</tag>
-         
-        <tag>商城首页分类导航</tag>
          
         <tag>httpclient</tag>
          
         <tag>freemarker</tag>
          
+        <tag>商城首页</tag>
          
-           
-             
-              <breadCrumb title="Java" url="http://www.ubuntu520.com/categories/Java/"/>
-          
-             
-              <breadCrumb title="Java SSM视频教程" url="http://www.ubuntu520.com/categories/Java/Java-SSM%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.ubuntu520.com/java-ssm-6-2.html</loc>
-    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
-    <data>
-        <display>
-        <title>「6-2」门户系统 Portal 所涉及到的功能介绍及静态首页的添加</title>
-        <pubTime>2019-01-17T07:50:36.000Z</pubTime>
-        
-        <tag>码农商城</tag>
+        <tag>电商商品数据</tag>
          
-        <tag>Portal</tag>
-         
-        <tag>门户系统</tag>
+        <tag>商品数据</tag>
          
          
            
@@ -2584,62 +2524,22 @@
 
     
   <url>
-    <loc>http://www.ubuntu520.com/java-ssm-video.html</loc>
+    <loc>http://www.ubuntu520.com/java-ssm-6-4.html</loc>
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     <data>
         <display>
-        <title>Java进阶SSM分布式项目实战视频教程</title>
-        <pubTime>2018-09-10T07:42:30.000Z</pubTime>
+        <title>「6-4」rest系统提供商城首页分类导航的json数据</title>
+        <pubTime>2019-02-22T11:56:10.000Z</pubTime>
         
-        <tag>Git</tag>
-         
-        <tag>Nginx</tag>
-         
-        <tag>Java</tag>
-         
-        <tag>MySQL</tag>
-         
-        <tag>项目实战</tag>
-         
-        <tag>分布式</tag>
-         
         <tag>码农商城</tag>
          
-        <tag>Maven</tag>
+        <tag>rest</tag>
          
-        <tag>EasyUI</tag>
+        <tag>json</tag>
          
-        <tag>Spring</tag>
+        <tag>rest接口java</tag>
          
-        <tag>Spring MVC</tag>
-         
-        <tag>Mybatis</tag>
-         
-        <tag>UEditor</tag>
-         
-        <tag>postman</tag>
-         
-        <tag>SSM视频教程</tag>
-         
-        <tag>redis</tag>
-         
-        <tag>solor</tag>
-         
-        <tag>JQuery</tag>
-         
-        <tag>Freemark</tag>
-         
-        <tag>activMQ</tag>
-         
-        <tag>httpClient</tag>
-         
-        <tag>InteliJ IDEA</tag>
-         
-        <tag>Tomcat7</tag>
-         
-        <tag>JDK</tag>
-         
-        <tag>sqlyog</tag>
+        <tag>商城首页分类导航</tag>
          
          
            
@@ -2688,6 +2588,106 @@
 
     
   <url>
+    <loc>http://www.ubuntu520.com/java-ssm-6-5.html</loc>
+    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
+    <data>
+        <display>
+        <title>「6-5」 httpclient+freemarker实现商城首页分类的导航数据展示</title>
+        <pubTime>2019-02-23T16:03:33.000Z</pubTime>
+        
+        <tag>码农商城</tag>
+         
+        <tag>httpclient</tag>
+         
+        <tag>freemarker</tag>
+         
+        <tag>商城首页分类导航</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java" url="http://www.ubuntu520.com/categories/Java/"/>
+          
+             
+              <breadCrumb title="Java SSM视频教程" url="http://www.ubuntu520.com/categories/Java/Java-SSM%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.ubuntu520.com/java-ssm-video.html</loc>
+    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
+    <data>
+        <display>
+        <title>Java进阶SSM分布式项目实战视频教程</title>
+        <pubTime>2018-09-10T07:42:30.000Z</pubTime>
+        
+        <tag>Git</tag>
+         
+        <tag>Nginx</tag>
+         
+        <tag>Java</tag>
+         
+        <tag>MySQL</tag>
+         
+        <tag>项目实战</tag>
+         
+        <tag>分布式</tag>
+         
+        <tag>码农商城</tag>
+         
+        <tag>Maven</tag>
+         
+        <tag>EasyUI</tag>
+         
+        <tag>Spring</tag>
+         
+        <tag>Spring MVC</tag>
+         
+        <tag>Mybatis</tag>
+         
+        <tag>postman</tag>
+         
+        <tag>UEditor</tag>
+         
+        <tag>SSM视频教程</tag>
+         
+        <tag>redis</tag>
+         
+        <tag>solor</tag>
+         
+        <tag>JQuery</tag>
+         
+        <tag>Freemark</tag>
+         
+        <tag>activMQ</tag>
+         
+        <tag>httpClient</tag>
+         
+        <tag>InteliJ IDEA</tag>
+         
+        <tag>Tomcat7</tag>
+         
+        <tag>JDK</tag>
+         
+        <tag>sqlyog</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java" url="http://www.ubuntu520.com/categories/Java/"/>
+          
+             
+              <breadCrumb title="Java SSM视频教程" url="http://www.ubuntu520.com/categories/Java/Java-SSM%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.ubuntu520.com/jian-xin-ji-lei-zhe-jian-niu-bi-de-shi.html</loc>
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     <data>
@@ -2711,6 +2711,40 @@
            
              
               <breadCrumb title="个人成长" url="http://www.ubuntu520.com/categories/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.ubuntu520.com/java-xue-xi-lu-xian.html</loc>
+    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
+    <data>
+        <display>
+        <title>java程序员的学习路线-java web学习资源及必备书籍清单</title>
+        <pubTime>2020-02-20T07:34:27.000Z</pubTime>
+        
+        <tag>java</tag>
+         
+        <tag>java程序员</tag>
+         
+        <tag>java学习路线</tag>
+         
+        <tag>java书籍清单</tag>
+         
+        <tag>java学习论坛</tag>
+         
+        <tag>java学习博客</tag>
+         
+        <tag>java学习路径图</tag>
+         
+        <tag>java web</tag>
+         
+         
+           
+             
+              <breadCrumb title="java" url="http://www.ubuntu520.com/categories/java/"/>
           
         </display>
     </data>
@@ -2747,40 +2781,6 @@
               <breadCrumb title="个人理财" url="http://www.ubuntu520.com/categories/podcast/%E8%82%AF%E5%AE%9A%E4%BC%9A%E7%94%B5%E5%8F%B0/%E4%B8%AA%E4%BA%BA%E7%90%86%E8%B4%A2/"/>
           
              
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.ubuntu520.com/java-xue-xi-lu-xian.html</loc>
-    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
-    <data>
-        <display>
-        <title>java程序员的学习路线-java web学习资源及必备书籍清单</title>
-        <pubTime>2020-02-20T07:34:27.000Z</pubTime>
-        
-        <tag>java</tag>
-         
-        <tag>java程序员</tag>
-         
-        <tag>java学习路线</tag>
-         
-        <tag>java书籍清单</tag>
-         
-        <tag>java学习论坛</tag>
-         
-        <tag>java学习博客</tag>
-         
-        <tag>java学习路径图</tag>
-         
-        <tag>java web</tag>
-         
-         
-           
-             
-              <breadCrumb title="java" url="http://www.ubuntu520.com/categories/java/"/>
-          
         </display>
     </data>
     </url>
@@ -2973,30 +2973,6 @@
 
     
   <url>
-    <loc>http://www.ubuntu520.com/programing-experience.html</loc>
-    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
-    <data>
-        <display>
-        <title>编程人生中的两个小经验</title>
-        <pubTime>2018-07-12T13:55:11.000Z</pubTime>
-        
-        <tag>个人提升</tag>
-         
-        <tag>编程</tag>
-         
-        <tag>关于wistbean</tag>
-         
-         
-           
-             
-              <breadCrumb title="经验分享" url="http://www.ubuntu520.com/categories/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.ubuntu520.com/present.html</loc>
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     <data>
@@ -3027,6 +3003,30 @@
 
     
   <url>
+    <loc>http://www.ubuntu520.com/programing-experience.html</loc>
+    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
+    <data>
+        <display>
+        <title>编程人生中的两个小经验</title>
+        <pubTime>2018-07-12T13:55:11.000Z</pubTime>
+        
+        <tag>个人提升</tag>
+         
+        <tag>编程</tag>
+         
+        <tag>关于wistbean</tag>
+         
+         
+           
+             
+              <breadCrumb title="经验分享" url="http://www.ubuntu520.com/categories/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.ubuntu520.com/product-thinking.html</loc>
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     <data>
@@ -3048,35 +3048,6 @@
           
              
               <breadCrumb title="互联网" url="http://www.ubuntu520.com/categories/podcast/%E8%82%AF%E5%AE%9A%E4%BC%9A%E7%94%B5%E5%8F%B0/%E4%BA%92%E8%81%94%E7%BD%91/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.ubuntu520.com/pycharm-01.html</loc>
-    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
-    <data>
-        <display>
-        <title>PyCharm 使用教程：01 安装PyCharm</title>
-        <pubTime>2018-09-23T06:21:00.000Z</pubTime>
-        
-        <tag>教程</tag>
-         
-        <tag>python</tag>
-         
-        <tag>PyCharm</tag>
-         
-        <tag>工具使用</tag>
-         
-         
-           
-             
-              <breadCrumb title="python" url="http://www.ubuntu520.com/categories/python/"/>
-          
-             
-              <breadCrumb title="PyCharm" url="http://www.ubuntu520.com/categories/python/PyCharm/"/>
           
         </display>
     </data>
@@ -3113,12 +3084,41 @@
 
     
   <url>
-    <loc>http://www.ubuntu520.com/python-spider-dangdang.html</loc>
+    <loc>http://www.ubuntu520.com/pycharm-01.html</loc>
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     <data>
         <display>
-        <title>Python爬取当当网最受欢迎的 500 本书</title>
-        <pubTime>2018-10-28T08:03:48.000Z</pubTime>
+        <title>PyCharm 使用教程：01 安装PyCharm</title>
+        <pubTime>2018-09-23T06:21:00.000Z</pubTime>
+        
+        <tag>教程</tag>
+         
+        <tag>python</tag>
+         
+        <tag>PyCharm</tag>
+         
+        <tag>工具使用</tag>
+         
+         
+           
+             
+              <breadCrumb title="python" url="http://www.ubuntu520.com/categories/python/"/>
+          
+             
+              <breadCrumb title="PyCharm" url="http://www.ubuntu520.com/categories/python/PyCharm/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.ubuntu520.com/python-spider-meizi.html</loc>
+    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
+    <data>
+        <display>
+        <title>Python爬虫基础：爬取妹子图片并保存到本地</title>
+        <pubTime>2018-10-13T17:27:16.000Z</pubTime>
         
         <tag>教程</tag>
          
@@ -3177,32 +3177,6 @@
 
     
   <url>
-    <loc>http://www.ubuntu520.com/python-spider-meizi.html</loc>
-    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
-    <data>
-        <display>
-        <title>Python爬虫基础：爬取妹子图片并保存到本地</title>
-        <pubTime>2018-10-13T17:27:16.000Z</pubTime>
-        
-        <tag>教程</tag>
-         
-        <tag>python</tag>
-         
-        <tag>python爬虫</tag>
-         
-        <tag>python基础</tag>
-         
-         
-           
-             
-              <breadCrumb title="python" url="http://www.ubuntu520.com/categories/python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.ubuntu520.com/python-spider-shuaige.html</loc>
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     <data>
@@ -3229,12 +3203,12 @@
 
     
   <url>
-    <loc>http://www.ubuntu520.com/python-spider-wechat.html</loc>
+    <loc>http://www.ubuntu520.com/python-spider-dangdang.html</loc>
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     <data>
         <display>
-        <title>python爬取微信好友数据，分析后我好像知道了些什么</title>
-        <pubTime>2018-11-07T14:43:43.000Z</pubTime>
+        <title>Python爬取当当网最受欢迎的 500 本书</title>
+        <pubTime>2018-10-28T08:03:48.000Z</pubTime>
         
         <tag>教程</tag>
          
@@ -3248,9 +3222,6 @@
            
              
               <breadCrumb title="python" url="http://www.ubuntu520.com/categories/python/"/>
-          
-             
-              <breadCrumb title="python爬虫" url="http://www.ubuntu520.com/categories/python/python%E7%88%AC%E8%99%AB/"/>
           
         </display>
     </data>
@@ -3317,6 +3288,61 @@
 
     
   <url>
+    <loc>http://www.ubuntu520.com/python-spider-wechat.html</loc>
+    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
+    <data>
+        <display>
+        <title>python爬取微信好友数据，分析后我好像知道了些什么</title>
+        <pubTime>2018-11-07T14:43:43.000Z</pubTime>
+        
+        <tag>教程</tag>
+         
+        <tag>python</tag>
+         
+        <tag>python爬虫</tag>
+         
+        <tag>python基础</tag>
+         
+         
+           
+             
+              <breadCrumb title="python" url="http://www.ubuntu520.com/categories/python/"/>
+          
+             
+              <breadCrumb title="python爬虫" url="http://www.ubuntu520.com/categories/python/python%E7%88%AC%E8%99%AB/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.ubuntu520.com/python-web-fxxkpython-spider-tutorial-11.html</loc>
+    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
+    <data>
+        <display>
+        <title>python爬虫18 | 就算你被封了也能继续爬，使用IP代理池伪装你的IP地址，让IP飘一会</title>
+        <pubTime>2019-05-12T09:20:03.000Z</pubTime>
+        
+        <tag>python</tag>
+         
+        <tag>python3爬虫教程</tag>
+         
+        <tag>python 爬虫入门教程</tag>
+         
+        <tag>python3爬虫</tag>
+         
+         
+           
+             
+              <breadCrumb title="python" url="http://www.ubuntu520.com/categories/python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.ubuntu520.com/python-web-fxxkpython-spider-tutorial-13.html</loc>
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     <data>
@@ -3343,12 +3369,12 @@
 
     
   <url>
-    <loc>http://www.ubuntu520.com/python-web-fxxkpython-spider-tutorial-4.html</loc>
+    <loc>http://www.ubuntu520.com/python-web-fxxkpython-spider-tutorial-7.html</loc>
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     <data>
         <display>
-        <title>python爬虫25 | 爬取下来的数据怎么保存？ CSV 了解一下</title>
-        <pubTime>2019-05-05T09:20:03.000Z</pubTime>
+        <title>python爬虫22 | 以后我再讲「模拟登录」我就是狗</title>
+        <pubTime>2019-05-08T09:20:03.000Z</pubTime>
         
         <tag>python</tag>
          
@@ -3392,32 +3418,6 @@
            
              
               <breadCrumb title="python3系列爬虫教程" url="http://www.ubuntu520.com/categories/python3%E7%B3%BB%E5%88%97%E7%88%AC%E8%99%AB%E6%95%99%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.ubuntu520.com/python-web-fxxkpython-spider-tutorial-11.html</loc>
-    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
-    <data>
-        <display>
-        <title>python爬虫18 | 就算你被封了也能继续爬，使用IP代理池伪装你的IP地址，让IP飘一会</title>
-        <pubTime>2019-05-12T09:20:03.000Z</pubTime>
-        
-        <tag>python</tag>
-         
-        <tag>python3爬虫教程</tag>
-         
-        <tag>python 爬虫入门教程</tag>
-         
-        <tag>python3爬虫</tag>
-         
-         
-           
-             
-              <breadCrumb title="python" url="http://www.ubuntu520.com/categories/python/"/>
           
         </display>
     </data>
@@ -3505,12 +3505,12 @@
 
     
   <url>
-    <loc>http://www.ubuntu520.com/python-web-fxxkpython-spider-tutorial-7.html</loc>
+    <loc>http://www.ubuntu520.com/python-web-fxxkpython-spider-tutorial-4.html</loc>
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     <data>
         <display>
-        <title>python爬虫22 | 以后我再讲「模拟登录」我就是狗</title>
-        <pubTime>2019-05-08T09:20:03.000Z</pubTime>
+        <title>python爬虫25 | 爬取下来的数据怎么保存？ CSV 了解一下</title>
+        <pubTime>2019-05-05T09:20:03.000Z</pubTime>
         
         <tag>python</tag>
          
@@ -3524,6 +3524,54 @@
            
              
               <breadCrumb title="python" url="http://www.ubuntu520.com/categories/python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.ubuntu520.com/start-learning-linux.html</loc>
+    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
+    <data>
+        <display>
+        <title>Linux 学习启动篇</title>
+        <pubTime>2017-03-31T09:25:18.000Z</pubTime>
+        
+        <tag>教程</tag>
+         
+        <tag>Linux</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://www.ubuntu520.com/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.ubuntu520.com/python3-web-fxxkpython-spider-tutorial-3.html</loc>
+    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
+    <data>
+        <display>
+        <title>高考要来了，扒一扒历年高考录取分数来压压惊</title>
+        <pubTime>2019-06-04T09:20:03.000Z</pubTime>
+        
+        <tag>python</tag>
+         
+        <tag>python3爬虫教程</tag>
+         
+        <tag>python 爬虫入门教程</tag>
+         
+        <tag>python3爬虫</tag>
+         
+         
+           
+             
+              <breadCrumb title="python3爬虫教程" url="http://www.ubuntu520.com/categories/python3%E7%88%AC%E8%99%AB%E6%95%99%E7%A8%8B/"/>
           
         </display>
     </data>
@@ -3579,28 +3627,6 @@
 
     
   <url>
-    <loc>http://www.ubuntu520.com/start-learning-linux.html</loc>
-    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
-    <data>
-        <display>
-        <title>Linux 学习启动篇</title>
-        <pubTime>2017-03-31T09:25:18.000Z</pubTime>
-        
-        <tag>教程</tag>
-         
-        <tag>Linux</tag>
-         
-         
-           
-             
-              <breadCrumb title="Linux" url="http://www.ubuntu520.com/categories/Linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.ubuntu520.com/use-banwagong.html</loc>
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     <data>
@@ -3620,37 +3646,6 @@
              
               <breadCrumb title="搬瓦工" url="http://www.ubuntu520.com/categories/vpn/%E6%90%AC%E7%93%A6%E5%B7%A5/"/>
           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.ubuntu520.com/valuable-place.html</loc>
-    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
-    <data>
-        <display>
-        <title>这些非常有价值的学习网站，你知道几个？</title>
-        <pubTime>2018-11-22T13:02:08.000Z</pubTime>
-        
-        <tag>肯定会电台</tag>
-         
-        <tag>互联网</tag>
-         
-        <tag>资源推荐</tag>
-         
-         
-           
-             
-              <breadCrumb title="podcast" url="http://www.ubuntu520.com/categories/podcast/"/>
-          
-             
-              <breadCrumb title="肯定会电台" url="http://www.ubuntu520.com/categories/podcast/%E8%82%AF%E5%AE%9A%E4%BC%9A%E7%94%B5%E5%8F%B0/"/>
-          
-             
-              <breadCrumb title="资源推荐" url="http://www.ubuntu520.com/categories/podcast/%E8%82%AF%E5%AE%9A%E4%BC%9A%E7%94%B5%E5%8F%B0/%E8%B5%84%E6%BA%90%E6%8E%A8%E8%8D%90/"/>
-          
-             
         </display>
     </data>
     </url>
@@ -3745,6 +3740,126 @@
 
     
   <url>
+    <loc>http://www.ubuntu520.com/valuable-place.html</loc>
+    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
+    <data>
+        <display>
+        <title>这些非常有价值的学习网站，你知道几个？</title>
+        <pubTime>2018-11-22T13:02:08.000Z</pubTime>
+        
+        <tag>肯定会电台</tag>
+         
+        <tag>互联网</tag>
+         
+        <tag>资源推荐</tag>
+         
+         
+           
+             
+              <breadCrumb title="podcast" url="http://www.ubuntu520.com/categories/podcast/"/>
+          
+             
+              <breadCrumb title="肯定会电台" url="http://www.ubuntu520.com/categories/podcast/%E8%82%AF%E5%AE%9A%E4%BC%9A%E7%94%B5%E5%8F%B0/"/>
+          
+             
+              <breadCrumb title="资源推荐" url="http://www.ubuntu520.com/categories/podcast/%E8%82%AF%E5%AE%9A%E4%BC%9A%E7%94%B5%E5%8F%B0/%E8%B5%84%E6%BA%90%E6%8E%A8%E8%8D%90/"/>
+          
+             
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.ubuntu520.com/vultr-25-December-vps-coupon.html</loc>
+    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
+    <data>
+        <display>
+        <title>2019年 vultr vps优惠送50美元</title>
+        <pubTime>2019-01-31T16:40:36.000Z</pubTime>
+        
+        <tag>互联网</tag>
+         
+        <tag>vultr</tag>
+         
+        <tag>搭建ss</tag>
+         
+        <tag>vpn</tag>
+         
+        <tag>vultr优惠码</tag>
+         
+         
+           
+             
+              <breadCrumb title="vultr" url="http://www.ubuntu520.com/categories/vultr/"/>
+          
+             
+              <breadCrumb title="vpn" url="http://www.ubuntu520.com/categories/vultr/vpn/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.ubuntu520.com/vultr-ssr-bbr-build-quick.html</loc>
+    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
+    <data>
+        <display>
+        <title>优惠购买境外服务器vultr一键快速搭建自己的ssr并开启bbr加速访问vpn教程</title>
+        <pubTime>2019-04-03T07:14:40.000Z</pubTime>
+        
+        <tag>互联网</tag>
+         
+        <tag>vultr</tag>
+         
+        <tag>vpn</tag>
+         
+        <tag>vultr优惠码</tag>
+         
+        <tag>搭建ssr</tag>
+         
+        <tag>搭建自己的vpn</tag>
+         
+        <tag>国外服务器搭建vpn</tag>
+         
+        <tag>shadowsock搭建vpn</tag>
+         
+        <tag>怎么搭建属于自己的vpn</tag>
+         
+        <tag>自己搭建vpn服务器</tag>
+         
+        <tag>vultr搭建vpn</tag>
+         
+        <tag>bbr</tag>
+         
+        <tag>ssr链接</tag>
+         
+        <tag>访问youtube</tag>
+         
+        <tag>如何访问谷歌</tag>
+         
+        <tag>vultr搭建ss/ssr教程最新完整版</tag>
+         
+        <tag>vultr搭建ss shadowsocks教程-超详细</tag>
+         
+         
+           
+             
+              <breadCrumb title="vpn" url="http://www.ubuntu520.com/categories/vpn/"/>
+          
+             
+              <breadCrumb title="vps" url="http://www.ubuntu520.com/categories/vpn/vps/"/>
+          
+             
+              <breadCrumb title="vultr" url="http://www.ubuntu520.com/categories/vpn/vps/vultr/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.ubuntu520.com/vultr-give-50-dollars-coupon.html</loc>
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     <data>
@@ -3784,121 +3899,6 @@
           
              
               <breadCrumb title="vps" url="http://www.ubuntu520.com/categories/vultr/vpn/vps/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.ubuntu520.com/vultr-25-December-vps-coupon.html</loc>
-    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
-    <data>
-        <display>
-        <title>2019年 vultr vps优惠送50美元</title>
-        <pubTime>2019-01-31T16:40:36.000Z</pubTime>
-        
-        <tag>互联网</tag>
-         
-        <tag>vultr</tag>
-         
-        <tag>搭建ss</tag>
-         
-        <tag>vpn</tag>
-         
-        <tag>vultr优惠码</tag>
-         
-         
-           
-             
-              <breadCrumb title="vultr" url="http://www.ubuntu520.com/categories/vultr/"/>
-          
-             
-              <breadCrumb title="vpn" url="http://www.ubuntu520.com/categories/vultr/vpn/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.ubuntu520.com/python3-web-fxxkpython-spider-tutorial-3.html</loc>
-    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
-    <data>
-        <display>
-        <title>高考要来了，扒一扒历年高考录取分数来压压惊</title>
-        <pubTime>2019-06-04T09:20:03.000Z</pubTime>
-        
-        <tag>python</tag>
-         
-        <tag>python3爬虫教程</tag>
-         
-        <tag>python 爬虫入门教程</tag>
-         
-        <tag>python3爬虫</tag>
-         
-         
-           
-             
-              <breadCrumb title="python3爬虫教程" url="http://www.ubuntu520.com/categories/python3%E7%88%AC%E8%99%AB%E6%95%99%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.ubuntu520.com/vultr-ssr-bbr-build-quick.html</loc>
-    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
-    <data>
-        <display>
-        <title>优惠购买境外服务器vultr一键快速搭建自己的ssr并开启bbr加速访问vpn教程</title>
-        <pubTime>2019-04-03T07:14:40.000Z</pubTime>
-        
-        <tag>互联网</tag>
-         
-        <tag>vultr</tag>
-         
-        <tag>vpn</tag>
-         
-        <tag>vultr优惠码</tag>
-         
-        <tag>搭建自己的vpn</tag>
-         
-        <tag>国外服务器搭建vpn</tag>
-         
-        <tag>shadowsock搭建vpn</tag>
-         
-        <tag>怎么搭建属于自己的vpn</tag>
-         
-        <tag>自己搭建vpn服务器</tag>
-         
-        <tag>vultr搭建vpn</tag>
-         
-        <tag>搭建ssr</tag>
-         
-        <tag>bbr</tag>
-         
-        <tag>ssr链接</tag>
-         
-        <tag>访问youtube</tag>
-         
-        <tag>如何访问谷歌</tag>
-         
-        <tag>vultr搭建ss/ssr教程最新完整版</tag>
-         
-        <tag>vultr搭建ss shadowsocks教程-超详细</tag>
-         
-         
-           
-             
-              <breadCrumb title="vpn" url="http://www.ubuntu520.com/categories/vpn/"/>
-          
-             
-              <breadCrumb title="vps" url="http://www.ubuntu520.com/categories/vpn/vps/"/>
-          
-             
-              <breadCrumb title="vultr" url="http://www.ubuntu520.com/categories/vpn/vps/vultr/"/>
           
         </display>
     </data>
@@ -3982,32 +3982,6 @@
 
     
   <url>
-    <loc>http://www.ubuntu520.com/python-web-fxxkpython-spider-tutorial-10.html</loc>
-    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
-    <data>
-        <display>
-        <title>python爬虫19 | 遇到需要的登录的网站怎么办？用这3招轻松搞定！</title>
-        <pubTime>2019-05-11T09:20:03.000Z</pubTime>
-        
-        <tag>python</tag>
-         
-        <tag>python3爬虫教程</tag>
-         
-        <tag>python 爬虫入门教程</tag>
-         
-        <tag>python3爬虫</tag>
-         
-         
-           
-             
-              <breadCrumb title="python" url="http://www.ubuntu520.com/categories/python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.ubuntu520.com/python-web-fxxkpython-spider-tutorial-0.html</loc>
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     <data>
@@ -4034,12 +4008,12 @@
 
     
   <url>
-    <loc>http://www.ubuntu520.com/python-web-fxxkpython-spider-tutorial-14.html</loc>
+    <loc>http://www.ubuntu520.com/python-web-fxxkpython-spider-tutorial-10.html</loc>
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     <data>
         <display>
-        <title>python爬虫15 | 害羞，用多线程秒爬那些万恶的妹纸们，纸巾呢？</title>
-        <pubTime>2019-05-15T09:20:03.000Z</pubTime>
+        <title>python爬虫19 | 遇到需要的登录的网站怎么办？用这3招轻松搞定！</title>
+        <pubTime>2019-05-11T09:20:03.000Z</pubTime>
         
         <tag>python</tag>
          
@@ -4086,6 +4060,32 @@
 
     
   <url>
+    <loc>http://www.ubuntu520.com/python-web-fxxkpython-spider-tutorial-14.html</loc>
+    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
+    <data>
+        <display>
+        <title>python爬虫15 | 害羞，用多线程秒爬那些万恶的妹纸们，纸巾呢？</title>
+        <pubTime>2019-05-15T09:20:03.000Z</pubTime>
+        
+        <tag>python</tag>
+         
+        <tag>python3爬虫教程</tag>
+         
+        <tag>python 爬虫入门教程</tag>
+         
+        <tag>python3爬虫</tag>
+         
+         
+           
+             
+              <breadCrumb title="python" url="http://www.ubuntu520.com/categories/python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.ubuntu520.com/python-web-fxxkpython-spider-tutorial-18.html</loc>
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     <data>
@@ -4112,12 +4112,12 @@
 
     
   <url>
-    <loc>http://www.ubuntu520.com/python-web-fxxkpython-spider-tutorial-2.html</loc>
+    <loc>http://www.ubuntu520.com/python-web-fxxkpython-spider-tutorial-19.html</loc>
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     <data>
         <display>
-        <title>python爬虫27 | 当Python遇到MongoDB的时候，存储av女优的数据变得如此顺滑爽～</title>
-        <pubTime>2019-05-03T09:20:03.000Z</pubTime>
+        <title>python爬虫10 | 网站维护人员：真的求求你们了，不要再来爬取了！！</title>
+        <pubTime>2019-05-20T09:20:03.000Z</pubTime>
         
         <tag>python</tag>
          
@@ -4144,58 +4144,6 @@
         <display>
         <title>python爬虫09 | 上来，自己动 ！这就是 selenium 的牛逼之处</title>
         <pubTime>2019-05-21T09:20:03.000Z</pubTime>
-        
-        <tag>python</tag>
-         
-        <tag>python3爬虫教程</tag>
-         
-        <tag>python 爬虫入门教程</tag>
-         
-        <tag>python3爬虫</tag>
-         
-         
-           
-             
-              <breadCrumb title="python" url="http://www.ubuntu520.com/categories/python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.ubuntu520.com/python-web-fxxkpython-spider-tutorial-25.html</loc>
-    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
-    <data>
-        <display>
-        <title>python爬虫04 | 长江后浪推前浪，Reuqests库把urllib库拍在沙滩上</title>
-        <pubTime>2019-05-26T09:20:03.000Z</pubTime>
-        
-        <tag>python</tag>
-         
-        <tag>python3爬虫教程</tag>
-         
-        <tag>python 爬虫入门教程</tag>
-         
-        <tag>python3爬虫</tag>
-         
-         
-           
-             
-              <breadCrumb title="python" url="http://www.ubuntu520.com/categories/python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.ubuntu520.com/python-web-fxxkpython-spider-tutorial-23.html</loc>
-    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
-    <data>
-        <display>
-        <title>python爬虫06 | 你的第一个爬虫，爬取当当网 Top 500 本五星好评书籍</title>
-        <pubTime>2019-05-24T09:20:03.000Z</pubTime>
         
         <tag>python</tag>
          
@@ -4268,12 +4216,12 @@
 
     
   <url>
-    <loc>http://www.ubuntu520.com/python-web-fxxkpython-spider-tutorial-19.html</loc>
+    <loc>http://www.ubuntu520.com/python-web-fxxkpython-spider-tutorial-2.html</loc>
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     <data>
         <display>
-        <title>python爬虫10 | 网站维护人员：真的求求你们了，不要再来爬取了！！</title>
-        <pubTime>2019-05-20T09:20:03.000Z</pubTime>
+        <title>python爬虫27 | 当Python遇到MongoDB的时候，存储av女优的数据变得如此顺滑爽～</title>
+        <pubTime>2019-05-03T09:20:03.000Z</pubTime>
         
         <tag>python</tag>
          
@@ -4294,12 +4242,12 @@
 
     
   <url>
-    <loc>http://www.ubuntu520.com/python-web-fxxkpython-spider-tutorial-28.html</loc>
+    <loc>http://www.ubuntu520.com/python-web-fxxkpython-spider-tutorial-23.html</loc>
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     <data>
         <display>
-        <title>python爬虫入门01：教你在 Chrome 浏览器轻松抓包</title>
-        <pubTime>2019-05-29T09:20:03.000Z</pubTime>
+        <title>python爬虫06 | 你的第一个爬虫，爬取当当网 Top 500 本五星好评书籍</title>
+        <pubTime>2019-05-24T09:20:03.000Z</pubTime>
         
         <tag>python</tag>
          
@@ -4346,12 +4294,38 @@
 
     
   <url>
-    <loc>http://www.ubuntu520.com/python-web-fxxkpython-spider-tutorial-6.html</loc>
+    <loc>http://www.ubuntu520.com/python-web-fxxkpython-spider-tutorial-28.html</loc>
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     <data>
         <display>
-        <title>python爬虫23 | 手机，这次要让你上来自己动了。这就是 Appium+Python 的牛x之处</title>
-        <pubTime>2019-05-07T09:20:03.000Z</pubTime>
+        <title>python爬虫入门01：教你在 Chrome 浏览器轻松抓包</title>
+        <pubTime>2019-05-29T09:20:03.000Z</pubTime>
+        
+        <tag>python</tag>
+         
+        <tag>python3爬虫教程</tag>
+         
+        <tag>python 爬虫入门教程</tag>
+         
+        <tag>python3爬虫</tag>
+         
+         
+           
+             
+              <breadCrumb title="python" url="http://www.ubuntu520.com/categories/python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.ubuntu520.com/python-web-fxxkpython-spider-tutorial-25.html</loc>
+    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
+    <data>
+        <display>
+        <title>python爬虫04 | 长江后浪推前浪，Reuqests库把urllib库拍在沙滩上</title>
+        <pubTime>2019-05-26T09:20:03.000Z</pubTime>
         
         <tag>python</tag>
          
@@ -4398,12 +4372,12 @@
 
     
   <url>
-    <loc>http://www.ubuntu520.com/python3-web-fxxkpython-spider-tutorial-0.html</loc>
+    <loc>http://www.ubuntu520.com/python-web-fxxkpython-spider-tutorial-6.html</loc>
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     <data>
         <display>
-        <title>python爬虫30 | scrapy后续，把「糗事百科」的段子爬下来然后存到数据库中</title>
-        <pubTime>2019-06-01T09:20:03.000Z</pubTime>
+        <title>python爬虫23 | 手机，这次要让你上来自己动了。这就是 Appium+Python 的牛x之处</title>
+        <pubTime>2019-05-07T09:20:03.000Z</pubTime>
         
         <tag>python</tag>
          
@@ -4416,33 +4390,7 @@
          
            
              
-              <breadCrumb title="python3爬虫教程" url="http://www.ubuntu520.com/categories/python3%E7%88%AC%E8%99%AB%E6%95%99%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.ubuntu520.com/python3-web-fxxkpython-spider-tutorial-1.html</loc>
-    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
-    <data>
-        <display>
-        <title>python爬取 20w 表情包之后，从此你就成为了微信斗图届的高手</title>
-        <pubTime>2019-06-02T09:20:03.000Z</pubTime>
-        
-        <tag>python</tag>
-         
-        <tag>python3爬虫教程</tag>
-         
-        <tag>python 爬虫入门教程</tag>
-         
-        <tag>python3爬虫</tag>
-         
-         
-           
-             
-              <breadCrumb title="python3爬虫教程" url="http://www.ubuntu520.com/categories/python3%E7%88%AC%E8%99%AB%E6%95%99%E7%A8%8B/"/>
+              <breadCrumb title="python" url="http://www.ubuntu520.com/categories/python/"/>
           
         </display>
     </data>
@@ -4476,38 +4424,12 @@
 
     
   <url>
-    <loc>http://www.ubuntu520.com/python3-web-fxxkpython-spider-tutorial-2.html</loc>
+    <loc>http://www.ubuntu520.com/python3-web-fxxkpython-spider-tutorial-0.html</loc>
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     <data>
         <display>
-        <title>python爬取你喜欢的公众号的所有原创文章，然后搞成PDF慢慢看</title>
-        <pubTime>2019-06-03T09:20:03.000Z</pubTime>
-        
-        <tag>python</tag>
-         
-        <tag>python3爬虫教程</tag>
-         
-        <tag>python 爬虫入门教程</tag>
-         
-        <tag>python3爬虫</tag>
-         
-         
-           
-             
-              <breadCrumb title="python3爬虫教程" url="http://www.ubuntu520.com/categories/python3%E7%88%AC%E8%99%AB%E6%95%99%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.ubuntu520.com/python3-web-fxxkpython-spider-tutorial-12.html</loc>
-    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
-    <data>
-        <display>
-        <title>哇靠，这些数据疯狂变化，该怎么爬取？</title>
-        <pubTime>2019-06-13T09:20:03.000Z</pubTime>
+        <title>python爬虫30 | scrapy后续，把「糗事百科」的段子爬下来然后存到数据库中</title>
+        <pubTime>2019-06-01T09:20:03.000Z</pubTime>
         
         <tag>python</tag>
          
@@ -4554,12 +4476,12 @@
 
     
   <url>
-    <loc>http://www.ubuntu520.com/python3-web-fxxkpython-spider-tutorial-4.html</loc>
+    <loc>http://www.ubuntu520.com/python3+-web-fxxkpython-spider-tutorial-0.html</loc>
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     <data>
         <display>
-        <title>当 python 遇到你的微信的时候，你才发现原来你的微信好友是这样的</title>
-        <pubTime>2019-06-05T09:20:03.000Z</pubTime>
+        <title>听说你的爬虫一直在整站里循环绕圈圈爬取重复的数据？</title>
+        <pubTime>2019-06-01T09:20:03.000Z</pubTime>
         
         <tag>python</tag>
          
@@ -4606,12 +4528,64 @@
 
     
   <url>
-    <loc>http://www.ubuntu520.com/python3-web-fxxkpython-spider-tutorial-8.html</loc>
+    <loc>http://www.ubuntu520.com/python3-web-fxxkpython-spider-tutorial-1.html</loc>
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     <data>
         <display>
-        <title>给你们说几点鲜有人知的爬虫技巧</title>
-        <pubTime>2019-06-09T09:20:03.000Z</pubTime>
+        <title>python爬取 20w 表情包之后，从此你就成为了微信斗图届的高手</title>
+        <pubTime>2019-06-02T09:20:03.000Z</pubTime>
+        
+        <tag>python</tag>
+         
+        <tag>python3爬虫教程</tag>
+         
+        <tag>python 爬虫入门教程</tag>
+         
+        <tag>python3爬虫</tag>
+         
+         
+           
+             
+              <breadCrumb title="python3爬虫教程" url="http://www.ubuntu520.com/categories/python3%E7%88%AC%E8%99%AB%E6%95%99%E7%A8%8B/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.ubuntu520.com/python3-web-fxxkpython-spider-tutorial-4.html</loc>
+    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
+    <data>
+        <display>
+        <title>当 python 遇到你的微信的时候，你才发现原来你的微信好友是这样的</title>
+        <pubTime>2019-06-05T09:20:03.000Z</pubTime>
+        
+        <tag>python</tag>
+         
+        <tag>python3爬虫教程</tag>
+         
+        <tag>python 爬虫入门教程</tag>
+         
+        <tag>python3爬虫</tag>
+         
+         
+           
+             
+              <breadCrumb title="python3爬虫教程" url="http://www.ubuntu520.com/categories/python3%E7%88%AC%E8%99%AB%E6%95%99%E7%A8%8B/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.ubuntu520.com/python3-web-fxxkpython-spider-tutorial-2.html</loc>
+    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
+    <data>
+        <display>
+        <title>python爬取你喜欢的公众号的所有原创文章，然后搞成PDF慢慢看</title>
+        <pubTime>2019-06-03T09:20:03.000Z</pubTime>
         
         <tag>python</tag>
          
@@ -4658,32 +4632,6 @@
 
     
   <url>
-    <loc>http://www.ubuntu520.com/python3-web-fxxkpython-spider-tutorial-9.html</loc>
-    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
-    <data>
-        <display>
-        <title>随着身子的一阵颤抖，Python爬取抖音上的小姐姐突然变得索然无味</title>
-        <pubTime>2019-06-10T09:20:03.000Z</pubTime>
-        
-        <tag>python</tag>
-         
-        <tag>python3爬虫教程</tag>
-         
-        <tag>python 爬虫入门教程</tag>
-         
-        <tag>python3爬虫</tag>
-         
-         
-           
-             
-              <breadCrumb title="python3爬虫教程" url="http://www.ubuntu520.com/categories/python3%E7%88%AC%E8%99%AB%E6%95%99%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.ubuntu520.com/python3-web-fxxkpython-spider-tutorial-6.html</loc>
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     <data>
@@ -4710,12 +4658,64 @@
 
     
   <url>
-    <loc>http://www.ubuntu520.com/python3+-web-fxxkpython-spider-tutorial-0.html</loc>
+    <loc>http://www.ubuntu520.com/python3-web-fxxkpython-spider-tutorial-8.html</loc>
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     <data>
         <display>
-        <title>听说你的爬虫一直在整站里循环绕圈圈爬取重复的数据？</title>
-        <pubTime>2019-06-01T09:20:03.000Z</pubTime>
+        <title>给你们说几点鲜有人知的爬虫技巧</title>
+        <pubTime>2019-06-09T09:20:03.000Z</pubTime>
+        
+        <tag>python</tag>
+         
+        <tag>python3爬虫教程</tag>
+         
+        <tag>python 爬虫入门教程</tag>
+         
+        <tag>python3爬虫</tag>
+         
+         
+           
+             
+              <breadCrumb title="python3爬虫教程" url="http://www.ubuntu520.com/categories/python3%E7%88%AC%E8%99%AB%E6%95%99%E7%A8%8B/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.ubuntu520.com/python3-web-fxxkpython-spider-tutorial-9.html</loc>
+    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
+    <data>
+        <display>
+        <title>随着身子的一阵颤抖，Python爬取抖音上的小姐姐突然变得索然无味</title>
+        <pubTime>2019-06-10T09:20:03.000Z</pubTime>
+        
+        <tag>python</tag>
+         
+        <tag>python3爬虫教程</tag>
+         
+        <tag>python 爬虫入门教程</tag>
+         
+        <tag>python3爬虫</tag>
+         
+         
+           
+             
+              <breadCrumb title="python3爬虫教程" url="http://www.ubuntu520.com/categories/python3%E7%88%AC%E8%99%AB%E6%95%99%E7%A8%8B/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.ubuntu520.com/python3-web-fxxkpython-spider-tutorial-12.html</loc>
+    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
+    <data>
+        <display>
+        <title>哇靠，这些数据疯狂变化，该怎么爬取？</title>
+        <pubTime>2019-06-13T09:20:03.000Z</pubTime>
         
         <tag>python</tag>
          
@@ -4865,9 +4865,9 @@
         
         <tag>教程</tag>
          
-        <tag>Java</tag>
-         
         <tag>Intellij IDEA</tag>
+         
+        <tag>Java</tag>
          
         <tag>Java视频教程</tag>
          
@@ -4924,32 +4924,6 @@
 
     
   <url>
-    <loc>http://www.ubuntu520.com/python-web-fxxkpython-spider-tutorial-16.html</loc>
-    <lastmod>2020-09-09T11:33:46.000Z</lastmod>
-    <data>
-        <display>
-        <title>python爬虫13 | 秒爬，这多线程爬取速度也太猛了，这次就是要让你的爬虫效率杠杠的</title>
-        <pubTime>2019-05-17T09:20:03.000Z</pubTime>
-        
-        <tag>python</tag>
-         
-        <tag>python3爬虫教程</tag>
-         
-        <tag>python 爬虫入门教程</tag>
-         
-        <tag>python3爬虫</tag>
-         
-         
-           
-             
-              <breadCrumb title="python" url="http://www.ubuntu520.com/categories/python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.ubuntu520.com/python-web-fxxkpython-spider-tutorial-17.html</loc>
     <lastmod>2020-09-09T11:33:46.000Z</lastmod>
     <data>
@@ -4976,12 +4950,12 @@
 
     
   <url>
-    <loc>http://www.ubuntu520.com/python-web-fxxkpython-spider-tutorial-22.html</loc>
+    <loc>http://www.ubuntu520.com/python-web-fxxkpython-spider-tutorial-16.html</loc>
     <lastmod>2020-09-09T11:33:46.000Z</lastmod>
     <data>
         <display>
-        <title>python爬虫07 | 有了 BeautifulSoup ，妈妈再也不用担心我的正则表达式了</title>
-        <pubTime>2019-05-23T09:20:03.000Z</pubTime>
+        <title>python爬虫13 | 秒爬，这多线程爬取速度也太猛了，这次就是要让你的爬虫效率杠杠的</title>
+        <pubTime>2019-05-17T09:20:03.000Z</pubTime>
         
         <tag>python</tag>
          
@@ -5008,6 +4982,32 @@
         <display>
         <title>python爬虫08 | 你的第二个爬虫，要过年了，爬取豆瓣最受欢迎的250部电影慢慢看</title>
         <pubTime>2019-05-22T09:20:03.000Z</pubTime>
+        
+        <tag>python</tag>
+         
+        <tag>python3爬虫教程</tag>
+         
+        <tag>python 爬虫入门教程</tag>
+         
+        <tag>python3爬虫</tag>
+         
+         
+           
+             
+              <breadCrumb title="python" url="http://www.ubuntu520.com/categories/python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.ubuntu520.com/python-web-fxxkpython-spider-tutorial-22.html</loc>
+    <lastmod>2020-09-09T11:33:46.000Z</lastmod>
+    <data>
+        <display>
+        <title>python爬虫07 | 有了 BeautifulSoup ，妈妈再也不用担心我的正则表达式了</title>
+        <pubTime>2019-05-23T09:20:03.000Z</pubTime>
         
         <tag>python</tag>
          
@@ -5165,9 +5165,9 @@
         
         <tag>肯定会</tag>
          
-        <tag>wistbean</tag>
-         
         <tag>个人观点</tag>
+         
+        <tag>wistbean</tag>
          
         <tag>系统</tag>
          
