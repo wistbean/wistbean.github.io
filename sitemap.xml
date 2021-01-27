@@ -2,16 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://www.ubuntu520.com/python-xuexi-zhihu.html</loc>
+    <loc>http://www.ubuntu520.com/wo-zai-github-bei-diss.html</loc>
     
-    <lastmod>2021-01-27T18:02:06.824Z</lastmod>
+    <lastmod>2021-01-27T18:15:06.961Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.ubuntu520.com/python-zhihu-zixue.html</loc>
+    <loc>http://www.ubuntu520.com/python-xuexi-zhihu.html</loc>
     
-    <lastmod>2021-01-27T17:57:21.531Z</lastmod>
+    <lastmod>2021-01-27T18:02:06.824Z</lastmod>
     
   </url>
   
@@ -198,13 +198,6 @@
   </url>
   
   <url>
-    <loc>http://www.ubuntu520.com/abema-tv-is-only-accessiable-with-japan.html</loc>
-    
-    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.ubuntu520.com/FEYNMAN-LEARNING.html</loc>
     
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
@@ -219,6 +212,13 @@
   </url>
   
   <url>
+    <loc>http://www.ubuntu520.com/abema-tv-is-only-accessiable-with-japan.html</loc>
+    
+    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.ubuntu520.com/algorithm-and-data-structure.html</loc>
     
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
@@ -227,6 +227,13 @@
   
   <url>
     <loc>http://www.ubuntu520.com/backups.html</loc>
+    
+    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.ubuntu520.com/banwagong-quick-build-ss.html</loc>
     
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     
@@ -255,13 +262,6 @@
   
   <url>
     <loc>http://www.ubuntu520.com/banwagong-vpn.html</loc>
-    
-    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.ubuntu520.com/banwagong-quick-build-ss.html</loc>
     
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     
@@ -303,13 +303,6 @@
   </url>
   
   <url>
-    <loc>http://www.ubuntu520.com/google-search.html</loc>
-    
-    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.ubuntu520.com/how-to-learn-python-spider.html</loc>
     
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
@@ -317,7 +310,7 @@
   </url>
   
   <url>
-    <loc>http://www.ubuntu520.com/ipsec,l2tp_vpn.html</loc>
+    <loc>http://www.ubuntu520.com/google-search.html</loc>
     
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     
@@ -331,7 +324,49 @@
   </url>
   
   <url>
+    <loc>http://www.ubuntu520.com/ipsec,l2tp_vpn.html</loc>
+    
+    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.ubuntu520.com/java-platform.html</loc>
+    
+    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.ubuntu520.com/java-ssm-1-3.html</loc>
+    
+    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.ubuntu520.com/java-ssm-2-2.html</loc>
+    
+    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.ubuntu520.com/java-ssm-2-1.html</loc>
+    
+    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.ubuntu520.com/java-ssm-2-4.html</loc>
+    
+    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.ubuntu520.com/java-ssm-1-4.html</loc>
     
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     
@@ -352,56 +387,7 @@
   </url>
   
   <url>
-    <loc>http://www.ubuntu520.com/java-ssm-1-3.html</loc>
-    
-    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.ubuntu520.com/java-ssm-1-4.html</loc>
-    
-    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.ubuntu520.com/java-ssm-2-1.html</loc>
-    
-    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.ubuntu520.com/java-ssm-2-2.html</loc>
-    
-    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.ubuntu520.com/java-ssm-2-3.html</loc>
-    
-    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.ubuntu520.com/java-ssm-2-4.html</loc>
-    
-    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.ubuntu520.com/java-ssm-2-6.html</loc>
-    
-    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.ubuntu520.com/java-ssm-3-2.html</loc>
     
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     
@@ -422,21 +408,14 @@
   </url>
   
   <url>
-    <loc>http://www.ubuntu520.com/java-ssm-4-1.html</loc>
+    <loc>http://www.ubuntu520.com/java-ssm-3-2.html</loc>
     
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.ubuntu520.com/java-ssm-4-2.html</loc>
-    
-    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.ubuntu520.com/java-ssm-4-3.html</loc>
+    <loc>http://www.ubuntu520.com/java-ssm-2-6.html</loc>
     
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     
@@ -450,7 +429,7 @@
   </url>
   
   <url>
-    <loc>http://www.ubuntu520.com/java-ssm-5-1.html</loc>
+    <loc>http://www.ubuntu520.com/java-ssm-4-2.html</loc>
     
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     
@@ -464,7 +443,28 @@
   </url>
   
   <url>
+    <loc>http://www.ubuntu520.com/java-ssm-4-1.html</loc>
+    
+    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.ubuntu520.com/java-ssm-5-3.html</loc>
+    
+    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.ubuntu520.com/java-ssm-5-1.html</loc>
+    
+    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.ubuntu520.com/java-ssm-5-6.html</loc>
     
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     
@@ -485,28 +485,7 @@
   </url>
   
   <url>
-    <loc>http://www.ubuntu520.com/java-ssm-5-6.html</loc>
-    
-    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.ubuntu520.com/java-ssm-6-1.html</loc>
-    
-    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.ubuntu520.com/java-ssm-6-2.html</loc>
-    
-    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.ubuntu520.com/java-ssm-6-3.html</loc>
+    <loc>http://www.ubuntu520.com/java-ssm-4-3.html</loc>
     
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     
@@ -520,7 +499,7 @@
   </url>
   
   <url>
-    <loc>http://www.ubuntu520.com/java-ssm-6-5.html</loc>
+    <loc>http://www.ubuntu520.com/java-ssm-6-1.html</loc>
     
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     
@@ -534,7 +513,21 @@
   </url>
   
   <url>
-    <loc>http://www.ubuntu520.com/java-ssm-6-7.html</loc>
+    <loc>http://www.ubuntu520.com/java-ssm-6-3.html</loc>
+    
+    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.ubuntu520.com/java-ssm-6-5.html</loc>
+    
+    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.ubuntu520.com/java-ssm-6-2.html</loc>
     
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     
@@ -548,7 +541,7 @@
   </url>
   
   <url>
-    <loc>http://www.ubuntu520.com/java-xue-xi-lu-xian.html</loc>
+    <loc>http://www.ubuntu520.com/java-ssm-6-7.html</loc>
     
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     
@@ -563,6 +556,13 @@
   
   <url>
     <loc>http://www.ubuntu520.com/jiucai.html</loc>
+    
+    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.ubuntu520.com/java-xue-xi-lu-xian.html</loc>
     
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     
@@ -611,6 +611,13 @@
   </url>
   
   <url>
+    <loc>http://www.ubuntu520.com/programing-experience.html</loc>
+    
+    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.ubuntu520.com/present.html</loc>
     
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
@@ -619,13 +626,6 @@
   
   <url>
     <loc>http://www.ubuntu520.com/product-thinking.html</loc>
-    
-    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.ubuntu520.com/programing-experience.html</loc>
     
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     
@@ -646,28 +646,7 @@
   </url>
   
   <url>
-    <loc>http://www.ubuntu520.com/python-spider-meizi.html</loc>
-    
-    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.ubuntu520.com/python-spider-dangdang.html</loc>
-    
-    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.ubuntu520.com/python-spider-shuaige.html</loc>
-    
-    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.ubuntu520.com/python-spider-tutorial.html</loc>
     
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     
@@ -681,6 +660,20 @@
   </url>
   
   <url>
+    <loc>http://www.ubuntu520.com/python-spider-meizi.html</loc>
+    
+    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.ubuntu520.com/python-spider-shuaige.html</loc>
+    
+    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.ubuntu520.com/python-spider-wechat.html</loc>
     
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
@@ -688,7 +681,7 @@
   </url>
   
   <url>
-    <loc>http://www.ubuntu520.com/python-web-fxxkpython-spider-tutorial-11.html</loc>
+    <loc>http://www.ubuntu520.com/python-spider-tutorial.html</loc>
     
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     
@@ -702,20 +695,6 @@
   </url>
   
   <url>
-    <loc>http://www.ubuntu520.com/python-web-fxxkpython-spider-tutorial-29.html</loc>
-    
-    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.ubuntu520.com/python-web-fxxkpython-spider-tutorial-7.html</loc>
-    
-    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.ubuntu520.com/python-web-fxxkpython-spider-tutorial-4.html</loc>
     
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
@@ -723,7 +702,14 @@
   </url>
   
   <url>
-    <loc>http://www.ubuntu520.com/python3-web-fxxkpython-spider-tutorial-3.html</loc>
+    <loc>http://www.ubuntu520.com/python-web-fxxkpython-spider-tutorial-29.html</loc>
+    
+    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.ubuntu520.com/python-web-fxxkpython-spider-tutorial-11.html</loc>
     
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     
@@ -737,6 +723,13 @@
   </url>
   
   <url>
+    <loc>http://www.ubuntu520.com/spider-qiniu.html</loc>
+    
+    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.ubuntu520.com/slash.html</loc>
     
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
@@ -744,7 +737,7 @@
   </url>
   
   <url>
-    <loc>http://www.ubuntu520.com/spider-qiniu.html</loc>
+    <loc>http://www.ubuntu520.com/python-web-fxxkpython-spider-tutorial-7.html</loc>
     
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     
@@ -758,14 +751,14 @@
   </url>
   
   <url>
-    <loc>http://www.ubuntu520.com/start-learning-linux.html</loc>
+    <loc>http://www.ubuntu520.com/tutorial-resources.html</loc>
     
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.ubuntu520.com/tutorial-resources.html</loc>
+    <loc>http://www.ubuntu520.com/start-learning-linux.html</loc>
     
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     
@@ -779,14 +772,14 @@
   </url>
   
   <url>
-    <loc>http://www.ubuntu520.com/v2ray-vps-vultr-https-tls.html</loc>
+    <loc>http://www.ubuntu520.com/valuable-place.html</loc>
     
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.ubuntu520.com/valuable-place.html</loc>
+    <loc>http://www.ubuntu520.com/v2ray-vps-vultr-https-tls.html</loc>
     
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     
@@ -800,6 +793,13 @@
   </url>
   
   <url>
+    <loc>http://www.ubuntu520.com/vultr-give-50-dollars-coupon.html</loc>
+    
+    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.ubuntu520.com/vultr-25-December-vps-coupon.html</loc>
     
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
@@ -807,7 +807,7 @@
   </url>
   
   <url>
-    <loc>http://www.ubuntu520.com/vultr-give-50-dollars-coupon.html</loc>
+    <loc>http://www.ubuntu520.com/python3-web-fxxkpython-spider-tutorial-3.html</loc>
     
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     
@@ -849,13 +849,6 @@
   </url>
   
   <url>
-    <loc>http://www.ubuntu520.com/python-web-fxxkpython-spider-tutorial-12.html</loc>
-    
-    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.ubuntu520.com/python-web-fxxkpython-spider-tutorial-10.html</loc>
     
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
@@ -877,14 +870,14 @@
   </url>
   
   <url>
-    <loc>http://www.ubuntu520.com/python-web-fxxkpython-spider-tutorial-18.html</loc>
+    <loc>http://www.ubuntu520.com/python-web-fxxkpython-spider-tutorial-12.html</loc>
     
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.ubuntu520.com/python-web-fxxkpython-spider-tutorial-19.html</loc>
+    <loc>http://www.ubuntu520.com/python-web-fxxkpython-spider-tutorial-18.html</loc>
     
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     
@@ -905,6 +898,13 @@
   </url>
   
   <url>
+    <loc>http://www.ubuntu520.com/python-web-fxxkpython-spider-tutorial-25.html</loc>
+    
+    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.ubuntu520.com/python-web-fxxkpython-spider-tutorial-23.html</loc>
     
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
@@ -919,14 +919,14 @@
   </url>
   
   <url>
-    <loc>http://www.ubuntu520.com/python-web-fxxkpython-spider-tutorial-25.html</loc>
+    <loc>http://www.ubuntu520.com/python-web-fxxkpython-spider-tutorial-26.html</loc>
     
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.ubuntu520.com/python-web-fxxkpython-spider-tutorial-3.html</loc>
+    <loc>http://www.ubuntu520.com/python-web-fxxkpython-spider-tutorial-19.html</loc>
     
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     
@@ -940,7 +940,7 @@
   </url>
   
   <url>
-    <loc>http://www.ubuntu520.com/python-web-fxxkpython-spider-tutorial-26.html</loc>
+    <loc>http://www.ubuntu520.com/python-web-fxxkpython-spider-tutorial-3.html</loc>
     
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     
@@ -968,27 +968,6 @@
   </url>
   
   <url>
-    <loc>http://www.ubuntu520.com/python3+-web-fxxkpython-spider-tutorial-1.html</loc>
-    
-    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.ubuntu520.com/python3-web-fxxkpython-spider-tutorial-10.html</loc>
-    
-    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.ubuntu520.com/python3+-web-fxxkpython-spider-tutorial-0.html</loc>
-    
-    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.ubuntu520.com/python3-web-fxxkpython-spider-tutorial-1.html</loc>
     
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
@@ -996,21 +975,7 @@
   </url>
   
   <url>
-    <loc>http://www.ubuntu520.com/python3-web-fxxkpython-spider-tutorial-12.html</loc>
-    
-    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.ubuntu520.com/python3-web-fxxkpython-spider-tutorial-11.html</loc>
-    
-    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.ubuntu520.com/python3-web-fxxkpython-spider-tutorial-4.html</loc>
+    <loc>http://www.ubuntu520.com/python3+-web-fxxkpython-spider-tutorial-1.html</loc>
     
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     
@@ -1024,7 +989,28 @@
   </url>
   
   <url>
-    <loc>http://www.ubuntu520.com/python3-web-fxxkpython-spider-tutorial-5.html</loc>
+    <loc>http://www.ubuntu520.com/python3-web-fxxkpython-spider-tutorial-12.html</loc>
+    
+    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.ubuntu520.com/python3-web-fxxkpython-spider-tutorial-10.html</loc>
+    
+    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.ubuntu520.com/python3-web-fxxkpython-spider-tutorial-4.html</loc>
+    
+    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.ubuntu520.com/python3-web-fxxkpython-spider-tutorial-11.html</loc>
     
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     
@@ -1038,7 +1024,7 @@
   </url>
   
   <url>
-    <loc>http://www.ubuntu520.com/python3-web-fxxkpython-spider-tutorial-6.html</loc>
+    <loc>http://www.ubuntu520.com/python3-web-fxxkpython-spider-tutorial-5.html</loc>
     
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     
@@ -1046,6 +1032,20 @@
   
   <url>
     <loc>http://www.ubuntu520.com/python3-web-fxxkpython-spider-tutorial-9.html</loc>
+    
+    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.ubuntu520.com/python3-web-fxxkpython-spider-tutorial-6.html</loc>
+    
+    <lastmod>2020-09-09T11:33:48.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.ubuntu520.com/python3+-web-fxxkpython-spider-tutorial-0.html</loc>
     
     <lastmod>2020-09-09T11:33:48.000Z</lastmod>
     
@@ -1108,14 +1108,14 @@
   </url>
   
   <url>
-    <loc>http://www.ubuntu520.com/python-web-fxxkpython-spider-tutorial-17.html</loc>
+    <loc>http://www.ubuntu520.com/python-web-fxxkpython-spider-tutorial-16.html</loc>
     
     <lastmod>2020-09-09T11:33:46.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.ubuntu520.com/python-web-fxxkpython-spider-tutorial-16.html</loc>
+    <loc>http://www.ubuntu520.com/python-web-fxxkpython-spider-tutorial-17.html</loc>
     
     <lastmod>2020-09-09T11:33:46.000Z</lastmod>
     
@@ -1136,14 +1136,14 @@
   </url>
   
   <url>
-    <loc>http://www.ubuntu520.com/python-web-fxxkpython-spider-tutorial-5.html</loc>
+    <loc>http://www.ubuntu520.com/python-web-fxxkpython-spider-tutorial-9.html</loc>
     
     <lastmod>2020-09-09T11:33:46.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.ubuntu520.com/python-web-fxxkpython-spider-tutorial-9.html</loc>
+    <loc>http://www.ubuntu520.com/python-web-fxxkpython-spider-tutorial-5.html</loc>
     
     <lastmod>2020-09-09T11:33:46.000Z</lastmod>
     
