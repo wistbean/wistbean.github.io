@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131395348-1"></script>
+    <script data-ad-client="ca-pub-9097083609097034" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-131395348-1');
+    </script>
+
+    
+
+    
+
+    
+
+
+<!-- Baidu Push -->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<!-- End Baidu Push -->
+
+
+    <meta charset="utf-8">
+    
+    <meta name="google-site-verification" content="bcJVGqEGcBIay29szBsswzqYxY3qUzWuvu1hfad3-08">
+    
+    
+    
+    
+    <title>How to build your own VPN in 3 minutes | wistbean | wistbean</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#B5963F">
+    
+    
+    <meta name="keywords" content="wistbean">
+    <meta name="description" content="Why build your own VPN?Many people want to use VPN. They don’t want to buy a third-party “VPN account”. In addition to being unstable, they are also afraid of insecurity. Some third-party VPNs will ge">
+<meta name="keywords" content="wistbean">
+<meta property="og:type" content="website">
+<meta property="og:title" content="How to build your own VPN in 3 minutes">
+<meta property="og:url" content="https://ubuntu520.com/vpn/index.html">
+<meta property="og:site_name" content="wistbean">
+<meta property="og:description" content="Why build your own VPN?Many people want to use VPN. They don’t want to buy a third-party “VPN account”. In addition to being unstable, they are also afraid of insecurity. Some third-party VPNs will ge">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://ubuntu520.com/images/vpn1.png">
+<meta property="og:image" content="https://ubuntu520.com/images/vpn2.png">
+<meta property="og:image" content="https://ubuntu520.com/images/vpn3.png">
+<meta property="og:image" content="https://ubuntu520.com/images/vpn4.png">
+<meta property="og:image" content="https://ubuntu520.com/images/vpn5.png">
+<meta property="og:image" content="https://ubuntu520.com/images/vpn6.png">
+<meta property="og:image" content="https://ubuntu520.com/images/vpn7.png">
+<meta property="og:image" content="https://ubuntu520.com/images/server-info.png">
+<meta property="og:image" content="https://ubuntu520.com/images/vpn10.png">
+<meta property="og:image" content="https://ubuntu520.com/images/vpn11.png">
+<meta property="og:image" content="https://ubuntu520.com/images/vpn12.png">
+<meta property="og:image" content="https://ubuntu520.com/images/vvpn.png">
+<meta property="og:image" content="https://ubuntu520.com/images/vpn14.png">
+<meta property="og:image" content="https://ubuntu520.com/images/vpn15.png">
+<meta property="og:image" content="https://ubuntu520.com/images/vpn16.png">
+<meta property="og:image" content="https://ubuntu520.com/images/vpn17.png">
+<meta property="og:image" content="https://ubuntu520.com/images/vpn18.png">
+<meta property="og:updated_time" content="2022-10-27T15:05:13.921Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="How to build your own VPN in 3 minutes">
+<meta name="twitter:description" content="Why build your own VPN?Many people want to use VPN. They don’t want to buy a third-party “VPN account”. In addition to being unstable, they are also afraid of insecurity. Some third-party VPNs will ge">
+<meta name="twitter:image" content="https://ubuntu520.com/images/vpn1.png">
+    
+        <link rel="alternate" type="application/atom+xml" title="wistbean" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(https://wistbean.github.io/images/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">wistbean</h5>
+          <a href="mailto:wistbean.bb@gmail.com" title="wistbean.bb@gmail.com" class="mail">wistbean.bb@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="https://vip.fxxkpython.com/?page_id=18"  >
+                <i class="icon icon-lg icon-bug"></i>
+                python付费订阅
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-bars"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives/"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/aboutMe/"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light off" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">How to build your own VPN in 3 minutes</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="vultr ss bbr v2ray 100美金">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+
+    </div>
+</header>
+<header class="content-header page-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">How to build your own VPN in 3 minutes</h1>
+        <h5 class="subtitle">
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    <article class="page-article fade" itemprop="blogPage">
+        <div class="post-content page-content" id="page-content" itemprop="pageContent">
+            <h1 id="Why-build-your-own-VPN"><a href="#Why-build-your-own-VPN" class="headerlink" title="Why build your own VPN?"></a>Why build your own VPN?</h1><p>Many people want to use VPN. They don’t want to buy a third-party “VPN account”. In addition to being unstable, they are also afraid of insecurity. Some third-party VPNs will get user data to do some bad things, and also limit the speed of the network.</p>
+<p>So you can buy a server yourself, and then build a VPN that is completely your own, stable and fast!</p>
+<p>Then let’s teach you how to use <a href="https://bwh89.net/aff.php?aff=32874" target="_blank" rel="noopener">Bandwagon Host</a> (a cost-effective cloud server provider) to quickly build your own VPN. And I will also tell you <strong>how to spend less than others to buy a server</strong>, the following will mention how to get the coupon code.</p>
+<h1 id="Preparation-before-building-a-VPN"><a href="#Preparation-before-building-a-VPN" class="headerlink" title="Preparation before building a VPN"></a>Preparation before building a VPN</h1><ol>
+<li><p>A computer with internet access.</p>
+</li>
+<li><p><a href="paypal.com">PayPal</a> account</p>
+</li>
+</ol>
+<h1 id="Buy-Bandwagon-Host-VPS-Cloud-Server"><a href="#Buy-Bandwagon-Host-VPS-Cloud-Server" class="headerlink" title="Buy Bandwagon Host VPS Cloud Server"></a>Buy Bandwagon Host VPS Cloud Server</h1><p>Click on the <a href="https://bwh89.net/aff.php?aff=32874" target="_blank" rel="noopener">official website of Bandwagon</a> to enter the official website of Bandwagon (you will receive a coupon code from here). After entering, you can see the VPS cloud server that you can purchase. If you use it personally, you can buy the cheapest one.<br>For example, there is a $19.99 one year is good:</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/vpn1.png" alt="Bandwagon Host" title="">
+                </div>
+                <div class="image-caption">Bandwagon Host</div>
+            </figure>
+
+<p>However, it is very cheap and very popular, and will soon be bought by people. For example, no stock here means that people have bought it.</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/vpn2.png" alt="Bandwagon Host" title="">
+                </div>
+                <div class="image-caption">Bandwagon Host</div>
+            </figure>
+
+<h1 id="Get-Bandwagon-Host-Coupon-Code"><a href="#Get-Bandwagon-Host-Coupon-Code" class="headerlink" title="Get Bandwagon Host Coupon Code"></a>Get Bandwagon Host Coupon Code</h1><p>Ok, we click on “Order KVM”:</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/vpn3.png" alt="build VPN" title="">
+                </div>
+                <div class="image-caption">build VPN</div>
+            </figure>
+
+<p>When you get to this page, don’t rush to add “Add to Cart” to the shopping cart. There is a coupon code hidden inside. Many people don’t know, use the browser to view the source code.</p>
+<p>For chrome browser, press F12, then search for “code”(Use the shortcut Ctrl + F). You will find a “Try this promo code: xxxx”. This xxxx is the coupon code. You can copy it and it will be useful later.</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/vpn4.png" alt="build VPN" title="">
+                </div>
+                <div class="image-caption">build VPN</div>
+            </figure>
+
+<p>The location of the page is to select the address of the server. When you visit Google, it will display the address you are currently accessing. Ok, let’s click on “Add to Cart”.</p>
+<p>Next, enter the settlement page, the coupon code we just copied comes in handy, copy the coupon code you just copied and click “Validate Code” to see! Is it a discount!</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/vpn5.png" alt="build VPN" title="">
+                </div>
+                <div class="image-caption">build VPN</div>
+            </figure>
+
+<p>Then click “CheckOut” to complete the payment.</p>
+<h1 id="Quickly-build-your-own-VPN"><a href="#Quickly-build-your-own-VPN" class="headerlink" title="Quickly build your own VPN"></a>Quickly build your own VPN</h1><p>After the purchase, you will have a server of your own, and then click MyServices under Services, you can see your server:</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/vpn6.png" alt="your Servers" title="">
+                </div>
+                <div class="image-caption">your Servers</div>
+            </figure>
+
+<p>We click on “KiwiVM Control Panel” to enter the management interface:</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/vpn7.png" alt="KiwiVM Control Panel" title="">
+                </div>
+                <div class="image-caption">KiwiVM Control Panel</div>
+            </figure>
+
+<p>You can see the information of your server:</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/server-info.png" alt="information" title="">
+                </div>
+                <div class="image-caption">information</div>
+            </figure>
+
+<p>Then we click on “OpenVPN Server”:</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/vpn10.png" alt="OpenVPN Server" title="">
+                </div>
+                <div class="image-caption">OpenVPN Server</div>
+            </figure>
+
+<p>Then click: “Install and configer OpenVPN Server”, Bandwagon will automatically help us install and configure the server, do not need to manually knock the command:</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/vpn11.png" alt="Install and configer OpenVPN Server" title="">
+                </div>
+                <div class="image-caption">Install and configer OpenVPN Server</div>
+            </figure>
+
+<p>Wait a minute to set up a VPN, is it fast?</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/vpn12.png" alt="build VPN" title="">
+                </div>
+                <div class="image-caption">build VPN</div>
+            </figure>
+
+<h1 id="Use-openVPN"><a href="#Use-openVPN" class="headerlink" title="Use openVPN"></a>Use openVPN</h1><p>First we download the configuration file required for our VPN file, click “Download key Files” to download, and then download the openVPN client:</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/vvpn.png" alt="build VPN" title="">
+                </div>
+                <div class="image-caption">build VPN</div>
+            </figure>
+
+<p>Then extract the configuration file to the config folder of the openVPN client:</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/vpn14.png" alt="build vpn" title="">
+                </div>
+                <div class="image-caption">build vpn</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/vpn15.png" alt="build vpn" title="">
+                </div>
+                <div class="image-caption">build vpn</div>
+            </figure>
+
+<p>Then open the openvpn-gui in the bin directory of the openvpn directory, and then Connect, the openVPN in the lower right corner will become green, and then you can access the Internet through vpn, the speed is very fast:</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/vpn16.png" alt="build vpn" title="">
+                </div>
+                <div class="image-caption">build vpn</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/vpn17.png" alt="build vpn" title="">
+                </div>
+                <div class="image-caption">build vpn</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/vpn18.png" alt="build vpn" title="">
+                </div>
+                <div class="image-caption">build vpn</div>
+            </figure>
+
+<h1 id="Related"><a href="#Related" class="headerlink" title="Related"></a>Related</h1><ul>
+<li><a href="https://techcrunch.com/2017/04/09/how-i-made-my-own-vpn-server-in-15-minutes/" target="_blank" rel="noopener">How I made my own VPN server in 15 minutes</a></li>
+<li><a href="https://arstechnica.com/gadgets/2017/05/how-to-build-your-own-vpn-if-youre-rightfully-wary-of-commercial-options/" target="_blank" rel="noopener">How to build your own VPN if you’re (rightfully) wary of commercial options</a></li>
+<li><a href="https://www.techradar.com/news/should-you-set-up-your-own-vpn-server" target="_blank" rel="noopener">Should you set up your own VPN server?</a></li>
+</ul>
+
+        </div>
+
+        
+        <div class="card page-about-me flex-row">
+            <a href="/" class="avatar waves-effect waves-circle waves-light"><img src="/img/avatar.jpg"></a>
+            <div class="content flex-col">
+                <p><strong>wistbean</strong></p>
+                <p><em>wistbean</em></p>
+                <p>答应自己的事，就要做到。</p>
+            </div>
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://ubuntu520.com/vpn/&title=《How to build your own VPN in 3 minutes》 — wistbean&pic=https://ubuntu520.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://ubuntu520.com/vpn/&title=《How to build your own VPN in 3 minutes》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://ubuntu520.com/vpn/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《How to build your own VPN in 3 minutes》 — wistbean&url=https://ubuntu520.com/vpn/&via=https://ubuntu520.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://ubuntu520.com/vpn/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+        
+
+        
+
+
+        
+
+
+
+
+
+<section class="comments" id="comments">
+    <!-- UY BEGIN -->
+    <script src="https://utteranc.es/client.js"
+        repo="wistbean/wistbean.github.io"
+        issue-term="pathname"
+        label="Comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
+    <!-- UY END -->
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </article>
+    
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>本站已加入 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-知识 4.0  (CC BY-NC-SA 4.0)国际协议 | 转载请注明链接出处</a></span>
+        </p>
+    </div>
+
+        <div class="bottom">
+                <p><span>wistbean &copy; 2015 - 2023</span>
+                    <span>
+                        
+                         <a href="https://wistbean.github.io/">肯定会|wistbean</a>
+                         <a href="https://fxxkpython.com">通往Python高手之路</a>
+                         <a href="https://www.bwh8.net/aff.php?aff=32874" target="_blank">搬瓦工2023优惠码</a>、
+                         <a href="https://www.vultr.com/?ref=7532860" target="_blank">vultr2023优惠码</a>
+                    </span>
+                </p>
+        </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://ubuntu520.com/vpn/&title=《How to build your own VPN in 3 minutes》 — wistbean&pic=https://ubuntu520.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://ubuntu520.com/vpn/&title=《How to build your own VPN in 3 minutes》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://ubuntu520.com/vpn/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《How to build your own VPN in 3 minutes》 — wistbean&url=https://ubuntu520.com/vpn/&via=https://ubuntu520.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://ubuntu520.com/vpn/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAAAAAAZai4+AAABU0lEQVR42u3aQQ7DIAxE0dz/0nRbqTKZsUml2J9VVEF5LDBguC65rK/y+3tUM2p1rMCC1Yi1tiViRd/7wSh9wYI1mRX96T4QRJ0pg7kxwIIFSw4B+poLCxas/weIfciABQtWZdOcCweP7+VhwWrBqiy37vcj+S1YsF7OWmbJHVztXmDBGsbSJ7CSJFKCi3F5AwvWMJZ+SalQ3KsaaVGHBWskSz+U5gKEvaWGBas1q57ocesoYQgWrJmsyuOAU9efdlYYFqxGrP1Sqk9+JWTYyV9YsEay3CX51FWlcZKGBWsAKwd107tGL7BgwXpiwrsDgwVrDKvy4KCSNroJE7BgDWPVl1U32XQqCQULVj+W+/DOTQcnAwQsWCNZ7iSvRx17Lw8LFiwzQCitkudgWLBgmW31axgppQsL1gCWnjzS67gDgAVrMquywdUPpQeyWbBg9WR9ANczpn7VBVn8AAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

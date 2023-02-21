@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131395348-1"></script>
+    <script data-ad-client="ca-pub-9097083609097034" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-131395348-1');
+    </script>
+
+    
+
+    
+
+    
+
+
+<!-- Baidu Push -->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<!-- End Baidu Push -->
+
+
+    <meta charset="utf-8">
+    
+    <meta name="google-site-verification" content="bcJVGqEGcBIay29szBsswzqYxY3qUzWuvu1hfad3-08">
+    
+    
+    
+    
+    <title>Java中的异常处理，Exception和Error的使用 | wistbean | wistbean</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#B5963F">
+    
+    
+    <meta name="keywords" content="Java,Exception,Error">
+    <meta name="description" content="对比一下 Exception 和 Error                                                                                             Exception 和 Error                从 Java API 可以看到，Exception 和 Error 都继承于 Throwable ，Th">
+<meta name="keywords" content="Java,Exception,Error">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java中的异常处理，Exception和Error的使用">
+<meta property="og:url" content="https://ubuntu520.com/java-error-exception.html">
+<meta property="og:site_name" content="wistbean">
+<meta property="og:description" content="对比一下 Exception 和 Error                                                                                             Exception 和 Error                从 Java API 可以看到，Exception 和 Error 都继承于 Throwable ，Th">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://ubuntu520.com/images/throwable.png">
+<meta property="og:updated_time" content="2018-11-02T00:52:36.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java中的异常处理，Exception和Error的使用">
+<meta name="twitter:description" content="对比一下 Exception 和 Error                                                                                             Exception 和 Error                从 Java API 可以看到，Exception 和 Error 都继承于 Throwable ，Th">
+<meta name="twitter:image" content="https://ubuntu520.com/images/throwable.png">
+    
+        <link rel="alternate" type="application/atom+xml" title="wistbean" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(https://wistbean.github.io/images/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">wistbean</h5>
+          <a href="mailto:wistbean.bb@gmail.com" title="wistbean.bb@gmail.com" class="mail">wistbean.bb@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="https://vip.fxxkpython.com/?page_id=18"  >
+                <i class="icon icon-lg icon-bug"></i>
+                python付费订阅
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-bars"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives/"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/aboutMe/"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light off" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Java中的异常处理，Exception和Error的使用</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="vultr ss bbr v2ray 100美金">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Java中的异常处理，Exception和Error的使用</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2016-03-01T09:00:13.000Z" itemprop="datePublished" class="page-time">
+  2016-03-01
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Java/">Java</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>目录</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#对比一下-Exception-和-Error"><span class="post-toc-number">1.</span> <span class="post-toc-text">对比一下 Exception 和 Error</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-java-error-exception"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Java中的异常处理，Exception和Error的使用</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2016-03-01 17:00:13" datetime="2016-03-01T09:00:13.000Z"  itemprop="datePublished">2016-03-01</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Java/">Java</a></li></ul>
+
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="对比一下-Exception-和-Error"><a href="#对比一下-Exception-和-Error" class="headerlink" title="对比一下 Exception 和 Error"></a>对比一下 Exception 和 Error</h1><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/throwable.png" alt="Exception 和 Error" title="">
+                </div>
+                <div class="image-caption">Exception 和 Error</div>
+            </figure>
+
+<ol>
+<li><p>从 Java API 可以看到，Exception 和 Error 都继承于 Throwable ，Throwable提供了 throw(抛出) 和 catch(捕获)</p>
+</li>
+<li><p>Exception 是在程序正常运行的时候可以预料到的，可以事先对其捕获，进行相应的处理。</p>
+</li>
+<li><p>Error 一般不需要捕获，因为它是在正常情况下，不太可能发生的。</p>
+</li>
+<li><p>Exception 有两种情况</p>
+</li>
+</ol>
+<ul>
+<li>编译时可检查（需要在代码中事先捕获处理）</li>
+<li>运行时不可检查 （如 NullPointException），编译期不强求捕获，但是可以对其判断，是否需要捕获代码。</li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+      <!--  
+
+        
+        关注公众号「wistbean」，发送「帅书」获取我写的技术电子书
+        
+        -->
+        在公众号「学习 Python 的正确姿势」发送「帅书」领取我写的技术电子书，转载请注明出处：
+        <a href="https://ubuntu520.com/java-error-exception.html">
+                   wistbean
+        </a>
+    </div>
+    
+    <footer>
+        <a href="https://ubuntu520.com">
+            <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+            wistbean
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Error/">Error</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Exception/">Exception</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://ubuntu520.com/java-error-exception.html&title=《Java中的异常处理，Exception和Error的使用》 — wistbean&pic=https://ubuntu520.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://ubuntu520.com/java-error-exception.html&title=《Java中的异常处理，Exception和Error的使用》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://ubuntu520.com/java-error-exception.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Java中的异常处理，Exception和Error的使用》 — wistbean&url=https://ubuntu520.com/java-error-exception.html&via=https://ubuntu520.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://ubuntu520.com/java-error-exception.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/java-final.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Java中的final，finally，finalize</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/java-platform.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Java的特性和对解释执行的疑问</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+<section class="comments" id="comments">
+    <!-- UY BEGIN -->
+    <script src="https://utteranc.es/client.js"
+        repo="wistbean/wistbean.github.io"
+        issue-term="pathname"
+        label="Comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
+    <!-- UY END -->
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>本站已加入 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-知识 4.0  (CC BY-NC-SA 4.0)国际协议 | 转载请注明链接出处</a></span>
+        </p>
+    </div>
+
+        <div class="bottom">
+                <p><span>wistbean &copy; 2015 - 2023</span>
+                    <span>
+                        
+                         <a href="https://wistbean.github.io/">肯定会|wistbean</a>
+                         <a href="https://fxxkpython.com">通往Python高手之路</a>
+                         <a href="https://www.bwh8.net/aff.php?aff=32874" target="_blank">搬瓦工2023优惠码</a>、
+                         <a href="https://www.vultr.com/?ref=7532860" target="_blank">vultr2023优惠码</a>
+                    </span>
+                </p>
+        </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://ubuntu520.com/java-error-exception.html&title=《Java中的异常处理，Exception和Error的使用》 — wistbean&pic=https://ubuntu520.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://ubuntu520.com/java-error-exception.html&title=《Java中的异常处理，Exception和Error的使用》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://ubuntu520.com/java-error-exception.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Java中的异常处理，Exception和Error的使用》 — wistbean&url=https://ubuntu520.com/java-error-exception.html&via=https://ubuntu520.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://ubuntu520.com/java-error-exception.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACIUlEQVR42u3aQW7EIAwF0Nz/0qnU1XSR9Nsw0wYeq1FFSB6VLGxzHPE4v8fr79e/XM28evZ+5tXKEwYGBsZjGeftGPn0q6eu1r/fsvs1MTAwdmDkQTafn4CnrYOBgYERLz2+KRgYGBjjjF6KmzDuj4wYGBgYSRKb1Lhy3p/l4hgYGA9k9BoDn/n99v4GBgbGv2ecxVFtBvSKa+WvwsDAWJqRpJRJlMvLbb3iWlTUw8DAWJTRC5o99tzmwY/5GBgYGzB6x7iRoJynx1GRDgMDYxtG79OT11SPjHniioGBsQOjF0x7sDy450EcAwNjB8b7rmrln9tramJgYOzDyCflr+wV7yakxBgYGIsyqmFx5IJFHtCrt78wMDB2YFSbi3lRrHqgzA+Fl51YDAyMRRnjwTRvfFaD8oTLFhgYGA9n5K8ZOczlK1cbDxgYGDswepck5rYQqlsQ/R8wMDAWYuSLVl/ZOwjm7YGjtzcYGBgPZ4y3IXNMNUGNwBgYGIsy8sQyD7jVRHR8DgYGxm6MvKFYDbK9jYjWxMDAWJqRpJTvOyBWg3uh6IaBgbEQ4yyO8WCdBM0k88bAwNiHMbf0nzc1k6eqR1UMDIy1GfnSs0Jz76rHL0EWAwNjA0YeZPNQ2wuy1VQWAwMDY+RCxshT5UYpBgYGRrG4lj+VHCKjbcXAwNiAMZLEVj9xvG2JgYGxG6PXGMhT3DysV0t7R3VgYGA8j/EF7K9lq2Rp7jIAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
