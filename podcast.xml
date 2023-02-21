@@ -52,7 +52,7 @@
         
         
           var ap = new APlayer({
-            element: document.getElementById(&amp;quot;aplayer-vSfCXWOl&amp;quot;),
+            element: document.getElementById(&amp;quot;aplayer-bxJHFjHc&amp;quot;),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -117,7 +117,7 @@
         
         
           var ap = new APlayer({
-            element: document.getElementById(&amp;quot;aplayer-MFmVYVlh&amp;quot;),
+            element: document.getElementById(&amp;quot;aplayer-rUcckVRZ&amp;quot;),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -253,7 +253,7 @@ b站、Youtube之前说过了，b站不仅仅是个二次元的视频资源网�
         
         
           var ap = new APlayer({
-            element: document.getElementById(&amp;quot;aplayer-pkzuvFKH&amp;quot;),
+            element: document.getElementById(&amp;quot;aplayer-aQlAWVxY&amp;quot;),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -321,7 +321,7 @@ chines robot，丢脸不?
         
         
           var ap = new APlayer({
-            element: document.getElementById(&amp;quot;aplayer-GUFPhYKc&amp;quot;),
+            element: document.getElementById(&amp;quot;aplayer-XrWIBBbl&amp;quot;),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -398,7 +398,7 @@ chines robot，丢脸不?
         
         
           var ap = new APlayer({
-            element: document.getElementById(&amp;quot;aplayer-hXqbAxTp&amp;quot;),
+            element: document.getElementById(&amp;quot;aplayer-YQjKBIZf&amp;quot;),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -467,7 +467,7 @@ chines robot，丢脸不?
         
         
           var ap = new APlayer({
-            element: document.getElementById(&amp;quot;aplayer-fCCmruEG&amp;quot;),
+            element: document.getElementById(&amp;quot;aplayer-RjZHnnRH&amp;quot;),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -547,7 +547,7 @@ chines robot，丢脸不?
         
         
           var ap = new APlayer({
-            element: document.getElementById(&amp;quot;aplayer-zTePTBlo&amp;quot;),
+            element: document.getElementById(&amp;quot;aplayer-xLDlxHzM&amp;quot;),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -627,7 +627,7 @@ PyCharm编辑器的使用
         
         
           var ap = new APlayer({
-            element: document.getElementById(&amp;quot;aplayer-GYshvSur&amp;quot;),
+            element: document.getElementById(&amp;quot;aplayer-WhlxSHaP&amp;quot;),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -703,7 +703,7 @@ PyCharm编辑器的使用
         
         
           var ap = new APlayer({
-            element: document.getElementById(&amp;quot;aplayer-wiHJAVtY&amp;quot;),
+            element: document.getElementById(&amp;quot;aplayer-XXYVZAgy&amp;quot;),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -771,7 +771,7 @@ AI 能够帮助我们，也会害了我们，所以我们应该不断的学习�
         
         
           var ap = new APlayer({
-            element: document.getElementById(&amp;quot;aplayer-XzQwdusS&amp;quot;),
+            element: document.getElementById(&amp;quot;aplayer-smIBdYlB&amp;quot;),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -1049,7 +1049,7 @@ AI 能够帮助我们，也会害了我们，所以我们应该不断的学习�
         
         
           var ap = new APlayer({
-            element: document.getElementById(&amp;quot;aplayer-FhBCgJMY&amp;quot;),
+            element: document.getElementById(&amp;quot;aplayer-ZskBEmfC&amp;quot;),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -1090,7 +1090,7 @@ AI 能够帮助我们，也会害了我们，所以我们应该不断的学习�
         
         
           var ap = new APlayer({
-            element: document.getElementById(&amp;quot;aplayer-pHnTiilj&amp;quot;),
+            element: document.getElementById(&amp;quot;aplayer-jFxVssiS&amp;quot;),
             narrow: false,
             autoplay: false,
             showlrc: false,
