@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://ubuntu520.com/cloud-server.html</loc>
+    
+    <lastmod>2023-03-30T17:00:13.721Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://ubuntu520.com/paypal-withdrawing-rmb.html</loc>
     
     <lastmod>2023-02-23T17:40:43.628Z</lastmod>
@@ -23,20 +30,6 @@
   </url>
   
   <url>
-    <loc>https://ubuntu520.com/vultr-vps-bbr-ss.html</loc>
-    
-    <lastmod>2023-02-21T19:04:26.674Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://ubuntu520.com/ipsec,l2tp_vpn.html</loc>
-    
-    <lastmod>2023-02-21T19:04:26.671Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://ubuntu520.com/vultr-give-50-dollars-coupon.html</loc>
     
     <lastmod>2023-02-21T19:04:26.668Z</lastmod>
@@ -44,44 +37,9 @@
   </url>
   
   <url>
-    <loc>https://ubuntu520.com/banwagong-quick-build-ss.html</loc>
-    
-    <lastmod>2023-02-21T18:59:48.271Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://ubuntu520.com/banwagong-ss.html</loc>
-    
-    <lastmod>2023-02-21T18:57:09.871Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://ubuntu520.com/v2ray-vps-vultr-https-tls.html</loc>
-    
-    <lastmod>2023-02-21T18:56:15.570Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://ubuntu520.com/banwagong-ssr-quick.html</loc>
-    
-    <lastmod>2023-02-21T18:53:53.553Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://ubuntu520.com/use-banwagong.html</loc>
     
     <lastmod>2023-02-21T18:53:18.910Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://ubuntu520.com/vultr-ssr-bbr-build-quick.html</loc>
-    
-    <lastmod>2023-02-21T18:51:57.048Z</lastmod>
     
   </url>
   
@@ -208,13 +166,6 @@
     <loc>https://ubuntu520.com/vpn/index.html</loc>
     
     <lastmod>2022-10-27T15:05:13.921Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://ubuntu520.com/cloud-server.html</loc>
-    
-    <lastmod>2022-10-27T15:05:13.918Z</lastmod>
     
   </url>
   
