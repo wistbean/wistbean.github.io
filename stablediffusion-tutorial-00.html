@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131395348-1"></script>
+    <script data-ad-client="ca-pub-9097083609097034" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-131395348-1');
+    </script>
+
+    
+
+    
+
+    
+
+
+<!-- Baidu Push -->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<!-- End Baidu Push -->
+
+
+    <meta charset="utf-8">
+    
+    <meta name="google-site-verification" content="bcJVGqEGcBIay29szBsswzqYxY3qUzWuvu1hfad3-08">
+    
+    
+    
+    
+    <title>AI 绘画从0到1 | 00 课程在后，骚话在前 | wistbean | wistbean</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#B5963F">
+    
+    
+    <meta name="keywords" content="AI 绘画,stablediffusion教程,ai绘画教程">
+    <meta name="description" content="说点骚话许久不见，甚是想念哈哈。 看到标题你应该知道了，我打算写一个关于“AI绘画”的免费系列教程，作为对一直期待我更新的读者朋友们的回馈。 当然，我写的东西大多比较 “我行我素”，但也会站在一个自学者的角度出发，去给你做一些必要的演示。 我看到大部分朋友对 AIGC 很是感兴趣，其中最火的莫过于“AI聊天问答”和“AI绘画”，我相信你早就把玩过它们，只不过浅尝辄止，我想可能你还没有看到它对你的用">
+<meta name="keywords" content="AI 绘画,stablediffusion教程,ai绘画教程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AI 绘画从0到1 | 00 课程在后，骚话在前">
+<meta property="og:url" content="https://wistbean.org/stablediffusion-tutorial-00.html">
+<meta property="og:site_name" content="wistbean">
+<meta property="og:description" content="说点骚话许久不见，甚是想念哈哈。 看到标题你应该知道了，我打算写一个关于“AI绘画”的免费系列教程，作为对一直期待我更新的读者朋友们的回馈。 当然，我写的东西大多比较 “我行我素”，但也会站在一个自学者的角度出发，去给你做一些必要的演示。 我看到大部分朋友对 AIGC 很是感兴趣，其中最火的莫过于“AI聊天问答”和“AI绘画”，我相信你早就把玩过它们，只不过浅尝辄止，我想可能你还没有看到它对你的用">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2023-12-19T18:46:11.798Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="AI 绘画从0到1 | 00 课程在后，骚话在前">
+<meta name="twitter:description" content="说点骚话许久不见，甚是想念哈哈。 看到标题你应该知道了，我打算写一个关于“AI绘画”的免费系列教程，作为对一直期待我更新的读者朋友们的回馈。 当然，我写的东西大多比较 “我行我素”，但也会站在一个自学者的角度出发，去给你做一些必要的演示。 我看到大部分朋友对 AIGC 很是感兴趣，其中最火的莫过于“AI聊天问答”和“AI绘画”，我相信你早就把玩过它们，只不过浅尝辄止，我想可能你还没有看到它对你的用">
+    
+        <link rel="alternate" type="application/atom+xml" title="wistbean" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(https://wistbean.github.io/images/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">wistbean</h5>
+          <a href="mailto:wistbean.bb@gmail.com" title="wistbean.bb@gmail.com" class="mail">wistbean.bb@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="https://ubuntu520.com/python-tutorial.html"  >
+                <i class="icon icon-lg icon-coffee"></i>
+                Python零基础入门教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2NzYyNjg2Nw==&action=getalbum&album_id=2448798954764255234#wechat_redirect"  >
+                <i class="icon icon-lg icon-bug"></i>
+                Python爬虫教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://vip.fxxkpython.com/?page_id=18"  >
+                <i class="icon icon-lg icon-code"></i>
+                加入我的VIP
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/aboutMe/"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light off" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">AI 绘画从0到1 | 00 课程在后，骚话在前</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="vultr ss bbr v2ray 100美金">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">AI 绘画从0到1 | 00 课程在后，骚话在前</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2023-12-19T18:43:16.000Z" itemprop="datePublished" class="page-time">
+  2023-12-20
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/AI绘画教程/">AI绘画教程</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>目录</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#说点骚话"><span class="post-toc-number">1.</span> <span class="post-toc-text">说点骚话</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#为什么使用-stable-diffusion-？"><span class="post-toc-number">2.</span> <span class="post-toc-text">为什么使用 stable diffusion ？</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-stablediffusion-tutorial-00"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">AI 绘画从0到1 | 00 课程在后，骚话在前</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2023-12-20 02:43:16" datetime="2023-12-19T18:43:16.000Z"  itemprop="datePublished">2023-12-20</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/AI绘画教程/">AI绘画教程</a></li></ul>
+
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h2 id="说点骚话"><a href="#说点骚话" class="headerlink" title="说点骚话"></a>说点骚话</h2><p>许久不见，甚是想念哈哈。</p>
+<p>看到标题你应该知道了，我打算写一个关于“AI绘画”的免费系列教程，作为对一直期待我更新的读者朋友们的回馈。</p>
+<p>当然，我写的东西大多比较 <a href="https://music.163.com/#/song?id=2101452513" target="_blank" rel="noopener">“我行我素”</a>，但也会站在一个自学者的角度出发，去给你做一些必要的演示。</p>
+<p>我看到大部分朋友对 AIGC 很是感兴趣，其中最火的莫过于“AI聊天问答”和“AI绘画”，我相信你早就把玩过它们，只不过浅尝辄止，我想可能你还没有看到它对你的用处，我希望你看完我这个系列教程后，你不再仅仅是“玩一下”，而是“一直用”，让它能够结合到你自己的业务上去，或者干脆能从中衍生出属于自己独特的业务。</p>
+<p>据我所知，有些人已经通过 AI绘画 在一些主流的平台提供情侣头像服务，有些人通过 AI绘画 对自家的产品进行美化设计，还有基于此作出一些工具，这都是不错的一些小商业案例。</p>
+<p>可能你会觉得， AI绘画不就是说一下自己想要的场景，然后就生成一幅画嘛~</p>
+<p>确实是，你的描述关键词很关键，但如何利用模型和插件，如何调好参数，如何利用好特定的关键符号，让其结果成为接近你想要的惊喜，而不是惊吓，这是我想跟你说的东西。</p>
+<h2 id="为什么使用-stable-diffusion-？"><a href="#为什么使用-stable-diffusion-？" class="headerlink" title="为什么使用 stable diffusion ？"></a>为什么使用 stable diffusion ？</h2><p>现在比较主流的AI绘画是“Midjourney”，“DALL-E” 和 “stable diffusion”等， 但 stable diffusion 人家<a href="https://github.com/Stability-AI/stablediffusion" target="_blank" rel="noopener">开源免费</a>，<strong>这就有点当年 Linux 开源操作系统</strong>的意思了，这使得 stable diffusion 涌现出很多开源的模型和插件，你可以将它跑在你自己的电脑或服务器上，还可以自己进行微调训练。</p>
+<p>除了文生图，它的图生图能力也很不错。</p>
+<p>那么接下来就跟我走进“AI绘画”的世界，敬请关注，我们下回就从环境安装开始，peace！</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+      <!--  
+
+        
+        关注公众号「wistbean」，发送「帅书」获取我写的技术电子书
+        
+        -->
+        在公众号「学习 Python 的正确姿势」发送「帅书」领取我写的技术电子书，转载请注明出处：
+        <a href="https://wistbean.org/stablediffusion-tutorial-00.html">
+                   wistbean
+        </a>
+    </div>
+    
+    <footer>
+        <a href="https://wistbean.org">
+            <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+            wistbean
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AI-绘画/">AI 绘画</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ai绘画教程/">ai绘画教程</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stablediffusion教程/">stablediffusion教程</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.org/stablediffusion-tutorial-00.html&title=《AI 绘画从0到1 | 00 课程在后，骚话在前》 — wistbean&pic=https://wistbean.org/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.org/stablediffusion-tutorial-00.html&title=《AI 绘画从0到1 | 00 课程在后，骚话在前》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.org/stablediffusion-tutorial-00.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《AI 绘画从0到1 | 00 课程在后，骚话在前》 — wistbean&url=https://wistbean.org/stablediffusion-tutorial-00.html&via=https://wistbean.org" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.org/stablediffusion-tutorial-00.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/chrome-extensions.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">我用过觉得很不错的Chrome插件</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>本站已加入 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-知识 4.0  (CC BY-NC-SA 4.0)国际协议 | 转载请注明链接出处</a></span>
+        </p>
+    </div>
+
+        <div class="bottom">
+                <p><span>wistbean &copy; 2015 - 2023</span>
+                    <span>
+                        
+                         <a href="https://wistbean.github.io/">肯定会|wistbean</a>
+                         <a href="https://fxxkpython.com">通往Python高手之路</a>
+                         <a href="https://www.bwh8.net/aff.php?aff=32874" target="_blank">搬瓦工2023优惠码</a>、
+                         <a href="https://www.vultr.com/?ref=7532860" target="_blank">vultr2023优惠码</a>
+                    </span>
+                </p>
+        </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.org/stablediffusion-tutorial-00.html&title=《AI 绘画从0到1 | 00 课程在后，骚话在前》 — wistbean&pic=https://wistbean.org/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.org/stablediffusion-tutorial-00.html&title=《AI 绘画从0到1 | 00 课程在后，骚话在前》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.org/stablediffusion-tutorial-00.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《AI 绘画从0到1 | 00 课程在后，骚话在前》 — wistbean&url=https://wistbean.org/stablediffusion-tutorial-00.html&via=https://wistbean.org" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.org/stablediffusion-tutorial-00.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACK0lEQVR42u3ay46DMAwF0P7/TzPr0QxwbbeVSE5WVUshh4XlR16veB0n6/qav7+eXX/2zZsXBgbGYxnH5Uq2eL2J/L9nn5OXiIGBsQMjv3UvBF/Hyfy5p99jYGBgxLfuJZG9Z2FgYGDMA+71/a8TQQwMDIxeETtPCvNg/cFaHAMD44GMvOv+/c8fmW9gYGA8inEUVzU4TgYDhV1hYGAszcgDXF5eJtf3Wmw3qScGBsbSjPyo1uRoVzU052NODAyMtRm9plg1LCYhMn9B//wLAwNjaUa16T8fWPYCfbMjiIGBsRCjCkheR69vnw9By/NYDAyMhzMmj+kVpfmLKByzwMDAWJRRbc0nmEm2Vk03f9XiGBgYWzLyB+QBt7fRm8QRAwNjA0ae5FUbZNVXkz/xZoSJgYGxKKOZlhWPfPXGooUTIhgYGJsxes366pGLaoi/OTOCgYGxHKN3FKPXksvvk48TMDAw9mTMNzcpa/PgjoGBsRsjb8pXW2b5hiavBgMDYx9GtWiclKbVwUOUVmJgYGzAmDTI5tf3qm0MDAyMajMub7HlA9TCPTEwMBZlHMU1HxtUG3mFHiEGBsaijHzlvLzQ7ZXKzUksBgbGwxnJFvMxZPUN9VLGm8EABgbGooxq2tcbEszxzcMWGBgYmzGqaV/ekuudncDAwMBI0sG8Mq4ewiiU0BgYGBswqkco8qCcH5gYNe8wMDCWZvRKxyTUvmsTbxtqYmBgPI/xAxYM2xnp1F20AAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

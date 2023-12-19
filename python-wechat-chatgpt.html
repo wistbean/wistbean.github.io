@@ -55,31 +55,31 @@
 <meta name="keywords" content="ChatGPT,微信机器人">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用 Python 写一个「ChatGPT 微信机器人」">
-<meta property="og:url" content="https://ubuntu520.com/python-wechat-chatgpt.html">
+<meta property="og:url" content="https://wistbean.org/python-wechat-chatgpt.html">
 <meta property="og:site_name" content="wistbean">
 <meta property="og:description" content="上次写的那篇在终端操作ChatGPT中，分享了一个 ChatGPT 共享账号，直接给干废了 - - 文末我还说可以使用 OpenAPI 的方式实现，还可以将它接入到微信，有些朋友在后台常问到怎么弄，这次干脆就流程写下，给想要自己弄个 ChatGPT 的朋友做个简单的参考哈。 搞个自己的账号上次使用的是 playwright 来获取浏览器的元素实现的，操作起来有点傻，这次就基于 OpenAI 的 A">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://ubuntu520.com/images/cg-01.png">
-<meta property="og:image" content="https://ubuntu520.com/images/cg-02.png">
-<meta property="og:image" content="https://ubuntu520.com/images/cg-03.png">
-<meta property="og:image" content="https://ubuntu520.com/images/cg-04.png">
-<meta property="og:image" content="https://ubuntu520.com/images/cg-05.png">
-<meta property="og:image" content="https://ubuntu520.com/images/cg-06.png">
-<meta property="og:image" content="https://ubuntu520.com/images/cg-07.png">
-<meta property="og:image" content="https://ubuntu520.com/images/cg-08.png">
-<meta property="og:image" content="https://ubuntu520.com/images/cg-09.png">
-<meta property="og:image" content="https://ubuntu520.com/images/cg-10.png">
-<meta property="og:image" content="https://ubuntu520.com/images/cg-12.png">
-<meta property="og:image" content="https://ubuntu520.com/images/cg-11.png">
-<meta property="og:image" content="https://ubuntu520.com/images/cg-13.png">
-<meta property="og:image" content="https://ubuntu520.com/images/cg-14.png">
-<meta property="og:image" content="https://ubuntu520.com/images/cg-15.png">
-<meta property="og:image" content="https://ubuntu520.com/images/cg-16.png">
+<meta property="og:image" content="https://wistbean.org/images/cg-01.png">
+<meta property="og:image" content="https://wistbean.org/images/cg-02.png">
+<meta property="og:image" content="https://wistbean.org/images/cg-03.png">
+<meta property="og:image" content="https://wistbean.org/images/cg-04.png">
+<meta property="og:image" content="https://wistbean.org/images/cg-05.png">
+<meta property="og:image" content="https://wistbean.org/images/cg-06.png">
+<meta property="og:image" content="https://wistbean.org/images/cg-07.png">
+<meta property="og:image" content="https://wistbean.org/images/cg-08.png">
+<meta property="og:image" content="https://wistbean.org/images/cg-09.png">
+<meta property="og:image" content="https://wistbean.org/images/cg-10.png">
+<meta property="og:image" content="https://wistbean.org/images/cg-12.png">
+<meta property="og:image" content="https://wistbean.org/images/cg-11.png">
+<meta property="og:image" content="https://wistbean.org/images/cg-13.png">
+<meta property="og:image" content="https://wistbean.org/images/cg-14.png">
+<meta property="og:image" content="https://wistbean.org/images/cg-15.png">
+<meta property="og:image" content="https://wistbean.org/images/cg-16.png">
 <meta property="og:updated_time" content="2023-02-18T19:36:21.694Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用 Python 写一个「ChatGPT 微信机器人」">
 <meta name="twitter:description" content="上次写的那篇在终端操作ChatGPT中，分享了一个 ChatGPT 共享账号，直接给干废了 - - 文末我还说可以使用 OpenAPI 的方式实现，还可以将它接入到微信，有些朋友在后台常问到怎么弄，这次干脆就流程写下，给想要自己弄个 ChatGPT 的朋友做个简单的参考哈。 搞个自己的账号上次使用的是 playwright 来获取浏览器的元素实现的，操作起来有点傻，这次就基于 OpenAI 的 A">
-<meta name="twitter:image" content="https://ubuntu520.com/images/cg-01.png">
+<meta name="twitter:image" content="https://wistbean.org/images/cg-01.png">
     
         <link rel="alternate" type="application/atom+xml" title="wistbean" href="/atom.xml">
     
@@ -408,13 +408,13 @@
         
         -->
         在公众号「学习 Python 的正确姿势」发送「帅书」领取我写的技术电子书，转载请注明出处：
-        <a href="https://ubuntu520.com/python-wechat-chatgpt.html">
+        <a href="https://wistbean.org/python-wechat-chatgpt.html">
                    wistbean
         </a>
     </div>
     
     <footer>
-        <a href="https://ubuntu520.com">
+        <a href="https://wistbean.org">
             <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
             wistbean
         </a>
@@ -436,7 +436,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://ubuntu520.com/python-wechat-chatgpt.html&title=《使用 Python 写一个「ChatGPT 微信机器人」》 — wistbean&pic=https://ubuntu520.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.org/python-wechat-chatgpt.html&title=《使用 Python 写一个「ChatGPT 微信机器人」》 — wistbean&pic=https://wistbean.org/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -446,22 +446,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://ubuntu520.com/python-wechat-chatgpt.html&title=《使用 Python 写一个「ChatGPT 微信机器人」》 — wistbean&source=wistbean" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.org/python-wechat-chatgpt.html&title=《使用 Python 写一个「ChatGPT 微信机器人」》 — wistbean&source=wistbean" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://ubuntu520.com/python-wechat-chatgpt.html" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.org/python-wechat-chatgpt.html" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《使用 Python 写一个「ChatGPT 微信机器人」》 — wistbean&url=https://ubuntu520.com/python-wechat-chatgpt.html&via=https://ubuntu520.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《使用 Python 写一个「ChatGPT 微信机器人」》 — wistbean&url=https://wistbean.org/python-wechat-chatgpt.html&via=https://wistbean.org" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://ubuntu520.com/python-wechat-chatgpt.html" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.org/python-wechat-chatgpt.html" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -561,7 +561,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://ubuntu520.com/python-wechat-chatgpt.html&title=《使用 Python 写一个「ChatGPT 微信机器人」》 — wistbean&pic=https://ubuntu520.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.org/python-wechat-chatgpt.html&title=《使用 Python 写一个「ChatGPT 微信机器人」》 — wistbean&pic=https://wistbean.org/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -571,22 +571,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://ubuntu520.com/python-wechat-chatgpt.html&title=《使用 Python 写一个「ChatGPT 微信机器人」》 — wistbean&source=wistbean" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.org/python-wechat-chatgpt.html&title=《使用 Python 写一个「ChatGPT 微信机器人」》 — wistbean&source=wistbean" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://ubuntu520.com/python-wechat-chatgpt.html" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.org/python-wechat-chatgpt.html" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《使用 Python 写一个「ChatGPT 微信机器人」》 — wistbean&url=https://ubuntu520.com/python-wechat-chatgpt.html&via=https://ubuntu520.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《使用 Python 写一个「ChatGPT 微信机器人」》 — wistbean&url=https://wistbean.org/python-wechat-chatgpt.html&via=https://wistbean.org" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://ubuntu520.com/python-wechat-chatgpt.html" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.org/python-wechat-chatgpt.html" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -597,7 +597,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACNUlEQVR42u3aQXIbMQwEQP//00pVrraYGdBxsmTzpLIlir0HCCDw8RGv1+/17i+vTyvf5/N/1+/ZWhgYGI9lvJZrfdAcs35nvudbKgYGxgWMdXBMvrI9bhKUk7NhYGBgJO9ZB+g8EUweEwYGBkbCmB0xL4wxMDAwdorY5OvbIjZ/ZN9Wi2NgYDyQ0TYGfvL1X+xvYGBgPITxKtc67cuv0pLgW5wKAwPjaEZ76d+mhu1usweBgYFxA2Pna9abFuGyHN345i4HBgbGf8zIy8XZ0FgCbi/XvniNgYFxJSPfYqfNuZNuflGLY2BgXMZohyHyIJuXqeszFL8bGBgYD2fsH3rnU+tkMd8BAwPjbEab9rXtxp1xjSJ8Y2BgHM1or/5nq22Itg0GDAyMsxlt8Rld0weX/nkY3arFMTAwDmK0oxJJCyFvNtS/D++GLTAwMC5jJH/Jr/XzADosejEwMI5mtGMTs2GLWfKXNxIwMDBuYMyuwPJPtY3PWYDGwMA4m9EGytmBZoG+aCpgYGAcythPwtoBi1kjoa7FMTAwDmXMytRZ+thesf3hwWFgYBzNaBuWedhtx8La4F4fBQMD47GMV7nW2+UDGbOxjLepJAYGxtGM/Uv//ZRu1uDEwMC4jdEG2Tb5ax/TsC2BgYFxASMPo+2oRDtwtlXKYmBgXM/IE7UEkwTxojGAgYGBsX3plsfGvAzGwMC4jTErYpNksb2wa/uSGBgYNzBmjYGdkvUfADAwMJ7K+AXEh8xS3xvAtgAAAABJRU5ErkJggg==" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACI0lEQVR42u3a0Y7CMAxE0f7/TxeJ11J3xk6B2jdPaOmSHFaajeNsmzz29zi+1n83HscntzsGDBgwHstwJzhOE//k7N2zZ+J5T6kwYMAYwFBCNmZUojP++uK1wYABA4YeqfHSc/ENAwYMGDmGW4jqG82vBi4MGDAeyFAWpxy36cv6WS0OAwaMBzIqjYG7X3+pvwEDBow/ZuzmcJsB7iZvTw0YMGD0ZuQO5ZXcc99dMAsMGDCaMnJHY7nC0m0DGE1TGDBgDGCsKm6VpdcZH17DgAGjNUNZVmWh7iUMPeJhwIAxh3Gx5Sq3Deqxm7wtAgMGjHaM+gUvpTGQC2vpq4EBA8YARiVw3ctkbphK0QwDBowBjEqRmdvYubyLhisMGDBaMyqLc+NVWeiCz4QBA0Y7hhJ8bhDrR/xKI0H6ZwADBoyRjNxmMbelU2Yx7ozAgAGjHcMNSnebWCmM3eCGAQPGNMZ9Rakbwca1DBgwYLRm5ApRdylrD/JgwIAxhxGXrArJDdl61MKAAWMyw51M+bm7lVx2wQIGDBiNGPpxfxzKSmQreBdz+peBAQNGI8ZuDj0ccxe/3GYnDBgwJjDczVnuoph+CWxZYwAGDBjtGErIKhFcf760iYQBA8YAhh6yuVJ21WEcDBgwYFQC1G1kuqXpxZMwYMCAYYap8gn6JQ9pPTBgwBjAyBWx7iIqBfDF7DBgwGjNyDUG3OsX9pTm1wcDBoymjBdMII50xFqFHQAAAABJRU5ErkJggg==" alt="微信分享二维码">
 </div>
 
 

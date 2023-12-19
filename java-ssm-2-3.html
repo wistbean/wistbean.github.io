@@ -55,7 +55,7 @@
 <meta name="keywords" content="教程,Java,Java视频教程,项目实战,分布式,SSM,IntelliJ IDEA,码农商城,Maven">
 <meta property="og:type" content="article">
 <meta property="og:title" content="「2-3」使用 InteliJ IDEA 创建 Maven 项目与相关配置">
-<meta property="og:url" content="https://ubuntu520.com/java-ssm-2-3.html">
+<meta property="og:url" content="https://wistbean.org/java-ssm-2-3.html">
 <meta property="og:site_name" content="wistbean">
 <meta property="og:description" content="SSM视频教程第2-3节:使用 InteliJ IDEA 创建 Maven 项目与相关配置   访问不了Youtube？1.点击搭建自己的ss并开启bbr快速上网教程轻松访问1080p高清Youtube视频。2.或者点击本节b站视频教程地址观看。  SSM视频教程第2-3节课程概要使用 Intelij IDEA 创建 Maven 工程并配置 1234567891011121314151617181">
 <meta property="og:locale" content="zh-CN">
@@ -209,13 +209,13 @@
             <h1 id="SSM视频教程第2-3节-使用-InteliJ-IDEA-创建-Maven-项目与相关配置"><a href="#SSM视频教程第2-3节-使用-InteliJ-IDEA-创建-Maven-项目与相关配置" class="headerlink" title="SSM视频教程第2-3节:使用 InteliJ IDEA 创建 Maven 项目与相关配置"></a>SSM视频教程第2-3节:使用 InteliJ IDEA 创建 Maven 项目与相关配置</h1><iframe width="100%" height="315" src="https://www.youtube.com/embed/TwmgCsTpgXg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <blockquote>
-<p>访问不了Youtube？<br>1.点击<a href="https://wistbean.org/vultr-vps-bbr-ss.html" target="_blank" rel="noopener">搭建自己的ss并开启bbr快速上网教程</a>轻松访问1080p高清Youtube视频。<br>2.或者点击<a href="https://www.bilibili.com/video/av28261268/" target="_blank" rel="noopener">本节b站视频教程地址</a>观看。</p>
+<p>访问不了Youtube？<br>1.点击<a href="https://wistbean.org/vultr-vps-bbr-ss.html">搭建自己的ss并开启bbr快速上网教程</a>轻松访问1080p高清Youtube视频。<br>2.或者点击<a href="https://www.bilibili.com/video/av28261268/" target="_blank" rel="noopener">本节b站视频教程地址</a>观看。</p>
 </blockquote>
 <h1 id="SSM视频教程第2-3节课程概要"><a href="#SSM视频教程第2-3节课程概要" class="headerlink" title="SSM视频教程第2-3节课程概要"></a>SSM视频教程第2-3节课程概要</h1><p>使用 Intelij IDEA 创建 Maven 工程并配置</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span><br><span class="line">&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot;</span><br><span class="line">         xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span><br><span class="line">         xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;</span><br><span class="line">    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;</span><br><span class="line">    &lt;groupId&gt;com.kendinghui&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;manong_parent&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;</span><br><span class="line"></span><br><span class="line">    &lt;!--子模块--&gt;</span><br><span class="line">    &lt;modules&gt;</span><br><span class="line">    &lt;/modules&gt;</span><br><span class="line"></span><br><span class="line">    &lt;!--集中地定义版本号--&gt;</span><br><span class="line">    &lt;properties&gt;</span><br><span class="line">        &lt;junit.version&gt;4.12&lt;/junit.version&gt;</span><br><span class="line">        &lt;maven-resources-plugin&gt;3.1.0&lt;/maven-resources-plugin&gt;</span><br><span class="line">        &lt;maven-compiler-plugin&gt;3.2&lt;/maven-compiler-plugin&gt;</span><br><span class="line">    &lt;/properties&gt;</span><br><span class="line"></span><br><span class="line">    &lt;dependencyManagement&gt;</span><br><span class="line">        &lt;dependencies&gt;</span><br><span class="line">            &lt;dependency&gt;</span><br><span class="line">                &lt;groupId&gt;junit&lt;/groupId&gt;</span><br><span class="line">                &lt;artifactId&gt;junit&lt;/artifactId&gt;</span><br><span class="line">                &lt;version&gt;$&#123;junit.version&#125;&lt;/version&gt;</span><br><span class="line">            &lt;/dependency&gt;</span><br><span class="line">        &lt;/dependencies&gt;</span><br><span class="line">    &lt;/dependencyManagement&gt;</span><br><span class="line"></span><br><span class="line">    &lt;build&gt;</span><br><span class="line">        &lt;plugins&gt;</span><br><span class="line">            &lt;plugin&gt;</span><br><span class="line">                &lt;!--定义一个资源拷贝的插件--&gt;</span><br><span class="line">                &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;</span><br><span class="line">                &lt;artifactId&gt;maven-resources-plugin&lt;/artifactId&gt;</span><br><span class="line">                &lt;version&gt;$&#123;maven-resources-plugin&#125;&lt;/version&gt;</span><br><span class="line">                &lt;configuration&gt;</span><br><span class="line">                    &lt;encoding&gt;UTF-8&lt;/encoding&gt;</span><br><span class="line">                &lt;/configuration&gt;</span><br><span class="line">            &lt;/plugin&gt;</span><br><span class="line"></span><br><span class="line">            &lt;plugin&gt;</span><br><span class="line">                &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;</span><br><span class="line">                &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;</span><br><span class="line">                &lt;version&gt;$&#123;maven-compiler-plugin&#125;&lt;/version&gt;</span><br><span class="line">                &lt;configuration&gt;</span><br><span class="line">                    &lt;compilerVersion&gt;1.8&lt;/compilerVersion&gt;</span><br><span class="line">                    &lt;source&gt;1.8&lt;/source&gt;</span><br><span class="line">                    &lt;target&gt;1.8&lt;/target&gt;</span><br><span class="line">                    &lt;encoding&gt;UTF-8&lt;/encoding&gt;</span><br><span class="line">                &lt;/configuration&gt;</span><br><span class="line">            &lt;/plugin&gt;</span><br><span class="line">        &lt;/plugins&gt;</span><br><span class="line">    &lt;/build&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;/project&gt;</span><br></pre></td></tr></table></figure>
 
 <h1 id="SSM视频教程目录"><a href="#SSM视频教程目录" class="headerlink" title="SSM视频教程目录"></a>SSM视频教程目录</h1><ul>
-<li><a href="https://wistbean.org/java-ssm-video.html#SSM%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%9B%AE%E5%BD%95" target="_blank" rel="noopener">SSM视频教程目录</a></li>
+<li><a href="https://wistbean.org/java-ssm-video.html#SSM%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%9B%AE%E5%BD%95">SSM视频教程目录</a></li>
 </ul>
 
         </div>
@@ -230,13 +230,13 @@
         
         -->
         在公众号「学习 Python 的正确姿势」发送「帅书」领取我写的技术电子书，转载请注明出处：
-        <a href="https://ubuntu520.com/java-ssm-2-3.html">
+        <a href="https://wistbean.org/java-ssm-2-3.html">
                    wistbean
         </a>
     </div>
     
     <footer>
-        <a href="https://ubuntu520.com">
+        <a href="https://wistbean.org">
             <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
             wistbean
         </a>
@@ -258,7 +258,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://ubuntu520.com/java-ssm-2-3.html&title=《「2-3」使用 InteliJ IDEA 创建 Maven 项目与相关配置》 — wistbean&pic=https://ubuntu520.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.org/java-ssm-2-3.html&title=《「2-3」使用 InteliJ IDEA 创建 Maven 项目与相关配置》 — wistbean&pic=https://wistbean.org/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -268,22 +268,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://ubuntu520.com/java-ssm-2-3.html&title=《「2-3」使用 InteliJ IDEA 创建 Maven 项目与相关配置》 — wistbean&source=wistbean" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.org/java-ssm-2-3.html&title=《「2-3」使用 InteliJ IDEA 创建 Maven 项目与相关配置》 — wistbean&source=wistbean" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://ubuntu520.com/java-ssm-2-3.html" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.org/java-ssm-2-3.html" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《「2-3」使用 InteliJ IDEA 创建 Maven 项目与相关配置》 — wistbean&url=https://ubuntu520.com/java-ssm-2-3.html&via=https://ubuntu520.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《「2-3」使用 InteliJ IDEA 创建 Maven 项目与相关配置》 — wistbean&url=https://wistbean.org/java-ssm-2-3.html&via=https://wistbean.org" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://ubuntu520.com/java-ssm-2-3.html" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.org/java-ssm-2-3.html" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -383,7 +383,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://ubuntu520.com/java-ssm-2-3.html&title=《「2-3」使用 InteliJ IDEA 创建 Maven 项目与相关配置》 — wistbean&pic=https://ubuntu520.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.org/java-ssm-2-3.html&title=《「2-3」使用 InteliJ IDEA 创建 Maven 项目与相关配置》 — wistbean&pic=https://wistbean.org/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -393,22 +393,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://ubuntu520.com/java-ssm-2-3.html&title=《「2-3」使用 InteliJ IDEA 创建 Maven 项目与相关配置》 — wistbean&source=wistbean" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.org/java-ssm-2-3.html&title=《「2-3」使用 InteliJ IDEA 创建 Maven 项目与相关配置》 — wistbean&source=wistbean" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://ubuntu520.com/java-ssm-2-3.html" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.org/java-ssm-2-3.html" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《「2-3」使用 InteliJ IDEA 创建 Maven 项目与相关配置》 — wistbean&url=https://ubuntu520.com/java-ssm-2-3.html&via=https://ubuntu520.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《「2-3」使用 InteliJ IDEA 创建 Maven 项目与相关配置》 — wistbean&url=https://wistbean.org/java-ssm-2-3.html&via=https://wistbean.org" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://ubuntu520.com/java-ssm-2-3.html" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.org/java-ssm-2-3.html" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -419,7 +419,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABwklEQVR42u3aQW6DQAwFUO5/6VTqqlVF8LdnCJXerCKSDA8Wlsf2cZTX63v9vfLz+tnn+p7LFi4u7pj7ervOKGdX0lU34OLi3s99H2hO/9x6mHrgw8XFfT63nqD0QiEuLu5/5F4kH63jEy4u7pO5yw4n5fRo+1kNFxd3wE3D0I7PG+u7uLi4IbdX3Kw3V+Z3/LUnLi7uLdy05FFJgNJYlBZKcHFxd3PTwsTaY0z6UnBxce/kzlsp89GNUmDFxcW9hZsmImkDpj5+kd4dFxd3H7c+RFUPSZOW7UWpBRcX9xZub7t6C6TeRGnGWlxc3A3cSpIxL4D2dsPFxf0Ut9c0rbRR3++TpjUXKQ4uLu5Sblr0nFyZH7RwcXHv5/baHmmztsQ62x8XF/cWbnpQ6TVQe+v0IXFxcTdz67efNFfSQiouLu4TuOno1bzkcZQXLi7up7i9tCMdrkof7Eg3xcXFXcRNA0raXp0URCovBRcXdx+3F7x6QbA+jIWLi/sEbn2Is15Ire8Q3BcXF/dh3PQ3vVLLxbe4uLiP5E4Kqb1WCi4u7qe46dRG2j6pvJTFZzVcXNw1GUt8IOmNak1+iYuLu5n7BRxfQ/q6KCq3AAAAAElFTkSuQmCC" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABxklEQVR42u3aS4rEMAwFwNz/0pntQGjPkxyLZiivmk7iFFkI63Nd8bo/rN9Xn3c+rz73vE4sXFzcbe69XAnieXX9VPL/pz1xcXEnuetAk9DX+7wW7HBxcb+Ym0DXu+Hi4v4n7vrZPMzh4uJ+PzcvfCSHmGrwOpKr4eLibnDzKuW530fqu7i4uC3uXVw75dEX3o6LizvCzQNKcuzYacQWDk+4uLiD3CQ8JclJkjjlqVSUq+Hi4r7KzTetFkqq9KREgouLO8OtJiS9UYxe6TP6NLi4uAe4+8eUanpTbdh8rOLg4uIe4/aGMHqUnY7JFc1l4OLivsnNB6Ty4YleYSUKZLi4uIe51ZJEcn91n/wtuLi4M9z9Ukhv2GInxcLFxZ3h9g435xKhQmUXFxf3GDcpiCRbVym95i4uLu4kNz/E7DddtsoluLi4g9x3ockOzeCIi4t7mHsXV94WzcNTITXCxcUd4fZGIvJ7kvurRRlcXNwZbm8wonpUSpKf6NPg4uIOcpsdmPiwkkfQF+q7uLi449wk6Kz/32rE4uLifiV3PynqVTlwcXHnuTvFzfxwk7Rn/vhYuLi4I9xqKNkZ0+yNb+Li4g5yfwAOEXGwCIX70AAAAABJRU5ErkJggg==" alt="微信分享二维码">
 </div>
 
 

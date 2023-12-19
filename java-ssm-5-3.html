@@ -50,21 +50,21 @@
     <meta name="theme-color" content="#B5963F">
     
     
-    <meta name="keywords" content="教程,Intellij IDEA,Java,Java视频教程,项目实战,分布式,SSM,码农商城,EasyUI,商品,FreeMarker,Jqury">
+    <meta name="keywords" content="教程,Java,Intellij IDEA,Java视频教程,项目实战,分布式,SSM,码农商城,EasyUI,商品,FreeMarker,Jqury">
     <meta name="description" content="访问不了Youtube？1.点击搭建自己的ss并开启bbr快速上网教程轻松访问1080p高清Youtube视频。2.点击本节b站视频教程地址观看。  我们已经在5-2小节中实现了商品添加的界面,那么接下来我们就要对数据进行交互了。 在我们请求 product_add 这个页面的时候，我们应该将商品分类父级的数据放到 session 里面，然后传给页面。所以我们可以写一个 Controller">
-<meta name="keywords" content="教程,Intellij IDEA,Java,Java视频教程,项目实战,分布式,SSM,码农商城,EasyUI,商品,FreeMarker,Jqury">
+<meta name="keywords" content="教程,Java,Intellij IDEA,Java视频教程,项目实战,分布式,SSM,码农商城,EasyUI,商品,FreeMarker,Jqury">
 <meta property="og:type" content="article">
 <meta property="og:title" content="「5-3」实现码农商城商品分类的添加数据交互">
-<meta property="og:url" content="https://ubuntu520.com/java-ssm-5-3.html">
+<meta property="og:url" content="https://wistbean.org/java-ssm-5-3.html">
 <meta property="og:site_name" content="wistbean">
 <meta property="og:description" content="访问不了Youtube？1.点击搭建自己的ss并开启bbr快速上网教程轻松访问1080p高清Youtube视频。2.点击本节b站视频教程地址观看。  我们已经在5-2小节中实现了商品添加的界面,那么接下来我们就要对数据进行交互了。 在我们请求 product_add 这个页面的时候，我们应该将商品分类父级的数据放到 session 里面，然后传给页面。所以我们可以写一个 Controller">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://ubuntu520.com/images/cat.png">
+<meta property="og:image" content="https://wistbean.org/images/cat.png">
 <meta property="og:updated_time" content="2023-05-30T13:53:29.992Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="「5-3」实现码农商城商品分类的添加数据交互">
 <meta name="twitter:description" content="访问不了Youtube？1.点击搭建自己的ss并开启bbr快速上网教程轻松访问1080p高清Youtube视频。2.点击本节b站视频教程地址观看。  我们已经在5-2小节中实现了商品添加的界面,那么接下来我们就要对数据进行交互了。 在我们请求 product_add 这个页面的时候，我们应该将商品分类父级的数据放到 session 里面，然后传给页面。所以我们可以写一个 Controller">
-<meta name="twitter:image" content="https://ubuntu520.com/images/cat.png">
+<meta name="twitter:image" content="https://wistbean.org/images/cat.png">
     
         <link rel="alternate" type="application/atom+xml" title="wistbean" href="/atom.xml">
     
@@ -204,9 +204,9 @@
             <iframe width="100%" height="315" src="https://www.youtube.com/embed/eskTPnvHtZ4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <blockquote>
-<p>访问不了Youtube？<br>1.点击<a href="https://wistbean.org/vultr-vps-bbr-ss.html" target="_blank" rel="noopener">搭建自己的ss并开启bbr快速上网教程</a>轻松访问1080p高清Youtube视频。<br>2.点击<a href="https://www.bilibili.com/video/av38940502/" target="_blank" rel="noopener">本节b站视频教程地址</a>观看。</p>
+<p>访问不了Youtube？<br>1.点击<a href="https://wistbean.org/vultr-vps-bbr-ss.html">搭建自己的ss并开启bbr快速上网教程</a>轻松访问1080p高清Youtube视频。<br>2.点击<a href="https://www.bilibili.com/video/av38940502/" target="_blank" rel="noopener">本节b站视频教程地址</a>观看。</p>
 </blockquote>
-<p>我们已经在<a href="https://wistbean.org/java-ssm-5-2.html" target="_blank" rel="noopener">5-2</a>小节中实现了商品添加的界面,那么接下来我们就要对数据进行交互了。</p>
+<p>我们已经在<a href="https://wistbean.org/java-ssm-5-2.html">5-2</a>小节中实现了商品添加的界面,那么接下来我们就要对数据进行交互了。</p>
 <p>在我们请求 product_add 这个页面的时候，我们应该将商品分类父级的数据放到 session 里面，然后传给页面。所以我们可以写一个 Controller 来实现：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RequestMapping</span>(<span class="string">"/product_add"</span>)</span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">requestProductAdd</span><span class="params">(HttpServletRequest request)</span></span>&#123;</span><br><span class="line">    List&lt;EasyUITree&gt; categories = productCategoryService.findProductCategoryListByParentId((<span class="keyword">short</span>) <span class="number">0</span>);</span><br><span class="line">    request.getSession().setAttribute(<span class="string">"categories"</span>,categories);</span><br><span class="line">    <span class="keyword">return</span> <span class="string">"product_add"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -228,7 +228,7 @@
 
 <p> SSM视频教程目录</p>
 <ul>
-<li><a href="https://wistbean.org/java-ssm-video.html#SSM%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%9B%AE%E5%BD%95" target="_blank" rel="noopener">SSM视频教程目录</a></li>
+<li><a href="https://wistbean.org/java-ssm-video.html#SSM%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%9B%AE%E5%BD%95">SSM视频教程目录</a></li>
 </ul>
 
         </div>
@@ -243,13 +243,13 @@
         
         -->
         在公众号「学习 Python 的正确姿势」发送「帅书」领取我写的技术电子书，转载请注明出处：
-        <a href="https://ubuntu520.com/java-ssm-5-3.html">
+        <a href="https://wistbean.org/java-ssm-5-3.html">
                    wistbean
         </a>
     </div>
     
     <footer>
-        <a href="https://ubuntu520.com">
+        <a href="https://wistbean.org">
             <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
             wistbean
         </a>
@@ -271,7 +271,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://ubuntu520.com/java-ssm-5-3.html&title=《「5-3」实现码农商城商品分类的添加数据交互》 — wistbean&pic=https://ubuntu520.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.org/java-ssm-5-3.html&title=《「5-3」实现码农商城商品分类的添加数据交互》 — wistbean&pic=https://wistbean.org/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -281,22 +281,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://ubuntu520.com/java-ssm-5-3.html&title=《「5-3」实现码农商城商品分类的添加数据交互》 — wistbean&source=wistbean" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.org/java-ssm-5-3.html&title=《「5-3」实现码农商城商品分类的添加数据交互》 — wistbean&source=wistbean" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://ubuntu520.com/java-ssm-5-3.html" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.org/java-ssm-5-3.html" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《「5-3」实现码农商城商品分类的添加数据交互》 — wistbean&url=https://ubuntu520.com/java-ssm-5-3.html&via=https://ubuntu520.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《「5-3」实现码农商城商品分类的添加数据交互》 — wistbean&url=https://wistbean.org/java-ssm-5-3.html&via=https://wistbean.org" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://ubuntu520.com/java-ssm-5-3.html" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.org/java-ssm-5-3.html" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -396,7 +396,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://ubuntu520.com/java-ssm-5-3.html&title=《「5-3」实现码农商城商品分类的添加数据交互》 — wistbean&pic=https://ubuntu520.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.org/java-ssm-5-3.html&title=《「5-3」实现码农商城商品分类的添加数据交互》 — wistbean&pic=https://wistbean.org/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -406,22 +406,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://ubuntu520.com/java-ssm-5-3.html&title=《「5-3」实现码农商城商品分类的添加数据交互》 — wistbean&source=wistbean" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.org/java-ssm-5-3.html&title=《「5-3」实现码农商城商品分类的添加数据交互》 — wistbean&source=wistbean" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://ubuntu520.com/java-ssm-5-3.html" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.org/java-ssm-5-3.html" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《「5-3」实现码农商城商品分类的添加数据交互》 — wistbean&url=https://ubuntu520.com/java-ssm-5-3.html&via=https://ubuntu520.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《「5-3」实现码农商城商品分类的添加数据交互》 — wistbean&url=https://wistbean.org/java-ssm-5-3.html&via=https://wistbean.org" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://ubuntu520.com/java-ssm-5-3.html" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.org/java-ssm-5-3.html" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -432,7 +432,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAAByElEQVR42u3aQYrDQAwEQP//09lrYGHckjyTBMqnsGTtmhyE1PJ1xddreb1/5//n9T2vHRcuLu6Ym1OSv6xB6+OtDbi4uOe560KTsJIjJfe/seHi4n4ld01MylxSBHFxcX+LO6fg4uL+CrcaeSSDSh6dbJnVcHFxB9w8pdz3eUu+i4uL2+K+itfkGOvQJHo6Li7uEW51IVodWvIBKXkuLi7uGW4SgyYjTXWUyo9687vi4uJu4BaqXTFgzUvbpMHCxcU9ye29JNF72MMBCi4u7pjba0HWD8sDlHI7hYuLe4Tb21z0YtBqq9RsbnBxccfcamvyVLHLi1R584OLi/sQN1+B9MKRvAjeGHBxcQ9yewUrb4Cqy9eo7uLi4m7jVneX+atX1ai0GtHi4uLu5lbDjvy/esvUm4KIi4t7kJu0O5PClBwjGsBwcXE/yu2NKNUYpfxNXFzczdxJ29ELTfLGCBcX91Pc/MpXLNV79tojXFzc3dxq8ZqsQ3qvdl29GomLizvmVgtNNejMK2gh38XFxf0y7nygGk1suLi4X8ntjUO9KOThuouLixtzey1LdZn6QF3CxcU9wu2Fm8mrGPPFySjfxcXF7XD/AAP74jFYMO8OAAAAAElFTkSuQmCC" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABwUlEQVR42u3aQXLCMAwFUO5/abrtDG34kmyHTp9XDITwwkJjffnxiNfz23p9//rK12uu31+wcHFxx9zn5apek9B798fFxT3PvS40VVaOLhc7XFzcj+T2tim4uLj/h9srW6O/AxcX9yC32tgkt86L15ZeDRcXd8DtbVDWvt6S7+Li4ra4z+LK71CNS6Jfx8XFPcKtbl9645Zku1MY7uLi4m7mJs1JXobyMPQaGpUwXFzcW7nzQcj8iEahkOHi4i7l5iFmr5BVQ5AfHhIXF/cIN9+C5JuSZLCaD2yiXg0XF3cbNz+EUR2U9sY20UwYFxd3A7cXbVSJ+ZjkTSHDxcU9wk0+yG8xaZzKsQsuLu6t3B2HLSZxKi4u7knu5LBUNf5oRqW4uLgHub2xR+E/KEaxbzy4uLgHufnBiCp9cVyCi4t7nJt8IX+wVcWusAvDxcUdc3utTrXhyWPT8vQVFxd3A3d+JKLXOOXtU/NhcHFxx9zeFmcyRKmes1qwI8PFxW1x80LTq5GTKPbXfBcXF/ePcJPiNRrE4uLifiS3N0adBB+jQoaLizvgVsPNyTA1P3iBi4t7F3fBnDbATUJVXFzcg9wviK9SwcyzSoMAAAAASUVORK5CYII=" alt="微信分享二维码">
 </div>
 
 

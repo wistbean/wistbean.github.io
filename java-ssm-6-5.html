@@ -50,12 +50,12 @@
     <meta name="theme-color" content="#B5963F">
     
     
-    <meta name="keywords" content="码农商城,httpclient,freemarker,商城首页分类导航">
+    <meta name="keywords" content="码农商城,商城首页分类导航,httpclient,freemarker">
     <meta name="description" content="我们已经在 rest 系统中实现了商品分类的API，那么接下来我们就可以在 portal 系统中请求 rest 中的分类数据，我们可以使用 httpclient 进行不同系统之间的请求，接着将获取到的数据用 freemarker 进行展示。 创建 HttpClient在 common 模块中依赖相关jar包 12345678910111213141516171819202122&amp;lt;depend">
-<meta name="keywords" content="码农商城,httpclient,freemarker,商城首页分类导航">
+<meta name="keywords" content="码农商城,商城首页分类导航,httpclient,freemarker">
 <meta property="og:type" content="article">
 <meta property="og:title" content="「6-5」 httpclient+freemarker实现商城首页分类的导航数据展示">
-<meta property="og:url" content="https://ubuntu520.com/java-ssm-6-5.html">
+<meta property="og:url" content="https://wistbean.org/java-ssm-6-5.html">
 <meta property="og:site_name" content="wistbean">
 <meta property="og:description" content="我们已经在 rest 系统中实现了商品分类的API，那么接下来我们就可以在 portal 系统中请求 rest 中的分类数据，我们可以使用 httpclient 进行不同系统之间的请求，接着将获取到的数据用 freemarker 进行展示。 创建 HttpClient在 common 模块中依赖相关jar包 12345678910111213141516171819202122&amp;lt;depend">
 <meta property="og:locale" content="zh-CN">
@@ -220,7 +220,7 @@
 <h1 id="Service-的具体实现"><a href="#Service-的具体实现" class="headerlink" title="Service 的具体实现"></a>Service 的具体实现</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CategoriesServiceImpl</span> <span class="keyword">implements</span> <span class="title">CategoriesService</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;REST_URL&#125;"</span>)</span><br><span class="line">    <span class="keyword">private</span> String REST_URL;</span><br><span class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;CATEGORY_LIST&#125;"</span>)</span><br><span class="line">    <span class="keyword">private</span> String CATEGORY_LIST;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Res_Categories <span class="title">getCategories</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            String jsonResutlt = HttpClientUtil.httpGet(REST_URL + CATEGORY_LIST);</span><br><span class="line">            Res_Categories res_categories = GsonUtil.fromJson(Res_Categories.class, jsonResutlt);</span><br><span class="line">            <span class="keyword">return</span> res_categories;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <ul>
-<li><a href="https://wistbean.org/java-ssm-video.html#SSM%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%9B%AE%E5%BD%95" target="_blank" rel="noopener">SSM视频教程目录</a></li>
+<li><a href="https://wistbean.org/java-ssm-video.html#SSM%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%9B%AE%E5%BD%95">SSM视频教程目录</a></li>
 </ul>
 
         </div>
@@ -235,13 +235,13 @@
         
         -->
         在公众号「学习 Python 的正确姿势」发送「帅书」领取我写的技术电子书，转载请注明出处：
-        <a href="https://ubuntu520.com/java-ssm-6-5.html">
+        <a href="https://wistbean.org/java-ssm-6-5.html">
                    wistbean
         </a>
     </div>
     
     <footer>
-        <a href="https://ubuntu520.com">
+        <a href="https://wistbean.org">
             <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
             wistbean
         </a>
@@ -263,7 +263,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://ubuntu520.com/java-ssm-6-5.html&title=《「6-5」 httpclient+freemarker实现商城首页分类的导航数据展示》 — wistbean&pic=https://ubuntu520.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.org/java-ssm-6-5.html&title=《「6-5」 httpclient+freemarker实现商城首页分类的导航数据展示》 — wistbean&pic=https://wistbean.org/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -273,22 +273,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://ubuntu520.com/java-ssm-6-5.html&title=《「6-5」 httpclient+freemarker实现商城首页分类的导航数据展示》 — wistbean&source=wistbean" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.org/java-ssm-6-5.html&title=《「6-5」 httpclient+freemarker实现商城首页分类的导航数据展示》 — wistbean&source=wistbean" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://ubuntu520.com/java-ssm-6-5.html" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.org/java-ssm-6-5.html" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《「6-5」 httpclient+freemarker实现商城首页分类的导航数据展示》 — wistbean&url=https://ubuntu520.com/java-ssm-6-5.html&via=https://ubuntu520.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《「6-5」 httpclient+freemarker实现商城首页分类的导航数据展示》 — wistbean&url=https://wistbean.org/java-ssm-6-5.html&via=https://wistbean.org" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://ubuntu520.com/java-ssm-6-5.html" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.org/java-ssm-6-5.html" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -388,7 +388,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://ubuntu520.com/java-ssm-6-5.html&title=《「6-5」 httpclient+freemarker实现商城首页分类的导航数据展示》 — wistbean&pic=https://ubuntu520.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.org/java-ssm-6-5.html&title=《「6-5」 httpclient+freemarker实现商城首页分类的导航数据展示》 — wistbean&pic=https://wistbean.org/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -398,22 +398,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://ubuntu520.com/java-ssm-6-5.html&title=《「6-5」 httpclient+freemarker实现商城首页分类的导航数据展示》 — wistbean&source=wistbean" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.org/java-ssm-6-5.html&title=《「6-5」 httpclient+freemarker实现商城首页分类的导航数据展示》 — wistbean&source=wistbean" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://ubuntu520.com/java-ssm-6-5.html" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.org/java-ssm-6-5.html" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《「6-5」 httpclient+freemarker实现商城首页分类的导航数据展示》 — wistbean&url=https://ubuntu520.com/java-ssm-6-5.html&via=https://ubuntu520.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《「6-5」 httpclient+freemarker实现商城首页分类的导航数据展示》 — wistbean&url=https://wistbean.org/java-ssm-6-5.html&via=https://wistbean.org" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://ubuntu520.com/java-ssm-6-5.html" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.org/java-ssm-6-5.html" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -424,7 +424,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABxUlEQVR42u3aQY5jIQwFwNz/0untSK2QZxvoP1Kx+kIRFFlY2Ob1isf71/h3fv29XvN1YuDi4o657+VYc9fbr2fW63/cCxcX9yJ3vf2njfNDVtf/OI+Li/tI7vqik/wmWQEXF/d/5Ca5Se8wuLi4z+Eml5VqmaNaRtmcq+Hi4g64eZXy3PeR+i4uLm6L+y6OSYslKcJ+2R0XF/cKt3p9qRZD87JIvi8uLu4d7rwIUk2lklLIlyPh4uIe41YfUvTaIckKhRsZLi7uFW4v/uWXnjwUfvnGxcW9yM3LHGtK9RlWfg3CxcW9z52kNzklelqRJD+4uLhXuPMHFpMGbSFlwsXFvcLtJTl7q5fVQImLi3uaW31skUN7/1wh+cHFxT3GzcNKr6W669jlOi4uLu4m7q7LyqSNGhVqcXFxL3Krm/VKqL22DS4u7l9x80bp3sZJ+Ze4uLiHub1rR/VgeaCMzoGLi3uYm49dQapQ/ogbsbi4uCe4edBJrkS9JKcQ4HBxcS9yJw+qejPNZAwXF/fB3EnbdUPGhouL+zDupDrbK4WMAhkuLu6AW34GEbdSeiWVQk8YFxf3ALcXnqoPNSYhDBcX9yL3BzF/KfhiPG0dAAAAAElFTkSuQmCC" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAAB1ElEQVR42u3aS27DMAwFQN//0u42QCH3kfrEQEerwIntURaE+KTrisf9MT6vjD6Pvv39zGvHwMXFnebej2OEGN2bTDK5PnomLi7uSe5zoUnK1vNzlhU7XFzcF3OrCxRcXNz/wK1SkrtwcXHfxk2an2dubxobezVcXNwJbm+BsvbzlnwXFxe3xb2LIy9ASZtUfjsuLu4Rbl5QqsFoPsnq5i4uLu5ubq8VeX5NEobmTxj+r7i4uEe4ecyRNy05PVo24eLiHuT2ylbe8KzalMXFxX0PN9n4rG6sJg3SsPnBxcU9wl11oGrVFumCqBQXF3eaW12OVFuj3ibNH3UXFxd3G7e6UdqLQQvBRxKm4OLibub2cPld1QZpqu7i4uIu4uYBaLJYyeOP3vFQXFzck9xkNgmuSkmuFM6M4OLiHuHmZai3TGnGJbi4uAe51UVJ9cjFTLG78lni4uJOc+/iqAagvSi2+b/i4uIu4vaOROS/mVkY5e/FxcXdwa22H8+PjqKNIKJtLnRwcXGXcquvz+PUagUtBKa4uLiv4faOVuRbts3UBBcX96vcasA6H3wsqLu4uLgtbjXczNuVaOs0X1Th4uIe4fY2PvPjFDNFbSrfxcXF7XB/AEhcSOdHBcb3AAAAAElFTkSuQmCC" alt="微信分享二维码">
 </div>
 
 

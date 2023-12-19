@@ -55,7 +55,7 @@
 <meta name="keywords" content="教程,Java,Java视频教程,项目实战,分布式,SSM,IntelliJ IDEA,码农商城,Maven,Spring,Spring MVC,Mybatis,逆向工程">
 <meta property="og:type" content="article">
 <meta property="og:title" content="「2-6」Java SSM框架的整合与Mybatis逆向工程">
-<meta property="og:url" content="https://ubuntu520.com/java-ssm-2-6.html">
+<meta property="og:url" content="https://wistbean.org/java-ssm-2-6.html">
 <meta property="og:site_name" content="wistbean">
 <meta property="og:description" content="SSM视频教程第2-6节:SSM框架的整合与Mybatis逆向工程 &amp;gt; 访问不了Youtube？ 1.点击[搭建自己的ss并开启bbr快速上网教程](https://wistbean.org/vultr-vps-bbr-ss.html)轻松访问1080p高清Youtube视频。 2.或者点击[本节b站视频教程地址](https://www.bilibili.com/video/av31282630">
 <meta property="og:locale" content="zh-CN">
@@ -220,7 +220,7 @@
 <h2 id="web-xml配置"><a href="#web-xml配置" class="headerlink" title="web.xml配置"></a>web.xml配置</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span><br><span class="line">&lt;web-app xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span><br><span class="line">         xmlns=&quot;http://java.sun.com/xml/ns/javaee&quot; xmlns:web=&quot;http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd&quot;</span><br><span class="line">         xsi:schemaLocation=&quot;http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd&quot;</span><br><span class="line">         id=&quot;manong&quot; version=&quot;2.5&quot;&gt;</span><br><span class="line">    &lt;display-name&gt;manong-manager&lt;/display-name&gt;</span><br><span class="line">    &lt;welcome-file-list&gt;</span><br><span class="line">        &lt;welcome-file&gt;index.html&lt;/welcome-file&gt;</span><br><span class="line">        &lt;welcome-file&gt;index.htm&lt;/welcome-file&gt;</span><br><span class="line">        &lt;welcome-file&gt;index.jsp&lt;/welcome-file&gt;</span><br><span class="line"></span><br><span class="line">    &lt;/welcome-file-list&gt;</span><br><span class="line">    &lt;!-- 加载spring容器 --&gt;</span><br><span class="line">    &lt;context-param&gt;</span><br><span class="line">        &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;</span><br><span class="line">        &lt;param-value&gt;classpath:spring/applicationContext-*.xml&lt;/param-value&gt;</span><br><span class="line">    &lt;/context-param&gt;</span><br><span class="line">    &lt;listener&gt;</span><br><span class="line">        &lt;listener-class&gt;org.springframework.web.context.ContextLoaderListener&lt;/listener-class&gt;</span><br><span class="line">    &lt;/listener&gt;</span><br><span class="line">    &lt;!-- 解决post乱码 --&gt;</span><br><span class="line">    &lt;filter&gt;</span><br><span class="line">        &lt;filter-name&gt;CharacterEncodingFilter&lt;/filter-name&gt;</span><br><span class="line">        &lt;filter-class&gt;org.springframework.web.filter.CharacterEncodingFilter&lt;/filter-class&gt;</span><br><span class="line">        &lt;init-param&gt;</span><br><span class="line">            &lt;param-name&gt;encoding&lt;/param-name&gt;</span><br><span class="line">            &lt;param-value&gt;utf-8&lt;/param-value&gt;</span><br><span class="line">        &lt;/init-param&gt;</span><br><span class="line">    &lt;/filter&gt;</span><br><span class="line">    &lt;filter-mapping&gt;</span><br><span class="line">        &lt;filter-name&gt;CharacterEncodingFilter&lt;/filter-name&gt;</span><br><span class="line">        &lt;url-pattern&gt;/*&lt;/url-pattern&gt;</span><br><span class="line">    &lt;/filter-mapping&gt;</span><br><span class="line">    &lt;!-- springmvc的前端控制器 --&gt;</span><br><span class="line">    &lt;servlet&gt;</span><br><span class="line">        &lt;servlet-name&gt;manong-manager&lt;/servlet-name&gt;</span><br><span class="line">        &lt;servlet-class&gt;org.springframework.web.servlet.DispatcherServlet&lt;/servlet-class&gt;</span><br><span class="line"></span><br><span class="line">        &lt;init-param&gt;</span><br><span class="line">            &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;</span><br><span class="line">            &lt;param-value&gt;classpath:spring/springmvc.xml&lt;/param-value&gt;</span><br><span class="line">        &lt;/init-param&gt;</span><br><span class="line">        &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;</span><br><span class="line">    &lt;/servlet&gt;</span><br><span class="line">    &lt;servlet-mapping&gt;</span><br><span class="line">        &lt;servlet-name&gt;manong-manager&lt;/servlet-name&gt;</span><br><span class="line">        &lt;url-pattern&gt;/&lt;/url-pattern&gt;</span><br><span class="line">    &lt;/servlet-mapping&gt;</span><br><span class="line">&lt;/web-app&gt;</span><br></pre></td></tr></table></figure>
 
 <h1 id="SSM视频教程目录"><a href="#SSM视频教程目录" class="headerlink" title="SSM视频教程目录"></a>SSM视频教程目录</h1><ul>
-<li><a href="https://wistbean.org/java-ssm-video.html#SSM%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%9B%AE%E5%BD%95" target="_blank" rel="noopener">SSM视频教程目录</a></li>
+<li><a href="https://wistbean.org/java-ssm-video.html#SSM%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%9B%AE%E5%BD%95">SSM视频教程目录</a></li>
 </ul>
 
         </div>
@@ -235,13 +235,13 @@
         
         -->
         在公众号「学习 Python 的正确姿势」发送「帅书」领取我写的技术电子书，转载请注明出处：
-        <a href="https://ubuntu520.com/java-ssm-2-6.html">
+        <a href="https://wistbean.org/java-ssm-2-6.html">
                    wistbean
         </a>
     </div>
     
     <footer>
-        <a href="https://ubuntu520.com">
+        <a href="https://wistbean.org">
             <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
             wistbean
         </a>
@@ -263,7 +263,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://ubuntu520.com/java-ssm-2-6.html&title=《「2-6」Java SSM框架的整合与Mybatis逆向工程》 — wistbean&pic=https://ubuntu520.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.org/java-ssm-2-6.html&title=《「2-6」Java SSM框架的整合与Mybatis逆向工程》 — wistbean&pic=https://wistbean.org/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -273,22 +273,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://ubuntu520.com/java-ssm-2-6.html&title=《「2-6」Java SSM框架的整合与Mybatis逆向工程》 — wistbean&source=wistbean" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.org/java-ssm-2-6.html&title=《「2-6」Java SSM框架的整合与Mybatis逆向工程》 — wistbean&source=wistbean" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://ubuntu520.com/java-ssm-2-6.html" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.org/java-ssm-2-6.html" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《「2-6」Java SSM框架的整合与Mybatis逆向工程》 — wistbean&url=https://ubuntu520.com/java-ssm-2-6.html&via=https://ubuntu520.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《「2-6」Java SSM框架的整合与Mybatis逆向工程》 — wistbean&url=https://wistbean.org/java-ssm-2-6.html&via=https://wistbean.org" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://ubuntu520.com/java-ssm-2-6.html" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.org/java-ssm-2-6.html" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -311,18 +311,18 @@
 <nav class="post-nav flex-row flex-justify-between">
   
     <div class="waves-block waves-effect prev">
-      <a href="/java-ssm-2-5.html" id="post-prev" class="post-nav-link">
+      <a href="/build-personal-website.html" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">「2-5」使用InteliJ IDEA 创建 Maven 聚合工程</h4>
+        <h4 class="title">hexo搭建个人网站博客完全教程</h4>
       </a>
     </div>
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/java-ssm-2-4.html" id="post-next" class="post-nav-link">
+      <a href="/java-ssm-2-5.html" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">「2-4」使用InteliJ IDEA 创建分布式多模块 Maven 项目</h4>
+        <h4 class="title">「2-5」使用InteliJ IDEA 创建 Maven 聚合工程</h4>
       </a>
     </div>
   
@@ -388,7 +388,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://ubuntu520.com/java-ssm-2-6.html&title=《「2-6」Java SSM框架的整合与Mybatis逆向工程》 — wistbean&pic=https://ubuntu520.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.org/java-ssm-2-6.html&title=《「2-6」Java SSM框架的整合与Mybatis逆向工程》 — wistbean&pic=https://wistbean.org/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -398,22 +398,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://ubuntu520.com/java-ssm-2-6.html&title=《「2-6」Java SSM框架的整合与Mybatis逆向工程》 — wistbean&source=wistbean" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.org/java-ssm-2-6.html&title=《「2-6」Java SSM框架的整合与Mybatis逆向工程》 — wistbean&source=wistbean" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://ubuntu520.com/java-ssm-2-6.html" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.org/java-ssm-2-6.html" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《「2-6」Java SSM框架的整合与Mybatis逆向工程》 — wistbean&url=https://ubuntu520.com/java-ssm-2-6.html&via=https://ubuntu520.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《「2-6」Java SSM框架的整合与Mybatis逆向工程》 — wistbean&url=https://wistbean.org/java-ssm-2-6.html&via=https://wistbean.org" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://ubuntu520.com/java-ssm-2-6.html" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.org/java-ssm-2-6.html" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -424,7 +424,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABuUlEQVR42u3aQW7DMAwEQP//0+kD0qpL0pLTYnQKHMMeXQhq6euK1+ttJdeTZ147Fi4u7pj7Wq71PevXr68kz/9mS7i4uAe560JTfc37v/nzf7Hh4uJ+JDenJJvExcX9r9wqBRcX969wk2ZlXuyOntVwcXEH3Dyl3Pd7S76Li4vb4r6Ka72BvEg1346Li3uEWx2IVsPQPBbJ34uLi7ubmxx1qsOSXilMAhdcXNzz3MlBaNIGNTsyXFzczdx5UeuFreUABRcX9wh3HptWj0O9NggXF/dZbvWhyWcZhU8rgrYJFxf3PDfZRrUFmcSmTTQuLu6Amweg1QNSPobJ78fFxT3JzctW0tDk95e3iouLe4RbLTf5cSVvX/KWCBcX9yS32sRUQ5Peir4jw8XFfYhbRedFMCfi4uI+xV1Hokmc2huclO/ExcXdzJ20HdVBaTU2xcXFfYpbHbLOi1Q1rRnNhHFxcQfcXvHqjWHyCCYaouDi4m7mTj6o6l3JC9yPKQ4uLu5HcqsjlttObLi4uB/J7Z2relHIDYUMFxe3xS1/BhEjepFKNGTFxcXdxp2HmzeEHa2gFhcXdwP3C6Hs2FdwtNGAAAAAAElFTkSuQmCC" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABzElEQVR42u3aQY6EMAwEwPn/p9nrSCugbZMs0lZOI4SgmEMrtvP5xOv4Wt9X5nd+VixcXNwx97hcOeLsytlzrq//vgcXF3c/9zporimnjw7Q5bDDxcV9Mbe6TcHFxf0P3Opm6HpLhIuL+05uUvzkr6+G15JaDRcXd8DtbVCe/b2kv4uLi9viHsXVK2mSdkn0dlxc3C3cPFCqw4/eJil5Ly4u7h7ufNQ6H8cmDRdcXNyd3CR6egOV/JlJROLi4u7h5kemqkOX3obmphGDi4u7hdsrRXoHLJJMTWIOFxd3D7c65kxKo8mI9LFaDRcXd8DtNUSqm5tqUzXKXVxc3GXc3hClekQjj7z8jbi4uOu4SVgklPywxaSdiouLu5PbOzJVPV05apXi4uL+ETcfo05aHvmVmyDDxcVdzJ1sTfJYrMZlufjBxcVdxq02PvJWSC/sHu7T4OLiXt55FFfeFqmOZ6KPwcXF3cLtHYnID0z0mrCjISsuLu5D3KcORlRHLNWjHri4uPu5vVJnMmTNA+5myIqLi/sCbh5qeeukXLHh4uK+jDv/mNFoFhcXdyM3b25WxzDVgurmL8DFxd3CrUZJr3naC7VRfxcXF7fD/QHBi5p5OPTETwAAAABJRU5ErkJggg==" alt="微信分享二维码">
 </div>
 
 
