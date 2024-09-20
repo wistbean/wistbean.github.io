@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131395348-1"></script>
+    <script data-ad-client="ca-pub-9097083609097034" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-131395348-1');
+    </script>
+
+    
+
+    
+
+    
+
+
+<!-- Baidu Push -->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<!-- End Baidu Push -->
+
+
+    <meta charset="utf-8">
+    
+    <meta name="google-site-verification" content="bcJVGqEGcBIay29szBsswzqYxY3qUzWuvu1hfad3-08">
+    
+    
+    
+    
+    <title>谈谈java中的面向对象编程思想 | wistbean | wistbean</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#B5963F">
+    
+    
+    <meta name="keywords" content="Java,面向对象,编程思想">
+    <meta name="description" content="java对象英语：Object-oriented programming，缩写：OOP； 我们开发的程序是给用户使用的，而我们的程序是使用对象来完成产生的。对象可以看成是对问题的描述的一种解决方案，它与问题空间之间一一映射。也就是将问题抽取成为对象集合。 在java中以class关键字来定义类的对象，类包含了元素和功能，是一种引用类型，和Int、Float等类型是一样的道理，只不过Int、Floa">
+<meta name="keywords" content="Java,面向对象,编程思想">
+<meta property="og:type" content="article">
+<meta property="og:title" content="谈谈java中的面向对象编程思想">
+<meta property="og:url" content="https://wistbean.github.io/object-oriented-programming.html">
+<meta property="og:site_name" content="wistbean">
+<meta property="og:description" content="java对象英语：Object-oriented programming，缩写：OOP； 我们开发的程序是给用户使用的，而我们的程序是使用对象来完成产生的。对象可以看成是对问题的描述的一种解决方案，它与问题空间之间一一映射。也就是将问题抽取成为对象集合。 在java中以class关键字来定义类的对象，类包含了元素和功能，是一种引用类型，和Int、Float等类型是一样的道理，只不过Int、Floa">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://wistbean.github.io/images/oop1.png">
+<meta property="og:image" content="https://wistbean.github.io/images/oop2.png">
+<meta property="og:updated_time" content="2024-01-26T15:14:15.702Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="谈谈java中的面向对象编程思想">
+<meta name="twitter:description" content="java对象英语：Object-oriented programming，缩写：OOP； 我们开发的程序是给用户使用的，而我们的程序是使用对象来完成产生的。对象可以看成是对问题的描述的一种解决方案，它与问题空间之间一一映射。也就是将问题抽取成为对象集合。 在java中以class关键字来定义类的对象，类包含了元素和功能，是一种引用类型，和Int、Float等类型是一样的道理，只不过Int、Floa">
+<meta name="twitter:image" content="https://wistbean.github.io/images/oop1.png">
+    
+        <link rel="alternate" type="application/atom+xml" title="wistbean" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(https://wistbean.github.io/images/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">wistbean</h5>
+          <a href="mailto:wistbean.bb@gmail.com" title="wistbean.bb@gmail.com" class="mail">wistbean.bb@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="https://wistbean.org/python-tutorial.html"  >
+                <i class="icon icon-lg icon-coffee"></i>
+                Python零基础入门教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2NzYyNjg2Nw==&action=getalbum&album_id=2448798954764255234#wechat_redirect"  >
+                <i class="icon icon-lg icon-bug"></i>
+                Python爬虫教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://vip.fxxkpython.com/?page_id=18"  >
+                <i class="icon icon-lg icon-code"></i>
+                加入我的VIP
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/aboutMe/"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light off" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">谈谈java中的面向对象编程思想</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="vultr ss bbr v2ray 100美金">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">谈谈java中的面向对象编程思想</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-09-17T07:26:03.000Z" itemprop="datePublished" class="page-time">
+  2017-09-17
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Java/">Java</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>目录</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#java对象"><span class="post-toc-number">1.</span> <span class="post-toc-text">java对象</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#java面向对象的服务提供者"><span class="post-toc-number">2.</span> <span class="post-toc-text">java面向对象的服务提供者</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#java面向对象的封装"><span class="post-toc-number">3.</span> <span class="post-toc-text">java面向对象的封装</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#java对象组合"><span class="post-toc-number">4.</span> <span class="post-toc-text">java对象组合</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#java面向对象的继承"><span class="post-toc-number">5.</span> <span class="post-toc-text">java面向对象的继承</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#java面向对象的多态"><span class="post-toc-number">6.</span> <span class="post-toc-text">java面向对象的多态</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#对象存储"><span class="post-toc-number">7.</span> <span class="post-toc-text">对象存储</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#对象生命周期"><span class="post-toc-number">8.</span> <span class="post-toc-text">对象生命周期</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#相关资料"><span class="post-toc-number">9.</span> <span class="post-toc-text">相关资料</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-object-oriented-programming"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">谈谈java中的面向对象编程思想</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-09-17 15:26:03" datetime="2017-09-17T07:26:03.000Z"  itemprop="datePublished">2017-09-17</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Java/">Java</a></li></ul>
+
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="java对象"><a href="#java对象" class="headerlink" title="java对象"></a>java对象</h1><p>英语：Object-oriented programming，缩写：OOP；</p>
+<p>我们开发的程序是给用户使用的，而我们的程序是使用对象来完成产生的。对象可以看成是对问题的描述的一种解决方案，它与问题空间之间一一映射。也就是<strong>将问题抽取成为对象集合</strong>。</p>
+<p>在java中以class关键字来定义类的对象，类包含了元素和功能，是一种<strong>引用类型</strong>，和Int、Float等类型是一样的道理，只不过Int、Float等这些基本类型是java内置了的，所以我们可以拿来即用，而我们自定义的对象需要我们进行实例化后使用。</p>
+<h1 id="java面向对象的服务提供者"><a href="#java面向对象的服务提供者" class="headerlink" title="java面向对象的服务提供者"></a>java面向对象的服务提供者</h1><p>我们可以将对象看作服务提供者，比如手机这个对象，我们可以用它来聊天，打开闪光灯，砸核桃等。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/oop1.png" alt="OOP 面向对象" title="">
+                </div>
+                <div class="image-caption">OOP 面向对象</div>
+            </figure>
+
+<p>当每个对象都有各自独特的服务的时候，我们在使用的时候就很方便高效了，我们知道要实现什么功能，就拿什么对象来使用，如果我们对多个对象的各个方面都“组合”的很好的话，那么对代码来说是<strong>高内聚</strong>的，我们都约定俗成开发程序高内聚是我们追求你之一。</p>
+<h1 id="java面向对象的封装"><a href="#java面向对象的封装" class="headerlink" title="java面向对象的封装"></a>java面向对象的封装</h1><p>假设在合作开发的时候，有人负责创建类来提供服务，有人收集使用类来快速实现程序开发，我们把第一种人暂且叫类（服务）创建者，第二种人叫做使用服务（类）者。</p>
+<p>那么在这种情况下，创建者对自己的类只需要暴露必需的功能给使用者就可以了，使用者无需关心创建者是怎么样实现类的细节，拿来用就好了。这样创建者会对比较“脆弱”的代码进行封装，使用者无法触及，防止使用者随意修改，减少了bug的产生，还有就是创建者对封装的这些代码修改不会对使用者造成影响，比如类创建者在一开始创建类的时候某功能写的简单了，后来为了提高性能，那么修改这部分代码，实际上对使用者是毫无影响的。</p>
+<p>java用private关键字来限定只有类创建者和类内部方法可以使用，其它人都无法使用。</p>
+<p>如果是使用public修饰的话就相当于完全暴露了，任何人都可以使用。</p>
+<p>还有protected是让继承的子类可以使用，但是不能使用父类被private修饰的属性。</p>
+<p>默认不指定修饰的时候，同一包下的其它成员都可以访问。</p>
+<p>所以封装是有必要的，在这种分离的情况下，提高了安全性。</p>
+<h1 id="java对象组合"><a href="#java对象组合" class="headerlink" title="java对象组合"></a>java对象组合</h1><p>一个对象含有另一个对象，这就是组合。 比如手机这个对象含有相机对象，我们创建了相机对象，可以内置于手机对象中，这样做的好处是使用对象间灵活高效的。</p>
+<p><img src="/images/oop2.png" alt="OOP"></p>
+<p>代码提现：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Phone</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> Camera camera;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="java面向对象的继承"><a href="#java面向对象的继承" class="headerlink" title="java面向对象的继承"></a>java面向对象的继承</h1><p>当你发现对象之间存在诸多相似性的时候，并不需要每个都创建独立的对象，可以找出他们的相同点作为基类（父类），进而在衍生出差异的类（子类），这样子父类就包含子类所有共享的行为特性了，子类就以不同的实现方式存在。</p>
+<p>关于继承可以在<a href="http://www.wistbean.com/java-extends.html/" title="Java 继承是什么龟" target="_blank" rel="noopener">Java 继承是什么龟</a>查看。</p>
+<h1 id="java面向对象的多态"><a href="#java面向对象的多态" class="headerlink" title="java面向对象的多态"></a>java面向对象的多态</h1><p>狗可以称为动物，猫可以称为动物。多态在于你可以不在意具体对象类型而使用它们共同的属性：</p>
+<p>代码提现：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Animal</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        System.out.print(<span class="string">"吃东西。。"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Dog</span> <span class="keyword">extends</span> <span class="title">Animal</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"吃骨头"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Cat</span> <span class="keyword">extends</span> <span class="title">Animal</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"吃鱼"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Dog dog = <span class="keyword">new</span> Dog();</span><br><span class="line">        Cat cat = <span class="keyword">new</span> Cat();</span><br><span class="line">        eatSome(dog);</span><br><span class="line">        eatSome(cat);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">eatSome</span><span class="params">(Animal animal)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        animal.eat();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输出：</span><br><span class="line"></span><br><span class="line">	吃骨头</span><br><span class="line">	吃鱼</span><br></pre></td></tr></table></figure>
+
+<p>在这里可以看到dog和cat向上转型为Animal。<strong>向上转型是安全的，向下转型却是危险的</strong>，例如将Animal转为它的子类，因为此刻Animal既不知道是Dog还是Cat，所以向下转型还需要专门指定对象，即<strong>强制转换</strong>。</p>
+<p>更多关于多态可以参考：<a href="http://www.wistbean.com/blog/2015/07/22/java-polymorphic/" title="Java 多态可以吃吗？" target="_blank" rel="noopener">Java 多态可以吃吗？</a></p>
+<h1 id="对象存储"><a href="#对象存储" class="headerlink" title="对象存储"></a>对象存储</h1><p>因为java是在运行时才能确定对象的多少，所以有了动态存储对象的<strong>集合</strong>，集合提供了不同的接口和行为，它们之间效率不同，应用场景不同：<a href="http://www.wistbean.com/blog/2015/07/26/java-collection/" title="Java 细数各种常见的集合" target="_blank" rel="noopener">Java 细数各种常见的集合</a></p>
+<h1 id="对象生命周期"><a href="#对象生命周期" class="headerlink" title="对象生命周期"></a>对象生命周期</h1><p>对象的生成会占用内存资源的，所以需要销毁来释放内存资源，对象是在堆的内存池中动态创建的，java有一个专门的垃圾回收器，它知道对象在什么时候可以销毁，会自动的销毁从而释放资源且不会影响程序的正常运行。</p>
+<h1 id="相关资料"><a href="#相关资料" class="headerlink" title="相关资料"></a>相关资料</h1><ul>
+<li><a href="http://www.cnblogs.com/hellojava/archive/2013/02/27/2935450.html" target="_blank" rel="noopener">Java面向对象详解</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/29422384" target="_blank" rel="noopener">我的专栏 谈谈java的面向对象</a></li>
+<li><a href="http://wiki.jikexueyuan.com/project/java-interview-bible/OOP.html" target="_blank" rel="noopener">面向对象编程</a></li>
+<li><a href="https://zh.wikipedia.org/zh-hans/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1" target="_blank" rel="noopener">面向对象程序设计</a></li>
+<li><a href="https://www.zhihu.com/question/31021366" target="_blank" rel="noopener">什么是面向对象编程思想？</a></li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+      <!--  
+
+        
+        关注公众号「wistbean」，发送「帅书」获取我写的技术电子书
+        
+        -->
+        在公众号「学习 Python 的正确姿势」发送「帅书」领取我写的技术电子书，转载请注明出处：
+        <a href="https://wistbean.github.io/object-oriented-programming.html">
+                   wistbean
+        </a>
+    </div>
+    
+    <footer>
+        <a href="https://wistbean.github.io">
+            <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+            wistbean
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/编程思想/">编程思想</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面向对象/">面向对象</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/object-oriented-programming.html&title=《谈谈java中的面向对象编程思想》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/object-oriented-programming.html&title=《谈谈java中的面向对象编程思想》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/object-oriented-programming.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《谈谈java中的面向对象编程思想》 — wistbean&url=https://wistbean.github.io/object-oriented-programming.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/object-oriented-programming.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/programing-experience.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">编程人生中的两个小经验</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/install-centos.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">02 在VirtualBox虚拟机安装配置CentOS系统</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>本站已加入 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-知识 4.0  (CC BY-NC-SA 4.0)国际协议 | 转载请注明链接出处</a></span>
+        </p>
+    </div>
+
+        <div class="bottom">
+                <p><span>wistbean &copy; 2015 - 2024</span>
+                    <span>
+                        
+                         <a href="https://wistbean.github.io/">肯定会|wistbean</a>
+                         <a href="https://fxxkpython.com">通往Python高手之路</a>
+                         <a href="https://www.bwh8.net/aff.php?aff=32874" target="_blank">搬瓦工2024优惠码</a>、
+                         <a href="https://www.vultr.com/?ref=7532860" target="_blank">vultr2024优惠码</a>
+                    </span>
+                </p>
+        </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/object-oriented-programming.html&title=《谈谈java中的面向对象编程思想》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/object-oriented-programming.html&title=《谈谈java中的面向对象编程思想》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/object-oriented-programming.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《谈谈java中的面向对象编程思想》 — wistbean&url=https://wistbean.github.io/object-oriented-programming.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/object-oriented-programming.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACIUlEQVR42u3aQXLCMAwF0N7/0um2G5IvCTqD/LJiwInzvBCS5Z+f+Lr+XPe/vhp5f28yyxsuDAyMr2Vct9f9BMldySy9uzAwME5jJKHwPgTfT5/clcz78nsMDAyM+PNkZILEwMDAyBkPiVrw/OpCYGBgYPQKy0mxOlkyDAyM0xj5rvv/f/5IfwMDA+OrGFfxqjYJeg3O8lthYGCsZuQBrneEYr4xV3gfDAyM1YzqIa3JKybPSRbrgYqBgbGUUU3gemXwpFWZgDEwMPYxJgcgquE4aQw0gzUGBsZqRp54VY9wTbbkeiEYAwPjZEZvyz7aFAs22nIeBgbGOYxJEZtMmYfgZCFeBlwMDIzVjMnhifwgRbVFGn2PgYGxlFEtI6tj8qSwmiZG/xgYGBiLGL3Amm+KJa3N0dMwMDAOY0yaAb1DYPMCGAMDYzdjkqL10sc8ZSwfQcPAwFjNyGGT5uU8vFaLZAwMjK2MvJStxrp8TAIulLUYGBgrGPmUeaHbK2LzBmrhsAUGBsYiRp6Kfa7oHRWuGBgYRzJ6qVu1iK0CHlJDDAyMdYyreFU3wnql7CgpxMDAWMd4V/pYLXQn46s7bBgYGDsYvSCbj0/wvbIWAwPjNEZSrOZjqq3QahGLgYGB0QuaefNg3vIcnd3AwMA4gFFNCpOUMVmCh8XCwMA4gJG8XHWzLGfnz282MjEwML6c0SsdeyVubyttXvpiYGB8LeMX+wH6CJ5+Z5oAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

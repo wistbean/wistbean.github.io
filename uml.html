@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131395348-1"></script>
+    <script data-ad-client="ca-pub-9097083609097034" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-131395348-1');
+    </script>
+
+    
+
+    
+
+    
+
+
+<!-- Baidu Push -->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<!-- End Baidu Push -->
+
+
+    <meta charset="utf-8">
+    
+    <meta name="google-site-verification" content="bcJVGqEGcBIay29szBsswzqYxY3qUzWuvu1hfad3-08">
+    
+    
+    
+    
+    <title>轻松理解UML用例图时序图类图的教程 | wistbean | wistbean</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#B5963F">
+    
+    
+    <meta name="keywords" content="教程,Java,UML,用例图,时序图,类图">
+    <meta name="description" content="写在前面当你老大扔给你这样的图，或者你需要完成某些功能而去看文档的时候发现以下类似这样的图会不会不（一）知（脸）所（懵）措（逼）：                                                                                              UML               （图片来至wikipedia）  （图片来至微">
+<meta name="keywords" content="教程,Java,UML,用例图,时序图,类图">
+<meta property="og:type" content="article">
+<meta property="og:title" content="轻松理解UML用例图时序图类图的教程">
+<meta property="og:url" content="https://wistbean.github.io/uml.html">
+<meta property="og:site_name" content="wistbean">
+<meta property="og:description" content="写在前面当你老大扔给你这样的图，或者你需要完成某些功能而去看文档的时候发现以下类似这样的图会不会不（一）知（脸）所（懵）措（逼）：                                                                                              UML               （图片来至wikipedia）  （图片来至微">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/UML_Use_Case_diagram.svg/513px-UML_Use_Case_diagram.svg.png">
+<meta property="og:image" content="https://pay.weixin.qq.com/wiki/doc/api/img/chapter7_4_1.png">
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Uml_diagram.svg/850px-Uml_diagram.svg.png">
+<meta property="og:image" content="https://wistbean.github.io/images/use%20case.png">
+<meta property="og:image" content="https://wistbean.github.io/images/actor.png">
+<meta property="og:image" content="https://wistbean.github.io/images/relation.png">
+<meta property="og:image" content="https://wistbean.github.io/images/boundary.png">
+<meta property="og:image" content="https://wistbean.github.io/images/usecaseexample.png">
+<meta property="og:image" content="https://wistbean.github.io/images/object.png">
+<meta property="og:image" content="https://wistbean.github.io/images/xuxain.png">
+<meta property="og:image" content="https://wistbean.github.io/images/huodongtiao.png">
+<meta property="og:image" content="https://wistbean.github.io/images/msg.png">
+<meta property="og:image" content="https://wistbean.github.io/images/ifelse.png">
+<meta property="og:image" content="https://wistbean.github.io/images/loop.png">
+<meta property="og:image" content="https://wistbean.github.io/images/sequence.png">
+<meta property="og:image" content="https://wistbean.github.io/images/class.png">
+<meta property="og:image" content="https://wistbean.github.io/images/user.png">
+<meta property="og:image" content="https://wistbean.github.io/images/guanlian.png">
+<meta property="og:image" content="https://wistbean.github.io/images/yilai.png">
+<meta property="og:image" content="https://wistbean.github.io/images/extends.png">
+<meta property="og:image" content="https://wistbean.github.io/images/impl.png">
+<meta property="og:image" content="https://wistbean.github.io/images/zuhe.png">
+<meta property="og:image" content="https://wistbean.github.io/images/juhe.png">
+<meta property="og:image" content="https://wistbean.github.io/images/calss%20case.png">
+<meta property="og:updated_time" content="2024-01-26T15:14:15.817Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="轻松理解UML用例图时序图类图的教程">
+<meta name="twitter:description" content="写在前面当你老大扔给你这样的图，或者你需要完成某些功能而去看文档的时候发现以下类似这样的图会不会不（一）知（脸）所（懵）措（逼）：                                                                                              UML               （图片来至wikipedia）  （图片来至微">
+<meta name="twitter:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/UML_Use_Case_diagram.svg/513px-UML_Use_Case_diagram.svg.png">
+    
+        <link rel="alternate" type="application/atom+xml" title="wistbean" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(https://wistbean.github.io/images/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">wistbean</h5>
+          <a href="mailto:wistbean.bb@gmail.com" title="wistbean.bb@gmail.com" class="mail">wistbean.bb@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="https://wistbean.org/python-tutorial.html"  >
+                <i class="icon icon-lg icon-coffee"></i>
+                Python零基础入门教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2NzYyNjg2Nw==&action=getalbum&album_id=2448798954764255234#wechat_redirect"  >
+                <i class="icon icon-lg icon-bug"></i>
+                Python爬虫教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://vip.fxxkpython.com/?page_id=18"  >
+                <i class="icon icon-lg icon-code"></i>
+                加入我的VIP
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/aboutMe/"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light off" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">轻松理解UML用例图时序图类图的教程</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="vultr ss bbr v2ray 100美金">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">轻松理解UML用例图时序图类图的教程</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-09-15T06:17:07.000Z" itemprop="datePublished" class="page-time">
+  2018-09-15
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Java/">Java</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>目录</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#写在前面"><span class="post-toc-number">1.</span> <span class="post-toc-text">写在前面</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#UML的用例图"><span class="post-toc-number">2.</span> <span class="post-toc-text">UML的用例图</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#UML的时序图"><span class="post-toc-number">3.</span> <span class="post-toc-text">UML的时序图</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#举个UML时序图例子："><span class="post-toc-number">3.1.</span> <span class="post-toc-text">举个UML时序图例子：</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#UML的类图"><span class="post-toc-number">4.</span> <span class="post-toc-text">UML的类图</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#类图举例子："><span class="post-toc-number">4.1.</span> <span class="post-toc-text">类图举例子：</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#参考资料"><span class="post-toc-number">5.</span> <span class="post-toc-text">参考资料</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-uml"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">轻松理解UML用例图时序图类图的教程</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-09-15 14:17:07" datetime="2018-09-15T06:17:07.000Z"  itemprop="datePublished">2018-09-15</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Java/">Java</a></li></ul>
+
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>当你老大扔给你这样的图，或者你需要完成某些功能而去看文档的时候发现以下类似这样的图会不会不（一）知（脸）所（懵）措（逼）：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/UML_Use_Case_diagram.svg/513px-UML_Use_Case_diagram.svg.png" alt="UML 用例图" title="UML">
+                </div>
+                <div class="image-caption">UML</div>
+            </figure>
+
+<p>（图片来至<a href="https://zh.wikipedia.org/wiki/%E7%94%A8%E4%BE%8B" target="_blank" rel="noopener">wikipedia</a>）<br><br></p>
+<p><img src="https://pay.weixin.qq.com/wiki/doc/api/img/chapter7_4_1.png" alt="UML 时序图"></p>
+<p>（图片来至<a href="https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=7_4" title="微信内网页支付时序图" target="_blank" rel="noopener">微信内网页支付时序图</a>）<br><br></p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Uml_diagram.svg/850px-Uml_diagram.svg.png" alt="UML 类图"></p>
+<p>（图片来至<a href="https://zh.wikipedia.org/wiki/%E9%A1%9E%E5%88%A5%E5%9C%96" target="_blank" rel="noopener">wikipedia</a>）</p>
+<p>如果你看了都不会一脸懵逼，那么可以出门左转啦，这篇文章就是来说明这些图的意思，让你在工作交流中，或者在看一些文档，或者看我的一些关于<a href="/blog/categories/pattern">设计模式</a>的文章，甚至架构建模中，都能轻松理解，毫无压力！</p>
+<h1 id="UML的用例图"><a href="#UML的用例图" class="headerlink" title="UML的用例图"></a>UML的用例图</h1><p>刚刚我们看到的第一张图片就是用例图，用例图有以下几个东东：</p>
+<ul>
+<li>用例</li>
+<li>参与者</li>
+<li>关联</li>
+<li>系统边界</li>
+</ul>
+<p>用例使用椭圆来表示，椭圆里边写上用例的名称：</p>
+<p><img src="/images/use%20case.png" alt="UML use case" title="UML use case"></p>
+<p>参与者用一个小人儿，在小人儿下面写上参与者名称,例如学生：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/actor.png" alt="UML actor" title="">
+                </div>
+                <div class="image-caption">UML actor</div>
+            </figure>
+
+
+<p>关联用一条线儿表示：</p>
+<p><img src="/images/relation.png" alt="UML relation"></p>
+<p>把用例围起来，系统边界就用个矩形啦：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/boundary.png" alt="UML boundary" title="">
+                </div>
+                <div class="image-caption">UML boundary</div>
+            </figure>
+
+
+<p>举个例子：</p>
+<p><img src="/images/usecaseexample.png" alt="UML usecase"></p>
+<p>我们可以看到这个</p>
+<p>系统叫做 「购物系统」 ；<br>有注册账号、登录系统、生成订单的用例（这里只列举几个用例，其它用例省略）；<br>参与者有顾客和管理员；<br>顾客关联到了注册账号和登录系统的用例；<br>管理员关联到了登录系统和生成订单的用例！</p>
+<h1 id="UML的时序图"><a href="#UML的时序图" class="headerlink" title="UML的时序图"></a>UML的时序图</h1><p>时序图就是我们刚刚看到的第二个图，时序图有以下几个东东：</p>
+<ul>
+<li>对象</li>
+<li>生命线</li>
+<li>活动条</li>
+<li>消息</li>
+<li>控制流<ul>
+<li>顺序</li>
+<li>分支</li>
+<li>循环</li>
+</ul>
+</li>
+</ul>
+<p>对象在矩形里边，左边是对象名称，右边是对象类型，下方还有一条线：</p>
+<p><img src="/images/object.png" alt="UML 时序图"></p>
+<p>用虚线代表的是对象的生命线：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/xuxain.png" alt="UML 时序图" title="">
+                </div>
+                <div class="image-caption">UML 时序图</div>
+            </figure>
+
+
+<p>活动条是一个竖着的矩形，当接收到消息的时候，这个对象就会有活动条：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/huodongtiao.png" alt="UML 时序图" title="">
+                </div>
+                <div class="image-caption">UML 时序图</div>
+            </figure>
+
+<p>消息用一根箭头，箭头上面写上消息信息，例如一个登录方法 login(userName,passWord):</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/msg.png" alt="UML 时序图" title="">
+                </div>
+                <div class="image-caption">UML 时序图</div>
+            </figure>
+
+
+<p>控制流有三种，普通就是按顺序的一个流程，还有分支就相当于if else：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/ifelse.png" alt="UML 时序图" title="">
+                </div>
+                <div class="image-caption">UML 时序图</div>
+            </figure>
+
+<p>矩形里边有一条虚线，左上角用ALT表示，当C为true的时候，就执行虚线上方的内容，当C为false的时候就执行虚线下方的内容。</p>
+<p>循环控制流：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/loop.png" alt="UML loop" title="">
+                </div>
+                <div class="image-caption">UML loop</div>
+            </figure>
+
+<p>左上角有LOOP表示循环，当C为true的时候，就循环执行方框里边的内容！</p>
+<h2 id="举个UML时序图例子："><a href="#举个UML时序图例子：" class="headerlink" title="举个UML时序图例子："></a>举个UML时序图例子：</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/sequence.png" alt="UML sequence diagram" title="">
+                </div>
+                <div class="image-caption">UML sequence diagram</div>
+            </figure>
+
+<p>可以看到，每个对象都有它们的<strong>生命线</strong>（虚线）；</p>
+<ol>
+<li><p>一开始用户给类型为GUI（界面）的Login对象发送一个登录<strong>信息</strong> 「 login（userName，passWord）」 ；</p>
+</li>
+<li><p>Login这个对象接收到了就会产生<strong>活动条</strong>，这时候Login这个界面会给类型为Controller的loginController发送登录<strong>信息</strong>「 login（userName，passWord）」 ；</p>
+</li>
+<li><p>此时loginController接收到<strong>信息</strong>产生<strong>活动条</strong>，这时候loginController去找类型为DB的UserDao，给它发送了一个获取用户密码的<strong>信息</strong>    「getUserPassword(userName)」；</p>
+</li>
+<li><p>UserDao接收到<strong>信息</strong>后产生<strong>活动条</strong>，返回用户的密码；</p>
+</li>
+<li><p>此时loginController接收到<strong>信息</strong>（用户的密码 userPassword），loginController此刻将信息发送给自己，通过verify去校验密码并且用result接收结果；</p>
+</li>
+<li><p>校验就产生了分支控制流，当resul为true的时候loginController会发送success给Login，当result为false的时候，loginController会发送failure给Login；</p>
+</li>
+<li><p>最后Login最后给用户发送messag信息。</p>
+</li>
+</ol>
+<p>好了，当你看到这里的时候，你就会发现，以后关于这类的时序图对你来说已经不在话下了。例如本文一开始的第二张图。</p>
+<h1 id="UML的类图"><a href="#UML的类图" class="headerlink" title="UML的类图"></a>UML的类图</h1><p>类图有以下几个东东：</p>
+<ul>
+<li>类名</li>
+<li>属性</li>
+<li>方法</li>
+<li>可见性</li>
+<li>数据类型</li>
+<li>关联关系</li>
+<li>依赖关系</li>
+<li>继承&#x2F;实现关系</li>
+<li>组合&#x2F;聚合关系</li>
+</ul>
+<p>类名、属性、方法在一个矩形中，分为上中下：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/class.png" alt="UML class" title="">
+                </div>
+                <div class="image-caption">UML class</div>
+            </figure>
+
+<p>可见性：</p>
+<ul>
+<li>private的时候在前方用 - 表示</li>
+<li>public的时候在前方用 + 表示</li>
+<li>protected的时候在前方用 # 表示</li>
+</ul>
+<p>数据类型表示形式：</p>
+<p>名字 ： 类型</p>
+<p>例如：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/user.png" alt="uml" title="">
+                </div>
+                <div class="image-caption">uml</div>
+            </figure>
+
+<p>userName 和 passWord 这两个属性是protected修饰的，数据类型都是String；<br>login() 和 register() 这两个方法是public修饰的，数据类型都是boolean；</p>
+<p>关联关系,用实线表示，例如A关联B：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/guanlian.png" alt="uml 关联关系" title="">
+                </div>
+                <div class="image-caption">uml 关联关系</div>
+            </figure>
+
+<p>依赖关系，用虚线表示，例如A依赖B：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/yilai.png" alt="uml 依赖关系" title="">
+                </div>
+                <div class="image-caption">uml 依赖关系</div>
+            </figure>
+
+<p>继承关系，用一个△ + 一条实线表示，例如A继承B：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/extends.png" alt="uml 继承关系" title="">
+                </div>
+                <div class="image-caption">uml 继承关系</div>
+            </figure>
+
+<p>依赖关系，用过一个△ + 一条虚线表示，例如A实现B：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/impl.png" alt="uml 依赖关系" title="">
+                </div>
+                <div class="image-caption">uml 依赖关系</div>
+            </figure>
+
+<p>组合关系，用一个 ♦ + 一条实线表示,例如A组合B：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/zuhe.png" alt="uml 组合关系" title="">
+                </div>
+                <div class="image-caption">uml 组合关系</div>
+            </figure>
+
+<p>聚合关系，用一个 ◇ + 一条实线表示,例如A组合B：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/juhe.png" alt="uml 聚合关系" title="">
+                </div>
+                <div class="image-caption">uml 聚合关系</div>
+            </figure>
+
+
+
+<blockquote>
+<p>聚合：表示两个对象之间是整体和部分的弱关系，部分的生命周期可以超越整体。如电脑和鼠标。</p>
+</blockquote>
+<blockquote>
+<p>组合：表示两个对象之间是整体和部分的强关系，部分的生命周期不能超越整体，或者说不能脱离整体而存在。组合关系的“部分”，是不能在整体之间进行共享的。</p>
+</blockquote>
+<h2 id="类图举例子："><a href="#类图举例子：" class="headerlink" title="类图举例子："></a>类图举例子：</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/calss%20case.png" alt="UML 类图" title="">
+                </div>
+                <div class="image-caption">UML 类图</div>
+            </figure>
+
+<p>可以看到，有User类，Customer类，Address类，Role类，Payment类，aliPay类，wechatPay类。</p>
+<p>其中Customer 继承 User，User类的userName 和 passWord 这两个属性是protected修饰的，数据类型都是String；<br>login() 和 register() 这两个方法是public修饰的，数据类型都是boolean；</p>
+<p>Address和Role聚合User；</p>
+<p>Customer依赖Payment；</p>
+<p>aliPay 和 wechatPay 实现了 Payment！</p>
+<p>以上，就是关于UML的用例图，时序图，类图！当然可以自己手动画几个试试，感觉挺不错哦，相信你在工作交流中，或者在看一些文档，或者看我的一些关于<a href="/blog/categories/pattern">设计模式</a>的文章，甚至架构建模中，都能轻松理解，毫无压力！</p>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ul>
+<li><a href="http://www.uml.org/" target="_blank" rel="noopener">官方UML Web站点</a></li>
+<li><a href="https://www.ibm.com/developerworks/cn/rational/r-uml/index.html" target="_blank" rel="noopener">UML基础统一建模语言简介</a></li>
+<li><a href="http://blog.csdn.net/zfrong/article/details/4086424" target="_blank" rel="noopener">UML实践详细经典教程</a></li>
+<li><a href="https://www.w3cschool.cn/uml_tutorial/" target="_blank" rel="noopener">w3cschool UML教程</a></li>
+<li><a href="https://zh.wikipedia.org/zh-hans/%E7%BB%9F%E4%B8%80%E5%BB%BA%E6%A8%A1%E8%AF%AD%E8%A8%80" target="_blank" rel="noopener">统一建模语言</a></li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+      <!--  
+
+        
+        关注公众号「wistbean」，发送「帅书」获取我写的技术电子书
+        
+        -->
+        在公众号「学习 Python 的正确姿势」发送「帅书」领取我写的技术电子书，转载请注明出处：
+        <a href="https://wistbean.github.io/uml.html">
+                   wistbean
+        </a>
+    </div>
+    
+    <footer>
+        <a href="https://wistbean.github.io">
+            <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+            wistbean
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/UML/">UML</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/教程/">教程</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/时序图/">时序图</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/用例图/">用例图</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/类图/">类图</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/uml.html&title=《轻松理解UML用例图时序图类图的教程》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/uml.html&title=《轻松理解UML用例图时序图类图的教程》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/uml.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《轻松理解UML用例图时序图类图的教程》 — wistbean&url=https://wistbean.github.io/uml.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/uml.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/github.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">GitHub是什么？如何使用？</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/present.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">读书:一个年轻人和老人的故事</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>本站已加入 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-知识 4.0  (CC BY-NC-SA 4.0)国际协议 | 转载请注明链接出处</a></span>
+        </p>
+    </div>
+
+        <div class="bottom">
+                <p><span>wistbean &copy; 2015 - 2024</span>
+                    <span>
+                        
+                         <a href="https://wistbean.github.io/">肯定会|wistbean</a>
+                         <a href="https://fxxkpython.com">通往Python高手之路</a>
+                         <a href="https://www.bwh8.net/aff.php?aff=32874" target="_blank">搬瓦工2024优惠码</a>、
+                         <a href="https://www.vultr.com/?ref=7532860" target="_blank">vultr2024优惠码</a>
+                    </span>
+                </p>
+        </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/uml.html&title=《轻松理解UML用例图时序图类图的教程》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/uml.html&title=《轻松理解UML用例图时序图类图的教程》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/uml.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《轻松理解UML用例图时序图类图的教程》 — wistbean&url=https://wistbean.github.io/uml.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/uml.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABxUlEQVR42u3aQW7DMAwEQP//0ynQW5FYWYqW7AKjU5C01vhCiEsdR7xev+vs8/s6+9/k+wsWLi5um/sarjH3/Qn5k5PX/vBKuLi4G7lJ8Tp9RFxzkuL4xYaLi/swbv4yVSIuLu7/5SabVQ80uLi4T+ZWNxg3P+Nj0KZeDRcXt8HtB6b9z1vzXVxc3MZUIiko+ffV4vVhd1xc3C3cJPJIAtB+hFp4Ji4u7mJuPjpNxioXNC3j5+Di4t7EnStJc1c08vDlz4kMFxd3MTcPN6vxaN44Je1Q1G/h4uIu5naONdX2plr+cHFxd3KrBWvd4ebLMQsXF3cxN9mmE4D2B7q4uLj7udWNk5Fq0gjNHYZwcXH3cKuRRB5z5FFsEpLi4uLexR3PMedqZD8WwcXF3c9NiNUDUP5r0nQVLmHg4uJexK0OSKrNTKdZwsXFvZe7IkI9Llq4uLh3cecCzWqo0ZoDdyooLi5ukdsZfCah6hhRPejg4uLu5FaLV2eIkhcyXFzcJ3CTQtO/QjHXPuHi4j6ZWw1BOiXy9PVwcXEfzJ0bllxwIQMXF3cjtzpYTcax+dWN/CVxcXH3cPuBaeeqVvUvcXFxF3N/AOH1tHsXzQW3AAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131395348-1"></script>
+    <script data-ad-client="ca-pub-9097083609097034" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-131395348-1');
+    </script>
+
+    
+
+    
+
+    
+
+
+<!-- Baidu Push -->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<!-- End Baidu Push -->
+
+
+    <meta charset="utf-8">
+    
+    <meta name="google-site-verification" content="bcJVGqEGcBIay29szBsswzqYxY3qUzWuvu1hfad3-08">
+    
+    
+    
+    
+    <title>02 在VirtualBox虚拟机安装配置CentOS系统 | wistbean | wistbean</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#B5963F">
+    
+    
+    <meta name="keywords" content="教程,Linux,VirtualBox,CentOS,虚拟机,配置">
+    <meta name="description" content="通过：01 创建CentOS虚拟机 我们已经创建好了虚拟机，也下载好了CentOS7的镜像文件。那么接下来就开始在我们的虚拟机安装配置CentOS系统。 01 首先打开我们的虚拟机，选择我们创建好的虚拟机，然后点击设置–存储–添加虚拟光驱：">
+<meta name="keywords" content="教程,Linux,VirtualBox,CentOS,虚拟机,配置">
+<meta property="og:type" content="article">
+<meta property="og:title" content="02 在VirtualBox虚拟机安装配置CentOS系统">
+<meta property="og:url" content="https://wistbean.github.io/install-centos.html">
+<meta property="og:site_name" content="wistbean">
+<meta property="og:description" content="通过：01 创建CentOS虚拟机 我们已经创建好了虚拟机，也下载好了CentOS7的镜像文件。那么接下来就开始在我们的虚拟机安装配置CentOS系统。 01 首先打开我们的虚拟机，选择我们创建好的虚拟机，然后点击设置–存储–添加虚拟光驱：">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://wistbean.github.io/images/2017-04-02-install-centos/installCentOS01.png">
+<meta property="og:image" content="https://wistbean.github.io/images/2017-04-02-install-centos/installCentOS02.png">
+<meta property="og:image" content="https://wistbean.github.io/images/2017-04-02-install-centos/installCentOS03.png">
+<meta property="og:image" content="https://wistbean.github.io/images/2017-04-02-install-centos/installCentOS04.png">
+<meta property="og:image" content="https://wistbean.github.io/images/2017-04-02-install-centos/installCentOS05.png">
+<meta property="og:image" content="https://wistbean.github.io/images/2017-04-02-install-centos/installCentOS06.png">
+<meta property="og:image" content="https://wistbean.github.io/images/2017-04-02-install-centos/installCentOS07.png">
+<meta property="og:image" content="https://wistbean.github.io/images/2017-04-02-install-centos/installCentOS08.png">
+<meta property="og:image" content="https://wistbean.github.io/images/2017-04-02-install-centos/installCentOS09.png">
+<meta property="og:image" content="https://wistbean.github.io/images/2017-04-02-install-centos/installCentOS10.png">
+<meta property="og:image" content="https://wistbean.github.io/images/2017-04-02-install-centos/installCentOS11.png">
+<meta property="og:image" content="https://wistbean.github.io/images/2017-04-02-install-centos/installCentOS12.png">
+<meta property="og:image" content="https://wistbean.github.io/images/2017-04-02-install-centos/installCentOS13.png">
+<meta property="og:image" content="https://wistbean.github.io/images/2017-04-02-install-centos/installCentOS14.png">
+<meta property="og:image" content="https://wistbean.github.io/images/2017-04-02-install-centos/installCentOS15.png">
+<meta property="og:image" content="https://wistbean.github.io/images/2017-04-02-install-centos/installCentOS16.png">
+<meta property="og:image" content="https://wistbean.github.io/images/2017-04-02-install-centos/installCentOS17.png">
+<meta property="og:image" content="https://wistbean.github.io/images/2017-04-02-install-centos/installCentOS18.png">
+<meta property="og:image" content="https://wistbean.github.io/images/2017-04-02-install-centos/installCentOS19.png">
+<meta property="og:image" content="https://wistbean.github.io/images/2017-04-02-install-centos/installCentOS20.png">
+<meta property="og:image" content="https://wistbean.github.io/images/2017-04-02-install-centos/installCentOS21.png">
+<meta property="og:image" content="https://wistbean.github.io/images/2017-04-02-install-centos/installCentOS22.png">
+<meta property="og:image" content="https://wistbean.github.io/images/2017-04-02-install-centos/installCentOS23.png">
+<meta property="og:image" content="https://wistbean.github.io/images/2017-04-02-install-centos/installCentOS24.png">
+<meta property="og:image" content="https://wistbean.github.io/images/2017-04-02-install-centos/installCentOS25.png">
+<meta property="og:image" content="https://wistbean.github.io/images/2017-04-02-install-centos/installCentOS26.png">
+<meta property="og:image" content="https://wistbean.github.io/images/2017-04-02-install-centos/installCentOS27.png">
+<meta property="og:image" content="https://wistbean.github.io/images/2017-04-02-install-centos/installCentOS28.png">
+<meta property="og:image" content="https://wistbean.github.io/images/2017-04-02-install-centos/installCentOS30.png">
+<meta property="og:image" content="https://wistbean.github.io/images/2017-04-02-install-centos/installCentOS31.png">
+<meta property="og:image" content="https://wistbean.github.io/images/2017-04-02-install-centos/installCentOS32.png">
+<meta property="og:image" content="https://wistbean.github.io/images/2017-04-02-install-centos/installCentOS33.png">
+<meta property="og:image" content="https://wistbean.github.io/images/2017-04-02-install-centos/installCentOS29.png">
+<meta property="og:updated_time" content="2024-01-26T15:14:15.626Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="02 在VirtualBox虚拟机安装配置CentOS系统">
+<meta name="twitter:description" content="通过：01 创建CentOS虚拟机 我们已经创建好了虚拟机，也下载好了CentOS7的镜像文件。那么接下来就开始在我们的虚拟机安装配置CentOS系统。 01 首先打开我们的虚拟机，选择我们创建好的虚拟机，然后点击设置–存储–添加虚拟光驱：">
+<meta name="twitter:image" content="https://wistbean.github.io/images/2017-04-02-install-centos/installCentOS01.png">
+    
+        <link rel="alternate" type="application/atom+xml" title="wistbean" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(https://wistbean.github.io/images/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">wistbean</h5>
+          <a href="mailto:wistbean.bb@gmail.com" title="wistbean.bb@gmail.com" class="mail">wistbean.bb@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="https://wistbean.org/python-tutorial.html"  >
+                <i class="icon icon-lg icon-coffee"></i>
+                Python零基础入门教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2NzYyNjg2Nw==&action=getalbum&album_id=2448798954764255234#wechat_redirect"  >
+                <i class="icon icon-lg icon-bug"></i>
+                Python爬虫教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://vip.fxxkpython.com/?page_id=18"  >
+                <i class="icon icon-lg icon-code"></i>
+                加入我的VIP
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/aboutMe/"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light off" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">02 在VirtualBox虚拟机安装配置CentOS系统</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="vultr ss bbr v2ray 100美金">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">02 在VirtualBox虚拟机安装配置CentOS系统</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-04-02T09:01:58.000Z" itemprop="datePublished" class="page-time">
+  2017-04-02
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Linux/">Linux</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>目录</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#设置LOCALIZATION-本地化安装"><span class="post-toc-number">1.</span> <span class="post-toc-text">设置LOCALIZATION(本地化安装)</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#设置SOFTWARE-软件安装"><span class="post-toc-number">2.</span> <span class="post-toc-text">设置SOFTWARE(软件安装)</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#设置SYSTEM-系统"><span class="post-toc-number">3.</span> <span class="post-toc-text">设置SYSTEM(系统)</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#开始安装"><span class="post-toc-number">4.</span> <span class="post-toc-text">开始安装</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#CentOS安装完成了"><span class="post-toc-number">5.</span> <span class="post-toc-text">CentOS安装完成了</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-install-centos"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">02 在VirtualBox虚拟机安装配置CentOS系统</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-04-02 17:01:58" datetime="2017-04-02T09:01:58.000Z"  itemprop="datePublished">2017-04-02</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Linux/">Linux</a></li></ul>
+
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>通过：<a href="/use-virtualbox-install-centos.html" title="01 创建CentOS虚拟机">01 创建CentOS虚拟机</a> 我们已经创建好了虚拟机，也下载好了CentOS7的镜像文件。那么接下来就开始在我们的虚拟机安装配置CentOS系统。</p>
+<p>01 首先打开我们的虚拟机，选择我们创建好的虚拟机，然后点击设置–存储–添加虚拟光驱：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/2017-04-02-install-centos/installCentOS01.png" alt="VirtualBox" title="">
+                </div>
+                <div class="image-caption">VirtualBox</div>
+            </figure>
+
+
+<p>02 点击选择磁盘：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/2017-04-02-install-centos/installCentOS02.png" alt="VirtualBox" title="">
+                </div>
+                <div class="image-caption">VirtualBox</div>
+            </figure>
+
+
+<p>03 选择我们下载好的CentOS镜像文件：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/2017-04-02-install-centos/installCentOS03.png" alt="VirtualBox" title="">
+                </div>
+                <div class="image-caption">VirtualBox</div>
+            </figure>
+
+<p>04 选择完之后，点击ok，再点击Virtual Box的启动按钮，就会引导读取我们选择的iso镜像文件：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/2017-04-02-install-centos/installCentOS04.png" alt="VirtualBox" title="">
+                </div>
+                <div class="image-caption">VirtualBox</div>
+            </figure>
+
+
+<p>05 运行后我们就可以看到安装引导：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/2017-04-02-install-centos/installCentOS05.png" alt="VirtualBox" title="">
+                </div>
+                <div class="image-caption">VirtualBox</div>
+            </figure>
+
+<p>06 我们选择 Install CentOS Linux7，然后按回车，骚等一会就会出现如下界面，我们选择English，当然你也可以选择中文，但是这里我选择English，毕竟学Linux还是要懂点英文的：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/2017-04-02-install-centos/installCentOS06.png" alt="VirtualBox" title="">
+                </div>
+                <div class="image-caption">VirtualBox</div>
+            </figure>
+
+<p>07 选择完之后我们看到CentOS系统安装总览，分别有「LOCALIZATION(本地化安装)」、「SOFTWARE(软件安装)」、「SYSTEM(系统安装)」：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/2017-04-02-install-centos/installCentOS07.png" alt="VirtualBox" title="">
+                </div>
+                <div class="image-caption">VirtualBox</div>
+            </figure>
+
+<blockquote>
+<p>注意了，在虚拟机使用和我们自己的电脑之间，按住右边的Ctrl键可以对鼠标的事件进行切换，比如你在虚拟机中使用中，想用鼠标使用自己的电脑时，那么就按右边的Ctrl键来获取鼠标事件。</p>
+</blockquote>
+<h1 id="设置LOCALIZATION-本地化安装"><a href="#设置LOCALIZATION-本地化安装" class="headerlink" title="设置LOCALIZATION(本地化安装)"></a>设置LOCALIZATION(本地化安装)</h1><p>08.1 点击DATE&amp;TIME来设置系统时间，这里Region（地区）我们选择Asia（亚洲），城市选择shanghai，然后点击左上角的Done：</p>
+<p><img src="/images/2017-04-02-install-centos/installCentOS08.png" alt="VirtualBox"></p>
+<p>08.2 接下来我们点击LANGUAGE SUPPORT(语言支持)，我们可以根据自己的需求选择需要的语言安装包，这里我选择英语和中文，选择完点击左上角的Done：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/2017-04-02-install-centos/installCentOS09.png" alt="VirtualBox" title="">
+                </div>
+                <div class="image-caption">VirtualBox</div>
+            </figure>
+
+
+<h1 id="设置SOFTWARE-软件安装"><a href="#设置SOFTWARE-软件安装" class="headerlink" title="设置SOFTWARE(软件安装)"></a>设置SOFTWARE(软件安装)</h1><p>09 INSTALLATION SOURCE 这个选项默认即可，接下来我们选择 SOFTWARE SELECTION, 这里面可以供我们选择软件包，因为我们把Linux作为服务器使用，所以在这里我们选择Server with GUI，因为这个环境包含了基础的服务设施和GUI界面，然后在右边可以根据需要选择软件环境：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/2017-04-02-install-centos/installCentOS10.png" alt="VirtualBox" title="">
+                </div>
+                <div class="image-caption">VirtualBox</div>
+            </figure>
+
+
+<h1 id="设置SYSTEM-系统"><a href="#设置SYSTEM-系统" class="headerlink" title="设置SYSTEM(系统)"></a>设置SYSTEM(系统)</h1><p>10.1 选择 「INSTALLATION DESTINATION」 进行分区操作，在这里说明一下Linux的分区必须有 根分区（用“&#x2F;”标识） 和 交换分区(用swap标识)，swap分区类似于Windows的虚拟内存概念。虽然Linux的必需分区为根分区和交换分区，但是我们在分区的时候可以根据我们的需要进行分区，不仅仅划分根分区和交换区：</p>
+<ul>
+<li>&#x2F;  (根分区)</li>
+<li>swap （交换分区）</li>
+<li>&#x2F;boot (存储系统内核和引导等信息)</li>
+<li>&#x2F;usr (存储应用软件安装信息)</li>
+<li>&#x2F;var (存储系统日志信息)</li>
+</ul>
+<p>在分区前还再说明一下Linux的分区命名规则：</p>
+<p>一般有这样的命名：</p>
+<blockquote>
+<p>&#x2F;dev&#x2F;hdb2 、 &#x2F;dev&#x2F;sda1</p>
+</blockquote>
+<ul>
+<li>&#x2F;dev : 所有文件的存放目录</li>
+<li>hd&#x2F;sd ： 代表硬盘，hd是IDE硬盘，sd是SCSI硬盘。</li>
+<li>b： 分区的第三个字母，代表的是在哪个硬盘上，如 &#x2F;dev&#x2F;hdb 就表示在第二个hd盘上， &#x2F;dev&#x2F;sda  就代表在第一个sd盘上。</li>
+<li>2： 最后这个数字就代表的是分区，Linux在1~4代表主分区或者扩展分区，从5开始就代表逻辑分区，比如 &#x2F;dev&#x2F;hdb2&#x2F; 就代表在第二个hd盘上的第二个主分区或者扩展分区， &#x2F;dev&#x2F;sda6 就代表在第一个sd盘上的第二个逻辑分区。</li>
+</ul>
+<p>好了，我们了解好了分区后就点击「INSTALLATION DESTINATION」 ，可以看到我们之前创建好的100G的sda盘，我们在下面选择「I will configure partitioning」 来自定义分区：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/2017-04-02-install-centos/installCentOS11.png" alt="VirtualBox" title="">
+                </div>
+                <div class="image-caption">VirtualBox</div>
+            </figure>
+
+<p>点击完Done之后会让我们选择分区方案，在这里我们选择 Standard partition（标准分区）：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/2017-04-02-install-centos/installCentOS12.png" alt="VirtualBox" title="">
+                </div>
+                <div class="image-caption">VirtualBox</div>
+            </figure>
+
+
+<p>接下来开始分区，首先对根分区进行划分，点击下方的 + ， Mount Point选择根分区（“&#x2F;”）,Desired Capacity(容量)输入20G：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/2017-04-02-install-centos/installCentOS13.png" alt="VirtualBox" title="">
+                </div>
+                <div class="image-caption">VirtualBox</div>
+            </figure>
+
+
+<p>然后我们点击 Add mount point，可以看到我们建立了sda1这个根分区：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/2017-04-02-install-centos/installCentOS14.png" alt="VirtualBox" title="">
+                </div>
+                <div class="image-caption">VirtualBox</div>
+            </figure>
+
+<p>接下来我们划分交换分区，点击下方的 + ，然后选择warp，这里输入4096M：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/2017-04-02-install-centos/installCentOS15.png" alt="VirtualBox" title="">
+                </div>
+                <div class="image-caption">VirtualBox</div>
+            </figure>
+
+<p>然后以同样的方式划分：</p>
+<ul>
+<li>&#x2F;boot (存储系统内核和引导等信息)</li>
+<li>&#x2F;usr (存储应用软件安装信息)</li>
+<li>&#x2F;var (存储系统日志信息)</li>
+</ul>
+<p>这里我给boot划分500M，usr划分20G，var划分30G，还有剩余的空间我们可以划分为“&#x2F;mydata”,这里录入mydata，下面的Desired Capacity不需要填，会自动就剩余的空间划分给mydata：</p>
+<p><img src="/images/2017-04-02-install-centos/installCentOS16.png" alt="VirtualBox"></p>
+<p>至此，我们就把划分好分区了：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/2017-04-02-install-centos/installCentOS17.png" alt="VirtualBox" title="">
+                </div>
+                <div class="image-caption">VirtualBox</div>
+            </figure>
+
+<p>点击完Done后我们点击Accept Cahnge：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/2017-04-02-install-centos/installCentOS18.png" alt="VirtualBox" title="">
+                </div>
+                <div class="image-caption">VirtualBox</div>
+            </figure>
+
+
+
+<p>10.2 接下来我们对网络进行配置,KDUMP默认启用即可， 点击「NETWORK &amp; HOST NAME」，可以看到我们左侧有一块网卡，Ethernet是以太网，enpOs3是网卡的标识，右侧可以看到详细MAC信息和连接速率等信息，左下角可以输入主机名：</p>
+<p><img src="/images/2017-04-02-install-centos/installCentOS19.png" alt="VirtualBox"></p>
+<p>然后点击右上角的开关按钮来激活我们的网卡。点击Done。</p>
+<h1 id="开始安装"><a href="#开始安装" class="headerlink" title="开始安装"></a>开始安装</h1><p>完成了以上的设置后，我们就点击右下角的 Begin Installation 按钮，开始安装到我们的磁盘啦。</p>
+<p><img src="/images/2017-04-02-install-centos/installCentOS20.png" alt="VirtualBox"></p>
+<p>在安装的过程中，我们开始对root账号进行密码设置：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/2017-04-02-install-centos/installCentOS21.png" alt="VirtualBox" title="">
+                </div>
+                <div class="image-caption">VirtualBox</div>
+            </figure>
+
+<p>设置完密码点击done，当然你也可以继续创建账户，然后就是等待安装啦：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/2017-04-02-install-centos/installCentOS22.png" alt="VirtualBox" title="">
+                </div>
+                <div class="image-caption">VirtualBox</div>
+            </figure>
+
+<p>经过一段时间的等待，我们的CentOS终于安装完成了：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/2017-04-02-install-centos/installCentOS23.png" alt="VirtualBox" title="">
+                </div>
+                <div class="image-caption">VirtualBox</div>
+            </figure>
+
+<p>接下来我们点击右下角的Reboot按钮进行重启，重启后我们选择CentOS Linux：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/2017-04-02-install-centos/installCentOS24.png" alt="VirtualBox" title="">
+                </div>
+                <div class="image-caption">VirtualBox</div>
+            </figure>
+
+<p>接下来我们需要同意协议，点击LICENSE,然后勾选accept：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/2017-04-02-install-centos/installCentOS25.png" alt="VirtualBox" title="">
+                </div>
+                <div class="image-caption">VirtualBox</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/2017-04-02-install-centos/installCentOS26.png" alt="VirtualBox" title="">
+                </div>
+                <div class="image-caption">VirtualBox</div>
+            </figure>
+
+<p>点击Done之后，如果你在安装的过程中没有创建账户，那么在这个时候可以点击USE CREATION来对用户进行创建：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/2017-04-02-install-centos/installCentOS27.png" alt="VirtualBox" title="">
+                </div>
+                <div class="image-caption">VirtualBox</div>
+            </figure>
+
+
+<p>创建完之后点击右下角的FINISH CONFIGURETION。</p>
+<h1 id="CentOS安装完成了"><a href="#CentOS安装完成了" class="headerlink" title="CentOS安装完成了"></a>CentOS安装完成了</h1><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/2017-04-02-install-centos/installCentOS28.png" alt="VirtualBox" title="">
+                </div>
+                <div class="image-caption">VirtualBox</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/2017-04-02-install-centos/installCentOS30.png" alt="VirtualBox" title="">
+                </div>
+                <div class="image-caption">VirtualBox</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/2017-04-02-install-centos/installCentOS31.png" alt="VirtualBox" title="">
+                </div>
+                <div class="image-caption">VirtualBox</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/2017-04-02-install-centos/installCentOS32.png" alt="VirtualBox" title="">
+                </div>
+                <div class="image-caption">VirtualBox</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/2017-04-02-install-centos/installCentOS33.png" alt="VirtualBox" title="">
+                </div>
+                <div class="image-caption">VirtualBox</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/2017-04-02-install-centos/installCentOS29.png" alt="VirtualBox" title="">
+                </div>
+                <div class="image-caption">VirtualBox</div>
+            </figure>
+
+<p>那么接下来的篇章会告诉你怎么基本使用CentOS，对系统目录进行了解，对CentOS有一个整体的认识。</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+      <!--  
+
+        
+        关注公众号「wistbean」，发送「帅书」获取我写的技术电子书
+        
+        -->
+        在公众号「学习 Python 的正确姿势」发送「帅书」领取我写的技术电子书，转载请注明出处：
+        <a href="https://wistbean.github.io/install-centos.html">
+                   wistbean
+        </a>
+    </div>
+    
+    <footer>
+        <a href="https://wistbean.github.io">
+            <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+            wistbean
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CentOS/">CentOS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VirtualBox/">VirtualBox</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/教程/">教程</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/虚拟机/">虚拟机</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/配置/">配置</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/install-centos.html&title=《02 在VirtualBox虚拟机安装配置CentOS系统》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/install-centos.html&title=《02 在VirtualBox虚拟机安装配置CentOS系统》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/install-centos.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《02 在VirtualBox虚拟机安装配置CentOS系统》 — wistbean&url=https://wistbean.github.io/install-centos.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/install-centos.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/object-oriented-programming.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">谈谈java中的面向对象编程思想</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/use-virtualbox-install-centos.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">01 使用 VirtualBox 创建 CentOS 虚拟机</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>本站已加入 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-知识 4.0  (CC BY-NC-SA 4.0)国际协议 | 转载请注明链接出处</a></span>
+        </p>
+    </div>
+
+        <div class="bottom">
+                <p><span>wistbean &copy; 2015 - 2024</span>
+                    <span>
+                        
+                         <a href="https://wistbean.github.io/">肯定会|wistbean</a>
+                         <a href="https://fxxkpython.com">通往Python高手之路</a>
+                         <a href="https://www.bwh8.net/aff.php?aff=32874" target="_blank">搬瓦工2024优惠码</a>、
+                         <a href="https://www.vultr.com/?ref=7532860" target="_blank">vultr2024优惠码</a>
+                    </span>
+                </p>
+        </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/install-centos.html&title=《02 在VirtualBox虚拟机安装配置CentOS系统》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/install-centos.html&title=《02 在VirtualBox虚拟机安装配置CentOS系统》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/install-centos.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《02 在VirtualBox虚拟机安装配置CentOS系统》 — wistbean&url=https://wistbean.github.io/install-centos.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/install-centos.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACMElEQVR42u3aS26DQBAFQN//0skBYvB7PcQSQ7GKkjBQLFr9e73i6+fPlfxPcuXnX3BhYGDclpE/5u9d5389f9GjE5K73lAxMDAewDiKYPljjn5zzsuf++GdMTAwMIKAmyd8yYfAwMDAmDHOk7Mk+K6QMDAwMPJ22PlxK2H3S7U4BgbGDRl51/37P//LfAMDA+NWjNm4MaeujDCLEzAwMLZmXDXCXIElxWpUymJgYGzKyFtjbUuuLX3zpt6bkzEwMLZmrI8tE/C1bbso6GNgYGzHaBO42TBgVrgmHTYMDIy9GW1p2iZ5s/FDTcXAwNiasdIIW1mYWCl6P2S1GBgYmzLyQnSW5LVNuqVwj4GBsSljVky2ZWo7AEhCc70choGBsQVjtsY6C6NtCvjh42JgYDyA0d7crmWsfJoit8XAwNiOsZ7S5Y3+tgFXr1lgYGBsysiDYJ7GtbsebfpYYDAwMLZgzJprK4njVWscb3ZGMDAwNmXkr9gGzdm6WBKIMTAwnsxou3QrI88LxgBHFTkGBsbWjLzVlSR87QJZG6aLnREMDIwtGEnYXRlhtg272bABAwNjV8ZPeeXINijPWnhRloqBgXFzRru8NVvCaBtzbaGLgYHxBEYbZNuXzte/ho02DAyMxzBWlsPahlq7ihGFbwwMDIy4oT8raNthwAUBFwMDY2tGu+A1O7P+EBgYGA9gzFK69RFmu152eCYGBsbWjGsTtVn6mL/00iATAwPjfoxfL0vrQTuTgxAAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

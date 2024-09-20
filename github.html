@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131395348-1"></script>
+    <script data-ad-client="ca-pub-9097083609097034" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-131395348-1');
+    </script>
+
+    
+
+    
+
+    
+
+
+<!-- Baidu Push -->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<!-- End Baidu Push -->
+
+
+    <meta charset="utf-8">
+    
+    <meta name="google-site-verification" content="bcJVGqEGcBIay29szBsswzqYxY3qUzWuvu1hfad3-08">
+    
+    
+    
+    
+    <title>GitHub是什么？如何使用？ | wistbean | wistbean</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#B5963F">
+    
+    
+    <meta name="keywords" content="GitHub,Git">
+    <meta name="description" content="GitHub是什么？GitHub就有点像微博，我们可以在上面看一些牛逼的人物写着开源的牛逼代码，觉得喜欢的话就给他们点赞，关注他们，甚至可以直接把他们的源代码拉下来，看着他们的代码，忘了那个她！ GitHub的首页有这样介绍：A better way to work together，也就是说我们除了去关注牛逼的人物还可以在上面一起合作写点东西出来，给我们提供一种更好的合作方式。">
+<meta name="keywords" content="GitHub,Git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GitHub是什么？如何使用？">
+<meta property="og:url" content="https://wistbean.github.io/github.html">
+<meta property="og:site_name" content="wistbean">
+<meta property="og:description" content="GitHub是什么？GitHub就有点像微博，我们可以在上面看一些牛逼的人物写着开源的牛逼代码，觉得喜欢的话就给他们点赞，关注他们，甚至可以直接把他们的源代码拉下来，看着他们的代码，忘了那个她！ GitHub的首页有这样介绍：A better way to work together，也就是说我们除了去关注牛逼的人物还可以在上面一起合作写点东西出来，给我们提供一种更好的合作方式。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://wistbean.github.io/images/github1.png">
+<meta property="og:image" content="https://wistbean.github.io/images/github2.png">
+<meta property="og:image" content="https://wistbean.github.io/images/github3.png">
+<meta property="og:updated_time" content="2024-01-26T15:14:15.619Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="GitHub是什么？如何使用？">
+<meta name="twitter:description" content="GitHub是什么？GitHub就有点像微博，我们可以在上面看一些牛逼的人物写着开源的牛逼代码，觉得喜欢的话就给他们点赞，关注他们，甚至可以直接把他们的源代码拉下来，看着他们的代码，忘了那个她！ GitHub的首页有这样介绍：A better way to work together，也就是说我们除了去关注牛逼的人物还可以在上面一起合作写点东西出来，给我们提供一种更好的合作方式。">
+<meta name="twitter:image" content="https://wistbean.github.io/images/github1.png">
+    
+        <link rel="alternate" type="application/atom+xml" title="wistbean" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(https://wistbean.github.io/images/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">wistbean</h5>
+          <a href="mailto:wistbean.bb@gmail.com" title="wistbean.bb@gmail.com" class="mail">wistbean.bb@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="https://wistbean.org/python-tutorial.html"  >
+                <i class="icon icon-lg icon-coffee"></i>
+                Python零基础入门教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2NzYyNjg2Nw==&action=getalbum&album_id=2448798954764255234#wechat_redirect"  >
+                <i class="icon icon-lg icon-bug"></i>
+                Python爬虫教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://vip.fxxkpython.com/?page_id=18"  >
+                <i class="icon icon-lg icon-code"></i>
+                加入我的VIP
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/aboutMe/"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light off" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">GitHub是什么？如何使用？</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="vultr ss bbr v2ray 100美金">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">GitHub是什么？如何使用？</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-09-15T11:53:09.000Z" itemprop="datePublished" class="page-time">
+  2018-09-15
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Git/">Git</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>目录</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#GitHub是什么？"><span class="post-toc-number">1.</span> <span class="post-toc-text">GitHub是什么？</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#GitHub有什么用？"><span class="post-toc-number">2.</span> <span class="post-toc-text">GitHub有什么用？</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Respository"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">Respository</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Issue"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">Issue</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Star"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">Star</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Fork"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">Fork</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Pull-Request"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">Pull Request</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Watch"><span class="post-toc-number">2.6.</span> <span class="post-toc-text">Watch</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Gist"><span class="post-toc-number">2.7.</span> <span class="post-toc-text">Gist</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#GitHub上一些不错的开源项目"><span class="post-toc-number">3.</span> <span class="post-toc-text">GitHub上一些不错的开源项目</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#free-programming-books"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">free-programming-books</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#LearningNotes"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">LearningNotes</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#ResumeSample"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">ResumeSample</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#还可以在GitHub上买东西呢！"><span class="post-toc-number">4.</span> <span class="post-toc-text">还可以在GitHub上买东西呢！</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#GitHub的视频教程"><span class="post-toc-number">5.</span> <span class="post-toc-text">GitHub的视频教程</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#GitHub参考文章"><span class="post-toc-number">6.</span> <span class="post-toc-text">GitHub参考文章</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-github"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">GitHub是什么？如何使用？</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-09-15 19:53:09" datetime="2018-09-15T11:53:09.000Z"  itemprop="datePublished">2018-09-15</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Git/">Git</a></li></ul>
+
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="GitHub是什么？"><a href="#GitHub是什么？" class="headerlink" title="GitHub是什么？"></a>GitHub是什么？</h1><p>GitHub就有点像微博，我们可以在上面看一些牛逼的人物写着开源的牛逼代码，觉得喜欢的话就给他们点赞，关注他们，甚至可以直接把他们的源代码拉下来，看着他们的代码，忘了那个她！</p>
+<p>GitHub的首页有这样介绍：A better way to work together，也就是说我们除了去关注牛逼的人物还可以在上面一起合作写点东西出来，给我们提供一种更好的合作方式。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/github1.png" alt="github" title="">
+                </div>
+                <div class="image-caption">github</div>
+            </figure>
+
+<p>GitHub简单来说就是基于 Git 的版本托管服务系统，是全球最大的社交编程及代码托管网站，因为里面大多都是男的在玩，所以说是全球最大的同性搞基社区，哈哈哈！</p>
+<h1 id="GitHub有什么用？"><a href="#GitHub有什么用？" class="headerlink" title="GitHub有什么用？"></a>GitHub有什么用？</h1><p>其实GitHub除了可以让我们代码托管和多人在上面一起协作完成项目之外呢，我们还可以在上面建立自己的博客网站，官方称为GitHub Pages，你可以在GitHub上面创建一个仓库，以github.io为后缀，可以托管你自己的博客网站，直接通过你的仓库名就能在线的访问你的网站了，而且完全免费，我自己搭了个网站托管在上面好久啦，感觉棒棒哒！地址在这：<a href="http://www.wistbean.com/" target="_blank" rel="noopener">http://www.wistbean.com</a>  (以前不知道听谁说，嫁人就要嫁给有自己网站的人，所以我就建了一个，嘿嘿嘿！)</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/github2.png" alt="github" title="">
+                </div>
+                <div class="image-caption">github</div>
+            </figure>
+
+<p>如果你有什么优秀的开源项目在上面被人点赞（star）或者 Folllow,那就很 666 的了，因为在 Github 上面被人点赞要比你在朋友圈被人点赞要难的多的多。如果在上面托管你自己的比较有影响力的开源项目，在面试的时候提供给对方看，也是一个很不错的加分项！</p>
+<h2 id="Respository"><a href="#Respository" class="headerlink" title="Respository"></a>Respository</h2><p>我们通常说在GitHub上面新建一个项目，这个项目就会在Respository里，Respository也就是仓库的意思，可以通过git使我们本地的项目与远程仓库保持同步，这样妈妈就不用担心我们的代码消失不见了！</p>
+<h2 id="Issue"><a href="#Issue" class="headerlink" title="Issue"></a>Issue</h2><p>随着我们的代码提交的越来越多，当有人发现你的开源项目不错，就把你的代码给拉（clone）到他们本地，他们运行后发现有 bug 或者觉得你的代码有问题，那么他就会给你提Issue，我们可以发现他们的Issue，然后我们解决完bug之后可以将其 close 掉，表示我们已经修复了这个bug！</p>
+<h2 id="Star"><a href="#Star" class="headerlink" title="Star"></a>Star</h2><p>我们去github看别人的开源项目的时候，发现很是不错，那我们就可以给这个项目 star 一下，也就是点赞，同时也是收藏的意思，在我们自己的star列表可以看到我们star过的项目。</p>
+<h2 id="Fork"><a href="#Fork" class="headerlink" title="Fork"></a>Fork</h2><p>如果你对别人的项目感兴趣，或者对他感兴趣，你可以去fork他的项目，fork 之后你就会发现，你自己的仓库里面竟然有一个和他一模一样的项目，更加爽的是，你竟然可以在他原有代码的基础上进行修改或者添加功能！</p>
+<h2 id="Pull-Request"><a href="#Pull-Request" class="headerlink" title="Pull Request"></a>Pull Request</h2><p>你给他添加完功能之后你发现，哇靠，我简直就是天才啊，这时候你是不是想告诉他，你这样的功能有多牛逼，那么这时候你就可以给他 Pull Request ，这时候他就看到你的代码，如果他觉得不错，接收了你的 Pull Request 之后，他就可以合并起来，这样他的项目就有你的一部分了！</p>
+<h2 id="Watch"><a href="#Watch" class="headerlink" title="Watch"></a>Watch</h2><p>Watch 就是观察，当你 Watch 了某个项目，就相当于你关注了它，那么这个项目有什么动态，你都可以实时的获取更新。</p>
+<h2 id="Gist"><a href="#Gist" class="headerlink" title="Gist"></a>Gist</h2><p>如果你想分享部分代码片段，可以使用 Gist，专门来分享代码片段的！</p>
+<h1 id="GitHub上一些不错的开源项目"><a href="#GitHub上一些不错的开源项目" class="headerlink" title="GitHub上一些不错的开源项目"></a>GitHub上一些不错的开源项目</h1><h2 id="free-programming-books"><a href="#free-programming-books" class="headerlink" title="free-programming-books"></a>free-programming-books</h2><p>这个项目被 star 了10w+，有我一份力量哈哈，这个项目之所以这么多star，是因为它含有许多免费的编程书籍，并且支持许多语言的版本！<br>中文版地址在这：<a href="https://github.com/EbookFoundation/free-programming-books/blob/master/free-programming-books-zh.md#%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86" target="_blank" rel="noopener">https://github.com/EbookFoundation/free-programming-books/blob/master/free-programming-books-zh.md#%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86</a></p>
+<h2 id="LearningNotes"><a href="#LearningNotes" class="headerlink" title="LearningNotes"></a>LearningNotes</h2><p>这个项目含有许多android，java，设计模式，算法等面试相关的知识与经验，受益匪浅！<br>地址：<a href="https://github.com/francistao/LearningNotes" target="_blank" rel="noopener">https://github.com/francistao/LearningNotes</a></p>
+<h2 id="ResumeSample"><a href="#ResumeSample" class="headerlink" title="ResumeSample"></a>ResumeSample</h2><p>这个项目是专门为程序员提供的简历模板，包括PHP程序员简历模板、iOS程序员简历模板、Android程序员简历模板、Web前端程序员简历模板、Java程序员简历模板、C&#x2F;C++程序员简历模板、<br>NodeJS程序员简历模板、架构师简历模板以及通用程序员简历模板 ！<br>地址：<a href="https://github.com/geekcompany/ResumeSample" target="_blank" rel="noopener">https://github.com/geekcompany/ResumeSample</a></p>
+<p>当然了还有许多牛逼的（比如google,Apache等开源项目）项目在上面等着你去发现！</p>
+<h1 id="还可以在GitHub上买东西呢！"><a href="#还可以在GitHub上买东西呢！" class="headerlink" title="还可以在GitHub上买东西呢！"></a>还可以在GitHub上买东西呢！</h1><p>GitHub上有个shop，里面有许多含有github logo的杯子呀，衣服呀，电脑贴纸呀，真的很酷炫和可爱！</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/github3.png" alt="github" title="">
+                </div>
+                <div class="image-caption">github</div>
+            </figure>
+
+<h1 id="GitHub的视频教程"><a href="#GitHub的视频教程" class="headerlink" title="GitHub的视频教程"></a>GitHub的视频教程</h1><p>我录了一个GitHub的视频教程，专门讲 Git 和 GitHub 的使用的，你可以在这里观看：</p>
+<ul>
+<li><a href="https://wistbean.org/java-ssm-1-3.html" target="_blank" rel="noopener">代码托管Git的使用</a></li>
+<li><a href="https://wistbean.org/java-ssm-1-4.html" target="_blank" rel="noopener">GitHub完全使用指南</a></li>
+</ul>
+<h1 id="GitHub参考文章"><a href="#GitHub参考文章" class="headerlink" title="GitHub参考文章"></a>GitHub参考文章</h1><ul>
+<li><a href="https://zh.wikipedia.org/zh-sg/GitHub" target="_blank" rel="noopener">GitHub - 维基百科，自由的百科全书</a></li>
+<li><a href="http://www.runoob.com/w3cnote/git-guide.html" target="_blank" rel="noopener">Github 简明教程</a></li>
+<li><a href="https://github.com/xirong/my-git/blob/master/how-to-use-github.md" target="_blank" rel="noopener">Github全程指南-如何高效使用？</a></li>
+<li><a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/00137628548491051ccfaef0ccb470894c858999603fedf000" target="_blank" rel="noopener">使用GitHub</a></li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+      <!--  
+
+        
+        关注公众号「wistbean」，发送「帅书」获取我写的技术电子书
+        
+        -->
+        在公众号「学习 Python 的正确姿势」发送「帅书」领取我写的技术电子书，转载请注明出处：
+        <a href="https://wistbean.github.io/github.html">
+                   wistbean
+        </a>
+    </div>
+    
+    <footer>
+        <a href="https://wistbean.github.io">
+            <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+            wistbean
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GitHub/">GitHub</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/github.html&title=《GitHub是什么？如何使用？》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/github.html&title=《GitHub是什么？如何使用？》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/github.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《GitHub是什么？如何使用？》 — wistbean&url=https://wistbean.github.io/github.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/github.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/java-ssm-3-1.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">「3-1」 后台管理系统 EasyUI 的使用</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/uml.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">轻松理解UML用例图时序图类图的教程</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>本站已加入 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-知识 4.0  (CC BY-NC-SA 4.0)国际协议 | 转载请注明链接出处</a></span>
+        </p>
+    </div>
+
+        <div class="bottom">
+                <p><span>wistbean &copy; 2015 - 2024</span>
+                    <span>
+                        
+                         <a href="https://wistbean.github.io/">肯定会|wistbean</a>
+                         <a href="https://fxxkpython.com">通往Python高手之路</a>
+                         <a href="https://www.bwh8.net/aff.php?aff=32874" target="_blank">搬瓦工2024优惠码</a>、
+                         <a href="https://www.vultr.com/?ref=7532860" target="_blank">vultr2024优惠码</a>
+                    </span>
+                </p>
+        </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/github.html&title=《GitHub是什么？如何使用？》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/github.html&title=《GitHub是什么？如何使用？》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/github.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《GitHub是什么？如何使用？》 — wistbean&url=https://wistbean.github.io/github.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/github.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABzklEQVR42u3ayw7CMAxE0fz/TxeJFRI0zHicEKGbFUKlPWVh+TWGfK7nef/8+s3793e/nV/fcODChRtzr+mZX1MD6ff/cAe4cOFu5OYB6C7AzYm6AS5cuGdyFYQSIuHChfuvXCkdEV4ALly4J3P1oKM8WL/DwloNLly4ndFmJOlO7fOm/i5cuHDjqYQeUNwmae3AhQt3DzcpSNzSxU1ZjIwMLly4rdzaI5U0KAl5xR0QuHDhLuAmxU8XVEpu4MKFu5irL0noixfz693G69AfBhcu3CZu0vjIlzb0V73t4sCFC3cLdx7I3KpED1sNoxS4cOE2cWsJilsIJQNXo/iBCxfuYq5CdBe53L/DqNXgwoXbyu1qgugTXSXMScUPXLhwl3FrD0hGp+6V9jIJXLhwY66+oFnLnvLU58uyJly4cLdw3QCnNEpqbdbikBUuXLgxV0939AcnqVIRDRcu3FbuZZ7kwW5aAxcu3F9xk52H+Qu7yxnGkBUuXLhbuO56ljKIdZOYeZJk93LgwoXbxHWDlwLtSozgwoV7MlcfoLoUfagDFy7cM7lKUpI3R4pdFrhw4bZy8+JHIeb3hAsX7h5uMg7Rh7LuSyaFE1y4cAPuA0aVzRxi0XY9AAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

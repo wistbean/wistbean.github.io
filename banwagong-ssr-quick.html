@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131395348-1"></script>
+    <script data-ad-client="ca-pub-9097083609097034" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-131395348-1');
+    </script>
+
+    
+
+    
+
+    
+
+
+<!-- Baidu Push -->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<!-- End Baidu Push -->
+
+
+    <meta charset="utf-8">
+    
+    <meta name="google-site-verification" content="bcJVGqEGcBIay29szBsswzqYxY3qUzWuvu1hfad3-08">
+    
+    
+    
+    
+    <title>最新搬瓦工新手一键快速搭建SSR并开启bbr加速上网教程 | wistbean | wistbean</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#B5963F">
+    
+    
+    <meta name="keywords" content="vps,bbr,搬瓦工ssr,搬瓦工ssr混淆,搬瓦工ssr链接,搬瓦工cn2 ssr,shadowsocks搭建教程">
+    <meta name="description" content="搬瓦工搭建 SSR 教程，如果你是新手，又想搭建 SSR ，那么这个一键快速搭建 SSR 教程正和你意。 SSR 简介SSR（ShadowsocksR ） 是 SS（Shadowsocks） 的增强版，在 SS 的基础上添加了一些功能。根据 维基百科 介绍，SSR 增加了一些数据混淆方式，称修复了部分安全问题并可以提高QoS优先级。 搬瓦工云服务器搬瓦工官网 提供了许多性价比高的云服务器，并且可以">
+<meta name="keywords" content="vps,bbr,搬瓦工ssr,搬瓦工ssr混淆,搬瓦工ssr链接,搬瓦工cn2 ssr,shadowsocks搭建教程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="最新搬瓦工新手一键快速搭建SSR并开启bbr加速上网教程">
+<meta property="og:url" content="https://wistbean.github.io/banwagong-ssr-quick.html">
+<meta property="og:site_name" content="wistbean">
+<meta property="og:description" content="搬瓦工搭建 SSR 教程，如果你是新手，又想搭建 SSR ，那么这个一键快速搭建 SSR 教程正和你意。 SSR 简介SSR（ShadowsocksR ） 是 SS（Shadowsocks） 的增强版，在 SS 的基础上添加了一些功能。根据 维基百科 介绍，SSR 增加了一些数据混淆方式，称修复了部分安全问题并可以提高QoS优先级。 搬瓦工云服务器搬瓦工官网 提供了许多性价比高的云服务器，并且可以">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://wistbean.org/images/vpn4.png">
+<meta property="og:image" content="https://wistbean.org/images/vpn5.png">
+<meta property="og:image" content="https://wistbean.org/images/vpn8.png">
+<meta property="og:image" content="https://wistbean.org/images/vpn6.png">
+<meta property="og:image" content="https://wistbean.org/images/vpn7.png">
+<meta property="og:image" content="https://wistbean.org/images/vpn9.png">
+<meta property="og:image" content="https://wistbean.org/images/pic1.png">
+<meta property="og:image" content="https://wistbean.org/images/pic2.png">
+<meta property="og:image" content="https://wistbean.org/images/pic3.png">
+<meta property="og:image" content="https://wistbean.org/images/ss4.png">
+<meta property="og:updated_time" content="2024-01-26T15:14:15.588Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="最新搬瓦工新手一键快速搭建SSR并开启bbr加速上网教程">
+<meta name="twitter:description" content="搬瓦工搭建 SSR 教程，如果你是新手，又想搭建 SSR ，那么这个一键快速搭建 SSR 教程正和你意。 SSR 简介SSR（ShadowsocksR ） 是 SS（Shadowsocks） 的增强版，在 SS 的基础上添加了一些功能。根据 维基百科 介绍，SSR 增加了一些数据混淆方式，称修复了部分安全问题并可以提高QoS优先级。 搬瓦工云服务器搬瓦工官网 提供了许多性价比高的云服务器，并且可以">
+<meta name="twitter:image" content="https://wistbean.org/images/vpn4.png">
+    
+        <link rel="alternate" type="application/atom+xml" title="wistbean" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(https://wistbean.github.io/images/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">wistbean</h5>
+          <a href="mailto:wistbean.bb@gmail.com" title="wistbean.bb@gmail.com" class="mail">wistbean.bb@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="https://wistbean.org/python-tutorial.html"  >
+                <i class="icon icon-lg icon-coffee"></i>
+                Python零基础入门教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2NzYyNjg2Nw==&action=getalbum&album_id=2448798954764255234#wechat_redirect"  >
+                <i class="icon icon-lg icon-bug"></i>
+                Python爬虫教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://vip.fxxkpython.com/?page_id=18"  >
+                <i class="icon icon-lg icon-code"></i>
+                加入我的VIP
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/aboutMe/"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light off" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">最新搬瓦工新手一键快速搭建SSR并开启bbr加速上网教程</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="vultr ss bbr v2ray 100美金">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">最新搬瓦工新手一键快速搭建SSR并开启bbr加速上网教程</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2022-01-19T09:20:03.000Z" itemprop="datePublished" class="page-time">
+  2022-01-19
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/搬瓦工/">搬瓦工</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>目录</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#SSR-简介"><span class="post-toc-number">1.</span> <span class="post-toc-text">SSR 简介</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#搬瓦工云服务器"><span class="post-toc-number">2.</span> <span class="post-toc-text">搬瓦工云服务器</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#搬瓦工优惠购买"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">搬瓦工优惠购买</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#使用-SSH-工具连接到搬瓦工服务器"><span class="post-toc-number">3.</span> <span class="post-toc-text">使用 SSH 工具连接到搬瓦工服务器</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#windows系统连接搬瓦工vps"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">windows系统连接搬瓦工vps</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#mac系统连接搬瓦工vps"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">mac系统连接搬瓦工vps</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一键安装使用SSR"><span class="post-toc-number">4.</span> <span class="post-toc-text">一键安装使用SSR</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装-git"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">安装 git</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#下载安装ssr安装脚本"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">下载安装ssr安装脚本</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#运行ssr脚本"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">运行ssr脚本</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#SSR-命令操作"><span class="post-toc-number">5.</span> <span class="post-toc-text">SSR 命令操作</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一键开启-BBR-加速"><span class="post-toc-number">6.</span> <span class="post-toc-text">一键开启 BBR 加速</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#使用Shadowsocks"><span class="post-toc-number">7.</span> <span class="post-toc-text">使用Shadowsocks</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#windows使用Shadowsocks"><span class="post-toc-number">7.1.</span> <span class="post-toc-text">windows使用Shadowsocks</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Android使用Shadowsocks"><span class="post-toc-number">7.2.</span> <span class="post-toc-text">Android使用Shadowsocks</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#iPhone使用Shadowsocks"><span class="post-toc-number">7.3.</span> <span class="post-toc-text">iPhone使用Shadowsocks</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#相关"><span class="post-toc-number">8.</span> <span class="post-toc-text">相关</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-banwagong-ssr-quick"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">最新搬瓦工新手一键快速搭建SSR并开启bbr加速上网教程</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2022-01-19 17:20:03" datetime="2022-01-19T09:20:03.000Z"  itemprop="datePublished">2022-01-19</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/搬瓦工/">搬瓦工</a></li></ul>
+
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>搬瓦工搭建 SSR 教程，如果你是新手，又想搭建 SSR ，那么这个一键快速搭建 SSR 教程正和你意。</p>
+<h1 id="SSR-简介"><a href="#SSR-简介" class="headerlink" title="SSR 简介"></a>SSR 简介</h1><p>SSR（ShadowsocksR ） 是 SS（Shadowsocks） 的增强版，在 SS 的基础上添加了一些功能。根据 <a href="https://zh.wikipedia.org/wiki/Shadowsocks#ShadowsocksR" target="_blank" rel="noopener">维基百科</a> 介绍，SSR 增加了一些数据混淆方式，称修复了部分安全问题并可以提高QoS优先级。</p>
+<h1 id="搬瓦工云服务器"><a href="#搬瓦工云服务器" class="headerlink" title="搬瓦工云服务器"></a>搬瓦工云服务器</h1><p><a href="https://bwh89.net/aff.php?aff=32874" target="_blank">搬瓦工官网</a> 提供了许多性价比高的云服务器，并且可以使用支付宝支付，可以说很是亲民了，还有专门的 CN2 路线让速度加快。</p>
+<h2 id="搬瓦工优惠购买"><a href="#搬瓦工优惠购买" class="headerlink" title="搬瓦工优惠购买"></a>搬瓦工优惠购买</h2><p>很多人不知道搬瓦工官网隐藏了一个优惠码，使用这个优惠码可以优惠 6% 左右，首先选择以下隐藏优惠码的优惠链接：</p>
+<blockquote>
+<p>若搬瓦工无货了，可以到<br><a href="https://wistbean.org/vultr-vps-bbr-ss.html#%E4%BC%98%E6%83%A0%E8%B4%AD%E4%B9%B0vultr" target="_blank" rel="noopener"><br>        优惠购买vultr云服务器，新用户首次购买可以获得 100 美元使用金</a></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>搬瓦工配置</th>
+<th>搬瓦工费用</th>
+<th>优惠链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>*SPECIAL 40G KVM PROMO V3 - LOS ANGELES - CN2  * <br>  SSD硬盘: 40  GB RAID-10 <br> RAM内存: 2048   MB <br> CPU处理器: 1x Intel Xeon <br> Transfer流量: 2000  GB&#x2F;月 <br> 连接速度: 1 Gigabit <br> 洛杉矶机房，CN2路线，使用中国的直线路线，速度加快</td>
+<td>$27.99&#x2F;季</td>
+<td><a href="https://www.bwh88.net/aff.php?aff=32874&pid=58" target="_blank" rel="noopener">点击进入</a></td>
+</tr>
+<tr>
+<td>*SPECIAL 20G KVM PROMO V3 - LOS ANGELES - CN2 * <br>  SSD硬盘: 20 GB RAID-10 <br> RAM内存: 1024  MB <br> CPU处理器: 1x Intel Xeon <br> Transfer流量: 1000  GB&#x2F;月 <br> 连接速度: 1 Gigabit <br> 洛杉矶机房，CN2路线，使用中国的直线路线，速度加快</td>
+<td>$29.99 &#x2F;半年</td>
+<td><a href="https://www.bwh88.net/aff.php?aff=32874&pid=57" target="_blank" rel="noopener">点击进入</a></td>
+</tr>
+<tr>
+<td><em>80G KVM – PROMO</em> <br> SSD硬盘: 80 GB RAID-10<br>RAM内存: 4 GB<br>CPU处理器: 4x Intel Xeon<br>Transfer流量: 3 TB&#x2F;mo<br>连接速度: 1 Gigabit<br>Multiple locations</td>
+<td>$19.99&#x2F;月</td>
+<td><a href="https://www.bwh88.net/aff.php?aff=32874&pid=46" target="_blank" rel="noopener">点击进入</a></td>
+</tr>
+<tr>
+<td><em>20G KVM – PROMO</em> <br> SSD硬盘: 20 GB RAID-10 <br>RAM内存: 1024 MB <br>CPU处理器: 2x Intel Xeon <br>Transfer流量: 1 TB&#x2F;mo <br>连接速度: 1 Gigabit <br>Multiple locations</td>
+<td>$49.99&#x2F;年</td>
+<td><a href="https://www.bwh88.net/aff.php?aff=32874&pid=44" target="_blank" rel="noopener">点击进入</a></td>
+</tr>
+<tr>
+<td><em>40G KVM – PROMO</em> <br> SSD硬盘: 40 GB RAID-10 <br>RAM内存: 2 GB <br>CPU处理器: 3x Intel Xeon <br>Transfer流量: 2 TB&#x2F;mo <br>连接速度: 1 Gigabit <br>Multiple locations</td>
+<td>$99.99&#x2F;年</td>
+<td><a href="https://www.bwh88.net/aff.php?aff=32874&pid=45" target="_blank" rel="noopener">点击进入</a></td>
+</tr>
+<tr>
+<td><em>160G KVM – PROMO</em> <br> SSD硬盘: 160 GB RAID-10<br>RAM内存: 8 GB<br>CPU处理器: 5x Intel Xeon<br>Transfer流量: 4 TB&#x2F;mo<br>连接速度: 1 Gigabit<br>Multiple locations</td>
+<td>$39.99&#x2F;月</td>
+<td><a href="https://www.bwh88.net/aff.php?aff=32874&pid=47" target="_blank" rel="noopener">点击进入</a></td>
+</tr>
+<tr>
+<td><em>3200G KVM – PROMO</em> <br> SSD硬盘: 320 GB RAID-10<br>RAM内存: 16 GB<br>CPU处理器: 6x Intel Xeon<br>Transfer流量: 5 TB&#x2F;mo<br>连接速度: 1 Gigabit<br>Multiple locations</td>
+<td>$79.99&#x2F;月</td>
+<td><a href="https://www.bwh88.net/aff.php?aff=32874&pid=48" target="_blank" rel="noopener">点击进入</a></td>
+</tr>
+</tbody></table>
+<p>当你进到这个页面的时候呢，别急着点击「Add to Cart」添加到购物车，这里面暗藏着一个优惠码，很多人不知道，使用浏览器查看源代码，chrome浏览器的话按F12，然后搜索「code」，你会发现有一个 「Try this promo code: xxxx 」，这个xxxx就是优惠码，你把他复制下来，待会有用。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://wistbean.org/images/vpn4.png" alt="使用搬瓦工优惠码" title="">
+                </div>
+                <div class="image-caption">使用搬瓦工优惠码</div>
+            </figure>
+
+<p>页面的 Location 就是选择服务器的地址，到时访问谷歌的时候会显示你当前访问的地址。好了，我们点击「Add to Cart」。</p>
+<p>接下来，进入结算页面，我们刚才复制的优惠码就派上用场了，将你刚刚复制的优惠码复制进去然后点击 「Validate Code」，看！是不是优惠了！一般人不知道这种操作:</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://wistbean.org/images/vpn5.png" alt="使用搬瓦工优惠码" title="">
+                </div>
+                <div class="image-caption">使用搬瓦工优惠码</div>
+            </figure>
+
+<p>接着点击「CheckOut」完成付款即可。付款的时候选择 Alipay 就可以使用支付宝付款。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://wistbean.org/images/vpn8.png" alt="使用搬瓦工支付宝支付" title="">
+                </div>
+                <div class="image-caption">使用搬瓦工支付宝支付</div>
+            </figure>
+
+
+<p>购买完毕后你就拥有一台你自己的服务器了，接着点击Services下的MyServices，可以看到你的服务器：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://wistbean.org/images/vpn6.png" alt="搬瓦工搭建ssr" title="">
+                </div>
+                <div class="image-caption">搬瓦工搭建ssr</div>
+            </figure>
+
+<p>我们点击「KiwiVM Control Panel」进入管理界面：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://wistbean.org/images/vpn7.png" alt="搬瓦工搭建ssr" title="">
+                </div>
+                <div class="image-caption">搬瓦工搭建ssr</div>
+            </figure>
+
+<p>可以看到你服务器的信息:</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://wistbean.org/images/vpn9.png" alt="搬瓦工搭建ssr" title="">
+                </div>
+                <div class="image-caption">搬瓦工搭建ssr</div>
+            </figure>
+
+<p>有了<a href="https://bwh1.net/aff.php?aff=32874" target="_blank">搬瓦工</a>服务器的IP地址和端口,我们就可以连接了：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://wistbean.org/images/pic1.png" alt="搬瓦工搭建ssr" title="">
+                </div>
+                <div class="image-caption">搬瓦工搭建ssr</div>
+            </figure>
+
+<p>账号是root，密码可以在这里获取：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://wistbean.org/images/pic2.png" alt="搬瓦工搭建ssr" title="">
+                </div>
+                <div class="image-caption">搬瓦工搭建ssr</div>
+            </figure>
+
+<h1 id="使用-SSH-工具连接到搬瓦工服务器"><a href="#使用-SSH-工具连接到搬瓦工服务器" class="headerlink" title="使用 SSH 工具连接到搬瓦工服务器"></a>使用 SSH 工具连接到搬瓦工服务器</h1><h2 id="windows系统连接搬瓦工vps"><a href="#windows系统连接搬瓦工vps" class="headerlink" title="windows系统连接搬瓦工vps"></a>windows系统连接搬瓦工vps</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://wistbean.org/images/pic3.png" alt="搬瓦工搭建ssr" title="">
+                </div>
+                <div class="image-caption">搬瓦工搭建ssr</div>
+            </figure>
+
+<p>远程连接工具我一直用的是 <a href="https://www.vandyke.com/products/securecrt/" target="_blank" rel="noopener">SecureCRT</a> , 当然你也可以使用其它的 SSH 工具。<br>破解版的SecureCRT可以在百度网盘这里获取：</p>
+<ul>
+<li>链接: <a href="https://pan.baidu.com/s/11W4WHjCjmiNw6einQNrcPg" target="_blank" rel="noopener">https://pan.baidu.com/s/11W4WHjCjmiNw6einQNrcPg</a></li>
+<li>提取码: tyux</li>
+</ul>
+<h2 id="mac系统连接搬瓦工vps"><a href="#mac系统连接搬瓦工vps" class="headerlink" title="mac系统连接搬瓦工vps"></a>mac系统连接搬瓦工vps</h2><p>打开你的 Terminal 终端，接着输入：ssh root@你的ip地址，接着输入你的搬瓦工的 root 密码就可以登录了。</p>
+<h1 id="一键安装使用SSR"><a href="#一键安装使用SSR" class="headerlink" title="一键安装使用SSR"></a>一键安装使用SSR</h1><h2 id="安装-git"><a href="#安装-git" class="headerlink" title="安装 git"></a>安装 git</h2><p>输入命令：<br>    yum install git</p>
+<h2 id="下载安装ssr安装脚本"><a href="#下载安装ssr安装脚本" class="headerlink" title="下载安装ssr安装脚本"></a>下载安装ssr安装脚本</h2><p>输入命令：</p>
+<pre><code>git clone -b master https://github.com/flyzy2005/ss-fly
+</code></pre>
+<h2 id="运行ssr脚本"><a href="#运行ssr脚本" class="headerlink" title="运行ssr脚本"></a>运行ssr脚本</h2><p>输入命令：</p>
+<pre><code>ss-fly/ss-fly.sh -ssr
+</code></pre>
+<p>运行之后会提示你输入密码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Please enter password for ShadowsocksR:</span><br><span class="line">(Default password: teddysun.com) : (在这里输入密码然后回车)</span><br></pre></td></tr></table></figure>
+
+<p>接着会提示你输入端口号：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Please enter a port for ShadowsocksR [1-65535] (Default port: 14593):(在这里输入端口然后回车)</span><br></pre></td></tr></table></figure>
+
+<p>接着会提示你输入加密方式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Please select stream cipher for ShadowsocksR:（这里输入 7 然后回车）</span><br></pre></td></tr></table></figure>
+
+<p>最后就会出现下面的内容，说明你已经安装ssr成功了：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Congratulations, ShadowsocksR server install completed!</span><br><span class="line">Your Server IP        :服务器ip</span><br><span class="line">Your Server Port      :端口</span><br><span class="line">Your Password         :密码</span><br><span class="line">Your Protocol         :协议</span><br><span class="line">Your obfs             :混淆</span><br><span class="line">Your Encryption Method:your_encryption_method</span><br><span class="line"></span><br><span class="line">Welcome to visit:https://shadowsocks.be/9.html</span><br><span class="line">Enjoy it!</span><br></pre></td></tr></table></figure>
+
+<h1 id="SSR-命令操作"><a href="#SSR-命令操作" class="headerlink" title="SSR 命令操作"></a>SSR 命令操作</h1><ol>
+<li>启动：&#x2F;etc&#x2F;init.d&#x2F;shadowsocks start</li>
+<li>停止：&#x2F;etc&#x2F;init.d&#x2F;shadowsocks stop</li>
+<li>卸载：.&#x2F;shadowsocksR.sh uninstall</li>
+</ol>
+<h1 id="一键开启-BBR-加速"><a href="#一键开启-BBR-加速" class="headerlink" title="一键开启 BBR 加速"></a>一键开启 BBR 加速</h1><p>到这里你是安装成功SSR了，不过还可以加速上网：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ss-fly/ss-fly.sh -bbr</span><br></pre></td></tr></table></figure>
+
+<p>然后会提示你重启才会生效，我们按【y】进行重启。</p>
+<p>这样就可以了。</p>
+<h1 id="使用Shadowsocks"><a href="#使用Shadowsocks" class="headerlink" title="使用Shadowsocks"></a>使用Shadowsocks</h1><h2 id="windows使用Shadowsocks"><a href="#windows使用Shadowsocks" class="headerlink" title="windows使用Shadowsocks"></a>windows使用Shadowsocks</h2><p>windows点击下载：<a href="https://pan.baidu.com/s/19m0AfTkPDSRj0bfYrGpbIg" target="_blank" rel="noopener">Shadowsocks windows客户端</a></p>
+<p>打开 Shadowsocks 客户端，输入ip地址，密码，端口，和加密方式。接着点击确定，<strong>右下角会有个小飞机按钮，右键–&gt;启动代理</strong>。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://wistbean.org/images/ss4.png" alt="ss" title="">
+                </div>
+                <div class="image-caption">ss</div>
+            </figure>
+
+<p>这时候就可以了。</p>
+<h2 id="Android使用Shadowsocks"><a href="#Android使用Shadowsocks" class="headerlink" title="Android使用Shadowsocks"></a>Android使用Shadowsocks</h2><p>Android点击下载：<a href="https://pan.baidu.com/s/1coAkZn-GuYHu5eIKaHECxA" target="_blank" rel="noopener">Shadowsocks Android客户端</a></p>
+<p>打开apk安装，接着打开APP，输入ip地址，密码，端口，和加密方式。即可科学上网。</p>
+<h2 id="iPhone使用Shadowsocks"><a href="#iPhone使用Shadowsocks" class="headerlink" title="iPhone使用Shadowsocks"></a>iPhone使用Shadowsocks</h2><p>iPhone要下载的app需要在appstore下载，但是需要用美区账号才能下载，而且这个APP需要钱。在这里提供一种解决方案，就是可以再搭建一个<a href="https://wistbean.org/ipsec,l2tp_vpn.html#%E4%BD%BF%E7%94%A8-IPsec-L2TP-%E8%84%9A%E6%9C%AC%E6%90%AD%E5%BB%BA" target="_blank" rel="noopener">IPsec&#x2F;L2TP VPN</a>,专门给你的iPhone使用。</p>
+<h1 id="相关"><a href="#相关" class="headerlink" title="相关"></a>相关</h1><ul>
+<li><a href="https://wistbean.org/banwagong-quick-build-ss.html" target="_blank" rel="noopener">搬瓦工vps一键搭建ss并开启BBR代理加速科学上网，傻瓜式1分钟搞定</a></li>
+<li><a href="https://wistbean.org/vultr-vps-bbr-ss.html" target="_blank" rel="noopener">使用vultr(vps)搭建ss并开启BBR快速上网教程 超简单10分钟搞定</a></li>
+<li><a href="https://wistbean.org/cloud-server.html" target="_blank" rel="noopener">推荐|我用了十几台云服务器VPS后，告诉你哪家云服务产商性价比高,性能稳定</a></li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+      <!--  
+
+        
+        关注公众号「wistbean」，发送「帅书」获取我写的技术电子书
+        
+        -->
+        在公众号「学习 Python 的正确姿势」发送「帅书」领取我写的技术电子书，转载请注明出处：
+        <a href="https://wistbean.github.io/banwagong-ssr-quick.html">
+                   wistbean
+        </a>
+    </div>
+    
+    <footer>
+        <a href="https://wistbean.github.io">
+            <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+            wistbean
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bbr/">bbr</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shadowsocks搭建教程/">shadowsocks搭建教程</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vps/">vps</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/搬瓦工cn2-ssr/">搬瓦工cn2 ssr</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/搬瓦工ssr/">搬瓦工ssr</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/搬瓦工ssr混淆/">搬瓦工ssr混淆</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/搬瓦工ssr链接/">搬瓦工ssr链接</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/banwagong-ssr-quick.html&title=《最新搬瓦工新手一键快速搭建SSR并开启bbr加速上网教程》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/banwagong-ssr-quick.html&title=《最新搬瓦工新手一键快速搭建SSR并开启bbr加速上网教程》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/banwagong-ssr-quick.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《最新搬瓦工新手一键快速搭建SSR并开启bbr加速上网教程》 — wistbean&url=https://wistbean.github.io/banwagong-ssr-quick.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/banwagong-ssr-quick.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/ma-de-bu-hui-da-zi-le.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">妈的，不会打字了！</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/yi-dian-xiang-fa.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">通宵做完这件事后的一点想法</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>本站已加入 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-知识 4.0  (CC BY-NC-SA 4.0)国际协议 | 转载请注明链接出处</a></span>
+        </p>
+    </div>
+
+        <div class="bottom">
+                <p><span>wistbean &copy; 2015 - 2024</span>
+                    <span>
+                        
+                         <a href="https://wistbean.github.io/">肯定会|wistbean</a>
+                         <a href="https://fxxkpython.com">通往Python高手之路</a>
+                         <a href="https://www.bwh8.net/aff.php?aff=32874" target="_blank">搬瓦工2024优惠码</a>、
+                         <a href="https://www.vultr.com/?ref=7532860" target="_blank">vultr2024优惠码</a>
+                    </span>
+                </p>
+        </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/banwagong-ssr-quick.html&title=《最新搬瓦工新手一键快速搭建SSR并开启bbr加速上网教程》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/banwagong-ssr-quick.html&title=《最新搬瓦工新手一键快速搭建SSR并开启bbr加速上网教程》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/banwagong-ssr-quick.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《最新搬瓦工新手一键快速搭建SSR并开启bbr加速上网教程》 — wistbean&url=https://wistbean.github.io/banwagong-ssr-quick.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/banwagong-ssr-quick.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACMUlEQVR42u3aQW4CMRAEQP7/aXJFCoHuMURau/YURSa49jDxePp2i5/7w5OseVz5+rP5yg88GBgYl2XcXz75Fv/aRLL+95p8PQYGxjmMpBTmRbbexOh7MTAwMF4XwZVDYVJkMTAwML5RcNvmNmliMTAwMGaN5cqhcKVkf6wXx8DAuCAjv3X//5+/Mt/AwMC4FONePnm5bAeTeZF98i0YGBhbM/ICN4tQJIPJqEFNmmcMDIxNGSujx7yArr+aN7/BwMA4gDHbVnt93x498yMpBgbG3oyV6EO7idkotLh6w8DA2JqRhydWmtLi4iyG/YnEwMDYmjELQLQxr3x42TbPGBgY+zHyYpevSZrhlaPkk11hYGAcwMhjE/klWlv126HmkxEmBgbGpoy2Tc0LaztsmIXPbvmfxsDAuCyjPca1QYq2yLYFFwMD4wRGsWhhoDgbiC6FwzAwMDZi5OHR9rqtbXRnLwsDA+MExuyo1zals1eQfBYDA+McRjuSbI90K0PQelCKgYGxKaNNkM0a0SQQ1pbgJ/83MDAwDmPMwmH5FdssZnHL5xgYGBjHMPLow6y8ttGNN704BgbGdox7+awEKdowR/G9GBgYWzPawEQbhpiFzNpjJQYGxgmM+mJrudTmA4NhE4uBgbEpY2UAsB6kmLGjzAgGBgbGwgl0dpT8esHFwMDYgtGuzF/BLIiGgYFxDqMdSbZFs41l5EUfAwPjBMbKpVjbcOZXabPDKAYGxnaMH1Ekk2GqMGXUAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

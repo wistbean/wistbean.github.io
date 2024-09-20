@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131395348-1"></script>
+    <script data-ad-client="ca-pub-9097083609097034" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-131395348-1');
+    </script>
+
+    
+
+    
+
+    
+
+
+<!-- Baidu Push -->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<!-- End Baidu Push -->
+
+
+    <meta charset="utf-8">
+    
+    <meta name="google-site-verification" content="bcJVGqEGcBIay29szBsswzqYxY3qUzWuvu1hfad3-08">
+    
+    
+    
+    
+    <title>我的自学 Java 编程之路 | wistbean | wistbean</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#B5963F">
+    
+    
+    <meta name="keywords" content="Java,个人经验,Java初学者">
+    <meta name="description" content="学习Java之初我是大学的时候才开始接触编程的，不过我上的是一所三流的大学，高三的时候，因为我们班是重点班，所以有一些复读生也来我们班学习，高三开始不久我就和一个高四的学姐谈恋爱了，还是我的初恋，所以我高考就GG了… 偏题了，回来说说编程的事情吧，虽然说大学是个三流的学校，不过老师都是博士硕士级别的工程师，对于当时的我会觉得他们好像很厉害的样子，不过现在觉得有时候标签这种东西并不能说明什么吧。 那">
+<meta name="keywords" content="Java,个人经验,Java初学者">
+<meta property="og:type" content="article">
+<meta property="og:title" content="我的自学 Java 编程之路">
+<meta property="og:url" content="https://wistbean.github.io/lean-java.html">
+<meta property="og:site_name" content="wistbean">
+<meta property="og:description" content="学习Java之初我是大学的时候才开始接触编程的，不过我上的是一所三流的大学，高三的时候，因为我们班是重点班，所以有一些复读生也来我们班学习，高三开始不久我就和一个高四的学姐谈恋爱了，还是我的初恋，所以我高考就GG了… 偏题了，回来说说编程的事情吧，虽然说大学是个三流的学校，不过老师都是博士硕士级别的工程师，对于当时的我会觉得他们好像很厉害的样子，不过现在觉得有时候标签这种东西并不能说明什么吧。 那">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2024-01-26T15:14:15.685Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="我的自学 Java 编程之路">
+<meta name="twitter:description" content="学习Java之初我是大学的时候才开始接触编程的，不过我上的是一所三流的大学，高三的时候，因为我们班是重点班，所以有一些复读生也来我们班学习，高三开始不久我就和一个高四的学姐谈恋爱了，还是我的初恋，所以我高考就GG了… 偏题了，回来说说编程的事情吧，虽然说大学是个三流的学校，不过老师都是博士硕士级别的工程师，对于当时的我会觉得他们好像很厉害的样子，不过现在觉得有时候标签这种东西并不能说明什么吧。 那">
+    
+        <link rel="alternate" type="application/atom+xml" title="wistbean" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(https://wistbean.github.io/images/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">wistbean</h5>
+          <a href="mailto:wistbean.bb@gmail.com" title="wistbean.bb@gmail.com" class="mail">wistbean.bb@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="https://wistbean.org/python-tutorial.html"  >
+                <i class="icon icon-lg icon-coffee"></i>
+                Python零基础入门教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2NzYyNjg2Nw==&action=getalbum&album_id=2448798954764255234#wechat_redirect"  >
+                <i class="icon icon-lg icon-bug"></i>
+                Python爬虫教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://vip.fxxkpython.com/?page_id=18"  >
+                <i class="icon icon-lg icon-code"></i>
+                加入我的VIP
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/aboutMe/"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light off" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">我的自学 Java 编程之路</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="vultr ss bbr v2ray 100美金">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">我的自学 Java 编程之路</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-09-04T12:33:41.000Z" itemprop="datePublished" class="page-time">
+  2018-09-04
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Java/">Java</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>目录</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#学习Java之初"><span class="post-toc-number">1.</span> <span class="post-toc-text">学习Java之初</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#自学Java基础"><span class="post-toc-number">2.</span> <span class="post-toc-text">自学Java基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#开始用Java工作"><span class="post-toc-number">3.</span> <span class="post-toc-text">开始用Java工作</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Java后端开发"><span class="post-toc-number">4.</span> <span class="post-toc-text">Java后端开发</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#给新手自学-Java-的建议"><span class="post-toc-number">5.</span> <span class="post-toc-text">给新手自学 Java 的建议</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#相关文章"><span class="post-toc-number"></span> <span class="post-toc-text">相关文章</span></a>
+        </nav>
+    </aside>
+
+
+<article id="post-lean-java"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">我的自学 Java 编程之路</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-09-04 20:33:41" datetime="2018-09-04T12:33:41.000Z"  itemprop="datePublished">2018-09-04</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Java/">Java</a></li></ul>
+
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h2 id="学习Java之初"><a href="#学习Java之初" class="headerlink" title="学习Java之初"></a>学习Java之初</h2><p>我是大学的时候才开始接触编程的，不过我上的是一所三流的大学，高三的时候，因为我们班是重点班，所以有一些复读生也来我们班学习，高三开始不久我就和一个高四的学姐谈恋爱了，还是我的初恋，所以我高考就GG了…</p>
+<p>偏题了，回来说说编程的事情吧，虽然说大学是个三流的学校，不过老师都是博士硕士级别的工程师，对于当时的我会觉得他们好像很厉害的样子，不过现在觉得有时候标签这种东西并不能说明什么吧。</p>
+<p>那时候老师说「移动应用开发」会火，到时毕业一定可以找到工作，所以我就想着主攻「移动应用开发」，也就是 Android ，因为 Android 的应用层是用 java 写的，所以一开始学的是「java基础」。</p>
+<p>虽然说去上课，但是真正听老师讲课的人寥寥无几，我也不例外，电脑前演示着老师讲课的PPT，但是视线一直停留在自己手机里的美女上。</p>
+<p>不过有一次老师讲到一个「使用for循环打印星星的例子」，我觉得好好玩，这时候我才发现java并非那么无聊，我可以通过代码写出打印多少颗星星，打印成正三角形的形状，倒三角形的形状，正方形形状等等。第一次有了一种「有想法可以被java实现的感觉」，从那天起开始对编程产生了兴趣。</p>
+<p>那一天虽然知道了「for循环」怎么写（跟着老师的例子照猫画虎），但是对于java环境变量怎么配置，二进制是什么，什么是Byte，Long都不懂，那时候可以说对于 java 只知道怎么拼写而已。</p>
+<p>因为有些知识点之前没认真听，也发觉老师讲的很无聊，后来我决定自学，自我驱动的学习和被动的学习是两个完全不同的概念，我到现在依然认为：<strong>真正牛逼的人，都是自学能力极强的人！</strong></p>
+<h2 id="自学Java基础"><a href="#自学Java基础" class="headerlink" title="自学Java基础"></a>自学Java基础</h2><p>我开始上网查询学习「java基础知识」的资料，无意间发现了某培训机构（是哪个机构就不说了，免得说我打广告）有免费的讲课视频资料，看了一下目录发现很全面，于是我下载下来试着看一下，没想到被讲师的幽默讲课方式深深吸引，感觉他不做相声演员都可惜了，于是边笑着看他的视频，边跟着他敲代码，自己也做一些笔记。那段时间有时候逃课其实是在宿舍里看他的视频哈哈！</p>
+<p>那个视频课时分为三十来天，不过我是除了跟着他敲代码外，我还会自己做一些笔记，所以我大概花了两个多月才把视频学完的，也就这几个月的时间我从如何打印Hello World，到常量，变量，注释，运算，逻辑语句，再到面向对象（可能比较笨，当时想了好几天才明白这一概念），数组，函数，继承，内部类，多态，GUI等，再到集合，多线程，IO流，反射等等有一个全面的了解了。</p>
+<p>感觉自己把 java 比较基础的知识学的差不多了，就想着能不能做点好玩的东西出来，记得有一个情人节，那时候我还是有女朋友的人，想给女朋友做一个程序，作为礼物送给她，有那么一个夜晚，我突然想到能不能用 java 做一款小游戏，游戏的主角就是她呢？</p>
+<p>想想还是有点激动的，后来我模仿了「坦克游戏」，不过玩家的坦克是我女票的头像，而很多敌方坦克就是我的头像，然后子弹被我改成❤️（爱心子弹，害羞）。</p>
+<p>用了几天的时间把它做出来觉得好有成就感，最后我把这个游戏打成jar包送给我女票当作礼物，然后看她玩的时候一直在互相发射爱心，不过敌方的“我”又多，射出的爱心子弹又快,每次玩不久她就“挂”了，老是叫我去修改一下游戏速度，让她赢哈哈。不过现在的她已经不属于我了，哎，想想还是有点小伤感呢，我是不是又跑题了 - -</p>
+<p>因为我一开始就知道我学 java基础 是为了去开发 Android 应用，那时候觉得能在手机上把玩自己开发的 APP 是一种牛逼的存在。所以我又去找了一些「Android入门教程」的视频来学习，因为自己有了一定的 java基础知识 ，所以对「Android入门教程」视频学起来倒不觉得很难，反而是想着快点学完然后做个有意思的APP出来，所以那时候对Activity，Service的生命周期、一些诸如TextView，EditView基础的组件、诸如LinearLayout的容器组件、广播、Intent、内容提供者消费者、Sqlite等基础内容都学的比较认真。</p>
+<p>慢慢的我开始写了一些demo，但是发现很不满意，原因是我感觉自己写的东西很简单，几个界面跳来跳去，几个增删改查，好像就没什么了，感觉自己没有什么项目经验，而且停留在很基础的层面。</p>
+<p>于是我上网去搜索一些Android相关的资料，发现了CSDN上的「郭霖」大佬，发现他写的博客通俗易懂，那时候他每篇博客我都看，慢慢的我又认识到了「老罗」，他写的东西很深，有时候我看不懂 - -，发现了「阮一峰」的博客，再到后来我又发现在知乎上的 「stormzhang」， 我这才发现当时自己有多low，这些大佬们经验满满，我从他们身上学到了自定义View，性能优化，网络编程，第三方框架等等比较进阶的东西，不过更加让我学习到的是他们的执行力，他们的认知，他们对信息的敏感。</p>
+<p>举个例子：记得 Android Studio 刚出来那会，我只是觉得 Android Studio 应该和 Eclipse 差不多吧，不就是个编辑器，而且Android Studio 刚出来的时候我下载体验了一下卡的要死，我二话不说就把它给卸载了，什么垃圾玩意。不过后来我发现大佬们都在用 Android Studio ，而且一直在建议更换为Android Studio，我记得之前大佬们还专门写了Android Studio的教程。受他们的影响，我把Android Studio下载回来，随着Android Studio的迭代，我才发现这编辑器简直了，这快捷键，这体验，简直完爆 Eclipse。现在还看到有些人还用Eclipse开发，没用过Android Studio或者<a href="https://www.jetbrains.com/idea/" target="_blank" rel="noopener">InteliJ IDEA</a>，说实话，我面试到这样的人一般会直接pass掉，并不是说Eclipse不好，而是认为，如果不拥抱新的事物，总是固步自封，那么很快会被淘汰！</p>
+<p>也是那个时候，我发现了原来还有一个叫做「<a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>」的东西，简直打开了新天地，上面有许多大牛分享代码，聚集了全世界的程序员，吓得我赶紧去学习了Git的操作命令，clone了几个觉得适合我当时学习的Android项目源码！</p>
+<p>后来和朋友参加软件杯比赛，能写出比较像样的APP了，看着APP从想法到实现，确实能带来很多成就感，也许对别人来说并不完美，但是自己亲手写出来的，自己debug出来的APP，就是有不一样的感觉，觉得像自己的孩子一样哈哈！</p>
+<p>在大学期间，自己用PS画UI，使用第三方的接口，琢磨着做了几个小众的APP，后来将这些APP都装在自己的手机上，面试的时候一边演示一边跟面试官吹吹牛逼，倒也拿了几个实习offer。</p>
+<h2 id="开始用Java工作"><a href="#开始用Java工作" class="headerlink" title="开始用Java工作"></a>开始用Java工作</h2><p>后来自己选了初创公司，刚开始就让我接手一个比较大的项目，功能挺多的，商品上下架，第三方支付，商家入驻，到后来甚至还做了附近的人，聊天约炮交友，抽奖等功能，我和另一个小伙伴负责这个项目的Android端，虽然期间遇到了许多问题，如代码混淆打包闪退，不同手机兼容适配，支付配置不正确等等，也曾怀疑自己是不是能行过，但还是一一解决了，前前后后花了快一年时间也在应用市场上架了好几版，不过用户寥寥，可能你应该想到了，产品还没运营，就夭折了。现在回头想想，产品思维确实重要。</p>
+<p>接着也做了几款别的APP，表现也是平平 - -</p>
+<p>可能因为表现的还行，后来老大说有个公众号的小项目，后端让我来搞怎么样，当时自己也发现原生APP的开发趋势下降了，H5 越来越火，然后跟老大说给我三天熟悉一下 java 后端的，他说没问题，没想到这一决定让我开始转向后端开发了…</p>
+<h2 id="Java后端开发"><a href="#Java后端开发" class="headerlink" title="Java后端开发"></a>Java后端开发</h2><p>其实这三天主要研究了下 JSP , Servlet ,还看了点 struts2 框架，然后也算按计划时间倒腾出来了那个小项目，也是因为这个小项目我对后端开发产生了些许兴趣，我觉得写逻辑接口提供给前端调用好像比较牛逼。</p>
+<p>那段时间开始研究 SSH2 框架，使用它做了一个电商项目，接着发现很少人用 SSH2 了，然后研究了 SpringMVC 框架，JDBCTemplate，进一步学习 Mysql的索引、视图，使用 PowerDesigner 设计数据库，Nginx，Linux操作系统环境搭建，操作命令，网络协议等等。</p>
+<p>不过之前做的很少涉及到高并发，后来比较流行SSM框架了，也使用过它来做一些分布式的项目，慢慢的了解到了连接池、消息队列、定时、缓存、搜索引擎、渲染模板引擎等等。</p>
+<p>由于SSM配置繁琐，现在Spring Boot&#x2F;Spring Cloud这样的高效框架也越来越多人开始使用了。</p>
+<p>越往后越发现基础的东西很重要，比如多线程的同步异步，各种集合的实现原理，面向对象，反射技术等！</p>
+<p>当然我非常不推崇那些对刚入门想学的同学推荐一堆诸如：各种设计模式，JVM调优，负载均衡，各种数据结构和算法，链表、排序树，分布式存储，对象池，连接池，网络三次握手过程等等。</p>
+<p>人家还没开始学，就给吓跑了 - -</p>
+<h2 id="给新手自学-Java-的建议"><a href="#给新手自学-Java-的建议" class="headerlink" title="给新手自学 Java 的建议"></a>给新手自学 Java 的建议</h2><p>所以我建议「java自学入门」先从基础开始，再进阶到会使用各种框架，再慢慢了解其原理，加以项目辅助练习，最后再回来补充自己的弱项例如操作系统，数据结构，算法，网络！</p>
+<p>列个大纲吧：</p>
+<p>初级入门知识点：</p>
+<ul>
+<li>基本的语法</li>
+<li>数组</li>
+<li>面向对象</li>
+<li>IDEA工具使用，相信我，别用eclipse了！</li>
+<li>常见对象的使用</li>
+<li>集合框架</li>
+<li>IO流</li>
+<li>多线程</li>
+<li>GUI（可选）</li>
+<li>java网络编程</li>
+<li>反射</li>
+<li>《疯狂java讲义》类似书籍或视频教程</li>
+</ul>
+<p>进阶知识点：</p>
+<ul>
+<li>《Effective java》类似书籍</li>
+<li>数据序列化 JSON</li>
+<li>项目构建管理 Maven</li>
+<li>托管利器 Git</li>
+<li>Spring 容器</li>
+<li>Spring MVC框架</li>
+<li>安全框架 Shiro</li>
+<li>ORM框架 MyBatis</li>
+<li>数据库连接池</li>
+<li>模板引擎</li>
+<li>分布式缓存数据库 Redis</li>
+<li>分布式全文搜索引擎 Solr</li>
+<li>任务调度框架 Quartz</li>
+<li>消息队列 MQ</li>
+<li>日志组件 Log4J</li>
+<li>分布式服务框架 Dubbo</li>
+<li>分布式协调服务 ZooKeeper</li>
+<li>微服务 Spring boot 、 Spring Clound</li>
+</ul>
+<p>完善知识点：</p>
+<ul>
+<li>《深入分析java Web技术内幕》类似书籍</li>
+<li>JVM</li>
+<li>NIO</li>
+<li>设计模式</li>
+<li>Linux操作系统</li>
+<li>数据结构</li>
+<li>算法</li>
+<li>计算机网络</li>
+<li>数据库优化</li>
+</ul>
+<p>我相信一个人去关注这一问题，或者看到这里，都是有一颗学习的心，不过很多人被所谓的过来人扔一堆「晦涩难懂的技术名词」吓到，我是非常讨厌这样的人的，自以为很牛逼，摧毁初学者的信心， 凸！</p>
+<p>建议入门的童鞋可以先看视频教程，因为有老师在演示会比较好理解，记得总结，总结很重要！还有一点就是不要加入所谓的java开发讨论群，java学习群，因为十个有九个是在里面瞎逼逼，开车的！还有一点就是尽量使用Google。</p>
+<p>希望以上的内容能给你带来帮助。</p>
+<h1 id="相关文章"><a href="#相关文章" class="headerlink" title="相关文章"></a>相关文章</h1><ul>
+<li><a href="https://wistbean.org/programing-experience.html" target="_blank" rel="noopener">编程人生中的两个小经验</a></li>
+<li><a href="/categories/Java/">Categories: Java</a></li>
+<li><a href="/java-xue-xi-lu-xian.html">Java初学者的学习路线建议</a></li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+      <!--  
+
+        
+        关注公众号「wistbean」，发送「帅书」获取我写的技术电子书
+        
+        -->
+        在公众号「学习 Python 的正确姿势」发送「帅书」领取我写的技术电子书，转载请注明出处：
+        <a href="https://wistbean.github.io/lean-java.html">
+                   wistbean
+        </a>
+    </div>
+    
+    <footer>
+        <a href="https://wistbean.github.io">
+            <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+            wistbean
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java初学者/">Java初学者</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/个人经验/">个人经验</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/lean-java.html&title=《我的自学 Java 编程之路》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/lean-java.html&title=《我的自学 Java 编程之路》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/lean-java.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《我的自学 Java 编程之路》 — wistbean&url=https://wistbean.github.io/lean-java.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/lean-java.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/why-do-we-need-to-build-a-website.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">为什么要搭建一个属于自己的个人网站</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/make-money-on-the-internet.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">通过互联网赚钱的 9 种渠道</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>本站已加入 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-知识 4.0  (CC BY-NC-SA 4.0)国际协议 | 转载请注明链接出处</a></span>
+        </p>
+    </div>
+
+        <div class="bottom">
+                <p><span>wistbean &copy; 2015 - 2024</span>
+                    <span>
+                        
+                         <a href="https://wistbean.github.io/">肯定会|wistbean</a>
+                         <a href="https://fxxkpython.com">通往Python高手之路</a>
+                         <a href="https://www.bwh8.net/aff.php?aff=32874" target="_blank">搬瓦工2024优惠码</a>、
+                         <a href="https://www.vultr.com/?ref=7532860" target="_blank">vultr2024优惠码</a>
+                    </span>
+                </p>
+        </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/lean-java.html&title=《我的自学 Java 编程之路》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/lean-java.html&title=《我的自学 Java 编程之路》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/lean-java.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《我的自学 Java 编程之路》 — wistbean&url=https://wistbean.github.io/lean-java.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/lean-java.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAAByklEQVR42u3aS3KDMBAFQN//0s4BCPBmBslOqllRtkAtFirN5/WKr/fhOv57NvI4/vjUwxcuLu6Y+768jmMmUx7fmRtwcXH3c6uvvp7y+pfr+xsbLi7uH+Hmk+Hi4v5X7tnxKFlA7/24uLif4ibBTzK++tTCWA0XF3fAnacz5vdL8ru4uLgt7rt49con1U3w9G24uLhbuPmGco3uhTrNeXFxcTdyr7eb3sgVrR64uLh7uElYkmxheeK1+glusry4uLiPcudBTnVDzDe4Xz4ELi7udm612DkPeJLZTzcyXFzcxdzqUWYyfhT84OLibuTmjRT578v3XVxc3GXcZFB+AJoXU6Nl4OLiLuYmTRLV5Eh+MBoFP7i4uMu4eVdk0oTxbPATJV9wcXGXcfPkSH5fbe0qLB4XF3c7d1IozYuvvfwnLi7ufm4OSsKh/HiUlGcKpzBcXNwxt5fQzNss8uNLFCzh4uJu4fZaIvKNqUqvJl5xcXHXcavhRzUE6hVUTpeKi4u7kVstafRaKB6L1XBxcb+MW23LqCZTXr3V4OLifg23FzhNGjJwcXF3cvMjS6/hMh9/84FwcXG3cKtbSbWsMimcjPK7uLi4He4PBOjiMWgVHPgAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

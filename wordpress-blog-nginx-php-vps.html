@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131395348-1"></script>
+    <script data-ad-client="ca-pub-9097083609097034" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-131395348-1');
+    </script>
+
+    
+
+    
+
+    
+
+
+<!-- Baidu Push -->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<!-- End Baidu Push -->
+
+
+    <meta charset="utf-8">
+    
+    <meta name="google-site-verification" content="bcJVGqEGcBIay29szBsswzqYxY3qUzWuvu1hfad3-08">
+    
+    
+    
+    
+    <title>教你使用wordpress+nginx+php+mysql搭建一个博客 | wistbean | wistbean</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#B5963F">
+    
+    
+    <meta name="keywords" content="vultr,mysql,wordpress,wordpress搭建,wordpress教程,wordpress搭建博客,wordpress建站,nginx,个人博客,php">
+    <meta name="description" content="搭建 wordpress 前的准备最近我开了一个 VIP 的网站，用的就是 wordpress 框架搭建的，我之前用过 octopress 和 hexo 搭建博客，它们相对 wordpress 更加轻量一些，更多的是面向程序员使用命令的方式，而 wordpress 就有更多的人使用，上面也有丰富的插件和主题， wordpress 有后台管理界面，操作起来也非常方便。 常常有朋友问起如何搭建一个 w">
+<meta name="keywords" content="vultr,mysql,wordpress,wordpress搭建,wordpress教程,wordpress搭建博客,wordpress建站,nginx,个人博客,php">
+<meta property="og:type" content="article">
+<meta property="og:title" content="教你使用wordpress+nginx+php+mysql搭建一个博客">
+<meta property="og:url" content="https://wistbean.github.io/wordpress-blog-nginx-php-vps.html">
+<meta property="og:site_name" content="wistbean">
+<meta property="og:description" content="搭建 wordpress 前的准备最近我开了一个 VIP 的网站，用的就是 wordpress 框架搭建的，我之前用过 octopress 和 hexo 搭建博客，它们相对 wordpress 更加轻量一些，更多的是面向程序员使用命令的方式，而 wordpress 就有更多的人使用，上面也有丰富的插件和主题， wordpress 有后台管理界面，操作起来也非常方便。 常常有朋友问起如何搭建一个 w">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://wistbean.github.io/images/wordpress1.png">
+<meta property="og:image" content="https://wistbean.github.io/images/wordpress2.png">
+<meta property="og:image" content="https://wistbean.github.io/images/wordpress3.png">
+<meta property="og:image" content="https://wistbean.github.io/images/wordpress4.png">
+<meta property="og:image" content="https://wistbean.github.io/images/wordpress5.png">
+<meta property="og:image" content="https://wistbean.github.io/images/wordpress6.png">
+<meta property="og:image" content="https://wistbean.github.io/images/wordpress7.png">
+<meta property="og:image" content="https://wistbean.github.io/images/wordpress8.png">
+<meta property="og:image" content="https://wistbean.github.io/images/wordpress9.png">
+<meta property="og:image" content="https://wistbean.github.io/images/wordpress10.png">
+<meta property="og:image" content="https://wistbean.github.io/images/wordpress11.png">
+<meta property="og:image" content="https://wistbean.github.io/images/wordpress12.png">
+<meta property="og:image" content="https://wistbean.github.io/images/wordpress13.png">
+<meta property="og:image" content="https://wistbean.github.io/images/wordpress14.png">
+<meta property="og:image" content="https://wistbean.github.io/images/wordpress15.png">
+<meta property="og:image" content="https://wistbean.github.io/images/wordpress16.png">
+<meta property="og:updated_time" content="2024-01-26T15:14:15.836Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="教你使用wordpress+nginx+php+mysql搭建一个博客">
+<meta name="twitter:description" content="搭建 wordpress 前的准备最近我开了一个 VIP 的网站，用的就是 wordpress 框架搭建的，我之前用过 octopress 和 hexo 搭建博客，它们相对 wordpress 更加轻量一些，更多的是面向程序员使用命令的方式，而 wordpress 就有更多的人使用，上面也有丰富的插件和主题， wordpress 有后台管理界面，操作起来也非常方便。 常常有朋友问起如何搭建一个 w">
+<meta name="twitter:image" content="https://wistbean.github.io/images/wordpress1.png">
+    
+        <link rel="alternate" type="application/atom+xml" title="wistbean" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(https://wistbean.github.io/images/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">wistbean</h5>
+          <a href="mailto:wistbean.bb@gmail.com" title="wistbean.bb@gmail.com" class="mail">wistbean.bb@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="https://wistbean.org/python-tutorial.html"  >
+                <i class="icon icon-lg icon-coffee"></i>
+                Python零基础入门教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2NzYyNjg2Nw==&action=getalbum&album_id=2448798954764255234#wechat_redirect"  >
+                <i class="icon icon-lg icon-bug"></i>
+                Python爬虫教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://vip.fxxkpython.com/?page_id=18"  >
+                <i class="icon icon-lg icon-code"></i>
+                加入我的VIP
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/aboutMe/"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light off" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">教你使用wordpress+nginx+php+mysql搭建一个博客</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="vultr ss bbr v2ray 100美金">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">教你使用wordpress+nginx+php+mysql搭建一个博客</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-08-27T13:22:37.000Z" itemprop="datePublished" class="page-time">
+  2019-08-27
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/blog/">blog</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/blog/个人网站/">个人网站</a></li></ul></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>目录</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#搭建-wordpress-前的准备"><span class="post-toc-number">1.</span> <span class="post-toc-text">搭建 wordpress 前的准备</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#云服务器选择"><span class="post-toc-number">2.</span> <span class="post-toc-text">云服务器选择</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#域名购买"><span class="post-toc-number">3.</span> <span class="post-toc-text">域名购买</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#安装-mysql"><span class="post-toc-number">4.</span> <span class="post-toc-text">安装 mysql</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#rpm-添加-mysql-仓库"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">rpm 添加 mysql 仓库</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装-mysql-1"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">安装 mysql</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#启动-mysql"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">启动 mysql</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#安装-php"><span class="post-toc-number">5.</span> <span class="post-toc-text">安装 php</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#rpm添加php"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">rpm添加php</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装-php-以及相关插件"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">安装 php 以及相关插件</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#启动-php"><span class="post-toc-number">5.3.</span> <span class="post-toc-text">启动 php</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#安装-nginx"><span class="post-toc-number">6.</span> <span class="post-toc-text">安装 nginx</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装Nginx的依赖环境"><span class="post-toc-number">6.1.</span> <span class="post-toc-text">安装Nginx的依赖环境</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#下载Nginx"><span class="post-toc-number">6.2.</span> <span class="post-toc-text">下载Nginx</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#解压Nginx"><span class="post-toc-number">6.3.</span> <span class="post-toc-text">解压Nginx</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#参数配置"><span class="post-toc-number">6.4.</span> <span class="post-toc-text">参数配置</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#编译安装-nginx"><span class="post-toc-number">6.5.</span> <span class="post-toc-text">编译安装 nginx</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#启动-nginx"><span class="post-toc-number">6.6.</span> <span class="post-toc-text">启动 nginx</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#安装-wordpress"><span class="post-toc-number">7.</span> <span class="post-toc-text">安装 wordpress</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#配置-wordpress"><span class="post-toc-number">8.</span> <span class="post-toc-text">配置 wordpress</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#进入-mysql，设置下密码："><span class="post-toc-number">8.1.</span> <span class="post-toc-text">进入 mysql，设置下密码：</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#刷新权限"><span class="post-toc-number">8.2.</span> <span class="post-toc-text">刷新权限</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#退出，重新登录："><span class="post-toc-number">8.3.</span> <span class="post-toc-text">退出，重新登录：</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#创建-wordpress-数据库"><span class="post-toc-number">8.4.</span> <span class="post-toc-text">创建 wordpress 数据库</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#配置-wordpress-1"><span class="post-toc-number">8.5.</span> <span class="post-toc-text">配置 wordpress</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#将域名绑定到你的服务器地址"><span class="post-toc-number">8.6.</span> <span class="post-toc-text">将域名绑定到你的服务器地址</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#配置-nginx"><span class="post-toc-number">8.7.</span> <span class="post-toc-text">配置 nginx</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#搞定"><span class="post-toc-number">9.</span> <span class="post-toc-text">搞定</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-wordpress-blog-nginx-php-vps"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">教你使用wordpress+nginx+php+mysql搭建一个博客</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-08-27 21:22:37" datetime="2019-08-27T13:22:37.000Z"  itemprop="datePublished">2019-08-27</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/blog/">blog</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/blog/个人网站/">个人网站</a></li></ul></li></ul>
+
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="搭建-wordpress-前的准备"><a href="#搭建-wordpress-前的准备" class="headerlink" title="搭建 wordpress 前的准备"></a>搭建 wordpress 前的准备</h1><p>最近我开了一个 <a href="https://fxxkpython.com/" target="_blank" rel="noopener">VIP</a> 的网站，用的就是 <a href="https://wordpress.orghttps//wordpress.org" target="_blank" rel="noopener">wordpress</a> 框架搭建的，我之前用过 octopress 和 <a href="https://wistbean.org/build-personal-website.html" target="_blank" rel="noopener">hexo</a> 搭建博客，它们相对 wordpress 更加轻量一些，更多的是面向程序员使用命令的方式，而 wordpress 就有更多的人使用，上面也有丰富的插件和主题， wordpress 有后台管理界面，操作起来也非常方便。</p>
+<p>常常有朋友问起如何搭建一个 wordpress 的网站，这次就抽空给大家说说如何使用 wordpress 来搭建一个属于自己的博客吧。</p>
+<p>在此之前，我们需要：</p>
+<blockquote>
+<p>一台云服务器<br>一个域名<br>安装 mysql<br>安装 php<br>安装 nginx<br>安装 wordpress</p>
+</blockquote>
+<h1 id="云服务器选择"><a href="#云服务器选择" class="headerlink" title="云服务器选择"></a>云服务器选择</h1><p>wordpress<br>需要后台管理系统，有自己的数据库，所以我们需要有一台属于自己的服务器，关于云服务器的选择，我之前有写过：<br><a href="https://wistbean.org/cloud-server.html" target="_blank" rel="noopener">推荐|我用了十几台云服务器VPS后，告诉你哪家云服务产商性价比高,性能稳定</a>，如果你懒得看的话，就直接购买<br>vultr 吧，我一直在使用这家的云服务器，vultr 最近有活动，新用户充值 10 美元送 100<br>美元，点击<br><a href="https://www.vultr.com/?ref=8407679-6G" target="_blank" rel="noopener">vultr送100美元注册链接注册</a>。具体购买流程可以参考这个：<br><a href="https://wistbean.org/vultr-vps-bbr-ss.html#vultr-%E8%B4%AD%E4%B9%B0%E6%B5%81%E7%A8%8B" target="_blank" rel="noopener">vultr购买教程</a>，我选择的是<br>centos7 的系统哟。</p>
+<h1 id="域名购买"><a href="#域名购买" class="headerlink" title="域名购买"></a>域名购买</h1><p>关于域名和服务器我都不太推荐使用国内的，因为需要备案，关于域名可以到 godaddy 选购： <a href="https://sso.godaddy.com/" target="_blank" rel="noopener">https://sso.godaddy.com</a> 。</p>
+<h1 id="安装-mysql"><a href="#安装-mysql" class="headerlink" title="安装 mysql"></a>安装 mysql</h1><p>有了自己的服务器之后，就可以连接过去操作了。</p>
+<h2 id="rpm-添加-mysql-仓库"><a href="#rpm-添加-mysql-仓库" class="headerlink" title="rpm 添加 mysql 仓库"></a>rpm 添加 mysql 仓库</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -ivh https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm</span><br></pre></td></tr></table></figure>
+
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/wordpress1.png" alt="wordpress搭建教程" title="">
+                </div>
+                <div class="image-caption">wordpress搭建教程</div>
+            </figure>
+
+<h2 id="安装-mysql-1"><a href="#安装-mysql-1" class="headerlink" title="安装 mysql"></a>安装 mysql</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install mysql-community-server</span><br></pre></td></tr></table></figure>
+
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/wordpress2.png" alt="wordpress搭建教程" title="">
+                </div>
+                <div class="image-caption">wordpress搭建教程</div>
+            </figure>
+
+
+<h2 id="启动-mysql"><a href="#启动-mysql" class="headerlink" title="启动 mysql"></a>启动 mysql</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start mysqld</span><br></pre></td></tr></table></figure>
+
+<h1 id="安装-php"><a href="#安装-php" class="headerlink" title="安装 php"></a>安装 php</h1><h2 id="rpm添加php"><a href="#rpm添加php" class="headerlink" title="rpm添加php"></a>rpm添加php</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm</span><br><span class="line">rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装-php-以及相关插件"><a href="#安装-php-以及相关插件" class="headerlink" title="安装 php 以及相关插件"></a>安装 php 以及相关插件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install php72w-common php72w-fpm php72w-opcache php72w-gd php72w-mysqlnd php72w-mbstring php72w-pecl-redis php72w-pecl-memcached php72w-devel</span><br></pre></td></tr></table></figure>
+
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/wordpress3.png" alt="wordpress搭建教程" title="">
+                </div>
+                <div class="image-caption">wordpress搭建教程</div>
+            </figure>
+<h2 id="启动-php"><a href="#启动-php" class="headerlink" title="启动 php"></a>启动 php</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start php-fpm.service</span><br></pre></td></tr></table></figure>
+
+<h1 id="安装-nginx"><a href="#安装-nginx" class="headerlink" title="安装 nginx"></a>安装 <a href="https://wistbean.org/java-ssm-4-2.html#Nginx%E5%9C%A8Linux%E4%B8%8A%E5%AE%89%E8%A3%85" target="_blank" rel="noopener">nginx</a></h1><h2 id="安装Nginx的依赖环境"><a href="#安装Nginx的依赖环境" class="headerlink" title="安装Nginx的依赖环境"></a>安装Nginx的依赖环境</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y openssl openssl-devel</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>OpenSSL 是一个强大的安全套接字层密码库，囊括主要的密码算法、常用的密钥和证书封装管理功能及SSL协议，并提供丰富的应用程序供测试或其它目的使用。<br>  nginx不仅支持http协议，还支持https（即在ssl协议上传输http），所以需要在linux安装openssl库。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y zlib zlib-devel</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>多种压缩和解压缩的方式，nginx使用zlib对http包的内容进行gzip</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y pcre pcre-devel</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>nginx的http模块使用pcre来解析正则表达式</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install gcc-c++</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>安装nginx需要先将官网下载的源码进行编译，编译依赖gcc环境</p>
+</blockquote>
+<h2 id="下载Nginx"><a href="#下载Nginx" class="headerlink" title="下载Nginx"></a>下载Nginx</h2><p>在 <a href="http://nginx.org/en/download.html" target="_blank" rel="noopener">http://nginx.org/en/download.html</a> 可以下载相应的 nginx 版本，这里我下载的是 1.8.1：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum intall wget</span><br><span class="line">wget http://nginx.org/download/nginx-1.8.1.tar.gz</span><br></pre></td></tr></table></figure>
+
+<h2 id="解压Nginx"><a href="#解压Nginx" class="headerlink" title="解压Nginx"></a>解压Nginx</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf nginx-1.8.1.tar.gz</span><br></pre></td></tr></table></figure>
+
+<h2 id="参数配置"><a href="#参数配置" class="headerlink" title="参数配置"></a>参数配置</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd nginx-1.8.1</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">./configure \</span><br><span class="line">--prefix=/usr/local/nginx \</span><br><span class="line">--pid-path=/var/run/nginx/nginx.pid \</span><br><span class="line">--lock-path=/var/lock/nginx.lock \</span><br><span class="line">--error-log-path=/var/log/nginx/error.log \</span><br><span class="line">--http-log-path=/var/log/nginx/access.log \</span><br><span class="line">--with-http_gzip_static_module \</span><br><span class="line">--http-client-body-temp-path=/var/temp/nginx/client \</span><br><span class="line">--http-proxy-temp-path=/var/temp/nginx/proxy \</span><br><span class="line">--http-fastcgi-temp-path=/var/temp/nginx/fastcgi \</span><br><span class="line">--http-uwsgi-temp-path=/var/temp/nginx/uwsgi \</span><br><span class="line">--http-scgi-temp-path=/var/temp/nginx/scgi \</span><br><span class="line">--with-http_ssl_module</span><br></pre></td></tr></table></figure>
+
+<p>创建下刚配置到的目录：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /var</span><br><span class="line">mkdir -p temp/nginx</span><br></pre></td></tr></table></figure>
+
+<h2 id="编译安装-nginx"><a href="#编译安装-nginx" class="headerlink" title="编译安装 nginx"></a>编译安装 nginx</h2><p>进入到 nginx-1.8.1 目录：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">make</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
+
+<h2 id="启动-nginx"><a href="#启动-nginx" class="headerlink" title="启动 nginx"></a>启动 nginx</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/nginx/sbin</span><br><span class="line">./nginx</span><br></pre></td></tr></table></figure>
+
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/wordpress4.png" alt="wordpress搭建教程" title="">
+                </div>
+                <div class="image-caption">wordpress搭建教程</div>
+            </figure>
+
+<h1 id="安装-wordpress"><a href="#安装-wordpress" class="headerlink" title="安装 wordpress"></a>安装 wordpress</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/</span><br><span class="line">wget https://wordpress.org/latest.tar.gz</span><br><span class="line">tar -zxvf latest.tar.gz</span><br></pre></td></tr></table></figure>
+
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/wordpress5.png" alt="wordpress搭建教程" title="">
+                </div>
+                <div class="image-caption">wordpress搭建教程</div>
+            </figure>
+
+<h1 id="配置-wordpress"><a href="#配置-wordpress" class="headerlink" title="配置 wordpress"></a>配置 wordpress</h1><p>ok,现在环境都安装完毕了，接下来稍微做下配置就可以了。</p>
+<h2 id="进入-mysql，设置下密码："><a href="#进入-mysql，设置下密码：" class="headerlink" title="进入 mysql，设置下密码："></a>进入 mysql，设置下密码：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop mysqld</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqld --user=root --skip-grant-tables &amp;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">UPDATE mysql.user SET authentication_string=PASSWORD(&apos;设置你的密码&apos;) where USER=&apos;root&apos;;</span><br><span class="line">GRANT ALL PRIVILEGES ON *.* TO &apos;root&apos;@&apos;localhost&apos; IDENTIFIED BY &apos;你的密码&apos; WITH GRANT OPTION;</span><br></pre></td></tr></table></figure>
+
+<h2 id="刷新权限"><a href="#刷新权限" class="headerlink" title="刷新权限"></a>刷新权限</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flush privileges;</span><br></pre></td></tr></table></figure>
+
+<h2 id="退出，重新登录："><a href="#退出，重新登录：" class="headerlink" title="退出，重新登录："></a>退出，重新登录：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">exit</span><br><span class="line">mysql -uroot -p</span><br></pre></td></tr></table></figure>
+
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/wordpress6.png" alt="wordpress搭建教程" title="">
+                </div>
+                <div class="image-caption">wordpress搭建教程</div>
+            </figure>
+
+
+<h2 id="创建-wordpress-数据库"><a href="#创建-wordpress-数据库" class="headerlink" title="创建 wordpress 数据库"></a>创建 wordpress 数据库</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CREATE DATABASE wordpress;</span><br></pre></td></tr></table></figure>
+
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/wordpress7.png" alt="wordpress搭建教程" title="">
+                </div>
+                <div class="image-caption">wordpress搭建教程</div>
+            </figure>
+
+<h2 id="配置-wordpress-1"><a href="#配置-wordpress-1" class="headerlink" title="配置 wordpress"></a>配置 wordpress</h2><p>退出mysql，然后进入 wordpress 目录：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/wordpress/</span><br></pre></td></tr></table></figure>
+
+<p>修改文件wp-config：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi wp-config-sample.php</span><br></pre></td></tr></table></figure>
+
+<p>改下面几行，就是你刚刚创建的数据库名称和密码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">define( &apos;DB_NAME&apos;, &apos;wordpress&apos; );</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">/** MySQL database username */</span><br><span class="line">define( &apos;DB_USER&apos;, &apos;root&apos; );</span><br><span class="line"></span><br><span class="line">/** MySQL database password */</span><br><span class="line">define( &apos;DB_PASSWORD&apos;, &apos;你的密码&apos; );</span><br><span class="line"></span><br><span class="line">/** MySQL hostname */</span><br><span class="line">define( &apos;DB_HOST&apos;, &apos;localhost&apos; );</span><br></pre></td></tr></table></figure>
+
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/wordpress8.png" alt="wordpress搭建教程" title="">
+                </div>
+                <div class="image-caption">wordpress搭建教程</div>
+            </figure>
+
+<p>保存退出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">按 esc 之后，输入 ：wq</span><br></pre></td></tr></table></figure>
+
+<p>改下文件名：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv wp-config-sample.php wp-config.php</span><br></pre></td></tr></table></figure>
+
+<h2 id="将域名绑定到你的服务器地址"><a href="#将域名绑定到你的服务器地址" class="headerlink" title="将域名绑定到你的服务器地址"></a>将域名绑定到你的服务器地址</h2><p>DNS 添加 A 记录：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/wordpress9.png" alt="wordpress搭建教程" title="">
+                </div>
+                <div class="image-caption">wordpress搭建教程</div>
+            </figure>
+
+<h2 id="配置-nginx"><a href="#配置-nginx" class="headerlink" title="配置 nginx"></a>配置 nginx</h2><p>配置 nginx 文件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /usr/local/nginx/conf/nginx.conf</span><br></pre></td></tr></table></figure>
+
+<p>在 server 中做如下配置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">        listen       80;</span><br><span class="line">        server_name  fxxkpython.com;</span><br><span class="line">        root /usr/local/wordpress;</span><br><span class="line">        #charset koi8-r;</span><br><span class="line"></span><br><span class="line">        #access_log  logs/host.access.log  main;</span><br><span class="line"></span><br><span class="line">        location / &#123;</span><br><span class="line">                index index.php index.html index.htm;</span><br><span class="line">                try_files $uri $uri/ /index.php index.php;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        location ~ \.php$ &#123;</span><br><span class="line">                fastcgi_pass 127.0.0.1:9000;</span><br><span class="line">                fastcgi_index index.php;</span><br><span class="line">                fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;</span><br><span class="line">                include fastcgi_params;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        #error_page  404              /404.html;</span><br><span class="line"></span><br><span class="line">        # redirect server error pages to the static page /50x.html</span><br><span class="line">        #</span><br><span class="line">        error_page   500 502 503 504  /50x.html;</span><br><span class="line">        location = /50x.html &#123;</span><br><span class="line">            root   html;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>保存退出之后，reload 一下 niginx：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@wistbean sbin]# ./nginx -s reload</span><br></pre></td></tr></table></figure>
+
+<h1 id="搞定"><a href="#搞定" class="headerlink" title="搞定"></a>搞定</h1><p>打开你的域名， <a href="http://fxxkpython.com/wp-admin/install.php" target="_blank" rel="noopener">http://fxxkpython.com/wp-admin/install.php</a> ，这时候你会看到：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/wordpress10.png" alt="wordpress搭建教程" title="">
+                </div>
+                <div class="image-caption">wordpress搭建教程</div>
+            </figure>
+
+<p>配置你网站的信息：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/wordpress11.png" alt="wordpress搭建教程" title="">
+                </div>
+                <div class="image-caption">wordpress搭建教程</div>
+            </figure>
+<p>点击下一步，如果你不巧也出现这个错误 MySQL: 1006 - Can’t create database ‘***’ (errno: 13) ，别慌，使用如下命令开启权限：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chown -R mysql:mysql /var/lib/mysql</span><br></pre></td></tr></table></figure>
+
+<p>接着就可以登录进你的网站啦：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/wordpress12.png" alt="wordpress搭建教程" title="">
+                </div>
+                <div class="image-caption">wordpress搭建教程</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/wordpress13.png" alt="wordpress搭建教程" title="">
+                </div>
+                <div class="image-caption">wordpress搭建教程</div>
+            </figure>
+
+<p>可以配置你的主题，你想怎么玩就怎么玩，完全听从你自己的内心：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/wordpress14.png" alt="wordpress搭建教程" title="">
+                </div>
+                <div class="image-caption">wordpress搭建教程</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/wordpress15.png" alt="wordpress搭建教程" title="">
+                </div>
+                <div class="image-caption">wordpress搭建教程</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/wordpress16.png" alt="wordpress搭建教程" title="">
+                </div>
+                <div class="image-caption">wordpress搭建教程</div>
+            </figure>
+
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+      <!--  
+
+        
+        关注公众号「wistbean」，发送「帅书」获取我写的技术电子书
+        
+        -->
+        在公众号「学习 Python 的正确姿势」发送「帅书」领取我写的技术电子书，转载请注明出处：
+        <a href="https://wistbean.github.io/wordpress-blog-nginx-php-vps.html">
+                   wistbean
+        </a>
+    </div>
+    
+    <footer>
+        <a href="https://wistbean.github.io">
+            <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+            wistbean
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nginx/">nginx</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vultr/">vultr</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wordpress/">wordpress</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wordpress建站/">wordpress建站</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wordpress搭建/">wordpress搭建</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wordpress搭建博客/">wordpress搭建博客</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wordpress教程/">wordpress教程</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/个人博客/">个人博客</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/wordpress-blog-nginx-php-vps.html&title=《教你使用wordpress+nginx+php+mysql搭建一个博客》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/wordpress-blog-nginx-php-vps.html&title=《教你使用wordpress+nginx+php+mysql搭建一个博客》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/wordpress-blog-nginx-php-vps.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《教你使用wordpress+nginx+php+mysql搭建一个博客》 — wistbean&url=https://wistbean.github.io/wordpress-blog-nginx-php-vps.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/wordpress-blog-nginx-php-vps.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/programmer-chengxuyuan-jiedan-waibao-zhuanqian.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">说说个人开发者如何接单赚钱</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/github-chinese.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">这样下去 GitHub 迟早被你们毁了</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>本站已加入 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-知识 4.0  (CC BY-NC-SA 4.0)国际协议 | 转载请注明链接出处</a></span>
+        </p>
+    </div>
+
+        <div class="bottom">
+                <p><span>wistbean &copy; 2015 - 2024</span>
+                    <span>
+                        
+                         <a href="https://wistbean.github.io/">肯定会|wistbean</a>
+                         <a href="https://fxxkpython.com">通往Python高手之路</a>
+                         <a href="https://www.bwh8.net/aff.php?aff=32874" target="_blank">搬瓦工2024优惠码</a>、
+                         <a href="https://www.vultr.com/?ref=7532860" target="_blank">vultr2024优惠码</a>
+                    </span>
+                </p>
+        </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/wordpress-blog-nginx-php-vps.html&title=《教你使用wordpress+nginx+php+mysql搭建一个博客》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/wordpress-blog-nginx-php-vps.html&title=《教你使用wordpress+nginx+php+mysql搭建一个博客》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/wordpress-blog-nginx-php-vps.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《教你使用wordpress+nginx+php+mysql搭建一个博客》 — wistbean&url=https://wistbean.github.io/wordpress-blog-nginx-php-vps.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/wordpress-blog-nginx-php-vps.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLElEQVR42u3azWrEIBgF0L7/S083XRRKJveqU4ierIZMMB4D8v349RVfr1/X7zt/f1/9e/VM8uSyCwMD47GM19vr6pkrQP6WfIHezw0DA+McxtWL57fXdktNlgkDAwMjn3o+3QSPgYGB8QlGnpTmb8HAwMCYSWLbYC5KPuMUd1kujoGB8UBGXiz7/98f6W9gYGA8ivEqryQobP+dmc/PaBgYGFsz8g2uPRgxU4wbmw8GBsaujFWHt8YS4Hxpbu5gYGAcwBgrh41NYox6g8HAwNiakZfmZ1qPbQLcNj4xMDBOYORJY96wbNuZ0Wb6vniHgYGxKWM+KGzDwVVpbfaBMDAwdmC0bYCxFubnJlp8JQwMjIcz2q1zpog/lmEn7QoMDIy9GckenIeD+UTzJYsAGBgYmzLGNseZI1/5OHUki4GBsSmjHS4/eNEuXJ4AR0ksBgbGRox2ujMhYHuYo9hdMTAwDmOsKu634yw4bIGBgbEpow0E8wJcHibmy3EzPgYGxgGMZFp5wDcWILaAm04sBgbGAYz2BWPNhvkAEQMD4zTGYMErbm22zYCinYmBgbEp41Vebdi3Kj0uvgMGBsZ2jLXbax3MBVvqe0YNw8DAeCwjL7e1BzLG1iw/zIGBgXEao934xkLJ+bDvpjGAgYGBMbTh1vW/oHhXDIeBgXEwI7+TH6EYK+1hYGCcw8iPXLRh3NjISWKMgYFxDmMqdSwPXoyFksuamhgYGM9jfAOgCbJQ0Nm2yAAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

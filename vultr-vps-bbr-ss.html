@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131395348-1"></script>
+    <script data-ad-client="ca-pub-9097083609097034" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-131395348-1');
+    </script>
+
+    
+
+    
+
+    
+
+
+<!-- Baidu Push -->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<!-- End Baidu Push -->
+
+
+    <meta charset="utf-8">
+    
+    <meta name="google-site-verification" content="bcJVGqEGcBIay29szBsswzqYxY3qUzWuvu1hfad3-08">
+    
+    
+    
+    
+    <title>最新使用vultr(vps)搭建ss并开启BBR快速上网教程 超简单10分钟搞定 | wistbean | wistbean</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#B5963F">
+    
+    
+    <meta name="keywords" content="vultr,互联网,优惠码,搭建ss,国外服务器搭建,shadowsock搭建,vultr搭建">
+    <meta name="description" content="如果你想要查询一些权威的资料，上 Google 搜索有用的内容，超流畅 1080p 高清观看Youtube，畅游全网，而且完全拥有自己的服务器，那么本文将从购买vultr vps，到搭建属于你自己的 ss(Shadowrocks) 服务器，并且开启 BBR 加速上网，10分钟几个步骤轻松搞定。 首先我们需要购买一台境外的服务器，接着我们在这台云服务器里面安装代理服务，那么以后我们上网的时候就可以通">
+<meta name="keywords" content="vultr,互联网,优惠码,搭建ss,国外服务器搭建,shadowsock搭建,vultr搭建">
+<meta property="og:type" content="article">
+<meta property="og:title" content="最新使用vultr(vps)搭建ss并开启BBR快速上网教程 超简单10分钟搞定">
+<meta property="og:url" content="https://wistbean.github.io/vultr-vps-bbr-ss.html">
+<meta property="og:site_name" content="wistbean">
+<meta property="og:description" content="如果你想要查询一些权威的资料，上 Google 搜索有用的内容，超流畅 1080p 高清观看Youtube，畅游全网，而且完全拥有自己的服务器，那么本文将从购买vultr vps，到搭建属于你自己的 ss(Shadowrocks) 服务器，并且开启 BBR 加速上网，10分钟几个步骤轻松搞定。 首先我们需要购买一台境外的服务器，接着我们在这台云服务器里面安装代理服务，那么以后我们上网的时候就可以通">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://wistbean.github.io/images/vultr50.jpg">
+<meta property="og:image" content="https://wistbean.org/images/vultr-register.png">
+<meta property="og:image" content="https://wistbean.org/images/vultr-login.png">
+<meta property="og:image" content="https://wistbean.org/images/vultr-location.png">
+<meta property="og:image" content="https://wistbean.org/images/vultr-buy.gif">
+<meta property="og:image" content="https://wistbean.org/images/vultr00.png">
+<meta property="og:image" content="https://wistbean.org/images/vultr01.png">
+<meta property="og:image" content="https://wistbean.org/images/vultr02.png">
+<meta property="og:image" content="https://wistbean.org/images/vultr03.png">
+<meta property="og:image" content="https://wistbean.org/images/vultr04.png">
+<meta property="og:image" content="https://wistbean.org/images/vultr05.png">
+<meta property="og:image" content="https://wistbean.org/images/vultr06.png">
+<meta property="og:image" content="https://wistbean.org/images/vultr07.png">
+<meta property="og:image" content="https://wistbean.org/images/linux-panel.png">
+<meta property="og:image" content="https://wistbean.org/images/ss1.png">
+<meta property="og:image" content="https://wistbean.org/images/ss2.png">
+<meta property="og:image" content="https://wistbean.org/images/ss3.png">
+<meta property="og:image" content="https://wistbean.org/images/ss4.png">
+<meta property="og:image" content="https://wistbean.org/images/vpn18.png">
+<meta property="og:image" content="https://wistbean.org/images/ss7.png">
+<meta property="og:updated_time" content="2024-01-26T15:14:15.828Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="最新使用vultr(vps)搭建ss并开启BBR快速上网教程 超简单10分钟搞定">
+<meta name="twitter:description" content="如果你想要查询一些权威的资料，上 Google 搜索有用的内容，超流畅 1080p 高清观看Youtube，畅游全网，而且完全拥有自己的服务器，那么本文将从购买vultr vps，到搭建属于你自己的 ss(Shadowrocks) 服务器，并且开启 BBR 加速上网，10分钟几个步骤轻松搞定。 首先我们需要购买一台境外的服务器，接着我们在这台云服务器里面安装代理服务，那么以后我们上网的时候就可以通">
+<meta name="twitter:image" content="https://wistbean.github.io/images/vultr50.jpg">
+    
+        <link rel="alternate" type="application/atom+xml" title="wistbean" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(https://wistbean.github.io/images/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">wistbean</h5>
+          <a href="mailto:wistbean.bb@gmail.com" title="wistbean.bb@gmail.com" class="mail">wistbean.bb@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="https://wistbean.org/python-tutorial.html"  >
+                <i class="icon icon-lg icon-coffee"></i>
+                Python零基础入门教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2NzYyNjg2Nw==&action=getalbum&album_id=2448798954764255234#wechat_redirect"  >
+                <i class="icon icon-lg icon-bug"></i>
+                Python爬虫教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://vip.fxxkpython.com/?page_id=18"  >
+                <i class="icon icon-lg icon-code"></i>
+                加入我的VIP
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/aboutMe/"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light off" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">最新使用vultr(vps)搭建ss并开启BBR快速上网教程 超简单10分钟搞定</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="vultr ss bbr v2ray 100美金">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">最新使用vultr(vps)搭建ss并开启BBR快速上网教程 超简单10分钟搞定</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2022-10-31T18:40:36.000Z" itemprop="datePublished" class="page-time">
+  2022-11-01
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/vps/">vps</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/vps/vultr/">vultr</a></li></ul></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>目录</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#优惠购买vultr"><span class="post-toc-number">1.</span> <span class="post-toc-text">优惠购买vultr</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#注册vultr"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">注册vultr</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#vultr-购买流程"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">vultr 购买流程</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#选择服务器的机房位置，一般来说离你越近越好，速度会快那么一丢丢："><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">选择服务器的机房位置，一般来说离你越近越好，速度会快那么一丢丢：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#选择服务器的系统类型，选择-CentOS-版本："><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">选择服务器的系统类型，选择 CentOS 版本：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#选择服务器的价格和具体配置，自己用的话选最低的就够用了："><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">选择服务器的价格和具体配置，自己用的话选最低的就够用了：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#确认购买"><span class="post-toc-number">1.2.4.</span> <span class="post-toc-text">确认购买</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#拥有一台服务器"><span class="post-toc-number">1.2.5.</span> <span class="post-toc-text">拥有一台服务器</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#使用vultr搭建ss服务器"><span class="post-toc-number">2.</span> <span class="post-toc-text">使用vultr搭建ss服务器</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#下载Linux连接工具"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">下载Linux连接工具</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#开始搭建ss"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">开始搭建ss</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#输入以下命令，然后回车："><span class="post-toc-number">2.2.1.</span> <span class="post-toc-text">输入以下命令，然后回车：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#接着执行安装shadowsocks："><span class="post-toc-number">2.2.2.</span> <span class="post-toc-text">接着执行安装shadowsocks：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#获取-shadowsocks-sh-读取权限："><span class="post-toc-number">2.2.3.</span> <span class="post-toc-text">获取 shadowsocks.sh 读取权限：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#设置你的-ss-密码和端口号："><span class="post-toc-number">2.2.4.</span> <span class="post-toc-text">设置你的 ss 密码和端口号：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#选择加密方式"><span class="post-toc-number">2.2.5.</span> <span class="post-toc-text">选择加密方式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#安装ss完成"><span class="post-toc-number">2.2.6.</span> <span class="post-toc-text">安装ss完成</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#开始使用vultr的ss"><span class="post-toc-number">3.</span> <span class="post-toc-text">开始使用vultr的ss</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#windows使用Shadowsocks"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">windows使用Shadowsocks</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Android使用Shadowsocks"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">Android使用Shadowsocks</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#iPhone使用Shadowsocks"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">iPhone使用Shadowsocks</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#vultr使用BBR加速上网"><span class="post-toc-number">4.</span> <span class="post-toc-text">vultr使用BBR加速上网</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装-BBR"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">安装 BBR</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#获取读写权限"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">获取读写权限</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#启动BBR安装"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">启动BBR安装</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#相关"><span class="post-toc-number">5.</span> <span class="post-toc-text">相关</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-vultr-vps-bbr-ss"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">最新使用vultr(vps)搭建ss并开启BBR快速上网教程 超简单10分钟搞定</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2022-11-01 02:40:36" datetime="2022-10-31T18:40:36.000Z"  itemprop="datePublished">2022-11-01</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/vps/">vps</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/vps/vultr/">vultr</a></li></ul></li></ul>
+
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>如果你想要查询一些权威的资料，上 Google 搜索有用的内容，超流畅 1080p 高清观看Youtube，畅游全网，而且完全拥有自己的服务器，那么本文将从购买vultr vps，到搭建属于你自己的 ss(Shadowrocks) 服务器，并且开启 BBR 加速上网，10分钟几个步骤轻松搞定。</p>
+<p>首先我们需要购买一台境外的服务器，接着我们在这台云服务器里面安装代理服务，那么以后我们上网的时候就可以通过它来中转，轻松畅快的畅游全网了。</p>
+<h1 id="优惠购买vultr"><a href="#优惠购买vultr" class="headerlink" title="优惠购买vultr"></a>优惠购买vultr</h1><p>在使用了<a href="https://wistbean.org/cloud-server.html" target="_blank" rel="noopener">一些服务器之后</a>，我觉得 <a href="hhttps://www.vultr.com/?ref=7532860" target="_blank" rel="noopener">vultr</a> 的性价比超高，最低 $5&#x2F;月 ，就可以拥有一台 1TB 月流量的服务器了，根本用不完。</p>
+<p>而且现在 <a href="https://www.vultr.com/?ref=7532860" target="_blank" rel="noopener">vultr</a> 优惠力度很大，<strong>新用户充值 10 美元送 100 美元</strong>。点击<a href="https://www.vultr.com/?ref=7532860" target="_blank" rel="noopener">vultr送100美元注册链接</a>注册</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/vultr50.jpg" alt="vultr赠送100美金" title="">
+                </div>
+                <div class="image-caption">vultr赠送100美金</div>
+            </figure>
+
+<h2 id="注册vultr"><a href="#注册vultr" class="headerlink" title="注册vultr"></a>注册vultr</h2><p>点击 <a href="https://www.vultr.com/?ref=7532860" target="_blank" rel="noopener">vultr官网</a> 进行注册：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://wistbean.org/images/vultr-register.png" alt="注册vultr" title="">
+                </div>
+                <div class="image-caption">注册vultr</div>
+            </figure>
+
+<p>在这里输入你的邮箱和密码，接着点击按钮「Create Account」创建账号，然后 vultr 会给你的注册邮箱发送一份验证邮件，激活就好了。</p>
+<p>接着就可以登录 vultr 官网了：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://wistbean.org/images/vultr-login.png" alt="登录vultr" title="">
+                </div>
+                <div class="image-caption">登录vultr</div>
+            </figure>
+
+
+
+<h2 id="vultr-购买流程"><a href="#vultr-购买流程" class="headerlink" title="vultr 购买流程"></a>vultr 购买流程</h2><p>vultr 现在有 16 个境外节点，选择一个离你最近的就好了。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://wistbean.org/images/vultr-location.png" alt="登录vultr" title="">
+                </div>
+                <div class="image-caption">登录vultr</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://wistbean.org/images/vultr-buy.gif" alt="购买vultr" title="">
+                </div>
+                <div class="image-caption">购买vultr</div>
+            </figure>
+
+<p>登录进去之后选择左边的 billing 的菜单进行充值，vultr提供的支付方式简直完美，支持信用卡，比特币，paypal，支付宝，微信支付，在这里可以进行充值支付。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://wistbean.org/images/vultr00.png" alt="vultr充值" title="">
+                </div>
+                <div class="image-caption">vultr充值</div>
+            </figure>
+
+<p>充值完成之后，就可以左侧的 Sevrers 菜单，接着可以点击 <code>deploy one</code> 或者右侧的 + 号来选购你要的服务器：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://wistbean.org/images/vultr01.png" alt="vultr充值" title="">
+                </div>
+                <div class="image-caption">vultr充值</div>
+            </figure>
+
+<h3 id="选择服务器的机房位置，一般来说离你越近越好，速度会快那么一丢丢："><a href="#选择服务器的机房位置，一般来说离你越近越好，速度会快那么一丢丢：" class="headerlink" title="选择服务器的机房位置，一般来说离你越近越好，速度会快那么一丢丢："></a>选择服务器的机房位置，一般来说离你越近越好，速度会快那么一丢丢：</h3><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://wistbean.org/images/vultr02.png" alt="vultr服务器位置" title="">
+                </div>
+                <div class="image-caption">vultr服务器位置</div>
+            </figure>
+
+<h3 id="选择服务器的系统类型，选择-CentOS-版本："><a href="#选择服务器的系统类型，选择-CentOS-版本：" class="headerlink" title="选择服务器的系统类型，选择 CentOS 版本："></a>选择服务器的系统类型，选择 CentOS 版本：</h3><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://wistbean.org/images/vultr03.png" alt="vultr系统类型" title="">
+                </div>
+                <div class="image-caption">vultr系统类型</div>
+            </figure>
+
+<h3 id="选择服务器的价格和具体配置，自己用的话选最低的就够用了："><a href="#选择服务器的价格和具体配置，自己用的话选最低的就够用了：" class="headerlink" title="选择服务器的价格和具体配置，自己用的话选最低的就够用了："></a>选择服务器的价格和具体配置，自己用的话选最低的就够用了：</h3><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://wistbean.org/images/vultr04.png" alt="vultr配置" title="">
+                </div>
+                <div class="image-caption">vultr配置</div>
+            </figure>
+
+<h3 id="确认购买"><a href="#确认购买" class="headerlink" title="确认购买"></a>确认购买</h3><p>其它步骤可以忽略，然后点击右下角的 Deploy Now：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://wistbean.org/images/vultr05.png" alt="vultr" title="">
+                </div>
+                <div class="image-caption">vultr</div>
+            </figure>
+
+<h3 id="拥有一台服务器"><a href="#拥有一台服务器" class="headerlink" title="拥有一台服务器"></a>拥有一台服务器</h3><p>点击之后你就拥有一台属于你自己的服务器了：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://wistbean.org/images/vultr06.png" alt="vultr" title="">
+                </div>
+                <div class="image-caption">vultr</div>
+            </figure>
+
+<p>点击你的服务器，进去之后你就可以看到你的服务器的ip地址和账号密码了：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://wistbean.org/images/vultr07.png" alt="vultr" title="">
+                </div>
+                <div class="image-caption">vultr</div>
+            </figure>
+
+
+<p>以上信息等会用来从你的电脑连接到你的服务器上。</p>
+<h1 id="使用vultr搭建ss服务器"><a href="#使用vultr搭建ss服务器" class="headerlink" title="使用vultr搭建ss服务器"></a>使用vultr搭建ss服务器</h1><h2 id="下载Linux连接工具"><a href="#下载Linux连接工具" class="headerlink" title="下载Linux连接工具"></a>下载Linux连接工具</h2><p>需要在你的电脑连接到你的服务器，那么就需要连接工具，连接工具有很多个，根据你的需要，以下随意下载一个连接工具即可：</p>
+<ul>
+<li><a href="https://www.ssh.com/a/putty-0.70-installer.msi" target="_blank" rel="noopener">PUTTY Windows版本下载</a></li>
+<li><a href="https://www.ssh.com/ssh/putty/mac/" target="_blank" rel="noopener">PUTTY MAC版本下载</a></li>
+<li><a href="https://pan.baidu.com/s/11W4WHjCjmiNw6einQNrcPg" target="_blank" rel="noopener">SecureCRT</a> ,提取码：tyux</li>
+</ul>
+<p>接着打开连接工具，然后输入你刚刚购买的<strong>服务器 ip 地址和端口（端口号是：22），账户名，和密码</strong>就可以连接了。接下来就可以操作你的服务器了。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://wistbean.org/images/linux-panel.png" alt="服务器CentOS系统" title="">
+                </div>
+                <div class="image-caption">服务器CentOS系统</div>
+            </figure>
+
+<h2 id="开始搭建ss"><a href="#开始搭建ss" class="headerlink" title="开始搭建ss"></a>开始搭建ss</h2><p>连接到你的 vultr 服务器之后，接下来就可以使用几个命令让你快速搭建一个属于自己的 ss 服务器：</p>
+<h3 id="输入以下命令，然后回车："><a href="#输入以下命令，然后回车：" class="headerlink" title="输入以下命令，然后回车："></a>输入以下命令，然后回车：</h3><pre><code> yum install wget
+</code></pre>
+<h3 id="接着执行安装shadowsocks："><a href="#接着执行安装shadowsocks：" class="headerlink" title="接着执行安装shadowsocks："></a>接着执行安装shadowsocks：</h3><pre><code>wget --no-check-certificate -O shadowsocks.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh
+</code></pre>
+<h3 id="获取-shadowsocks-sh-读取权限："><a href="#获取-shadowsocks-sh-读取权限：" class="headerlink" title="获取 shadowsocks.sh 读取权限："></a>获取 shadowsocks.sh 读取权限：</h3><pre><code>chmod +x shadowsocks.sh
+</code></pre>
+<h3 id="设置你的-ss-密码和端口号："><a href="#设置你的-ss-密码和端口号：" class="headerlink" title="设置你的 ss 密码和端口号："></a>设置你的 ss 密码和端口号：</h3><p>输入<code>./shadowsocks.sh 2&gt;&amp;1 | tee shadowsocks.log</code>后就可以设置密码和端口号了：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://wistbean.org/images/ss1.png" alt="设置密码" title="">
+                </div>
+                <div class="image-caption">设置密码</div>
+            </figure>
+<h3 id="选择加密方式"><a href="#选择加密方式" class="headerlink" title="选择加密方式"></a>选择加密方式</h3><p>设置完密码和端口号之后，我们选择加密方式，这里选择 7 ，使用<code>aes-256-cfb</code>的加密模式：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://wistbean.org/images/ss2.png" alt="vultr ss服务器" title="">
+                </div>
+                <div class="image-caption">vultr ss服务器</div>
+            </figure>
+<p>接着按任意键进行安装。</p>
+<h3 id="安装ss完成"><a href="#安装ss完成" class="headerlink" title="安装ss完成"></a>安装ss完成</h3><p>等一会之后，就安装完成了，它会给你显示你需要连接 vpn 的信息：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://wistbean.org/images/ss3.png" alt="vultr ss服务器" title="">
+                </div>
+                <div class="image-caption">vultr ss服务器</div>
+            </figure>
+<p>可以看到需要连接 ss 的 ip地址，密码，端口，和加密方式。</p>
+<p>搞定，将这些信息保存起来，那么这时候你就可以使用它们来科学上网啦。</p>
+<h1 id="开始使用vultr的ss"><a href="#开始使用vultr的ss" class="headerlink" title="开始使用vultr的ss"></a>开始使用vultr的ss</h1><h2 id="windows使用Shadowsocks"><a href="#windows使用Shadowsocks" class="headerlink" title="windows使用Shadowsocks"></a>windows使用Shadowsocks</h2><p>windows点击下载：<a href="https://pan.baidu.com/s/19m0AfTkPDSRj0bfYrGpbIg" target="_blank" rel="noopener">Shadowsocks windows客户端</a></p>
+<p>打开 Shadowsocks 客户端，输入ip地址，密码，端口，和加密方式。接着点击确定，<strong>右下角会有个小飞机按钮，右键–&gt;启动代理</strong>。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://wistbean.org/images/ss4.png" alt="vultr的ss" title="">
+                </div>
+                <div class="image-caption">vultr的ss</div>
+            </figure>
+
+<p>这时候就可以科学上网了。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://wistbean.org/images/vpn18.png" alt="google" title="">
+                </div>
+                <div class="image-caption">google</div>
+            </figure>
+
+<h2 id="Android使用Shadowsocks"><a href="#Android使用Shadowsocks" class="headerlink" title="Android使用Shadowsocks"></a>Android使用Shadowsocks</h2><p>Android点击下载：<a href="https://pan.baidu.com/s/1coAkZn-GuYHu5eIKaHECxA" target="_blank" rel="noopener">Shadowsocks Android客户端</a></p>
+<p>打开apk安装，接着打开APP，输入ip地址，密码，端口，和加密方式。即可科学上网。</p>
+<h2 id="iPhone使用Shadowsocks"><a href="#iPhone使用Shadowsocks" class="headerlink" title="iPhone使用Shadowsocks"></a>iPhone使用Shadowsocks</h2><p>iPhone要下载的app需要在appstore下载，但是需要用美区账号才能下载，而且这个APP需要钱。在这里提供一种解决方案，就是可以再搭建一个<a href="https://wistbean.org/ipsec,l2tp_vpn.html#%E4%BD%BF%E7%94%A8-IPsec-L2TP-%E8%84%9A%E6%9C%AC%E6%90%AD%E5%BB%BA" target="_blank" rel="noopener">IPsec&#x2F;L2TP VPN</a>,专门给你的iPhone使用。</p>
+<p>接着就可以。</p>
+<p>不过速度并不是快到飞起来，所以接下来就可以使用 BBR 加速了。也很简单，几个命令就搞定了。</p>
+<h1 id="vultr使用BBR加速上网"><a href="#vultr使用BBR加速上网" class="headerlink" title="vultr使用BBR加速上网"></a>vultr使用BBR加速上网</h1><h2 id="安装-BBR"><a href="#安装-BBR" class="headerlink" title="安装 BBR"></a>安装 BBR</h2><pre><code>wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh
+</code></pre>
+<h2 id="获取读写权限"><a href="#获取读写权限" class="headerlink" title="获取读写权限"></a>获取读写权限</h2><pre><code>chmod +x bbr.sh
+</code></pre>
+<h2 id="启动BBR安装"><a href="#启动BBR安装" class="headerlink" title="启动BBR安装"></a>启动BBR安装</h2><pre><code>./bbr.sh
+</code></pre>
+<p>接着按任意键，开始安装，坐等一会。安装完成一会之后它会提示我们是否重新启动vps，我们输入 y 确定重启服务器。</p>
+<p>重新启动之后，输入 <code>lsmod | grep bbr</code> 如果看到 tcp_bbr 就说明 BBR 已经启动了。</p>
+<p>再访问一下 Youtube，1080p 超高清，秒开，很顺畅不卡顿，超爽！</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://wistbean.org/images/ss7.png" alt="youtube" title="">
+                </div>
+                <div class="image-caption">youtube</div>
+            </figure>
+
+<hr>
+<h1 id="相关"><a href="#相关" class="headerlink" title="相关"></a>相关</h1><ul>
+<li><a href="https://wistbean.org/banwagong-ss.html" target="_blank" rel="noopener">搬瓦工快速手动搭建SS(Shadowsocks)服务器简明详细教程</a></li>
+<li><a href="https://wistbean.org/cloud-server.html" target="_blank" rel="noopener">我用了十几台云服务器VPS后，告诉你哪家云服务产商性价比高,性能稳定</a></li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+      <!--  
+
+        
+        关注公众号「wistbean」，发送「帅书」获取我写的技术电子书
+        
+        -->
+        在公众号「学习 Python 的正确姿势」发送「帅书」领取我写的技术电子书，转载请注明出处：
+        <a href="https://wistbean.github.io/vultr-vps-bbr-ss.html">
+                   wistbean
+        </a>
+    </div>
+    
+    <footer>
+        <a href="https://wistbean.github.io">
+            <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+            wistbean
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shadowsock搭建/">shadowsock搭建</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vultr/">vultr</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vultr搭建/">vultr搭建</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/互联网/">互联网</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/优惠码/">优惠码</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/国外服务器搭建/">国外服务器搭建</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/搭建ss/">搭建ss</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/vultr-vps-bbr-ss.html&title=《最新使用vultr(vps)搭建ss并开启BBR快速上网教程 超简单10分钟搞定》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/vultr-vps-bbr-ss.html&title=《最新使用vultr(vps)搭建ss并开启BBR快速上网教程 超简单10分钟搞定》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/vultr-vps-bbr-ss.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《最新使用vultr(vps)搭建ss并开启BBR快速上网教程 超简单10分钟搞定》 — wistbean&url=https://wistbean.github.io/vultr-vps-bbr-ss.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/vultr-vps-bbr-ss.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/jie-qian.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">兄弟，借点钱呗！</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/paypal-withdrawing-rmb.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">将Paypal金额提现人民币到中国银行卡最新教程</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>本站已加入 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-知识 4.0  (CC BY-NC-SA 4.0)国际协议 | 转载请注明链接出处</a></span>
+        </p>
+    </div>
+
+        <div class="bottom">
+                <p><span>wistbean &copy; 2015 - 2024</span>
+                    <span>
+                        
+                         <a href="https://wistbean.github.io/">肯定会|wistbean</a>
+                         <a href="https://fxxkpython.com">通往Python高手之路</a>
+                         <a href="https://www.bwh8.net/aff.php?aff=32874" target="_blank">搬瓦工2024优惠码</a>、
+                         <a href="https://www.vultr.com/?ref=7532860" target="_blank">vultr2024优惠码</a>
+                    </span>
+                </p>
+        </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/vultr-vps-bbr-ss.html&title=《最新使用vultr(vps)搭建ss并开启BBR快速上网教程 超简单10分钟搞定》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/vultr-vps-bbr-ss.html&title=《最新使用vultr(vps)搭建ss并开启BBR快速上网教程 超简单10分钟搞定》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/vultr-vps-bbr-ss.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《最新使用vultr(vps)搭建ss并开启BBR快速上网教程 超简单10分钟搞定》 — wistbean&url=https://wistbean.github.io/vultr-vps-bbr-ss.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/vultr-vps-bbr-ss.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACMUlEQVR42u3ay67CMAxFUf7/p8v0SlcN+9gBqc7OCPFoszowduzXC6/rz/r//q5v3v1225IhQ8ZjGddypZvjd1lj+N5kyJBxDuPuxuvX61+RwL1+NGRvMmTIkEESu3VKR4J1+shkyJAhg1x6nerVylQSjmXIkHEyI90cTwp5UP5RLS5DhowHMvhh2e9ff6W/IUOGjEcxrnCtYetEMC13g13JkCFjNIMHuP5gRIqJhz9kyJAxlLGrZK1dgVwHwWTIkDGa0b8lTw3TdmY6liFDhowTGJ0LpUOoPGUMRtBkyJAxlJEWpeRTHnCDYMqnRWTIkDGUsWvkKy2Va48mfn4yZMh4OKNTapIUMD2qqwV0GTJknMnotx5bY14gHbztxMqQIWMco3OgzwvUWvOSPFZ05idDhoyhjPTT9GCutnXU2ZAhQ8Y4Bs8fr+Xi6V0nAf1QZsuQIeNgBr8BL3Q7jdJiwJUhQ8bDGeQ26ebSNkPtQdxiZMiQMY7Bw2tnOIN/vzZGJkOGjHMYnRRtb1BOy1oZMmScwCDpV21sq9aqLDYyZciQcRijNmVGQuquBoMMGTJOYFzhSg/mak2CONzLkCFjNIOv4gDEMgTzwjj9Y5AhQ8Y8Bm8JpMkfP4ZLe61xC1OGDBkjGDzw1VJMfgBXC8cyZMiQwYvYTtuAH+TFPQQZMmQcxuCDEfyojg9VBP0NGTJkjGN0Urp05CsN6+iaMmTIGM2olY4kpetsgh/kyZAhYzTjDR+OslCwp0FQAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

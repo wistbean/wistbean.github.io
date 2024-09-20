@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131395348-1"></script>
+    <script data-ad-client="ca-pub-9097083609097034" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-131395348-1');
+    </script>
+
+    
+
+    
+
+    
+
+
+<!-- Baidu Push -->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<!-- End Baidu Push -->
+
+
+    <meta charset="utf-8">
+    
+    <meta name="google-site-verification" content="bcJVGqEGcBIay29szBsswzqYxY3qUzWuvu1hfad3-08">
+    
+    
+    
+    
+    <title>PyCharm 使用教程：02 完全定制属于你自己的PyCharm编辑器 | wistbean | wistbean</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#B5963F">
+    
+    
+    <meta name="keywords" content="python,教程,PyCharm,工具使用">
+    <meta name="description" content="可以根据你自己的喜好，把 Pycharm 定制成你自己喜欢的样子，接下来说说怎么去定制你的 Pycharm 编辑器。 定制 IDE 颜色根据你的喜好，你可以把 IDE 中的错误信息，面板，代码等颜色进行定制。 使用快捷键 Ctrl+Alt+S 打开 PyCharm 的设置面板，在Editor | Color Scheme | General选择你喜欢的颜色主题，我这里选择的就是 Darcula，喜">
+<meta name="keywords" content="python,教程,PyCharm,工具使用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PyCharm 使用教程：02 完全定制属于你自己的PyCharm编辑器">
+<meta property="og:url" content="https://wistbean.github.io/pycharm-02.html">
+<meta property="og:site_name" content="wistbean">
+<meta property="og:description" content="可以根据你自己的喜好，把 Pycharm 定制成你自己喜欢的样子，接下来说说怎么去定制你的 Pycharm 编辑器。 定制 IDE 颜色根据你的喜好，你可以把 IDE 中的错误信息，面板，代码等颜色进行定制。 使用快捷键 Ctrl+Alt+S 打开 PyCharm 的设置面板，在Editor | Color Scheme | General选择你喜欢的颜色主题，我这里选择的就是 Darcula，喜">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://wistbean.github.io/images/pycharm_scheme.png">
+<meta property="og:image" content="https://wistbean.github.io/images/pycharm_uifont.png">
+<meta property="og:image" content="https://wistbean.github.io/images/pycharm_resize.gif">
+<meta property="og:image" content="https://wistbean.github.io/images/pycharm_textsize.gif">
+<meta property="og:image" content="https://wistbean.github.io/images/pycharm_keymap.png">
+<meta property="og:image" content="https://wistbean.github.io/images/pycharm_codestyle.png">
+<meta property="og:updated_time" content="2024-01-26T15:14:15.715Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PyCharm 使用教程：02 完全定制属于你自己的PyCharm编辑器">
+<meta name="twitter:description" content="可以根据你自己的喜好，把 Pycharm 定制成你自己喜欢的样子，接下来说说怎么去定制你的 Pycharm 编辑器。 定制 IDE 颜色根据你的喜好，你可以把 IDE 中的错误信息，面板，代码等颜色进行定制。 使用快捷键 Ctrl+Alt+S 打开 PyCharm 的设置面板，在Editor | Color Scheme | General选择你喜欢的颜色主题，我这里选择的就是 Darcula，喜">
+<meta name="twitter:image" content="https://wistbean.github.io/images/pycharm_scheme.png">
+    
+        <link rel="alternate" type="application/atom+xml" title="wistbean" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(https://wistbean.github.io/images/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">wistbean</h5>
+          <a href="mailto:wistbean.bb@gmail.com" title="wistbean.bb@gmail.com" class="mail">wistbean.bb@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="https://wistbean.org/python-tutorial.html"  >
+                <i class="icon icon-lg icon-coffee"></i>
+                Python零基础入门教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2NzYyNjg2Nw==&action=getalbum&album_id=2448798954764255234#wechat_redirect"  >
+                <i class="icon icon-lg icon-bug"></i>
+                Python爬虫教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://vip.fxxkpython.com/?page_id=18"  >
+                <i class="icon icon-lg icon-code"></i>
+                加入我的VIP
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/aboutMe/"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light off" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">PyCharm 使用教程：02 完全定制属于你自己的PyCharm编辑器</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="vultr ss bbr v2ray 100美金">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">PyCharm 使用教程：02 完全定制属于你自己的PyCharm编辑器</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-09-25T14:06:14.000Z" itemprop="datePublished" class="page-time">
+  2018-09-25
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/python/">python</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/python/PyCharm/">PyCharm</a></li></ul></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>目录</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#定制-IDE-颜色"><span class="post-toc-number">1.</span> <span class="post-toc-text">定制 IDE 颜色</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#修改界面中默认的字体"><span class="post-toc-number">2.</span> <span class="post-toc-text">修改界面中默认的字体</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#快速调整窗口大小"><span class="post-toc-number">3.</span> <span class="post-toc-text">快速调整窗口大小</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#改变你的代码字体大小"><span class="post-toc-number">4.</span> <span class="post-toc-text">改变你的代码字体大小</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#设置你的快捷键"><span class="post-toc-number">5.</span> <span class="post-toc-text">设置你的快捷键</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#设置你的代码风格"><span class="post-toc-number">6.</span> <span class="post-toc-text">设置你的代码风格</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#相关文章"><span class="post-toc-number"></span> <span class="post-toc-text">相关文章</span></a>
+        </nav>
+    </aside>
+
+
+<article id="post-pycharm-02"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">PyCharm 使用教程：02 完全定制属于你自己的PyCharm编辑器</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-09-25 22:06:14" datetime="2018-09-25T14:06:14.000Z"  itemprop="datePublished">2018-09-25</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/python/">python</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/python/PyCharm/">PyCharm</a></li></ul></li></ul>
+
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>可以根据你自己的喜好，把 Pycharm 定制成你自己喜欢的样子，接下来说说怎么去定制你的 Pycharm 编辑器。</p>
+<h2 id="定制-IDE-颜色"><a href="#定制-IDE-颜色" class="headerlink" title="定制 IDE 颜色"></a>定制 IDE 颜色</h2><p>根据你的喜好，你可以把 IDE 中的错误信息，面板，代码等颜色进行定制。</p>
+<p>使用快捷键 <code>Ctrl+Alt+S</code> 打开 PyCharm 的设置面板，在<code>Editor | Color Scheme | General</code>选择你喜欢的颜色主题，我这里选择的就是 Darcula，喜欢这种黑色的极客范。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/pycharm_scheme.png" alt="PyCharm颜色主题设置" title="">
+                </div>
+                <div class="image-caption">PyCharm颜色主题设置</div>
+            </figure>
+
+<h2 id="修改界面中默认的字体"><a href="#修改界面中默认的字体" class="headerlink" title="修改界面中默认的字体"></a>修改界面中默认的字体</h2><p>想要修改 Pycharm 中默认的字体，可以使用快捷键 <code>Ctrl+Alt+S</code> 打开设置面板，然后进入 <code>Appearance &amp; Behavior | Appearance.</code> ,选择<code> Override default fonts by (not recommended)</code>，接着你就可以更改字体和大小了，我个人认为默认的就挺好看了。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/pycharm_uifont.png" alt="PyCharm颜色主题设置" title="">
+                </div>
+                <div class="image-caption">PyCharm颜色主题设置</div>
+            </figure>
+
+<h2 id="快速调整窗口大小"><a href="#快速调整窗口大小" class="headerlink" title="快速调整窗口大小"></a>快速调整窗口大小</h2><p>处于垂直方向的窗口可以使用 <code>Ctrl+Shift+上</code> 或者 <code>Ctrl+Shift+下</code> 调整窗口的大小。<br>处于水平方向的窗口可以使用 <code>Ctrl+Shift+左</code> 或者 <code>Ctrl+Shift+右</code> 调整窗口的大小。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/pycharm_resize.gif" alt="PyCharm颜色主题设置" title="">
+                </div>
+                <div class="image-caption">PyCharm颜色主题设置</div>
+            </figure>
+
+<h2 id="改变你的代码字体大小"><a href="#改变你的代码字体大小" class="headerlink" title="改变你的代码字体大小"></a>改变你的代码字体大小</h2><p>使用快捷键 <code>Ctrl+Alt+S</code> 打开 PyCharm 的设置面板，进入 <code>Editor | General</code>,把<code>Change font size (Zoom) with Ctrl+Mouse Wheel</code>给选上，然后<br>可以到你的打代码的面板进行骚操作了。 按住 Ctrl 键，然后滚动你的鼠标滑轮，可以看到字体可以根据你的需要变大变小了。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/pycharm_textsize.gif" alt="PyCharm颜色主题设置" title="">
+                </div>
+                <div class="image-caption">PyCharm颜色主题设置</div>
+            </figure>
+
+
+<h2 id="设置你的快捷键"><a href="#设置你的快捷键" class="headerlink" title="设置你的快捷键"></a>设置你的快捷键</h2><p>Pycharm 的爽点之一就是可以使用各种快捷键，让你的快的飞起。使用快捷键 <code>Ctrl+Alt+S</code> 打开 PyCharm 的设置面板，进入 <code>Keymap</code>。<br>在这里你可以设置快捷方式，如果你之前使用过其他的编辑器，完全可以选择它们，Pycharm可以延用这些编辑器的快捷键使用。</p>
+<p>另外，如果你想对个别的快捷键设置，只需要 右键–&gt;<code>Add keyboard shortcut</code> 进行设置就可以了。</p>
+<p>往后有时间介绍一些常用的快捷键吧，让你的编辑器飞起来。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/pycharm_keymap.png" alt="PyCharm颜色主题设置" title="">
+                </div>
+                <div class="image-caption">PyCharm颜色主题设置</div>
+            </figure>
+
+
+<h2 id="设置你的代码风格"><a href="#设置你的代码风格" class="headerlink" title="设置你的代码风格"></a>设置你的代码风格</h2><p>进入设置面板，然后进入<code>Editor | Code Style | Python</code> ,可以设置你的代码风格，比如 tab 有几个空格，其实我觉得默认就挺好了。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/pycharm_codestyle.png" alt="PyCharm颜色主题设置" title="">
+                </div>
+                <div class="image-caption">PyCharm颜色主题设置</div>
+            </figure>
+
+
+<p>ok，以上就是PyCharm常用的定制方式。</p>
+<h1 id="相关文章"><a href="#相关文章" class="headerlink" title="相关文章"></a>相关文章</h1><ul>
+<li><a href="https://wistbean.org/pycharm-01.html" target="_blank" rel="noopener">PyCharm 使用教程：01 安装PyCharm</a></li>
+<li><a href="https://wistbean.org/python-tutorial.html" target="_blank" rel="noopener">python3入门基础有趣的教程</a></li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+      <!--  
+
+        
+        关注公众号「wistbean」，发送「帅书」获取我写的技术电子书
+        
+        -->
+        在公众号「学习 Python 的正确姿势」发送「帅书」领取我写的技术电子书，转载请注明出处：
+        <a href="https://wistbean.github.io/pycharm-02.html">
+                   wistbean
+        </a>
+    </div>
+    
+    <footer>
+        <a href="https://wistbean.github.io">
+            <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+            wistbean
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PyCharm/">PyCharm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具使用/">工具使用</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/教程/">教程</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/pycharm-02.html&title=《PyCharm 使用教程：02 完全定制属于你自己的PyCharm编辑器》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/pycharm-02.html&title=《PyCharm 使用教程：02 完全定制属于你自己的PyCharm编辑器》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/pycharm-02.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《PyCharm 使用教程：02 完全定制属于你自己的PyCharm编辑器》 — wistbean&url=https://wistbean.github.io/pycharm-02.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/pycharm-02.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/encourage-more.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">我艹你妈的，你长得也太好看了吧</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/java-ssm-3-2.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">「3-2」使用 PowerDesigner 逆向生成 MySQL 数据库</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>本站已加入 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-知识 4.0  (CC BY-NC-SA 4.0)国际协议 | 转载请注明链接出处</a></span>
+        </p>
+    </div>
+
+        <div class="bottom">
+                <p><span>wistbean &copy; 2015 - 2024</span>
+                    <span>
+                        
+                         <a href="https://wistbean.github.io/">肯定会|wistbean</a>
+                         <a href="https://fxxkpython.com">通往Python高手之路</a>
+                         <a href="https://www.bwh8.net/aff.php?aff=32874" target="_blank">搬瓦工2024优惠码</a>、
+                         <a href="https://www.vultr.com/?ref=7532860" target="_blank">vultr2024优惠码</a>
+                    </span>
+                </p>
+        </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/pycharm-02.html&title=《PyCharm 使用教程：02 完全定制属于你自己的PyCharm编辑器》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/pycharm-02.html&title=《PyCharm 使用教程：02 完全定制属于你自己的PyCharm编辑器》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/pycharm-02.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《PyCharm 使用教程：02 完全定制属于你自己的PyCharm编辑器》 — wistbean&url=https://wistbean.github.io/pycharm-02.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/pycharm-02.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABx0lEQVR42u3aS46DQAwFQO5/6Yw0q9mEPNvgMFL1KgoJVLOw/OnjiNfrd1U//13n97x44eLijrmv0/Xu1gklWbkBFxd3n5sEryRUJd+cB8EPNlxc3Idx8xA2SZVwcXH/F7f3sDzY4eLiPo2bFyf5BpJt3Fir4eLiDrj3NUx7ac3X+ru4uLjFtmbeEMkbrOWn4+LirnDPb52UItV0ZF4O4eLi7nCrhyeq49X5+QpcXNxNbpKU9DZWTXGicSwuLu46d9IGTUqaSdv0qL4DXFzcAbc84GyNV3vDmLcvCBcX92ZucogqCV5JmMvphf4NLi7ubdz5mKT6Ipr/xcXFXeQmgSwpTl7j9SH1wcXFXeQmY4+rjlkkL+XtU3BxcRe55wVPr0maNFvzIxe4uLib3GqDI9lYnjAlw93m/AcXF3fArZYivV9WhzG4uLhP4OaNy2qL5BgvXFzcb3Eva2i2xjNJenTkMRUXF3fM7Q0+k2MWSWibXMXFxb2bmwevfLgyD2Rvr+Li4i5y8+A1CWRJBP3wG1xc3Idxk/Kpmh5Vj2Xg4uI+mdsLahccyMDFxV3k9hKUPMDNCypcXNxN7rxhmoe5ajMFFxd3nfsD2XND+m87F3cAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131395348-1"></script>
+    <script data-ad-client="ca-pub-9097083609097034" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-131395348-1');
+    </script>
+
+    
+
+    
+
+    
+
+
+<!-- Baidu Push -->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<!-- End Baidu Push -->
+
+
+    <meta charset="utf-8">
+    
+    <meta name="google-site-verification" content="bcJVGqEGcBIay29szBsswzqYxY3qUzWuvu1hfad3-08">
+    
+    
+    
+    
+    <title>CentOS快速搭建一个属于自己的IPsec/L2TP | wistbean | wistbean</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#B5963F">
+    
+    
+    <meta name="keywords" content="搬瓦工搭建IPsec/L2TP">
+    <meta name="description" content="搭建IPsec&amp;#x2F;L2TP VPN的准备 一台云服务器VPS 远程连接VPS工具  1.我使用的云服务器是搬瓦工官网，因为性价比高，一年也就十几刀，速度快。 使用以下的搬瓦工出的最新优惠：    搬瓦工配置 搬瓦工费用 优惠链接    *SPECIAL 40G KVM PROMO V3 - LOS ANGELES - CN2  *   SSD硬盘: 40  GB RAID-10  RAM内">
+<meta name="keywords" content="搬瓦工搭建IPsec&#x2F;L2TP">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CentOS快速搭建一个属于自己的IPsec&#x2F;L2TP">
+<meta property="og:url" content="https://wistbean.github.io/ipsec,l2tp_vpn.html">
+<meta property="og:site_name" content="wistbean">
+<meta property="og:description" content="搭建IPsec&amp;#x2F;L2TP VPN的准备 一台云服务器VPS 远程连接VPS工具  1.我使用的云服务器是搬瓦工官网，因为性价比高，一年也就十几刀，速度快。 使用以下的搬瓦工出的最新优惠：    搬瓦工配置 搬瓦工费用 优惠链接    *SPECIAL 40G KVM PROMO V3 - LOS ANGELES - CN2  *   SSD硬盘: 40  GB RAID-10  RAM内">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://wistbean.github.io/images/pic1.png">
+<meta property="og:image" content="https://wistbean.github.io/images/pic2.png">
+<meta property="og:image" content="https://wistbean.github.io/images/pic3.png">
+<meta property="og:image" content="https://wistbean.github.io/images/pic5.png">
+<meta property="og:image" content="https://wistbean.github.io/images/pic6.png">
+<meta property="og:image" content="https://wistbean.github.io/images/pic7.jpg">
+<meta property="og:image" content="https://wistbean.github.io/images/pic8.png">
+<meta property="og:updated_time" content="2024-01-26T15:14:15.627Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CentOS快速搭建一个属于自己的IPsec&#x2F;L2TP">
+<meta name="twitter:description" content="搭建IPsec&amp;#x2F;L2TP VPN的准备 一台云服务器VPS 远程连接VPS工具  1.我使用的云服务器是搬瓦工官网，因为性价比高，一年也就十几刀，速度快。 使用以下的搬瓦工出的最新优惠：    搬瓦工配置 搬瓦工费用 优惠链接    *SPECIAL 40G KVM PROMO V3 - LOS ANGELES - CN2  *   SSD硬盘: 40  GB RAID-10  RAM内">
+<meta name="twitter:image" content="https://wistbean.github.io/images/pic1.png">
+    
+        <link rel="alternate" type="application/atom+xml" title="wistbean" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(https://wistbean.github.io/images/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">wistbean</h5>
+          <a href="mailto:wistbean.bb@gmail.com" title="wistbean.bb@gmail.com" class="mail">wistbean.bb@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="https://wistbean.org/python-tutorial.html"  >
+                <i class="icon icon-lg icon-coffee"></i>
+                Python零基础入门教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2NzYyNjg2Nw==&action=getalbum&album_id=2448798954764255234#wechat_redirect"  >
+                <i class="icon icon-lg icon-bug"></i>
+                Python爬虫教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://vip.fxxkpython.com/?page_id=18"  >
+                <i class="icon icon-lg icon-code"></i>
+                加入我的VIP
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/aboutMe/"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light off" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">CentOS快速搭建一个属于自己的IPsec/L2TP</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="vultr ss bbr v2ray 100美金">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">CentOS快速搭建一个属于自己的IPsec/L2TP</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-08-29T09:16:04.000Z" itemprop="datePublished" class="page-time">
+  2018-08-29
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/搬瓦工/">搬瓦工</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>目录</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#搭建IPsec-x2F-L2TP-VPN的准备"><span class="post-toc-number">1.</span> <span class="post-toc-text">搭建IPsec/L2TP VPN的准备</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#开始搭建-IPsec-x2F-L2TP-VPN"><span class="post-toc-number">2.</span> <span class="post-toc-text">开始搭建 IPsec/L2TP VPN</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#获取搬瓦工服务器的ip，端口，账号密码"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">获取搬瓦工服务器的ip，端口，账号密码</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#使用-SSH-工具连接到服务器"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">使用 SSH 工具连接到服务器</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#使用-IPsec-x2F-L2TP-脚本搭建"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">使用 IPsec/L2TP 脚本搭建</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#windowns-7-使用IPsec-x2F-L2TP-VPN"><span class="post-toc-number">3.</span> <span class="post-toc-text">windowns 7 使用IPsec/L2TP VPN</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#设置VPN连接"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">设置VPN连接</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#添加注册表"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">添加注册表</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#启动服务"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">启动服务</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#重启电脑后连接"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">重启电脑后连接</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#连接效果"><span class="post-toc-number">3.5.</span> <span class="post-toc-text">连接效果</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#iPhone-x2F-iPad-使用IPsec-x2F-L2TP-VPN"><span class="post-toc-number">3.6.</span> <span class="post-toc-text">iPhone/iPad 使用IPsec/L2TP VPN</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#参考文章"><span class="post-toc-number">3.7.</span> <span class="post-toc-text">参考文章</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-ipsec,l2tp_vpn"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">CentOS快速搭建一个属于自己的IPsec/L2TP</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-08-29 17:16:04" datetime="2018-08-29T09:16:04.000Z"  itemprop="datePublished">2018-08-29</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/搬瓦工/">搬瓦工</a></li></ul>
+
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="搭建IPsec-x2F-L2TP-VPN的准备"><a href="#搭建IPsec-x2F-L2TP-VPN的准备" class="headerlink" title="搭建IPsec&#x2F;L2TP VPN的准备"></a>搭建IPsec&#x2F;L2TP VPN的准备</h1><ul>
+<li>一台云服务器VPS</li>
+<li>远程连接VPS工具</li>
+</ul>
+<p>1.我使用的云服务器是<a href="https://bwh89.net/aff.php?aff=32874" target="_blank">搬瓦工官网</a>，<br>因为性价比高，一年也就十几刀，速度快。</p>
+<p>使用以下的搬瓦工出的最新优惠：</p>
+<table>
+<thead>
+<tr>
+<th>搬瓦工配置</th>
+<th>搬瓦工费用</th>
+<th>优惠链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>*SPECIAL 40G KVM PROMO V3 - LOS ANGELES - CN2  * <br>  SSD硬盘: 40  GB RAID-10 <br> RAM内存: 2048   MB <br> CPU处理器: 1x Intel Xeon <br> Transfer流量: 2000  GB&#x2F;月 <br> 连接速度: 1 Gigabit <br> 洛杉矶机房，CN2路线，使用中国的直线路线，速度加快</td>
+<td>$27.99&#x2F;季</td>
+<td><a href="https://www.bwh88.net/aff.php?aff=32874&pid=58" target="_blank" rel="noopener">点击进入</a></td>
+</tr>
+<tr>
+<td>*SPECIAL 20G KVM PROMO V3 - LOS ANGELES - CN2 * <br>  SSD硬盘: 20 GB RAID-10 <br> RAM内存: 1024  MB <br> CPU处理器: 1x Intel Xeon <br> Transfer流量: 1000  GB&#x2F;月 <br> 连接速度: 1 Gigabit <br> 洛杉矶机房，CN2路线，使用中国的直线路线，速度加快</td>
+<td>$29.99 &#x2F;半年</td>
+<td><a href="https://www.bwh88.net/aff.php?aff=32874&pid=57" target="_blank" rel="noopener">点击进入</a></td>
+</tr>
+<tr>
+<td><em>80G KVM – PROMO</em> <br> SSD硬盘: 80 GB RAID-10<br>RAM内存: 4 GB<br>CPU处理器: 4x Intel Xeon<br>Transfer流量: 3 TB&#x2F;mo<br>连接速度: 1 Gigabit<br>Multiple locations</td>
+<td>$19.99&#x2F;月</td>
+<td><a href="https://www.bwh88.net/aff.php?aff=32874&pid=46" target="_blank" rel="noopener">点击进入</a></td>
+</tr>
+<tr>
+<td><em>20G KVM – PROMO</em> <br> SSD硬盘: 20 GB RAID-10 <br>RAM内存: 1024 MB <br>CPU处理器: 2x Intel Xeon <br>Transfer流量: 1 TB&#x2F;mo <br>连接速度: 1 Gigabit <br>Multiple locations</td>
+<td>$49.99&#x2F;年</td>
+<td><a href="https://www.bwh88.net/aff.php?aff=32874&pid=44" target="_blank" rel="noopener">点击进入</a></td>
+</tr>
+<tr>
+<td><em>40G KVM – PROMO</em> <br> SSD硬盘: 40 GB RAID-10 <br>RAM内存: 2 GB <br>CPU处理器: 3x Intel Xeon <br>Transfer流量: 2 TB&#x2F;mo <br>连接速度: 1 Gigabit <br>Multiple locations</td>
+<td>$99.99&#x2F;年</td>
+<td><a href="https://www.bwh88.net/aff.php?aff=32874&pid=45" target="_blank" rel="noopener">点击进入</a></td>
+</tr>
+<tr>
+<td><em>160G KVM – PROMO</em> <br> SSD硬盘: 160 GB RAID-10<br>RAM内存: 8 GB<br>CPU处理器: 5x Intel Xeon<br>Transfer流量: 4 TB&#x2F;mo<br>连接速度: 1 Gigabit<br>Multiple locations</td>
+<td>$39.99&#x2F;月</td>
+<td><a href="https://www.bwh88.net/aff.php?aff=32874&pid=47" target="_blank" rel="noopener">点击进入</a></td>
+</tr>
+<tr>
+<td><em>3200G KVM – PROMO</em> <br> SSD硬盘: 320 GB RAID-10<br>RAM内存: 16 GB<br>CPU处理器: 6x Intel Xeon<br>Transfer流量: 5 TB&#x2F;mo<br>连接速度: 1 Gigabit<br>Multiple locations</td>
+<td>$79.99&#x2F;月</td>
+<td><a href="https://www.bwh88.net/aff.php?aff=32874&pid=48" target="_blank" rel="noopener">点击进入</a></td>
+</tr>
+</tbody></table>
+<p>2.远程连接工具我一直用的是 <a href="https://www.vandyke.com/products/securecrt/" target="_blank" rel="noopener">SecureCRT</a> , 当然你也可以使用其它的 SSH 工具。</p>
+<h1 id="开始搭建-IPsec-x2F-L2TP-VPN"><a href="#开始搭建-IPsec-x2F-L2TP-VPN" class="headerlink" title="开始搭建 IPsec&#x2F;L2TP VPN"></a>开始搭建 IPsec&#x2F;L2TP VPN</h1><h2 id="获取搬瓦工服务器的ip，端口，账号密码"><a href="#获取搬瓦工服务器的ip，端口，账号密码" class="headerlink" title="获取搬瓦工服务器的ip，端口，账号密码"></a>获取搬瓦工服务器的ip，端口，账号密码</h2><p>有了<a href="https://bwh89.net/aff.php?aff=32874" target="_blank">搬瓦工</a>服务器的IP地址和端口<br>我们就可以连接了：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/pic1.png" alt="搭建 IPsec/L2TP VPN" title="">
+                </div>
+                <div class="image-caption">搭建 IPsec/L2TP VPN</div>
+            </figure>
+
+
+<p>账号是root，密码可以在这里获取：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/pic2.png" alt="搭建 IPsec/L2TP VPN" title="">
+                </div>
+                <div class="image-caption">搭建 IPsec/L2TP VPN</div>
+            </figure>
+
+<h2 id="使用-SSH-工具连接到服务器"><a href="#使用-SSH-工具连接到服务器" class="headerlink" title="使用 SSH 工具连接到服务器"></a>使用 SSH 工具连接到服务器</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/pic3.png" alt="搭建 IPsec/L2TP VPN" title="">
+                </div>
+                <div class="image-caption">搭建 IPsec/L2TP VPN</div>
+            </figure>
+
+<h2 id="使用-IPsec-x2F-L2TP-脚本搭建"><a href="#使用-IPsec-x2F-L2TP-脚本搭建" class="headerlink" title="使用 IPsec&#x2F;L2TP 脚本搭建"></a>使用 IPsec&#x2F;L2TP 脚本搭建</h2><p>在这里感谢<a href="https://github.com/hwdsl2" target="_blank" rel="noopener">hwdsl2</a>提供的脚本，我们在连接到服务器后使用如下命令：</p>
+<p>安装 wget ：</p>
+<pre><code>yum install wget
+</code></pre>
+<p>使用脚本：</p>
+<pre><code>wget https://git.io/vpnsetup-centos -O vpnsetup.sh &amp;&amp; sudo sh vpnsetup.sh
+</code></pre>
+<p>稍等一会安装成功会提供一个 VPN 需要的信息：</p>
+<pre><code>Server IP: xxx.xx.xx.xx
+IPsec PSK: xxxx
+Username: xxxx
+Password: xxxx
+</code></pre>
+<p>这时候就搭建成功了，快吧？</p>
+<h1 id="windowns-7-使用IPsec-x2F-L2TP-VPN"><a href="#windowns-7-使用IPsec-x2F-L2TP-VPN" class="headerlink" title="windowns 7 使用IPsec&#x2F;L2TP VPN"></a>windowns 7 使用IPsec&#x2F;L2TP VPN</h1><h2 id="设置VPN连接"><a href="#设置VPN连接" class="headerlink" title="设置VPN连接"></a>设置VPN连接</h2><pre><code>单击开始菜单，选择控制面板。
+
+进入 网络和Internet 部分。
+
+单击 网络与共享中心。
+
+单击 设置新的连接或网络。
+
+选择 连接到工作区，然后单击 下一步。
+
+单击 使用我的Internet连接 (VPN)。
+
+在 Internet地址 字段中输入你的 VPN 服务器 IP。
+
+在 目标名称 字段中输入任意内容。
+
+选中 现在不连接；仅进行设置以便稍后连接 复选框。
+
+单击 下一步。
+
+在 用户名 字段中输入你的 VPN 用户名。
+
+在 密码 字段中输入你的 VPN 密码。
+
+选中 记住此密码 复选框。
+
+单击 创建，然后单击 关闭 按钮。
+
+返回 网络与共享中心。单击左侧的 更改适配器设置。
+
+右键单击新创建的 VPN 连接，并选择 属性。
+
+单击 选项 选项卡，取消选中 包括Windows登录域 复选框。
+
+单击 安全 选项卡，从 VPN 类型 下拉菜单中选择 &quot;使用 IPsec 的第 2 层隧道协议 (L2TP/IPSec)&quot;。
+
+单击 允许使用这些协议。确保选中 &quot;质询握手身份验证协议 (CHAP)&quot; 复选框。
+
+单击 高级设置 按钮。
+
+单击 使用预共享密钥作身份验证 并在 密钥 字段中输入你的 VPN IPsec PSK。
+
+单击 确定 关闭 高级设置。
+
+单击 确定 保存 VPN 连接的详细信息。
+</code></pre>
+<h2 id="添加注册表"><a href="#添加注册表" class="headerlink" title="添加注册表"></a>添加注册表</h2><p>新建一个TXT文件，输入以下内容：</p>
+<pre><code>Windows Registry Editor Version 5.00
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\RasMan\Parameters]
+&quot;ProhibitIpSec&quot;=dword:00000000
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PolicyAgent]
+&quot;AssumeUDPEncapsulationContextOnSendRule&quot;=dword:00000002
+</code></pre>
+<p>另存为.reg格式的文件，然后双击。</p>
+<h2 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h2><p>将以下服务全部设置为自动启用，要不然会连接不成功：</p>
+<pre><code>IPsec Policy Agent
+Routing and Remote Access
+Remote Access Auto Connection Manager
+Remote Access Connection Manager
+Secure Socket Tunneling Protocol Service
+</code></pre>
+<h2 id="重启电脑后连接"><a href="#重启电脑后连接" class="headerlink" title="重启电脑后连接"></a>重启电脑后连接</h2><p>重启电脑后，点击右下角的网络连接，双击VPN连接，即可成功连接：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/pic5.png" alt="搭建 IPsec/L2TP VPN" title="">
+                </div>
+                <div class="image-caption">搭建 IPsec/L2TP VPN</div>
+            </figure>
+
+<h2 id="连接效果"><a href="#连接效果" class="headerlink" title="连接效果"></a>连接效果</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/pic6.png" alt="搭建 IPsec/L2TP VPN" title="">
+                </div>
+                <div class="image-caption">搭建 IPsec/L2TP VPN</div>
+            </figure>
+
+
+<h2 id="iPhone-x2F-iPad-使用IPsec-x2F-L2TP-VPN"><a href="#iPhone-x2F-iPad-使用IPsec-x2F-L2TP-VPN" class="headerlink" title="iPhone&#x2F;iPad 使用IPsec&#x2F;L2TP VPN"></a>iPhone&#x2F;iPad 使用IPsec&#x2F;L2TP VPN</h2><pre><code>进入设置 -&gt; 通用 -&gt; VPN。
+单击 添加VPN配置...。
+单击 类型 。选择 L2TP 并返回。
+在 描述 字段中输入任意内容。
+在 服务器 字段中输入你的 VPN 服务器 IP。
+在 帐户 字段中输入你的 VPN 用户名。
+在 密码 字段中输入你的 VPN 密码。
+在 密钥 字段中输入你的 VPN IPsec PSK。
+启用 发送所有流量 选项。
+单击右上角的 存储。
+启用 VPN 连接。
+</code></pre>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/pic7.jpg" alt="搭建 IPsec/L2TP VPN" title="">
+                </div>
+                <div class="image-caption">搭建 IPsec/L2TP VPN</div>
+            </figure>
+
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/pic8.png" alt="搭建 IPsec/L2TP VPN" title="">
+                </div>
+                <div class="image-caption">搭建 IPsec/L2TP VPN</div>
+            </figure>
+
+<p>其它客户端连接方式请参考：<a href="https://github.com/hwdsl2/setup-ipsec-vpn/blob/master/docs/clients-zh.md" target="_blank" rel="noopener">配置 IPsec&#x2F;L2TP VPN 客户端</a></p>
+<h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><p><a href="https://github.com/hwdsl2/setup-ipsec-vpn" target="_blank" rel="noopener">IPsec VPN 服务器一键安装脚本</a></p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+      <!--  
+
+        
+        关注公众号「wistbean」，发送「帅书」获取我写的技术电子书
+        
+        -->
+        在公众号「学习 Python 的正确姿势」发送「帅书」领取我写的技术电子书，转载请注明出处：
+        <a href="https://wistbean.github.io/ipsec,l2tp_vpn.html">
+                   wistbean
+        </a>
+    </div>
+    
+    <footer>
+        <a href="https://wistbean.github.io">
+            <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+            wistbean
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/搬瓦工搭建IPsec-L2TP/">搬瓦工搭建IPsec/L2TP</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/ipsec,l2tp_vpn.html&title=《CentOS快速搭建一个属于自己的IPsec/L2TP》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/ipsec,l2tp_vpn.html&title=《CentOS快速搭建一个属于自己的IPsec/L2TP》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/ipsec,l2tp_vpn.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《CentOS快速搭建一个属于自己的IPsec/L2TP》 — wistbean&url=https://wistbean.github.io/ipsec,l2tp_vpn.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/ipsec,l2tp_vpn.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/java-ssm-1-1.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">「1-1」分布式高并发java web项目实战视频教程介绍</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/make-money.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">通过互联网赚取你的第一桶金</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>本站已加入 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-知识 4.0  (CC BY-NC-SA 4.0)国际协议 | 转载请注明链接出处</a></span>
+        </p>
+    </div>
+
+        <div class="bottom">
+                <p><span>wistbean &copy; 2015 - 2024</span>
+                    <span>
+                        
+                         <a href="https://wistbean.github.io/">肯定会|wistbean</a>
+                         <a href="https://fxxkpython.com">通往Python高手之路</a>
+                         <a href="https://www.bwh8.net/aff.php?aff=32874" target="_blank">搬瓦工2024优惠码</a>、
+                         <a href="https://www.vultr.com/?ref=7532860" target="_blank">vultr2024优惠码</a>
+                    </span>
+                </p>
+        </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/ipsec,l2tp_vpn.html&title=《CentOS快速搭建一个属于自己的IPsec/L2TP》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/ipsec,l2tp_vpn.html&title=《CentOS快速搭建一个属于自己的IPsec/L2TP》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/ipsec,l2tp_vpn.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《CentOS快速搭建一个属于自己的IPsec/L2TP》 — wistbean&url=https://wistbean.github.io/ipsec,l2tp_vpn.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/ipsec,l2tp_vpn.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJ0lEQVR42u3awW7EIAxF0fn/n063laal99lk1JjLqsqghMPCxcavFx7X2yDzyZPvz/n7i0OGDBmPZVzLQT5Anq834n0mX5sMGTLOYZBFpCQSZNM3/PpchgwZMtpz0iArQ4YMGf2Auz668TSV/ypDhgwZZEEkmK6Pg51j6LZcXIYMGQ9k8Kr75/++5X5DhgwZj2Jc4UivHnm4vBpDhgwZsxk8wK2Xnr6BpLLpemTIkHECo/OBvQkwbynbvE8yZMj4x4xOnkiCb2ehpJAnQ4aM2YxOQT9dSpq+BsFahgwZoxkksJLn6VUof3Pxf4UMGTIGMdIPkKDJt4YkySgEy5AhYzTj7iaMNaw2c0PRTYYMGY9i1IJg7VjJtyPeJhkyZBzAqB3yakU6XrALCm0yZMg4hkHS1xqVBGgedn94IkOGjAMY9zV+8UXzoh464cqQIWMcg18ZdubU2i+KNT8ZMmQMYnRCaq2dIk1oeXOGDBkyTmDwRaRNGOlmpe1oMmTIOIGRHvj6zWFpPwjCyJAh4wAGCYu8WJaG79bFgAwZMo5hkOQwPWnWDpS1BjIZMmRMZVzh4K0VfKFpoe2Ps60MGTLGMTo3gymJH/Jqia4MGTJmM9KUtVbE5ztXDNYyZMg4gEFSUP7Jva0YaFUyZMiQgS8s95bq+FWBDBkyZKStD2lbRme+DBkyzmGQJJaHYH74IwAUjmXIkDGa0enUSNNXsimdqwIZMmSMY3wBxzP6CH2Z6y0AAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

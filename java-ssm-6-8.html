@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131395348-1"></script>
+    <script data-ad-client="ca-pub-9097083609097034" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-131395348-1');
+    </script>
+
+    
+
+    
+
+    
+
+
+<!-- Baidu Push -->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<!-- End Baidu Push -->
+
+
+    <meta charset="utf-8">
+    
+    <meta name="google-site-verification" content="bcJVGqEGcBIay29szBsswzqYxY3qUzWuvu1hfad3-08">
+    
+    
+    
+    
+    <title>「6-8」码农商城商品详情页的展示 | wistbean | wistbean</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#B5963F">
+    
+    
+    <meta name="keywords" content="码农商城,商城首页,电商商品数据,商品数据,品详情页">
+    <meta name="description" content="绑定商品id在首页的商品列表中，我们可以将商品 id 绑定到 a 标签中： 12&amp;lt;d&amp;lt;a href=&quot;goods/$&amp;#123;product.id&amp;#125;&quot;&amp;gt;&amp;lt;img src=&quot;xxxx&quot;/&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;  提供 rest 服务Service12345678910@Overridepublic ResponseJsonResult">
+<meta name="keywords" content="码农商城,商城首页,电商商品数据,商品数据,品详情页">
+<meta property="og:type" content="article">
+<meta property="og:title" content="「6-8」码农商城商品详情页的展示">
+<meta property="og:url" content="https://wistbean.github.io/java-ssm-6-8.html">
+<meta property="og:site_name" content="wistbean">
+<meta property="og:description" content="绑定商品id在首页的商品列表中，我们可以将商品 id 绑定到 a 标签中： 12&amp;lt;d&amp;lt;a href=&quot;goods/$&amp;#123;product.id&amp;#125;&quot;&amp;gt;&amp;lt;img src=&quot;xxxx&quot;/&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;  提供 rest 服务Service12345678910@Overridepublic ResponseJsonResult">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://wistbean.github.io/images/rest-product-detail.png">
+<meta property="og:updated_time" content="2024-01-26T15:14:15.676Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="「6-8」码农商城商品详情页的展示">
+<meta name="twitter:description" content="绑定商品id在首页的商品列表中，我们可以将商品 id 绑定到 a 标签中： 12&amp;lt;d&amp;lt;a href=&quot;goods/$&amp;#123;product.id&amp;#125;&quot;&amp;gt;&amp;lt;img src=&quot;xxxx&quot;/&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;  提供 rest 服务Service12345678910@Overridepublic ResponseJsonResult">
+<meta name="twitter:image" content="https://wistbean.github.io/images/rest-product-detail.png">
+    
+        <link rel="alternate" type="application/atom+xml" title="wistbean" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(https://wistbean.github.io/images/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">wistbean</h5>
+          <a href="mailto:wistbean.bb@gmail.com" title="wistbean.bb@gmail.com" class="mail">wistbean.bb@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="https://wistbean.org/python-tutorial.html"  >
+                <i class="icon icon-lg icon-coffee"></i>
+                Python零基础入门教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2NzYyNjg2Nw==&action=getalbum&album_id=2448798954764255234#wechat_redirect"  >
+                <i class="icon icon-lg icon-bug"></i>
+                Python爬虫教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://vip.fxxkpython.com/?page_id=18"  >
+                <i class="icon icon-lg icon-code"></i>
+                加入我的VIP
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/aboutMe/"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light off" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">「6-8」码农商城商品详情页的展示</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="vultr ss bbr v2ray 100美金">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">「6-8」码农商城商品详情页的展示</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-04-08T11:11:23.000Z" itemprop="datePublished" class="page-time">
+  2019-04-08
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Java/">Java</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Java/Java-SSM视频教程/">Java SSM视频教程</a></li></ul></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>目录</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#绑定商品id"><span class="post-toc-number">1.</span> <span class="post-toc-text">绑定商品id</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#提供-rest-服务"><span class="post-toc-number">2.</span> <span class="post-toc-text">提供 rest 服务</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Service"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">Service</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Controller"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">Controller</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#portal"><span class="post-toc-number">3.</span> <span class="post-toc-text">portal</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Service-1"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">Service</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Controller-1"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">Controller</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Template"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">Template</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-java-ssm-6-8"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">「6-8」码农商城商品详情页的展示</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-04-08 19:11:23" datetime="2019-04-08T11:11:23.000Z"  itemprop="datePublished">2019-04-08</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Java/">Java</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Java/Java-SSM视频教程/">Java SSM视频教程</a></li></ul></li></ul>
+
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="绑定商品id"><a href="#绑定商品id" class="headerlink" title="绑定商品id"></a>绑定商品id</h1><p>在首页的商品列表中，我们可以将商品 id 绑定到 a 标签中：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;d&lt;a href="goods/$&#123;product.id&#125;"&gt;&lt;img src="xxxx"/&gt;&lt;/a&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<h1 id="提供-rest-服务"><a href="#提供-rest-服务" class="headerlink" title="提供 rest 服务"></a>提供 rest 服务</h1><h2 id="Service"><a href="#Service" class="headerlink" title="Service"></a>Service</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> ResponseJsonResult <span class="title">getProductDetailById</span><span class="params">(Integer id)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    Product product = productMapper.selectByPrimaryKey(id);</span><br><span class="line">    ResponseJsonResult responseJsonResult = <span class="keyword">new</span> ResponseJsonResult();</span><br><span class="line">    responseJsonResult.setObj(product);</span><br><span class="line">    <span class="keyword">return</span> responseJsonResult;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Controller"><a href="#Controller" class="headerlink" title="Controller"></a>Controller</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">@RequestMapping</span>(<span class="string">"product/detail/&#123;productId&#125;"</span>)</span><br><span class="line">   <span class="meta">@ResponseBody</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> ResponseJsonResult <span class="title">getProductDetail</span><span class="params">(@PathVariable(<span class="string">"productId"</span>)</span> Integer productId)</span>&#123;</span><br><span class="line">       ResponseJsonResult responseJsonResult = productService.getProductDetailById(productId);</span><br><span class="line">       <span class="keyword">return</span> responseJsonResult;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/rest-product-detail.png" alt="rest服务" title="">
+                </div>
+                <div class="image-caption">rest服务</div>
+            </figure>
+
+
+<h1 id="portal"><a href="#portal" class="headerlink" title="portal"></a>portal</h1><h2 id="Service-1"><a href="#Service-1" class="headerlink" title="Service"></a>Service</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> Product <span class="title">getDetailById</span><span class="params">(Integer id)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">       <span class="keyword">try</span> &#123;</span><br><span class="line">           String jsonResult = HttpClientUtil.httpGet(REST_URL + REST_PRODUCT_DETAIL + id);</span><br><span class="line">           ResponseJsonResult responseJsonResult = GsonUtils.fromJson(ResponseJsonResult.class, jsonResult);</span><br><span class="line">           Product product = (Product) responseJsonResult.getObj();</span><br><span class="line">           <span class="keyword">return</span> product;</span><br><span class="line">       &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">           e.printStackTrace();</span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line">       <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Controller-1"><a href="#Controller-1" class="headerlink" title="Controller"></a>Controller</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">@Controller</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ProductController</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    ProductService productService;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@RequestMapping</span>(<span class="string">"goods/&#123;productId&#125;"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">index</span><span class="params">(ModelMap modelMap,@PathVariable(<span class="string">"productId"</span>)</span> Integer productId)</span>&#123;</span><br><span class="line">        Product product = productService.getDetailById(productId);</span><br><span class="line">        modelMap.addAttribute(<span class="string">"product"</span>,product);</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"detail"</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Template"><a href="#Template" class="headerlink" title="Template"></a>Template</h2>
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+      <!--  
+
+        
+        关注公众号「wistbean」，发送「帅书」获取我写的技术电子书
+        
+        -->
+        在公众号「学习 Python 的正确姿势」发送「帅书」领取我写的技术电子书，转载请注明出处：
+        <a href="https://wistbean.github.io/java-ssm-6-8.html">
+                   wistbean
+        </a>
+    </div>
+    
+    <footer>
+        <a href="https://wistbean.github.io">
+            <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+            wistbean
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/品详情页/">品详情页</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/商品数据/">商品数据</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/商城首页/">商城首页</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/电商商品数据/">电商商品数据</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/码农商城/">码农商城</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/java-ssm-6-8.html&title=《「6-8」码农商城商品详情页的展示》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/java-ssm-6-8.html&title=《「6-8」码农商城商品详情页的展示》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/java-ssm-6-8.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《「6-8」码农商城商品详情页的展示》 — wistbean&url=https://wistbean.github.io/java-ssm-6-8.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/java-ssm-6-8.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/996.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">谈谈 996</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/java-ssm-6-7.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">「6-7」码农商城前端页面优化</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>本站已加入 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-知识 4.0  (CC BY-NC-SA 4.0)国际协议 | 转载请注明链接出处</a></span>
+        </p>
+    </div>
+
+        <div class="bottom">
+                <p><span>wistbean &copy; 2015 - 2024</span>
+                    <span>
+                        
+                         <a href="https://wistbean.github.io/">肯定会|wistbean</a>
+                         <a href="https://fxxkpython.com">通往Python高手之路</a>
+                         <a href="https://www.bwh8.net/aff.php?aff=32874" target="_blank">搬瓦工2024优惠码</a>、
+                         <a href="https://www.vultr.com/?ref=7532860" target="_blank">vultr2024优惠码</a>
+                    </span>
+                </p>
+        </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/java-ssm-6-8.html&title=《「6-8」码农商城商品详情页的展示》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/java-ssm-6-8.html&title=《「6-8」码农商城商品详情页的展示》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/java-ssm-6-8.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《「6-8」码农商城商品详情页的展示》 — wistbean&url=https://wistbean.github.io/java-ssm-6-8.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/java-ssm-6-8.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACKElEQVR42u3aQY7DIAwF0Ln/pTPbkaq035iOFPNYVWka8li4tuHnJx7Xzfj77ev9yZXX57zeuW1gYGA8lnG9He8nyKfMF+Ju3rvfYmBgnMO4mzj/nH/7/oXeP+H2OgYGBsZS8pcnfPkyYWBgYHQCbpJQ5lcwMDAw1orYahi9e351yTbX4hgYGA9k5M2y///8lf0NDAyMRzGu4qgWq3m4vBoDAwNjNiMPcGspWkKKCtSkhYeBgTGakSeF1YIzea29RzowMDBOYOQJXDU17G8MFHgYGBhDGXnorN6Zp4MbNgAwMDDGMZK2V78P3wnB0RtiYGCMZuTJWXWy6tIkReyH4IuBgXEMox9k83J3rWy+LWsxMDCGMqrTrG1PdrYko9YeBgbGYYxq6tZPGZPN0ah8xcDAOIBRDZetgjNI+wqHLTAwMEYzdoXa/kv3AzQGBsZURufYRLVxljytGl4xMDBOYKyVlJ1mXOs/oZrtYmBgjGPkDbX8nEPSMvvGomBgYMxj5NuNhbbXUhFbnevD9gAGBsY4RueoRB4cq227QmjGwMA4gJEH37UAnR9+zUN29FoYGBgPZ1zFsbYludZoK6SSGBgYoxm7StBqsvi9DQkMDIypjCTIVgNrZ+UWgzUGBsYBjH6xWj1kthmJgYGBERSxe5PLvHjGwMDAyFO9fqsuORYWbWFiYGAMZXSOlnZOziaJ4+Z2GwYGxgMZ1eZ+9SDFGizHYGBgjGb8Ap+XS6nh45lqAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

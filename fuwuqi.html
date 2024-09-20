@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131395348-1"></script>
+    <script data-ad-client="ca-pub-9097083609097034" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-131395348-1');
+    </script>
+
+    
+
+    
+
+    
+
+
+<!-- Baidu Push -->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<!-- End Baidu Push -->
+
+
+    <meta charset="utf-8">
+    
+    <meta name="google-site-verification" content="bcJVGqEGcBIay29szBsswzqYxY3qUzWuvu1hfad3-08">
+    
+    
+    
+    
+    <title>有一台服务器可以做些什么事情？ | wistbean | wistbean</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#B5963F">
+    
+    
+    <meta name="keywords" content="vps,服务器,Linux">
+    <meta name="description" content="我早些年为了搭建一个属于自己的个人网站，然后就买了域名，租了云服务器，开始一番折腾。 后来发现只是用它来托管我的破网站，有点大材小用了。都叫服务器了，这不得好好给我服务服务么？ 1、因为服务器都是 24 小时运行着的，所以有一个比较好玩的就是使用定时任务，比如我会往服务器扔几个写好的脚本，然后使用命令定时执行它们，帮我爬取一些数据，或是监控一些数据，做一些判断，给自己自动发送邮件提醒。 之前还开发">
+<meta name="keywords" content="vps,服务器,Linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="有一台服务器可以做些什么事情？">
+<meta property="og:url" content="https://wistbean.github.io/fuwuqi.html">
+<meta property="og:site_name" content="wistbean">
+<meta property="og:description" content="我早些年为了搭建一个属于自己的个人网站，然后就买了域名，租了云服务器，开始一番折腾。 后来发现只是用它来托管我的破网站，有点大材小用了。都叫服务器了，这不得好好给我服务服务么？ 1、因为服务器都是 24 小时运行着的，所以有一个比较好玩的就是使用定时任务，比如我会往服务器扔几个写好的脚本，然后使用命令定时执行它们，帮我爬取一些数据，或是监控一些数据，做一些判断，给自己自动发送邮件提醒。 之前还开发">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2022-06-29T14:05:29.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="有一台服务器可以做些什么事情？">
+<meta name="twitter:description" content="我早些年为了搭建一个属于自己的个人网站，然后就买了域名，租了云服务器，开始一番折腾。 后来发现只是用它来托管我的破网站，有点大材小用了。都叫服务器了，这不得好好给我服务服务么？ 1、因为服务器都是 24 小时运行着的，所以有一个比较好玩的就是使用定时任务，比如我会往服务器扔几个写好的脚本，然后使用命令定时执行它们，帮我爬取一些数据，或是监控一些数据，做一些判断，给自己自动发送邮件提醒。 之前还开发">
+    
+        <link rel="alternate" type="application/atom+xml" title="wistbean" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(https://wistbean.github.io/images/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">wistbean</h5>
+          <a href="mailto:wistbean.bb@gmail.com" title="wistbean.bb@gmail.com" class="mail">wistbean.bb@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="https://wistbean.org/python-tutorial.html"  >
+                <i class="icon icon-lg icon-coffee"></i>
+                Python零基础入门教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2NzYyNjg2Nw==&action=getalbum&album_id=2448798954764255234#wechat_redirect"  >
+                <i class="icon icon-lg icon-bug"></i>
+                Python爬虫教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://vip.fxxkpython.com/?page_id=18"  >
+                <i class="icon icon-lg icon-code"></i>
+                加入我的VIP
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/aboutMe/"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light off" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">有一台服务器可以做些什么事情？</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="vultr ss bbr v2ray 100美金">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">有一台服务器可以做些什么事情？</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2022-06-29T13:49:23.000Z" itemprop="datePublished" class="page-time">
+  2022-06-29
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/vps/">vps</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>目录</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#1、"><span class="post-toc-number">1.</span> <span class="post-toc-text">1、</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#2、"><span class="post-toc-number">2.</span> <span class="post-toc-text">2、</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#3、"><span class="post-toc-number">3.</span> <span class="post-toc-text">3、</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#4、"><span class="post-toc-number">4.</span> <span class="post-toc-text">4、</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#5、"><span class="post-toc-number">5.</span> <span class="post-toc-text">5、</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-fuwuqi"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">有一台服务器可以做些什么事情？</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2022-06-29 21:49:23" datetime="2022-06-29T13:49:23.000Z"  itemprop="datePublished">2022-06-29</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/vps/">vps</a></li></ul>
+
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>我早些年为了搭建一个属于自己的个人网站，然后就买了域名，租了云服务器，开始一番折腾。</p>
+<p>后来发现只是用它来托管我的破网站，有点大材小用了。都叫服务器了，这不得好好给我服务服务么？</p>
+<h1 id="1、"><a href="#1、" class="headerlink" title="1、"></a>1、</h1><p>因为服务器都是 24 小时运行着的，所以有一个比较好玩的就是使用定时任务，比如我会往服务器扔几个写好的脚本，然后使用命令定时执行它们，帮我爬取一些数据，或是监控一些数据，做一些判断，给自己自动发送邮件提醒。</p>
+<p>之前还开发了机器人丢在里面运行，比如微信自动回复，自动定时发微博，然后被封了 - -</p>
+<h1 id="2、"><a href="#2、" class="headerlink" title="2、"></a>2、</h1><p>作为一名小司机，有一些比较私密的学习资料，可以偷偷存放在自己的服务器上，这样最不容易被发现。</p>
+<p>还可以通过对象存储服务搭建一个属于自己的网盘，自己的东西自己安排，这不比限速之王（百度云）香？妈妈再也不用担心别人随意删我东西了。</p>
+<h1 id="3、"><a href="#3、" class="headerlink" title="3、"></a>3、</h1><p>其实现在搭建这些工具很方便，有些通过官方文档，几行命令就可以实现。比如关于代码的托管，对于私有的代码，除了可以使用 GitHub 的私有仓库之外，还可以自己搭建一个 GitLab。</p>
+<p>这样我的代码可以在自己的平台管理，不受限制，还用得着拿去给 Gitee 审核？</p>
+<h1 id="4、"><a href="#4、" class="headerlink" title="4、"></a>4、</h1><p>还可以在服务器里安装 web 容器，然后提供 API 接口给小程序或者网页调用。</p>
+<p>当然，在里面整个小型的管理系统也没问题。</p>
+<h1 id="5、"><a href="#5、" class="headerlink" title="5、"></a>5、</h1><p>还可以在服务器搭建个 jupyter notebook，然后直接打开服务器地址端口，就可以在网页上面直接写 Python 了，要什么环境安装？</p>
+<p>…<br>以上是我在服务器上折腾过的一些玩意，当然还有的在这里不方便说。</p>
+<p>总之，只要有<a href="https://banwagong.services/" target="_blank" rel="noopener">一台服务器</a>，有公网 IP，ssh 进去之后，你可以在里面搭建许多有用的互联网应用工具，甚至可以自己 diy，并且全都是自己说了算，这种感觉还是很爽的。</p>
+<p>「原谅我一生放纵不羁爱自由」</p>
+<p>当然，你最好要会点 Linux 系统的操作，这样使用起来才更加得心应手。</p>
+<p>一个小 tips：如果是个人使用，最好使用境外的服务器，这样绑定域名时不用备案。</p>
+<p>你用你自己的服务器吗？你都用它来做什么？欢迎分享给我～</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+      <!--  
+
+        
+        关注公众号「wistbean」，发送「帅书」获取我写的技术电子书
+        
+        -->
+        在公众号「学习 Python 的正确姿势」发送「帅书」领取我写的技术电子书，转载请注明出处：
+        <a href="https://wistbean.github.io/fuwuqi.html">
+                   wistbean
+        </a>
+    </div>
+    
+    <footer>
+        <a href="https://wistbean.github.io">
+            <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+            wistbean
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vps/">vps</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/服务器/">服务器</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/fuwuqi.html&title=《有一台服务器可以做些什么事情？》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/fuwuqi.html&title=《有一台服务器可以做些什么事情？》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/fuwuqi.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《有一台服务器可以做些什么事情？》 — wistbean&url=https://wistbean.github.io/fuwuqi.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/fuwuqi.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/xuegaocike.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">雪糕刺客，玩的就是心跳</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/programmer-2-freelancer.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">什么样的程序员可以成为自由职业者</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>本站已加入 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-知识 4.0  (CC BY-NC-SA 4.0)国际协议 | 转载请注明链接出处</a></span>
+        </p>
+    </div>
+
+        <div class="bottom">
+                <p><span>wistbean &copy; 2015 - 2024</span>
+                    <span>
+                        
+                         <a href="https://wistbean.github.io/">肯定会|wistbean</a>
+                         <a href="https://fxxkpython.com">通往Python高手之路</a>
+                         <a href="https://www.bwh8.net/aff.php?aff=32874" target="_blank">搬瓦工2024优惠码</a>、
+                         <a href="https://www.vultr.com/?ref=7532860" target="_blank">vultr2024优惠码</a>
+                    </span>
+                </p>
+        </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/fuwuqi.html&title=《有一台服务器可以做些什么事情？》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/fuwuqi.html&title=《有一台服务器可以做些什么事情？》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/fuwuqi.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《有一台服务器可以做些什么事情？》 — wistbean&url=https://wistbean.github.io/fuwuqi.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/fuwuqi.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABwUlEQVR42u3aQWoDMQwF0Nz/0um2EGb6JdmeUJ5XpQnmOYuPJPv1itc7WJ/f/P2fqz1fOxYuLu6YO0d8fnoFSna4MuDi4p7n3gfNJJiSfQp74uLifjG3V6Dg4uL+V+6qw+Di4n4/N2l+5kdKmqtlvRouLu6Au6o0mfy9Zb6Li4vb4r6LKw+p+zFrb+Hi4p7h5oFyj64WSdUGCRcX9ynupCFZNU699+Di4p7h9kqT6rizt3NUkeHi4m7gTgadPWIecJc/By4u7qPc+60n8ZSEY6FXw8XFXcqtlhf51pMWKGp+cHFxj3DzEWfeMvUaoSjIcHFxt3FHTciii5beMXBxcfdxC2PKiwP0SpwkOi9zFxcXdzM3b2OSYiU50oLoxMXFfYi7Y/CRPN2IHnPg4uIe5OZjjnyQmgdiPqDBxcU9z+0NRJKyJg++P76Di4u7mTsZaOax1Ys5XFzcp7i9JxG9C9FJUJYPg4uLO+aW249keNG6eol+UVxc3IPcamPTC7Jq89Oc7+Li4h7nTq5Deg8+RkGGi4t7kDu5epk8yMDFxT3JTZqffCxSHaQWohMXF/cItxolyWVqPgSpDmpxcXE3c38AefZSwQfTYKQAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

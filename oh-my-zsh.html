@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131395348-1"></script>
+    <script data-ad-client="ca-pub-9097083609097034" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-131395348-1');
+    </script>
+
+    
+
+    
+
+    
+
+
+<!-- Baidu Push -->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<!-- End Baidu Push -->
+
+
+    <meta charset="utf-8">
+    
+    <meta name="google-site-verification" content="bcJVGqEGcBIay29szBsswzqYxY3qUzWuvu1hfad3-08">
+    
+    
+    
+    
+    <title>命令行神器：oh-my-zsh | wistbean | wistbean</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#B5963F">
+    
+    
+    <meta name="keywords" content="命令行,终端,装逼,zsh,bash,shell,sh">
+    <meta name="description" content="前言之前在终端使用命令的时候，总觉得少了点什么，后面发现了 “zsh ”这玩意之后，被惊艳到了，我想有必要给你介绍一下，毕竟谁不想效率杠杆的呢？ 什么是 zsh我们经常使用的 shell 命令行解释器是 bash、sh，而 zsh是另外一种，不过呢，它有诸多优点，比如可定制强，效率高，高亮，命令提示等等.. 安装 zsh你可以在你的终端中输入如下命令  zsh –version  如果没有显示相关">
+<meta name="keywords" content="命令行,终端,装逼,zsh,bash,shell,sh">
+<meta property="og:type" content="article">
+<meta property="og:title" content="命令行神器：oh-my-zsh">
+<meta property="og:url" content="https://wistbean.github.io/oh-my-zsh.html">
+<meta property="og:site_name" content="wistbean">
+<meta property="og:description" content="前言之前在终端使用命令的时候，总觉得少了点什么，后面发现了 “zsh ”这玩意之后，被惊艳到了，我想有必要给你介绍一下，毕竟谁不想效率杠杆的呢？ 什么是 zsh我们经常使用的 shell 命令行解释器是 bash、sh，而 zsh是另外一种，不过呢，它有诸多优点，比如可定制强，效率高，高亮，命令提示等等.. 安装 zsh你可以在你的终端中输入如下命令  zsh –version  如果没有显示相关">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://wistbean.github.io/images/ohmyzsh/1.png">
+<meta property="og:image" content="https://user-images.githubusercontent.com/1816101/62960553-295e5600-bdfb-11e9-86f3-8cdfe5bbe947.jpg">
+<meta property="og:image" content="https://user-images.githubusercontent.com/1816101/62961667-7a6f4980-bdfd-11e9-9866-7094a8988f72.jpg">
+<meta property="og:image" content="https://user-images.githubusercontent.com/1816101/62961290-ca99dc00-bdfc-11e9-8016-93e12a40d42e.jpg">
+<meta property="og:image" content="https://wistbean.github.io/images/ohmyzsh/2.png">
+<meta property="og:image" content="https://wistbean.github.io/images/ohmyzsh/3.png">
+<meta property="og:image" content="https://wistbean.github.io/images/ohmyzsh/4.png">
+<meta property="og:image" content="https://wistbean.github.io/images/ohmyzsh/5.png">
+<meta property="og:image" content="https://wistbean.github.io/images/ohmyzsh/6.png">
+<meta property="og:image" content="https://wistbean.github.io/images/ohmyzsh/7.png">
+<meta property="og:image" content="https://wistbean.github.io/images/ohmyzsh/8.png">
+<meta property="og:image" content="https://wistbean.github.io/images/ohmyzsh/9.png">
+<meta property="og:image" content="https://wistbean.github.io/images/ohmyzsh/10.gif">
+<meta property="og:image" content="https://wistbean.github.io/images/ohmyzsh/11.gif">
+<meta property="og:image" content="https://wistbean.github.io/images/ohmyzsh/12.gif">
+<meta property="og:updated_time" content="2024-01-26T15:14:15.704Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="命令行神器：oh-my-zsh">
+<meta name="twitter:description" content="前言之前在终端使用命令的时候，总觉得少了点什么，后面发现了 “zsh ”这玩意之后，被惊艳到了，我想有必要给你介绍一下，毕竟谁不想效率杠杆的呢？ 什么是 zsh我们经常使用的 shell 命令行解释器是 bash、sh，而 zsh是另外一种，不过呢，它有诸多优点，比如可定制强，效率高，高亮，命令提示等等.. 安装 zsh你可以在你的终端中输入如下命令  zsh –version  如果没有显示相关">
+<meta name="twitter:image" content="https://wistbean.github.io/images/ohmyzsh/1.png">
+    
+        <link rel="alternate" type="application/atom+xml" title="wistbean" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(https://wistbean.github.io/images/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">wistbean</h5>
+          <a href="mailto:wistbean.bb@gmail.com" title="wistbean.bb@gmail.com" class="mail">wistbean.bb@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="https://wistbean.org/python-tutorial.html"  >
+                <i class="icon icon-lg icon-coffee"></i>
+                Python零基础入门教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2NzYyNjg2Nw==&action=getalbum&album_id=2448798954764255234#wechat_redirect"  >
+                <i class="icon icon-lg icon-bug"></i>
+                Python爬虫教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://vip.fxxkpython.com/?page_id=18"  >
+                <i class="icon icon-lg icon-code"></i>
+                加入我的VIP
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/aboutMe/"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light off" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">命令行神器：oh-my-zsh</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="vultr ss bbr v2ray 100美金">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">命令行神器：oh-my-zsh</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2020-11-22T09:09:16.000Z" itemprop="datePublished" class="page-time">
+  2020-11-22
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/命令行/">命令行</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>目录</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#前言"><span class="post-toc-number">1.</span> <span class="post-toc-text">前言</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#什么是-zsh"><span class="post-toc-number">2.</span> <span class="post-toc-text">什么是 zsh</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装-zsh"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">安装 zsh</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#设置-shell-默认解释器为-zsh"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">设置 shell 默认解释器为 zsh</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#安装-oh-my-zsh"><span class="post-toc-number">3.</span> <span class="post-toc-text">安装 oh-my-zsh</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#配置主题和插件"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">配置主题和插件</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#配置主题"><span class="post-toc-number">3.1.1.</span> <span class="post-toc-text">配置主题</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#配置插件"><span class="post-toc-number">3.1.2.</span> <span class="post-toc-text">配置插件</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#ohmyzsh-的常用高效操作"><span class="post-toc-number">4.</span> <span class="post-toc-text">ohmyzsh 的常用高效操作</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-oh-my-zsh"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">命令行神器：oh-my-zsh</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2020-11-22 17:09:16" datetime="2020-11-22T09:09:16.000Z"  itemprop="datePublished">2020-11-22</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/命令行/">命令行</a></li></ul>
+
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>之前在终端使用命令的时候，总觉得少了点什么，后面发现了 “<br><a href="https://www.zsh.org/" target="_blank" rel="noopener">zsh</a> ”<br>这玩意之后，被惊艳到了，我想有必要给你介绍一下，毕竟谁不想效率杠杆的呢？</p>
+<h1 id="什么是-zsh"><a href="#什么是-zsh" class="headerlink" title="什么是 zsh"></a>什么是 zsh</h1><p>我们经常使用的 shell 命令行解释器是 bash、sh，而 zsh<br>是另外一种，不过呢，它有诸多优点，比如可定制强，效率高，高亮，命令提示等等..</p>
+<h2 id="安装-zsh"><a href="#安装-zsh" class="headerlink" title="安装 zsh"></a>安装 zsh</h2><p>你可以在你的终端中输入如下命令</p>
+<blockquote>
+<p>zsh –version</p>
+</blockquote>
+<p>如果没有显示相关的版本号，说明你还没安装，你可以使用 apt 安装一下：</p>
+<blockquote>
+<p>sudo apt install zsh</p>
+</blockquote>
+<p>当你输入 zsh –version 出现版本号说明安装成功了</p>
+<blockquote>
+<p>zsh 5.4.2</p>
+</blockquote>
+<h2 id="设置-shell-默认解释器为-zsh"><a href="#设置-shell-默认解释器为-zsh" class="headerlink" title="设置 shell 默认解释器为 zsh"></a>设置 shell 默认解释器为 zsh</h2><p>你可以使用 chsh 命令修改默认命令解释器，将你的 bash 改为 zsh 吧：</p>
+<p>可以使用如下命令找到你的 zsh：</p>
+<blockquote>
+<p>which zsh</p>
+</blockquote>
+<p>比如我的 zsh 位置位于 &#x2F;usr&#x2F;bin&#x2F;zsh ， 那么就可以这样进行切换：</p>
+<blockquote>
+<p>chsh -s &#x2F;usr&#x2F;bin&#x2F;zsh</p>
+</blockquote>
+<p>重启一下，输入以下命令，如果显示的是 &#x2F;usr&#x2F;bin&#x2F;zsh 说明切换成功：</p>
+<blockquote>
+<p>echo $SHELL</p>
+</blockquote>
+<h1 id="安装-oh-my-zsh"><a href="#安装-oh-my-zsh" class="headerlink" title="安装 oh-my-zsh"></a>安装 oh-my-zsh</h1><p>一个命令搞定：</p>
+<blockquote>
+<p>sh -c “$(curl -fsSL <a href="https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&quot;" target="_blank" rel="noopener">https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&quot;</a></p>
+</blockquote>
+<p>安装完了之后是这样的：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/ohmyzsh/1.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+
+<h2 id="配置主题和插件"><a href="#配置主题和插件" class="headerlink" title="配置主题和插件"></a>配置主题和插件</h2><p>都搞定了之后，接下来就可以搞事情了！</p>
+<p>在这个链接有很多主题供你选择：</p>
+<blockquote>
+<p><a href="https://github.com/ohmyzsh/ohmyzsh/wiki/Themes" target="_blank" rel="noopener">https://github.com/ohmyzsh/ohmyzsh/wiki/Themes</a></p>
+</blockquote>
+<p>贴几个给你看看：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://user-images.githubusercontent.com/1816101/62960553-295e5600-bdfb-11e9-86f3-8cdfe5bbe947.jpg" alt="ohmyzsh" title="">
+                </div>
+                <div class="image-caption">ohmyzsh</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://user-images.githubusercontent.com/1816101/62961667-7a6f4980-bdfd-11e9-9866-7094a8988f72.jpg" alt="ohmyzsh" title="">
+                </div>
+                <div class="image-caption">ohmyzsh</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://user-images.githubusercontent.com/1816101/62961290-ca99dc00-bdfc-11e9-8016-93e12a40d42e.jpg" alt="ohmyzsh" title="">
+                </div>
+                <div class="image-caption">ohmyzsh</div>
+            </figure>
+
+<h3 id="配置主题"><a href="#配置主题" class="headerlink" title="配置主题"></a>配置主题</h3><p>找到你喜欢的主题之后，如何配置呢？</p>
+<p>你可以到 ~&#x2F;.zshrc 中编辑，比如我希望我的主题是 agnoster<br>风格的，那么就可以这样：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/ohmyzsh/2.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+<p>保存退出，接着使用 source 命令使其生效：</p>
+<blockquote>
+<p>source ~&#x2F;.zshrc</p>
+</blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/ohmyzsh/3.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+<p>高亮了！是不是瞬间逼格满满？</p>
+<h3 id="配置插件"><a href="#配置插件" class="headerlink" title="配置插件"></a>配置插件</h3><p>为什么说 oh-my-zsh 能让你效率提高 10 倍呢？<br>其中一个原因就是它可以安装很多插件，让你使用命令用到爽！</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/ohmyzsh/4.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+
+<p>你可以在这里找到：</p>
+<blockquote>
+<p><a href="https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins" target="_blank" rel="noopener">https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins</a></p>
+</blockquote>
+<p>找到你想要安装的插件，到你的 zshrc 文件中，把相关插件添加进来：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/ohmyzsh/5.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+<p>接着使用 source 使其生效：</p>
+<blockquote>
+<p>source ~&#x2F;.zshrc</p>
+</blockquote>
+<p>那么现在你就可以使用这些插件了，拿 Git 举个例子：</p>
+<p>查看 git 状态直接使用 gst：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/ohmyzsh/6.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+<p>添加文件直接 gaa， 提交直接 gcmsg：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/ohmyzsh/7.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+<p>创建分支直接 gb：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/ohmyzsh/8.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+<p>切换分支直接 gco：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/ohmyzsh/9.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+<p>当然，还有很多插件的高效使用，你都可以根据自己的需要去安装。</p>
+<h1 id="ohmyzsh-的常用高效操作"><a href="#ohmyzsh-的常用高效操作" class="headerlink" title="ohmyzsh 的常用高效操作"></a>ohmyzsh 的常用高效操作</h1><p>除了定制主题和插件之外，有一些常用的操作，也可以高效的进行，比如进入文件你可以这样：</p>
+<blockquote>
+<p>双击tab</p>
+</blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/ohmyzsh/10.gif" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+<p>查看命令帮助，还是：</p>
+<blockquote>
+<p>双击tab</p>
+</blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/ohmyzsh/11.gif" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+<p>进入历史目录，一个 d 就可以：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/ohmyzsh/12.gif" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+<p>是不是很爽咧？还有很多操作，你可以到这里找到：</p>
+<blockquote>
+<p><a href="https://ohmyz.sh/" target="_blank" rel="noopener">https://ohmyz.sh/</a></p>
+</blockquote>
+<p>ok，希望对你有帮助。</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+      <!--  
+
+        
+        关注公众号「wistbean」，发送「帅书」获取我写的技术电子书
+        
+        -->
+        在公众号「学习 Python 的正确姿势」发送「帅书」领取我写的技术电子书，转载请注明出处：
+        <a href="https://wistbean.github.io/oh-my-zsh.html">
+                   wistbean
+        </a>
+    </div>
+    
+    <footer>
+        <a href="https://wistbean.github.io">
+            <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+            wistbean
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bash/">bash</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sh/">sh</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/zsh/">zsh</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/命令行/">命令行</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/终端/">终端</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/装逼/">装逼</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/oh-my-zsh.html&title=《命令行神器：oh-my-zsh》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/oh-my-zsh.html&title=《命令行神器：oh-my-zsh》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/oh-my-zsh.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《命令行神器：oh-my-zsh》 — wistbean&url=https://wistbean.github.io/oh-my-zsh.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/oh-my-zsh.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/learn-code-from-project.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">编程中的逆向学习法</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/fan-fan-pa.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Python爬虫之js反反爬虫实例教程</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>本站已加入 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-知识 4.0  (CC BY-NC-SA 4.0)国际协议 | 转载请注明链接出处</a></span>
+        </p>
+    </div>
+
+        <div class="bottom">
+                <p><span>wistbean &copy; 2015 - 2024</span>
+                    <span>
+                        
+                         <a href="https://wistbean.github.io/">肯定会|wistbean</a>
+                         <a href="https://fxxkpython.com">通往Python高手之路</a>
+                         <a href="https://www.bwh8.net/aff.php?aff=32874" target="_blank">搬瓦工2024优惠码</a>、
+                         <a href="https://www.vultr.com/?ref=7532860" target="_blank">vultr2024优惠码</a>
+                    </span>
+                </p>
+        </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/oh-my-zsh.html&title=《命令行神器：oh-my-zsh》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/oh-my-zsh.html&title=《命令行神器：oh-my-zsh》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/oh-my-zsh.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《命令行神器：oh-my-zsh》 — wistbean&url=https://wistbean.github.io/oh-my-zsh.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/oh-my-zsh.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABzElEQVR42u3aS27DMAwFwNz/0u6miwCFlUfRdFxgtCoCSx53QfCj1ytex9t6/2X95N9df598TSxcXNw291iuM+769zPQ2QcnBlxc3Pu565etj14Hu/U5uQEXF/fJ3HxvNZDh4uL+X26CSAobXFzc53OT4qea4uTtkpFaDRcXt8HNu5Rzf4/0d3Fxcbe4R3Ht7erv/T0BFxf3Fm4eUPopSKdAwsXFvZ+717C4alfyrxl5MS4ubvE+QzIIyS9b7A1iCykOLi7uADdvg66PKJcxnbCIi4s7xs0D03q4cm1QO92Fi4t7CzfBJaPWciOjX6vh4uKOcfPkI3kyP6EVd3FxcYe569fsXdXq3JqIPgMXF3eYm4ekavCqfkCrVsPFxb2Ue9XRSeFULX6izi4uLu4t3L1hyV7xkwTNqDmCi4s7xq1urg5L9oayH2o1XFzcYW6SjlQvVO2NWD48g4uLO8w9imtvQLIXFnFxcb/F3bsSsXfNIkmeOkEWFxf3Wm61/MiLpaQhkqRKuLi43+KWRxrxQGWkVsPFxX0Ytzz8iIufQsWGi4v7YG4C7bc8WikOLi5ug5sUP9Wkpx8QcXFxv8WdaHf2R60X9HdxcXF3uD8ntVybaePX9wAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

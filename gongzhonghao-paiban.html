@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131395348-1"></script>
+    <script data-ad-client="ca-pub-9097083609097034" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-131395348-1');
+    </script>
+
+    
+
+    
+
+    
+
+
+<!-- Baidu Push -->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<!-- End Baidu Push -->
+
+
+    <meta charset="utf-8">
+    
+    <meta name="google-site-verification" content="bcJVGqEGcBIay29szBsswzqYxY3qUzWuvu1hfad3-08">
+    
+    
+    
+    
+    <title>如何实现公众号一键快速排版 | wistbean | wistbean</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#B5963F">
+    
+    
+    <meta name="keywords" content="公众号,文章,排版,脚本">
+    <meta name="description" content="为什么我要重新排版我之前在“学习Python的正确姿势”这个公众号写的文章的排版非常随意，心情好就排版的稍微好看一点，心情没那么好的时候就随便整一下，曾经一度认为只要内容足够好就行，但是我后来看了些文章后发现，好一点的排版是能让读者看起来舒服一些的，现在想想，人只要舒服了，就相对来说会更加愿意把我的文章看下去，是吧？ 而且我之前的文章是直接在公众号后台编辑器里面写的，有时候写着写着电脑突然傻逼了，">
+<meta name="keywords" content="公众号,文章,排版,脚本">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何实现公众号一键快速排版">
+<meta property="og:url" content="https://wistbean.github.io/gongzhonghao-paiban.html">
+<meta property="og:site_name" content="wistbean">
+<meta property="og:description" content="为什么我要重新排版我之前在“学习Python的正确姿势”这个公众号写的文章的排版非常随意，心情好就排版的稍微好看一点，心情没那么好的时候就随便整一下，曾经一度认为只要内容足够好就行，但是我后来看了些文章后发现，好一点的排版是能让读者看起来舒服一些的，现在想想，人只要舒服了，就相对来说会更加愿意把我的文章看下去，是吧？ 而且我之前的文章是直接在公众号后台编辑器里面写的，有时候写着写着电脑突然傻逼了，">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://wistbean.github.io/images/knb.png">
+<meta property="og:image" content="https://wistbean.github.io/images/md_gzh.png">
+<meta property="og:image" content="https://wistbean.github.io/images/md2.png">
+<meta property="og:image" content="https://wistbean.github.io/images/md3.png">
+<meta property="og:image" content="https://wistbean.github.io/images/notcss.png">
+<meta property="og:image" content="https://wistbean.github.io/images/chrome_css.gif">
+<meta property="og:image" content="https://wistbean.github.io/images/changehtml.png">
+<meta property="og:image" content="https://wistbean.github.io/images/egg.png">
+<meta property="og:image" content="https://wistbean.github.io/images/writehtml.png">
+<meta property="og:updated_time" content="2024-01-26T15:14:15.620Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="如何实现公众号一键快速排版">
+<meta name="twitter:description" content="为什么我要重新排版我之前在“学习Python的正确姿势”这个公众号写的文章的排版非常随意，心情好就排版的稍微好看一点，心情没那么好的时候就随便整一下，曾经一度认为只要内容足够好就行，但是我后来看了些文章后发现，好一点的排版是能让读者看起来舒服一些的，现在想想，人只要舒服了，就相对来说会更加愿意把我的文章看下去，是吧？ 而且我之前的文章是直接在公众号后台编辑器里面写的，有时候写着写着电脑突然傻逼了，">
+<meta name="twitter:image" content="https://wistbean.github.io/images/knb.png">
+    
+        <link rel="alternate" type="application/atom+xml" title="wistbean" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(https://wistbean.github.io/images/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">wistbean</h5>
+          <a href="mailto:wistbean.bb@gmail.com" title="wistbean.bb@gmail.com" class="mail">wistbean.bb@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="https://wistbean.org/python-tutorial.html"  >
+                <i class="icon icon-lg icon-coffee"></i>
+                Python零基础入门教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2NzYyNjg2Nw==&action=getalbum&album_id=2448798954764255234#wechat_redirect"  >
+                <i class="icon icon-lg icon-bug"></i>
+                Python爬虫教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://vip.fxxkpython.com/?page_id=18"  >
+                <i class="icon icon-lg icon-code"></i>
+                加入我的VIP
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/aboutMe/"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light off" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">如何实现公众号一键快速排版</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="vultr ss bbr v2ray 100美金">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">如何实现公众号一键快速排版</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2020-10-03T14:26:39.000Z" itemprop="datePublished" class="page-time">
+  2020-10-03
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/公众号/">公众号</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>目录</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#为什么我要重新排版"><span class="post-toc-number">1.</span> <span class="post-toc-text">为什么我要重新排版</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#实现一键排版公众号的步骤"><span class="post-toc-number">2.</span> <span class="post-toc-text">实现一键排版公众号的步骤</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#网上的排版教程"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">网上的排版教程</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#我自己想要的实现步骤"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">我自己想要的实现步骤</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#开始行动"><span class="post-toc-number">3.</span> <span class="post-toc-text">开始行动</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#如何将-Markdown-转化为-HTML"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">如何将 Markdown 转化为 HTML</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#样式调试"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">样式调试</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Python-替换"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">Python 替换</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#添加彩蛋"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">添加彩蛋</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#输出完整的-HTML"><span class="post-toc-number">3.5.</span> <span class="post-toc-text">输出完整的 HTML</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-gongzhonghao-paiban"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">如何实现公众号一键快速排版</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2020-10-03 22:26:39" datetime="2020-10-03T14:26:39.000Z"  itemprop="datePublished">2020-10-03</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/公众号/">公众号</a></li></ul>
+
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="为什么我要重新排版"><a href="#为什么我要重新排版" class="headerlink" title="为什么我要重新排版"></a>为什么我要重新排版</h1><p>我之前在<br>“学习Python的正确姿势”这个公众号写的文章的排版<strong>非常随意</strong>，心情好就排版的稍微好看一点，心情没那么好的时候就随便整一下，曾经一度认为只要内容足够好就行，但是我后来看了些文章后发现，好一点的排版是能让读者看起来舒服一些的，现在想想，人只要舒服了，就相对来说会更加愿意把我的文章看下去，是吧？</p>
+<p>而且我之前的文章是直接在公众号后台编辑器里面写的，有时候写着写着电脑突然傻逼了，然后写的东西全特么不见了，怎么找都找不回来，一气之下抽根烟走人，老子不写了行吧？</p>
+<p>但是我在 ide 里用<br>Markdown写就不一样了，它具有实时保存的功能，这样就不用担心我写了很久的东西付诸东流。</p>
+<p>另外就是，我一直想要 “不一样”，或者说，我想要有我自己的风格，属于我自己的东西，以后别人一看我的文章排版，能一下子就知道那玩意是我写的。</p>
+<blockquote>
+<p>我追求差异化，我要有我的风格，毕竟我们不一样。</p>
+</blockquote>
+<h1 id="实现一键排版公众号的步骤"><a href="#实现一键排版公众号的步骤" class="headerlink" title="实现一键排版公众号的步骤"></a>实现一键排版公众号的步骤</h1><p>接着我就去网上搜索一些公众号排版的编辑器，看了一下，虽然大多都傻瓜式复制粘贴就可以了，但是对于我来说都不咋地，甚至觉得有点无法入目。</p>
+<h2 id="网上的排版教程"><a href="#网上的排版教程" class="headerlink" title="网上的排版教程"></a>网上的排版教程</h2><p>后来我看到了可能吧博客中的一篇文章，其中就说到他是如何去排版公众号的：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/knb.png" alt="来自可能吧" title="">
+                </div>
+                <div class="image-caption">来自可能吧</div>
+            </figure>
+
+<h2 id="我自己想要的实现步骤"><a href="#我自己想要的实现步骤" class="headerlink" title="我自己想要的实现步骤"></a>我自己想要的实现步骤</h2><p>后来我想了一下，如果我用 Markdown 写的文章，然后使用 Python<br>直接把里面的内容转化为一篇排版好了的公众号文章，岂不是很爽？</p>
+<p>所以我打算脚本这样做：</p>
+<ol>
+<li>将写好的 Markdown 文章转化为 HTML </li>
+<li>将 HTML 中的各个标签替换成我想要（可能需要调试很久）的样式</li>
+<li>定义一些特有的标记语言，比如文末的二维码，小彩蛋啥的</li>
+<li>最后直接将带上样式的 HTML 文件完整输出</li>
+</ol>
+<p>这样我就可以把它们直接复制到公众号编辑器，然后一键发布了。</p>
+<blockquote>
+<p>这样实现起来并不难，但是很花时间啊，不过为了你们，我愿意。</p>
+</blockquote>
+<h1 id="开始行动"><a href="#开始行动" class="headerlink" title="开始行动"></a>开始行动</h1><p>步骤都列好了，那么接下来就行动起来，干就完了。</p>
+<h2 id="如何将-Markdown-转化为-HTML"><a href="#如何将-Markdown-转化为-HTML" class="headerlink" title="如何将 Markdown 转化为 HTML"></a>如何将 Markdown 转化为 HTML</h2><p>可以使用 Python 的 <a href="https://github.com/trentm/python-markdown2/" target="_blank" rel="noopener">markdown2</a> 这个库，使用方法很简单，直接调用 <code>markdown_path</code> 方法，<br>将 Markdown 文件传进去，就可以得到相应的 HTML 了。</p>
+<p>比如现在写的这篇文章的 Markdown 是这样的：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/md_gzh.png" alt="Markdown" title="">
+                </div>
+                <div class="image-caption">Markdown</div>
+            </figure>
+
+<p>使用一行代码就可以得到相应的 HTML 了：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/md2.png" alt="Markdown2" title="">
+                </div>
+                <div class="image-caption">Markdown2</div>
+            </figure> 
+
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/md3.png" alt="md2html" title="">
+                </div>
+                <div class="image-caption">md2html</div>
+            </figure>
+
+
+<p>使用 HTML 文件打开，预览一波：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/notcss.png" alt="没有样式" title="">
+                </div>
+                <div class="image-caption">没有样式</div>
+            </figure>
+
+<p>丑的一批，很正常，什么样式都没有添加，接下来就是慢慢对各个标签进行调试了，苦力活，本来在某服务平台叫人帮忙调下样式，但是结果我很不满意，只能自己慢慢搞了。</p>
+<blockquote>
+<p>我对排版只有两个要求： 尽量简洁，尽量留白！</p>
+</blockquote>
+<h2 id="样式调试"><a href="#样式调试" class="headerlink" title="样式调试"></a>样式调试</h2><p>打开 Chrome 慢慢调试：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/chrome_css.gif" alt="chrome调试" title="">
+                </div>
+                <div class="image-caption">chrome调试</div>
+            </figure>
+
+<p>当然，这个过程还要时不时将调试好的样式内容复制到公众号编辑器，避免等会错乱。</p>
+<p>调到最后的样式就是你现在看到的样子，是不是相对简洁一些，后面还会继续做调整。</p>
+<h2 id="Python-替换"><a href="#Python-替换" class="headerlink" title="Python 替换"></a>Python 替换</h2><p>调好样式之后，把 css 复制好，然后在 Python 脚本里面一顿替换就可以了。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/changehtml.png" alt="html替换" title="">
+                </div>
+                <div class="image-caption">html替换</div>
+            </figure>
+
+
+<h2 id="添加彩蛋"><a href="#添加彩蛋" class="headerlink" title="添加彩蛋"></a>添加彩蛋</h2><p>之前不是跟你们说过嘛，公众号粉丝每次破万就给大家整点福利啥的，到达 10w<br>粉丝就爆我的帅照。</p>
+<p>那么可以根据现有的粉丝数量，直接在后面追加相应的文本：</p>
+<p><img src="/images/egg.png" alt="小彩蛋"></p>
+<h2 id="输出完整的-HTML"><a href="#输出完整的-HTML" class="headerlink" title="输出完整的 HTML"></a>输出完整的 HTML</h2><p>最后很简单，直接将全部整好的 HTML 写到文件里面就可以了：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/writehtml.png" alt="输出html" title="">
+                </div>
+                <div class="image-caption">输出html</div>
+            </figure>
+
+<p>ok，完事！</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+      <!--  
+
+        
+        关注公众号「wistbean」，发送「帅书」获取我写的技术电子书
+        
+        -->
+        在公众号「学习 Python 的正确姿势」发送「帅书」领取我写的技术电子书，转载请注明出处：
+        <a href="https://wistbean.github.io/gongzhonghao-paiban.html">
+                   wistbean
+        </a>
+    </div>
+    
+    <footer>
+        <a href="https://wistbean.github.io">
+            <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+            wistbean
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/公众号/">公众号</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/排版/">排版</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/文章/">文章</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/脚本/">脚本</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/gongzhonghao-paiban.html&title=《如何实现公众号一键快速排版》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/gongzhonghao-paiban.html&title=《如何实现公众号一键快速排版》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/gongzhonghao-paiban.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《如何实现公众号一键快速排版》 — wistbean&url=https://wistbean.github.io/gongzhonghao-paiban.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/gongzhonghao-paiban.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/write-blog.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">写博客，何必呢？</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/debugging-your-life-1.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">停下来，debug 一下自己吧</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>本站已加入 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-知识 4.0  (CC BY-NC-SA 4.0)国际协议 | 转载请注明链接出处</a></span>
+        </p>
+    </div>
+
+        <div class="bottom">
+                <p><span>wistbean &copy; 2015 - 2024</span>
+                    <span>
+                        
+                         <a href="https://wistbean.github.io/">肯定会|wistbean</a>
+                         <a href="https://fxxkpython.com">通往Python高手之路</a>
+                         <a href="https://www.bwh8.net/aff.php?aff=32874" target="_blank">搬瓦工2024优惠码</a>、
+                         <a href="https://www.vultr.com/?ref=7532860" target="_blank">vultr2024优惠码</a>
+                    </span>
+                </p>
+        </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/gongzhonghao-paiban.html&title=《如何实现公众号一键快速排版》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/gongzhonghao-paiban.html&title=《如何实现公众号一键快速排版》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/gongzhonghao-paiban.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《如何实现公众号一键快速排版》 — wistbean&url=https://wistbean.github.io/gongzhonghao-paiban.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/gongzhonghao-paiban.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACL0lEQVR42u3ay24CMQwFUP7/p6nUVauKcG0PqCRnVohHxmcWJnZ8u8XX/fvKP73/uP6+s/7++l6jCwMD42MZ9+X1N9BHQTx651FY+b3WsWFgYJzDWKfRJJTk0VQfShIbBgYGxjrc/NNkR4eBgYHxnoTb2wgmqRkDAwMjWW69EcwbdvlqL6nFMTAwPpBRPRh45+sXnm9gYGB8COPeuiZlar5aIR4MDIytGUmz7Ko2WfUB5QUtBgbGyYzXJeJqqo1ixsDAOIaRj2cloxLV347+BjAwMDZl5M2v/DBg/dvqI1iv86sWx8DA2JrRG26Yt/vz/4QnKRsDA2NrRpLOqk20ZJyimo6jlTEwMDZl9Ia95uNik0IXAwPjNEZv25e35/IVkiPMJw8IAwNjU0aeLnvDENVBiqSsHf1vYGBgfCBj1I6Pw+0NmVWbdxgYGCcw8tbYVWNh8zYfBgbGOYzC9qt4tDlP09W7Y2Bg7MfIQyw06MfttuowGQYGxt6MvLyslqC9UPLv5O05DAyMPRjVLWAvmebHlj0eBgbGaYy8odbbUPZSeaHyxsDA2I7Ru3qDFPNy9GIMBgbGv2fMt3H5SGtS3ObsJ9NtGBgYGzGuytbzw8hJwYyBgXECo5o6e4eXeYOvOeqBgYFxAKPZjh8Xt/OyGQMDAyPfXfYGufLVovMNDAyM4xnVm1UB1VYdBgbGaYzq+Ht1nXyA7IIzVQwMjO0YvYOBahB5w+6qO2JgYGzB+AJ0lVWDJawqeQAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

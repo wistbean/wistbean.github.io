@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131395348-1"></script>
+    <script data-ad-client="ca-pub-9097083609097034" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-131395348-1');
+    </script>
+
+    
+
+    
+
+    
+
+
+<!-- Baidu Push -->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<!-- End Baidu Push -->
+
+
+    <meta charset="utf-8">
+    
+    <meta name="google-site-verification" content="bcJVGqEGcBIay29szBsswzqYxY3qUzWuvu1hfad3-08">
+    
+    
+    
+    
+    <title>Linux 学习启动篇 | wistbean | wistbean</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#B5963F">
+    
+    
+    <meta name="keywords" content="教程,Linux">
+    <meta name="description" content="从这篇文章起，就意味着开始着手学习使用Linux系统了，虽然经常听到Linux操作系统，但是或许正在着手去操作使用的人还是少数的，甚至连什么是Linux都不知道的人也大有所在。那么这篇 「Linux学习启动篇」 将从0开始，首先了解Linux是干嘛的？能在Linux上做些什么事情？接下来再和我一起深入学习！ 1.什么是LinuxLinux是一种自由和开放源代码的类UNIX操作系统。 Linux是自">
+<meta name="keywords" content="教程,Linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux 学习启动篇">
+<meta property="og:url" content="https://wistbean.github.io/start-learning-linux.html">
+<meta property="og:site_name" content="wistbean">
+<meta property="og:description" content="从这篇文章起，就意味着开始着手学习使用Linux系统了，虽然经常听到Linux操作系统，但是或许正在着手去操作使用的人还是少数的，甚至连什么是Linux都不知道的人也大有所在。那么这篇 「Linux学习启动篇」 将从0开始，首先了解Linux是干嘛的？能在Linux上做些什么事情？接下来再和我一起深入学习！ 1.什么是LinuxLinux是一种自由和开放源代码的类UNIX操作系统。 Linux是自">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://wistbean.github.io/images/625px-NewTux.svg.png">
+<meta property="og:image" content="https://wistbean.github.io/images/1024px-Johndebian7.png">
+<meta property="og:image" content="https://wistbean.github.io/images/1024px-Gentoo12.0.jpg">
+<meta property="og:image" content="https://wistbean.github.io/images/Cinnamon_1.6.7_Menu.png">
+<meta property="og:image" content="https://wistbean.github.io/images/Fedora_20_GNOME.png">
+<meta property="og:image" content="https://wistbean.github.io/images/Ubuntu_Desktop_12.10_Screenshot.png">
+<meta property="og:updated_time" content="2024-01-26T15:14:15.813Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Linux 学习启动篇">
+<meta name="twitter:description" content="从这篇文章起，就意味着开始着手学习使用Linux系统了，虽然经常听到Linux操作系统，但是或许正在着手去操作使用的人还是少数的，甚至连什么是Linux都不知道的人也大有所在。那么这篇 「Linux学习启动篇」 将从0开始，首先了解Linux是干嘛的？能在Linux上做些什么事情？接下来再和我一起深入学习！ 1.什么是LinuxLinux是一种自由和开放源代码的类UNIX操作系统。 Linux是自">
+<meta name="twitter:image" content="https://wistbean.github.io/images/625px-NewTux.svg.png">
+    
+        <link rel="alternate" type="application/atom+xml" title="wistbean" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(https://wistbean.github.io/images/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">wistbean</h5>
+          <a href="mailto:wistbean.bb@gmail.com" title="wistbean.bb@gmail.com" class="mail">wistbean.bb@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="https://wistbean.org/python-tutorial.html"  >
+                <i class="icon icon-lg icon-coffee"></i>
+                Python零基础入门教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2NzYyNjg2Nw==&action=getalbum&album_id=2448798954764255234#wechat_redirect"  >
+                <i class="icon icon-lg icon-bug"></i>
+                Python爬虫教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://vip.fxxkpython.com/?page_id=18"  >
+                <i class="icon icon-lg icon-code"></i>
+                加入我的VIP
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/aboutMe/"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light off" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Linux 学习启动篇</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="vultr ss bbr v2ray 100美金">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Linux 学习启动篇</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-03-31T09:25:18.000Z" itemprop="datePublished" class="page-time">
+  2017-03-31
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Linux/">Linux</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>目录</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-什么是Linux"><span class="post-toc-number">1.</span> <span class="post-toc-text">1.什么是Linux</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-开源协议"><span class="post-toc-number">2.</span> <span class="post-toc-text">2.开源协议</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-Linux使用领域"><span class="post-toc-number">3.</span> <span class="post-toc-text">3.Linux使用领域</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#4-Linux发行版"><span class="post-toc-number">4.</span> <span class="post-toc-text">4.Linux发行版</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#5-选择centOS版本进行学习"><span class="post-toc-number">5.</span> <span class="post-toc-text">5.选择centOS版本进行学习</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-start-learning-linux"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Linux 学习启动篇</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-03-31 17:25:18" datetime="2017-03-31T09:25:18.000Z"  itemprop="datePublished">2017-03-31</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Linux/">Linux</a></li></ul>
+
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>从这篇文章起，就意味着开始着手学习使用<a href="https://zh.wikipedia.org/zh/Linux" target="_blank" rel="noopener">Linux</a>系统了，虽然经常听到Linux操作系统，但是或许正在着手去操作使用的人还是少数的，甚至连什么是Linux都不知道的人也大有所在。那么这篇 「Linux学习启动篇」 将从0开始，首先了解Linux是干嘛的？能在Linux上做些什么事情？接下来再和我一起深入学习！</p>
+<h2 id="1-什么是Linux"><a href="#1-什么是Linux" class="headerlink" title="1.什么是Linux"></a>1.什么是Linux</h2><p>Linux是一种自由和开放源代码的类<a href="https://zh.wikipedia.org/wiki/UNIX" target="_blank" rel="noopener">UNIX</a>操作系统。</p>
+<p>Linux是自由开放源代码的，这个系统的内核是由<a href="https://zh.wikipedia.org/wiki/Linus_Torvalds" target="_blank" rel="noopener">「Linus Torvalds（中文名：林纳斯·托瓦兹）」</a>在1991年10月5日发布的，其实Linux本来指的是Linux内核本身，但是通常都用了「Linux内核」来称呼，而Linux就代表了 Linux内核 + 用户空间的应用程序 构成的完整操作系统。</p>
+<p><img src="/images/625px-NewTux.svg.png" alt="Linux"></p>
+<h2 id="2-开源协议"><a href="#2-开源协议" class="headerlink" title="2.开源协议"></a>2.开源协议</h2><p>Linux如此受欢迎的其中一个原因就是它开源，这意味着任何个人或者机构都可以很自由的使用Linux里面所有的源代码，你可以对它进行修改生成新的版本然后再发布出来成为你的东西。但是前提是遵循<a href="https://zh.wikipedia.org/wiki/GNU%E9%80%9A%E7%94%A8%E5%85%AC%E5%85%B1%E8%AE%B8%E5%8F%AF%E8%AF%81" target="_blank" rel="noopener">「GUN GPL协议」</a>。</p>
+<p>GUN GPL(GUN General Public License)，通用公共许可协议，这是由<a href="https://zh.wikipedia.org/wiki/%E7%90%86%E6%9F%A5%E5%BE%B7%C2%B7%E6%96%AF%E6%89%98%E6%9B%BC" target="_blank" rel="noopener">理查德·斯托曼</a>发起的，许多自由软件和开放源码都采用了这个协议条款，任何个人或者机构使用基于GPL进行衍生发布时必须采用GPL协议许可，而且需要<strong>公开源代码</strong>。</p>
+<h2 id="3-Linux使用领域"><a href="#3-Linux使用领域" class="headerlink" title="3.Linux使用领域"></a>3.Linux使用领域</h2><ul>
+<li><p>服务器领域： Linux已经在服务器领域占了大半壁江山，随着开源软件的日益强大，Linux服务器操作系统已经越来越多人使用。应该很少人会用windows server了吧。</p>
+</li>
+<li><p>移动设备嵌入领域： Linux的低成本、强大的定制功能以及良好的移植性能，在智能手机、平板电脑等移动设备方面，Android手机就是Google开发的基于Linux平台的开源手机操作系统。现在市场上Android手机仍然是占了最大的移动操作系统份额。阿里云的YunOS系统也是基于Linux的，越来越多的系统都使用了Linux。</p>
+</li>
+<li><p>桌面领域：现在大多数在Windows平台上广泛使用的自由软件都有相应的Linux版本，现在Linux桌面系统的发展也是越来越多了，像国内的红旗Linux，深度Linux，还有你可能经常听到的Ubuntu系统，都是基于Linux的桌面操作系统。</p>
+</li>
+</ul>
+<h2 id="4-Linux发行版"><a href="#4-Linux发行版" class="headerlink" title="4.Linux发行版"></a>4.Linux发行版</h2><p>Linux的发行版实在太多了，这里列举几个常见的发行版本。</p>
+<p><a href="https://www.debian.org/" target="_blank" rel="noopener">Debian</a> GNU&#x2F;Linux 7.0：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/1024px-Johndebian7.png" alt="debian" title="">
+                </div>
+                <div class="image-caption">debian</div>
+            </figure>
+
+<p><a href="https://www.gentoo.org/" target="_blank" rel="noopener">Gentoo</a> Linux 12.0：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/1024px-Gentoo12.0.jpg" alt="Gentoo" title="">
+                </div>
+                <div class="image-caption">Gentoo</div>
+            </figure>
+
+<p><a href="https://linuxmint.com/" target="_blank" rel="noopener">Linux Mint 14</a>：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/Cinnamon_1.6.7_Menu.png" alt="Linux Mint 14" title="">
+                </div>
+                <div class="image-caption">Linux Mint 14</div>
+            </figure>
+
+<p><a href="https://getfedora.org/zh_CN/" target="_blank" rel="noopener">Fedora</a>：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/Fedora_20_GNOME.png" alt="Fedora" title="">
+                </div>
+                <div class="image-caption">Fedora</div>
+            </figure>
+
+<p><a href="https://www.ubuntu.com/index_kylin" target="_blank" rel="noopener">Ubuntu</a>：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/Ubuntu_Desktop_12.10_Screenshot.png" alt="Ubuntu" title="">
+                </div>
+                <div class="image-caption">Ubuntu</div>
+            </figure>
+
+
+
+<p>以上列举的这几个都是有桌面版的，但是我们学习Linux主要还是对命令行进行学习，对于学习和使用的系统我们选择不是以上这几个，而是centOS系统，那么为什么选择centOS？</p>
+<h2 id="5-选择centOS版本进行学习"><a href="#5-选择centOS版本进行学习" class="headerlink" title="5.选择centOS版本进行学习"></a>5.选择centOS版本进行学习</h2><p>早前 <a href="https://www.redhat.com/zh" target="_blank" rel="noopener">Red Hat</a>公司 就发行了「Red Hat Linux」的个人版本，到了Red Hat 9.0版本后，Red Hat公司就不再发行桌面版的发行套件了，Red Hat Linux 也就停止了开发，而开始全力集中转向服务器版本上，也就是Red Hat Enterprise Linux（企业版本）。</p>
+<p>后来 Red Hat Linux 的桌面版本与来自开源社区的Fedora进行合并，Red Hat Linux 桌面版就称为了 Fedroa Core。</p>
+<p>所以目前Red Hat有：免费的Fedroa Core版本，也有收费的Red Hat Enterprise Linux版本。Red Hat Enterprise Linux都会在Fedroa Core版本的基础上进行升级，大约发布6个Fedroa Core版本就会发布一个Red Hat Enterprise Linux版本。</p>
+<p>因为之前我们讲过了，Red Hat的企业版本虽然收费的，但是它依照开源协议必须公开源代码，那么这个是时候CentOS就出现了，它的全名是（Community Enterprise Operating Systeam 社区企业操作系统），CentOS和Red Hat企业版本的不同之处在于centOS没有包含封闭源码的软件，所以centOS可以自由使用，而且可以长期的享受它的免费升级和服务。</p>
+<p>所以选择CentOS版本进行学习是很有必要的：目前网络上80%的Linux资源都是基于centOS的发行版的，可以供我们更多的资源查找和学习帮助。CentOS版本在许多开源镜像网站可以轻松获取。centOS也具有经典性和代表性，绝大多数物联网公司的后台服务器都使用的是centOS发行版本。</p>
+<p>所以综上：选择CentOS版本是比较好的。接下来就和我一起学习Linux吧，就从<a href="https://wistbean.org/use-virtualbox-install-centos.html" target="_blank" rel="noopener">安装虚拟机</a>开始，如何？</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+      <!--  
+
+        
+        关注公众号「wistbean」，发送「帅书」获取我写的技术电子书
+        
+        -->
+        在公众号「学习 Python 的正确姿势」发送「帅书」领取我写的技术电子书，转载请注明出处：
+        <a href="https://wistbean.github.io/start-learning-linux.html">
+                   wistbean
+        </a>
+    </div>
+    
+    <footer>
+        <a href="https://wistbean.github.io">
+            <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+            wistbean
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/教程/">教程</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/start-learning-linux.html&title=《Linux 学习启动篇》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/start-learning-linux.html&title=《Linux 学习启动篇》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/start-learning-linux.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Linux 学习启动篇》 — wistbean&url=https://wistbean.github.io/start-learning-linux.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/start-learning-linux.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/use-virtualbox-install-centos.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">01 使用 VirtualBox 创建 CentOS 虚拟机</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/space-complexity.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">算法中的时间复杂度分析</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>本站已加入 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-知识 4.0  (CC BY-NC-SA 4.0)国际协议 | 转载请注明链接出处</a></span>
+        </p>
+    </div>
+
+        <div class="bottom">
+                <p><span>wistbean &copy; 2015 - 2024</span>
+                    <span>
+                        
+                         <a href="https://wistbean.github.io/">肯定会|wistbean</a>
+                         <a href="https://fxxkpython.com">通往Python高手之路</a>
+                         <a href="https://www.bwh8.net/aff.php?aff=32874" target="_blank">搬瓦工2024优惠码</a>、
+                         <a href="https://www.vultr.com/?ref=7532860" target="_blank">vultr2024优惠码</a>
+                    </span>
+                </p>
+        </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/start-learning-linux.html&title=《Linux 学习启动篇》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/start-learning-linux.html&title=《Linux 学习启动篇》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/start-learning-linux.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Linux 学习启动篇》 — wistbean&url=https://wistbean.github.io/start-learning-linux.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/start-learning-linux.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLklEQVR42u3aQQ6DMAxEUe5/abpFqprMeKAS9s8KoUDzWLixneOQx3kZ1zu/rq93vues3/k987YBAwaM1zLO5VAY6zevf0X/KL+ehQEDxhyGsgg3ENfm678LAwYMGMqPbYKgvAVUrmHAgAGjFnBry83DNwwYMGYy9CTTDbu1OQ/m4jBgwHghQ6+6///6kf4GDBgwXsU4zfF0oltcFQwYMFoz8gQ1b2dKCaqwHhgwYHRl6Klp0shUmppr3uYODBgwWjNqJX53E+kuVP8cGwwMGDBaM9zgmxf03WYnDBgw5jD0EKYHTZfnBlPptAgMGDAaMfRl6eml/v5a2IUBA8Y0hh7U3P2mWzhzWwubrSEMGDAaMfSCl94ecEtmLnuDhwEDxgBGUhRLjl/obYBNgIYBA0Y7hl4yq5XkaimrvSmEAQPGAMZdhXslxS3+G6w3rDBgwBjAWE9yw6ibfN7QbIABA0ZrRh5k9fKccmgs2oDCgAFjDMMNkesFuZtF/RjrpiUAAwaM1oza8S89BV2Do9YCDBgwxjDc1qbedEz6q9JhMhgwYAxguOV7N0zrTxVbnjBgwGjKOM3hbhPd9LjYloABA0Zrhj6eKOXn820YDBgwXsuoBVk97UwSVP0pGDBgTGAYxxqEsKh8juTA2abcBgMGjPGMfIOYH/I4pBgMAwaMuYy8VKffL7YwYcCA0ZThHttyD1gkMKmpAAMGjNYMPXVMmgfrJSpt0ST1hQEDxmsZHxq3LLoGkRUZAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

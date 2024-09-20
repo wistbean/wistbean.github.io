@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131395348-1"></script>
+    <script data-ad-client="ca-pub-9097083609097034" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-131395348-1');
+    </script>
+
+    
+
+    
+
+    
+
+
+<!-- Baidu Push -->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<!-- End Baidu Push -->
+
+
+    <meta charset="utf-8">
+    
+    <meta name="google-site-verification" content="bcJVGqEGcBIay29szBsswzqYxY3qUzWuvu1hfad3-08">
+    
+    
+    
+    
+    <title>「5-1」Java模板引擎FreeMarker整合SSM | wistbean | wistbean</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#B5963F">
+    
+    
+    <meta name="keywords" content="教程,Java,Intellij IDEA,Java视频教程,项目实战,分布式,SSM,码农商城,EasyUI,商品,FreeMarker,UEditor,富文本编辑器">
+    <meta name="description" content="什么是FreeMarker   FreeMarker是一个 Java 的模板引擎，可以使用它来动态的绑定数据。比如我们在 JSP 中想要直接显示 Controller 传过来的数据的时候，那么我们就可以使用到 FreeMarker。">
+<meta name="keywords" content="教程,Java,Intellij IDEA,Java视频教程,项目实战,分布式,SSM,码农商城,EasyUI,商品,FreeMarker,UEditor,富文本编辑器">
+<meta property="og:type" content="article">
+<meta property="og:title" content="「5-1」Java模板引擎FreeMarker整合SSM">
+<meta property="og:url" content="https://wistbean.github.io/java-ssm-5-1.html">
+<meta property="og:site_name" content="wistbean">
+<meta property="og:description" content="什么是FreeMarker   FreeMarker是一个 Java 的模板引擎，可以使用它来动态的绑定数据。比如我们在 JSP 中想要直接显示 Controller 传过来的数据的时候，那么我们就可以使用到 FreeMarker。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://freemarker.apache.org/images/overview.png">
+<meta property="og:image" content="https://wistbean.github.io/images/freemark">
+<meta property="og:updated_time" content="2024-01-26T15:14:15.660Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="「5-1」Java模板引擎FreeMarker整合SSM">
+<meta name="twitter:description" content="什么是FreeMarker   FreeMarker是一个 Java 的模板引擎，可以使用它来动态的绑定数据。比如我们在 JSP 中想要直接显示 Controller 传过来的数据的时候，那么我们就可以使用到 FreeMarker。">
+<meta name="twitter:image" content="https://freemarker.apache.org/images/overview.png">
+    
+        <link rel="alternate" type="application/atom+xml" title="wistbean" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(https://wistbean.github.io/images/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">wistbean</h5>
+          <a href="mailto:wistbean.bb@gmail.com" title="wistbean.bb@gmail.com" class="mail">wistbean.bb@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="https://wistbean.org/python-tutorial.html"  >
+                <i class="icon icon-lg icon-coffee"></i>
+                Python零基础入门教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2NzYyNjg2Nw==&action=getalbum&album_id=2448798954764255234#wechat_redirect"  >
+                <i class="icon icon-lg icon-bug"></i>
+                Python爬虫教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://vip.fxxkpython.com/?page_id=18"  >
+                <i class="icon icon-lg icon-code"></i>
+                加入我的VIP
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/aboutMe/"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light off" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">「5-1」Java模板引擎FreeMarker整合SSM</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="vultr ss bbr v2ray 100美金">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">「5-1」Java模板引擎FreeMarker整合SSM</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-12-11T13:27:26.000Z" itemprop="datePublished" class="page-time">
+  2018-12-11
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Java/">Java</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Java/Java-SSM视频教程/">Java SSM视频教程</a></li></ul></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>目录</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#什么是FreeMarker"><span class="post-toc-number">1.</span> <span class="post-toc-text">什么是FreeMarker</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#FreeMarker与SpringMVC的整合"><span class="post-toc-number">2.</span> <span class="post-toc-text">FreeMarker与SpringMVC的整合</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#maven-依赖-freemarker"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">maven 依赖 freemarker</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#SpringMVC配置FreeMarker"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">SpringMVC配置FreeMarker</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Controller使用FreeMarker"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">Controller使用FreeMarker</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#template使用"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">template使用</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#SSM视频教程目录"><span class="post-toc-number">3.</span> <span class="post-toc-text">SSM视频教程目录</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-java-ssm-5-1"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">「5-1」Java模板引擎FreeMarker整合SSM</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-12-11 21:27:26" datetime="2018-12-11T13:27:26.000Z"  itemprop="datePublished">2018-12-11</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Java/">Java</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Java/Java-SSM视频教程/">Java SSM视频教程</a></li></ul></li></ul>
+
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="什么是FreeMarker"><a href="#什么是FreeMarker" class="headerlink" title="什么是FreeMarker"></a>什么是FreeMarker</h1><iframe src="//player.bilibili.com/player.html?aid=38024613&cid=66844321&page=1" width="100%" height="436" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+<p><a href="https://freemarker.apache.org/" target="_blank" rel="noopener">FreeMarker</a>是一个 Java 的模板引擎，可以使用它来动态的绑定数据。比如我们在 JSP 中想要直接显示 Controller 传过来的数据的时候，那么我们就可以使用到 FreeMarker。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://freemarker.apache.org/images/overview.png" alt="FreeMarker" title="">
+                </div>
+                <div class="image-caption">FreeMarker</div>
+            </figure>
+
+<p>比如上图中的 ${name} 就是一个模板，这样的话前端不需要知道这个数据的具体逻辑，后端给就是了，页面的样式和数据之间分离出来，各过各的，挺好。</p>
+<p>FreeMarker 还提供了一些<a href="https://freemarker.apache.org/docs/dgui_template_directives.html" target="_blank" rel="noopener">指令</a>，比如 if 判断，列表数据，循环等。我们的项目中到时候会用到。</p>
+<h1 id="FreeMarker与SpringMVC的整合"><a href="#FreeMarker与SpringMVC的整合" class="headerlink" title="FreeMarker与SpringMVC的整合"></a>FreeMarker与SpringMVC的整合</h1><h2 id="maven-依赖-freemarker"><a href="#maven-依赖-freemarker" class="headerlink" title="maven 依赖 freemarker"></a>maven 依赖 freemarker</h2><p>freemarker的maven依赖,<a href="https://mvnrepository.com/artifact/org.freemarker/freemarker/2.3.28" target="_blank" rel="noopener">最新版本如下</a>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.freemarker&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;freemarker&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;2.3.28&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+
+<p>支持集成常见的第三方库的依赖：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">     &lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">     &lt;artifactId&gt;spring-context-support&lt;/artifactId&gt;</span><br><span class="line">     &lt;version&gt;$&#123;spring.version&#125;&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="SpringMVC配置FreeMarker"><a href="#SpringMVC配置FreeMarker" class="headerlink" title="SpringMVC配置FreeMarker"></a>SpringMVC配置FreeMarker</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--freemarker的配置在前，当当请求发现/WEB-INF/ftl/没有的时候，就会去/WEB-INF/jsp/查找--&gt;</span><br><span class="line">   &lt;bean id=&quot;freemarkerConfig&quot; class=&quot;org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer&quot;&gt;</span><br><span class="line">       &lt;property name=&quot;templateLoaderPath&quot; value=&quot;/WEB-INF/ftl/&quot;/&gt;</span><br><span class="line">   &lt;/bean&gt;</span><br><span class="line">   &lt;bean id=&quot;viewResolver&quot; class=&quot;org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver&quot;&gt;</span><br><span class="line">       &lt;property name=&quot;prefix&quot; value=&quot;&quot;/&gt;</span><br><span class="line">       &lt;property name=&quot;suffix&quot; value=&quot;.ftl&quot;/&gt;</span><br><span class="line">       &lt;property name=&quot;contentType&quot; value=&quot;text/html; charset=UTF-8&quot;/&gt;</span><br><span class="line">   &lt;/bean&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Controller使用FreeMarker"><a href="#Controller使用FreeMarker" class="headerlink" title="Controller使用FreeMarker"></a>Controller使用FreeMarker</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Controller</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FreeMarkerTestController</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@RequestMapping</span>(<span class="string">"/hello"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">SayHello</span><span class="params">(Model model)</span></span>&#123;</span><br><span class="line">        model.addAttribute(<span class="string">"name"</span>,<span class="string">"wistbean"</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"hello"</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@RequestMapping</span>(<span class="string">"/hi"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">SayHi</span><span class="params">(Model model)</span></span>&#123;</span><br><span class="line">        model.addAttribute(<span class="string">"name"</span>,<span class="string">"wistbean"</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"hi"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="template使用"><a href="#template使用" class="headerlink" title="template使用"></a>template使用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;h1&gt;hello $&#123;name&#125;&lt;/h1&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/freemark" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+
+<h1 id="SSM视频教程目录"><a href="#SSM视频教程目录" class="headerlink" title="SSM视频教程目录"></a>SSM视频教程目录</h1><ul>
+<li><a href="https://wistbean.org/java-ssm-video.html#SSM%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%9B%AE%E5%BD%95" target="_blank" rel="noopener">SSM视频教程目录</a></li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+      <!--  
+
+        
+        关注公众号「wistbean」，发送「帅书」获取我写的技术电子书
+        
+        -->
+        在公众号「学习 Python 的正确姿势」发送「帅书」领取我写的技术电子书，转载请注明出处：
+        <a href="https://wistbean.github.io/java-ssm-5-1.html">
+                   wistbean
+        </a>
+    </div>
+    
+    <footer>
+        <a href="https://wistbean.github.io">
+            <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+            wistbean
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/EasyUI/">EasyUI</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/FreeMarker/">FreeMarker</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Intellij-IDEA/">Intellij IDEA</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java视频教程/">Java视频教程</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SSM/">SSM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/UEditor/">UEditor</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/分布式/">分布式</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/商品/">商品</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/富文本编辑器/">富文本编辑器</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/教程/">教程</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/码农商城/">码农商城</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/项目实战/">项目实战</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/java-ssm-5-1.html&title=《「5-1」Java模板引擎FreeMarker整合SSM》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/java-ssm-5-1.html&title=《「5-1」Java模板引擎FreeMarker整合SSM》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/java-ssm-5-1.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《「5-1」Java模板引擎FreeMarker整合SSM》 — wistbean&url=https://wistbean.github.io/java-ssm-5-1.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/java-ssm-5-1.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/java-ssm-5-2.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">「5-2」 码农商城-实现商品添加界面</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/ken-ding-hui-dian-tai.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">肯定会电台，晚点见</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>本站已加入 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-知识 4.0  (CC BY-NC-SA 4.0)国际协议 | 转载请注明链接出处</a></span>
+        </p>
+    </div>
+
+        <div class="bottom">
+                <p><span>wistbean &copy; 2015 - 2024</span>
+                    <span>
+                        
+                         <a href="https://wistbean.github.io/">肯定会|wistbean</a>
+                         <a href="https://fxxkpython.com">通往Python高手之路</a>
+                         <a href="https://www.bwh8.net/aff.php?aff=32874" target="_blank">搬瓦工2024优惠码</a>、
+                         <a href="https://www.vultr.com/?ref=7532860" target="_blank">vultr2024优惠码</a>
+                    </span>
+                </p>
+        </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/java-ssm-5-1.html&title=《「5-1」Java模板引擎FreeMarker整合SSM》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/java-ssm-5-1.html&title=《「5-1」Java模板引擎FreeMarker整合SSM》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/java-ssm-5-1.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《「5-1」Java模板引擎FreeMarker整合SSM》 — wistbean&url=https://wistbean.github.io/java-ssm-5-1.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/java-ssm-5-1.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLUlEQVR42u3ay47DIBBE0fz/TzPbSJahqpqMRHNZjRJPzPGi3Q8+H3mNl/X97fN65ZPn7zyv3LZgwIBxLGNM19s1b5urP4j5fV+pMGDAuIDxdmP9GuW/lA1l94UBAwaMeQI3T+mUhE8JvjBgwIBR+WkloXQ/gQEDBoysiHUTuDnSDe7banEYMGAcyNCbZf//90/mGzBgwDiKMcylB0Q3XI7CggEDRm+GHuCyFE0HK0X1ooUHAwaM1gw9KXQLTr3EnW9uQ84LAwaMwxm7Gmd7BwNuyw8GDBi9GcpgUi81s1TSPcBhvx9gwIBxOKMScLNWXRZwF9/CgAGjNaPSGssmjG4TzdgDDBgwmjLcLWZhVH9kyr0WtTgMGDAaMbKWWXbkIhtJSkUvDBgwrmHo7TCXVB+O2lU4DBgwGjGykKcPA7IUs1SfwoABoymjfgAia6W5A0vpzAgMGDDaMdyt10OkMnLQ3xIwYMC4geGWqW4I3vZO0JEwYMBozXDDYjYScA+NZUkkDBgw+jH0cWMlCBqnP+TyeDHlgAEDRmtGdsAr+zU9JV3sCgYMGJcx9PCqB+ghrGzICgMGjN6MYa5sJJk12oxUEgYMGK0Z+nJbaXqA1q8Pe4cwYMBowcgOVegB2n1yYbCGAQPGBYx6sZqRtiFhwIABQ04EK8mlnmguDlvAgAHjesaIlkJSymBphAkDBoymjF8Uou5xDX0YAAMGjNsY7rbcEJzBdAwMGDBaM/4AzieyUIcRa+wAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

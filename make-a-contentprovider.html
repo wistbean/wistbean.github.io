@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131395348-1"></script>
+    <script data-ad-client="ca-pub-9097083609097034" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-131395348-1');
+    </script>
+
+    
+
+    
+
+    
+
+
+<!-- Baidu Push -->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<!-- End Baidu Push -->
+
+
+    <meta charset="utf-8">
+    
+    <meta name="google-site-verification" content="bcJVGqEGcBIay29szBsswzqYxY3qUzWuvu1hfad3-08">
+    
+    
+    
+    
+    <title>做一个内容提供者 | wistbean | wistbean</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#B5963F">
+    
+    
+    <meta name="keywords" content="wistbean,肯定会,写作,肯定会公众号,原创">
+    <meta name="description" content="之前在开发Android 的时候，有一个组件叫做 “ContentProvider” ，它主要是用来提供数据，在不同的 APP 之间进行数据共享，在这里我不是要解释 ContentProvider 的代码原理，其实我对它的具体实现也早就忘记了。我只是对这个名称的印象颇深。 内容提供者，按字面的意思理解，就是乐于分享内容的人，内容的具体展现方式不同，有人喜欢分享干货教程，有人喜欢分享趣事，有人喜欢分">
+<meta name="keywords" content="wistbean,肯定会,写作,肯定会公众号,原创">
+<meta property="og:type" content="article">
+<meta property="og:title" content="做一个内容提供者">
+<meta property="og:url" content="https://wistbean.github.io/make-a-contentprovider.html">
+<meta property="og:site_name" content="wistbean">
+<meta property="og:description" content="之前在开发Android 的时候，有一个组件叫做 “ContentProvider” ，它主要是用来提供数据，在不同的 APP 之间进行数据共享，在这里我不是要解释 ContentProvider 的代码原理，其实我对它的具体实现也早就忘记了。我只是对这个名称的印象颇深。 内容提供者，按字面的意思理解，就是乐于分享内容的人，内容的具体展现方式不同，有人喜欢分享干货教程，有人喜欢分享趣事，有人喜欢分">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2024-01-26T15:14:15.693Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="做一个内容提供者">
+<meta name="twitter:description" content="之前在开发Android 的时候，有一个组件叫做 “ContentProvider” ，它主要是用来提供数据，在不同的 APP 之间进行数据共享，在这里我不是要解释 ContentProvider 的代码原理，其实我对它的具体实现也早就忘记了。我只是对这个名称的印象颇深。 内容提供者，按字面的意思理解，就是乐于分享内容的人，内容的具体展现方式不同，有人喜欢分享干货教程，有人喜欢分享趣事，有人喜欢分">
+    
+        <link rel="alternate" type="application/atom+xml" title="wistbean" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(https://wistbean.github.io/images/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">wistbean</h5>
+          <a href="mailto:wistbean.bb@gmail.com" title="wistbean.bb@gmail.com" class="mail">wistbean.bb@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="https://wistbean.org/python-tutorial.html"  >
+                <i class="icon icon-lg icon-coffee"></i>
+                Python零基础入门教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2NzYyNjg2Nw==&action=getalbum&album_id=2448798954764255234#wechat_redirect"  >
+                <i class="icon icon-lg icon-bug"></i>
+                Python爬虫教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://vip.fxxkpython.com/?page_id=18"  >
+                <i class="icon icon-lg icon-code"></i>
+                加入我的VIP
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/aboutMe/"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light off" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">做一个内容提供者</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="vultr ss bbr v2ray 100美金">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">做一个内容提供者</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-02-21T12:57:36.000Z" itemprop="datePublished" class="page-time">
+  2019-02-21
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/个人提升/">个人提升</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>目录</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1"><span class="post-toc-number">1.</span> <span class="post-toc-text">1</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2"><span class="post-toc-number">2.</span> <span class="post-toc-text">2</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3"><span class="post-toc-number">3.</span> <span class="post-toc-text">3</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#4"><span class="post-toc-number">4.</span> <span class="post-toc-text">4</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#5"><span class="post-toc-number">5.</span> <span class="post-toc-text">5</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-make-a-contentprovider"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">做一个内容提供者</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-02-21 20:57:36" datetime="2019-02-21T12:57:36.000Z"  itemprop="datePublished">2019-02-21</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/个人提升/">个人提升</a></li></ul>
+
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>之前在开发Android 的时候，有一个组件叫做 “ContentProvider” ，它主要是用来提供数据，在不同的 APP 之间进行数据共享，在这里我不是要解释 ContentProvider 的代码原理，其实我对它的具体实现也早就忘记了。我只是对这个名称的印象颇深。</p>
+<p>内容提供者，按字面的意思理解，就是乐于分享内容的人，内容的具体展现方式不同，有人喜欢分享干货教程，有人喜欢分享趣事，有人喜欢分享自己拍摄的生活视频等等。</p>
+<p>我认为这些人，都是值得被尊重的。我也想做一个内容提供者，事实上，我已经在做了。这次想说说我为什么想当一个内容提供者。</p>
+<h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2><p>在此之前，我想对不同的人所对待内容做一个简单的定义，即：内容提供者、内容分享者、内容搬运者以及内容使用者。</p>
+<p>内容提供者刚刚说了，就是完全原创，并且乐于分享内容的人。</p>
+<p>而内容分享者呢，我认为也算是内容提供者的一种，只不过成本很低，比如你看到了一篇不错的文章，你规范转发给你的朋友，给他们带来价值。</p>
+<p>至于内容搬运者呢？是令很多内容提供者厌烦的人，怎么说呢？他们只会搬运别人内容，这些内容并不是他们自己提供的。这些搬运者更多的是为了赚点小钱，也不管什么版权，不管别人辛苦的原创。取个吸引人的标题，把别人的内容搬运到不同的平台，有人点击就行。</p>
+<p>内容使用者就不必多说了，我们每一个人，从上学那天起，就是内容使用者。</p>
+<h2 id="2"><a href="#2" class="headerlink" title="2"></a>2</h2><p>对我来说，提供内容，其实也是一个学习过程的一部分，我一直觉得，学习是一种过程，而不是一个状态。</p>
+<p>不同的人接收到相同的知识会有不同的理解，同一个人在不同的阶段接收到相同的知识也是如此。提供内容能让我有个记录，我把我此刻所思所想，总结一下，提供出来。有些人看了，觉得很是认同，也有些人看了之后产生不一样的想法。我们再交流一下，彼此又学到了一点，这个过程本身就很美妙，不是吗？</p>
+<h2 id="3"><a href="#3" class="headerlink" title="3"></a>3</h2><p>之前看过 Fenng 的一篇文章，说的是 “利他” ，他认为如果你想获得更多价值，就应该做一个利他的人。我很认同，利他就是利己，而内容提供，就是一种利他的行为。</p>
+<p>最近我也发现，分享会给我带来运气。我想这应该是我之前 “利他” 的原因吧。</p>
+<p>在互联网平台上，我很开心的发现越来越多的人在做着利他的事情，他们都在提供有价值的内容。前两天我想开发一个小工具用来下载视频，放在以往，我可能需要从 0 开始，去研究一些请求规则，数据解析等等。但是现在，我在 GitHub 就发现原来有人就开源了一个类似的了，我只需要把他的项目 clone 下来，然后根据我自己的需要，在此之上修改一些代码，省去了自己的很多时间，不到一天，我就把小工具做的有模有样了。</p>
+<p>用了原作者的 “轮子” ，我就会心存感谢，如果下次原作者有什么需要帮助的，我如果能帮得上的，当然会提供帮助。</p>
+<h2 id="4"><a href="#4" class="headerlink" title="4"></a>4</h2><p>我提供了一些有价值的内容，可以认识到一些朋友，有些是志同道合的，我们一起聊着我们正在做的事情。有些是从我这里得到了帮助，给我加油鼓励，多好啊。</p>
+<p>除此之外，当一个内容提供者还能遇见不少机会，比如就有人找我一起创业，跟我说了很多他的想法，有培训机构找我去讲课，有人找我做外包项目，有人找我投稿，有出版社找我出书等。</p>
+<p>虽然大多我都婉拒了，但是如果我没有坚持提供内容，我想要得到的机会就会显得很是被动。</p>
+<h2 id="5"><a href="#5" class="headerlink" title="5"></a>5</h2><p>虽然做一个内容提供者好像挺多好处的，但都是需要坚持的，如果把它当作赚钱的工具，那是无法做长久的。</p>
+<p>我之所以想坚持的当一个内容提供者，除了刚刚所说的，也因为我看到的“大佬们”，大多就是在坚持不断的提供有价值的内容，我向他们学习。另外，也有一点虚荣心作祟，就是为了 “装那些努力得到的逼”。当然，往后的往后，能顺带赚点钱，就更好了。</p>
+<blockquote>
+<p>这是发表在我的个人公众号「肯定会」的文章，推荐你关注一下哦！</p>
+</blockquote>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+      <!--  
+
+        
+        关注公众号「wistbean」，发送「帅书」获取我写的技术电子书
+        
+        -->
+        在公众号「学习 Python 的正确姿势」发送「帅书」领取我写的技术电子书，转载请注明出处：
+        <a href="https://wistbean.github.io/make-a-contentprovider.html">
+                   wistbean
+        </a>
+    </div>
+    
+    <footer>
+        <a href="https://wistbean.github.io">
+            <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+            wistbean
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wistbean/">wistbean</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/写作/">写作</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原创/">原创</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/肯定会/">肯定会</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/肯定会公众号/">肯定会公众号</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/make-a-contentprovider.html&title=《做一个内容提供者》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/make-a-contentprovider.html&title=《做一个内容提供者》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/make-a-contentprovider.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《做一个内容提供者》 — wistbean&url=https://wistbean.github.io/make-a-contentprovider.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/make-a-contentprovider.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/java-ssm-6-4.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">「6-4」rest系统提供商城首页分类导航的json数据</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/java-bug-datasource-red.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">解决 Intellij IDEA Cannot resolve bean &#39;dataSource&#39; 问题</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>本站已加入 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-知识 4.0  (CC BY-NC-SA 4.0)国际协议 | 转载请注明链接出处</a></span>
+        </p>
+    </div>
+
+        <div class="bottom">
+                <p><span>wistbean &copy; 2015 - 2024</span>
+                    <span>
+                        
+                         <a href="https://wistbean.github.io/">肯定会|wistbean</a>
+                         <a href="https://fxxkpython.com">通往Python高手之路</a>
+                         <a href="https://www.bwh8.net/aff.php?aff=32874" target="_blank">搬瓦工2024优惠码</a>、
+                         <a href="https://www.vultr.com/?ref=7532860" target="_blank">vultr2024优惠码</a>
+                    </span>
+                </p>
+        </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/make-a-contentprovider.html&title=《做一个内容提供者》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/make-a-contentprovider.html&title=《做一个内容提供者》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/make-a-contentprovider.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《做一个内容提供者》 — wistbean&url=https://wistbean.github.io/make-a-contentprovider.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/make-a-contentprovider.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACMklEQVR42u3a0W6DMBBE0fz/T9PXSC1wZwyVbF8/VU0AHyKtdr37+eB1fK3um2fXfv+fP6VcMmTImJZxXC7ygOsH8/tfw86ulSFDxj4MEgrJp+km+J1v9ixDhgwZXRDEKSBHypAhQ0YX+Ah4hCdDhgwZTxWZ16nedWgmxfNjtbgMGTImZPBT9///+5X+hgwZMqZiHOHq2pbdfYJdyZAhY2kGD3BdckaSvLQhevriZMiQsSiDl6zdN9M3ykfK/vgdZMiQsTQjrRPJsRoP1uSqm2M+GTJkbMnoDsjeaIWi9qcMGTKWZvChh65ATVuhfATkph8rQ4aM5RgjoxVpwO3GwlCDU4YMGYsySFjkIW+kNI1TwN8ZrgwZMhZl8MKVF58jd+vGOGTIkLEPI10dL00KgypchgwZSzPSg630KI28jjQFlCFDxm6MtHnZRfFnAzQ6QZQhQ8YGjDQgEhhPAdNgLUOGjLUZz45ZjDQmeWshrollyJAxOYNsrps1463QNAGNfxMZMmRMzuBtyLRhydPHdID1NDWUIUPGNoz0YSOjFd3wKwq4MmTIWI7RHb2l5W6aegappAwZMhZlHOHiCR/fYle4niaFMmTIWI7B1/i2+OPJ1stpXBkyZEzLIIEyTexG3lz5ymTIkLEBoytB063EndW0MSBDhgwZoJHAH981DNC0iAwZMrZnpIdlPOAOjX3IkCFjAwZ/PEF21/KgLEOGjN0YaenIQ2Q3YPFG6StDhoxpGT9WjeTznpwmhgAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

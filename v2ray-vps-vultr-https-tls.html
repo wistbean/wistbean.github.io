@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131395348-1"></script>
+    <script data-ad-client="ca-pub-9097083609097034" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-131395348-1');
+    </script>
+
+    
+
+    
+
+    
+
+
+<!-- Baidu Push -->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<!-- End Baidu Push -->
+
+
+    <meta charset="utf-8">
+    
+    <meta name="google-site-verification" content="bcJVGqEGcBIay29szBsswzqYxY3qUzWuvu1hfad3-08">
+    
+    
+    
+    
+    <title>搭建 v2ray 服务上网安装教程, 简单 10 分钟搞定 | wistbean | wistbean</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#B5963F">
+    
+    
+    <meta name="keywords" content="vultr,vps,v2ray,v2ray 搭建,v2ray 安卓,v2ray ios,v2ray 搭建脚本,v2ray搭建详细图文教程,v2ray 搭建服务,搭建v2ray机场,搭建v2ray,搭建v2ray节点,v2ray一键搭建,v2ray搭建方法,v2ray 客户端,v2ray 一键安装,v2ray 安装,v2ray 怎么用,v2ray官方一键,ubuntu 安装 v2ray">
+    <meta name="description" content="除了使用 ss 搭建的服务 之外，也有一种新的搭建方式，那就是v2ray， v2ray 的加密方式相对稳定，v2ray 提供了各种协议，可以根据自己的需要进行搭建。本篇 v2ray 搭建详细图文教程可以让你少走弯路，通过 v2ray 一键搭建脚本以及安装注意事项可以很快让自己拥有属于自己稳定高效的代理代理服务。 搭建 v2ray 前的准备境外 vps 购买关于境外云服务器，对性价比要求高的可以考虑">
+<meta name="keywords" content="vultr,vps,v2ray,v2ray 搭建,v2ray 安卓,v2ray ios,v2ray 搭建脚本,v2ray搭建详细图文教程,v2ray 搭建服务,搭建v2ray机场,搭建v2ray,搭建v2ray节点,v2ray一键搭建,v2ray搭建方法,v2ray 客户端,v2ray 一键安装,v2ray 安装,v2ray 怎么用,v2ray官方一键,ubuntu 安装 v2ray">
+<meta property="og:type" content="article">
+<meta property="og:title" content="搭建 v2ray 服务上网安装教程, 简单 10 分钟搞定">
+<meta property="og:url" content="https://wistbean.github.io/v2ray-vps-vultr-https-tls.html">
+<meta property="og:site_name" content="wistbean">
+<meta property="og:description" content="除了使用 ss 搭建的服务 之外，也有一种新的搭建方式，那就是v2ray， v2ray 的加密方式相对稳定，v2ray 提供了各种协议，可以根据自己的需要进行搭建。本篇 v2ray 搭建详细图文教程可以让你少走弯路，通过 v2ray 一键搭建脚本以及安装注意事项可以很快让自己拥有属于自己稳定高效的代理代理服务。 搭建 v2ray 前的准备境外 vps 购买关于境外云服务器，对性价比要求高的可以考虑">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://wistbean.org/images/vultr-register.png">
+<meta property="og:image" content="https://wistbean.org/images/vultr-login.png">
+<meta property="og:image" content="https://wistbean.org/images/vultr-location.png">
+<meta property="og:image" content="https://wistbean.org/images/vultr-buy.gif">
+<meta property="og:image" content="https://wistbean.org/images/vultr00.png">
+<meta property="og:image" content="https://wistbean.org/images/vultr01.png">
+<meta property="og:image" content="https://wistbean.org/images/vultr02.png">
+<meta property="og:image" content="https://wistbean.github.io/imgase/v2ray-cloude-server">
+<meta property="og:image" content="https://wistbean.org/images/vultr03.png">
+<meta property="og:image" content="https://wistbean.github.io/images/vps-5.png">
+<meta property="og:image" content="https://wistbean.org/images/vultr05.png">
+<meta property="og:image" content="https://wistbean.org/images/vultr06.png">
+<meta property="og:image" content="https://wistbean.org/images/vultr07.png">
+<meta property="og:image" content="https://wistbean.github.io/images/v2ray_image02.png">
+<meta property="og:image" content="https://wistbean.github.io/images/v2ray_image03.png">
+<meta property="og:image" content="https://wistbean.org/images/linux-panel.png">
+<meta property="og:image" content="https://wistbean.org/images/install_v2ray.png">
+<meta property="og:updated_time" content="2024-01-26T15:14:15.822Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="搭建 v2ray 服务上网安装教程, 简单 10 分钟搞定">
+<meta name="twitter:description" content="除了使用 ss 搭建的服务 之外，也有一种新的搭建方式，那就是v2ray， v2ray 的加密方式相对稳定，v2ray 提供了各种协议，可以根据自己的需要进行搭建。本篇 v2ray 搭建详细图文教程可以让你少走弯路，通过 v2ray 一键搭建脚本以及安装注意事项可以很快让自己拥有属于自己稳定高效的代理代理服务。 搭建 v2ray 前的准备境外 vps 购买关于境外云服务器，对性价比要求高的可以考虑">
+<meta name="twitter:image" content="https://wistbean.org/images/vultr-register.png">
+    
+        <link rel="alternate" type="application/atom+xml" title="wistbean" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(https://wistbean.github.io/images/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">wistbean</h5>
+          <a href="mailto:wistbean.bb@gmail.com" title="wistbean.bb@gmail.com" class="mail">wistbean.bb@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="https://wistbean.org/python-tutorial.html"  >
+                <i class="icon icon-lg icon-coffee"></i>
+                Python零基础入门教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2NzYyNjg2Nw==&action=getalbum&album_id=2448798954764255234#wechat_redirect"  >
+                <i class="icon icon-lg icon-bug"></i>
+                Python爬虫教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://vip.fxxkpython.com/?page_id=18"  >
+                <i class="icon icon-lg icon-code"></i>
+                加入我的VIP
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/aboutMe/"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light off" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">搭建 v2ray 服务上网安装教程, 简单 10 分钟搞定</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="vultr ss bbr v2ray 100美金">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">搭建 v2ray 服务上网安装教程, 简单 10 分钟搞定</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2022-01-09T09:53:55.000Z" itemprop="datePublished" class="page-time">
+  2022-01-09
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/服务器/">服务器</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>目录</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#搭建-v2ray-前的准备"><span class="post-toc-number">1.</span> <span class="post-toc-text">搭建 v2ray 前的准备</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#境外-vps-购买"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">境外 vps 购买</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#注册vultr"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">注册vultr</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#vultr-购买流程"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">vultr 购买流程</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#选择服务器的机房位置，一般来说离你越近越好，速度会快那么一丢丢："><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">选择服务器的机房位置，一般来说离你越近越好，速度会快那么一丢丢：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#服务器类型选择云服务器："><span class="post-toc-number">1.3.2.</span> <span class="post-toc-text">服务器类型选择云服务器：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#选择服务器的系统类型，选择-CentOS-版本："><span class="post-toc-number">1.3.3.</span> <span class="post-toc-text">选择服务器的系统类型，选择 CentOS 版本：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#选择服务器的价格和具体配置，自己用的话选最低的就够用了："><span class="post-toc-number">1.3.4.</span> <span class="post-toc-text">选择服务器的价格和具体配置，自己用的话选最低的就够用了：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#确认购买"><span class="post-toc-number">1.3.5.</span> <span class="post-toc-text">确认购买</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#拥有一台服务器"><span class="post-toc-number">1.3.6.</span> <span class="post-toc-text">拥有一台服务器</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#vps-连接"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">vps 连接</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#快速搭建-v2ray"><span class="post-toc-number">2.</span> <span class="post-toc-text">快速搭建 v2ray</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#v2ray-一键脚本安装"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">v2ray 一键脚本安装</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#使用-v2ray"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">使用 v2ray</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#同步服务器的时间"><span class="post-toc-number">2.2.1.</span> <span class="post-toc-text">同步服务器的时间</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#开启-v2ray"><span class="post-toc-number">2.2.2.</span> <span class="post-toc-text">开启 v2ray</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#解决-v2ray-invalid-user-VMessAEAD可"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">解决 v2ray invalid user: VMessAEAD可</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#重启v2ray："><span class="post-toc-number">2.4.</span> <span class="post-toc-text">重启v2ray：</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#客户端使用-v2ray"><span class="post-toc-number">3.</span> <span class="post-toc-text">客户端使用 v2ray</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Windows-使用-v2ray"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">Windows 使用 v2ray</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#macos-使用-v2ray"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">macos 使用 v2ray</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Linux-用户"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">Linux 用户</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#v2ray-使用相关问题"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">v2ray 使用相关问题</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#V2ray-相关"><span class="post-toc-number">4.</span> <span class="post-toc-text">V2ray 相关</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#v2ray-官网"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">v2ray 官网</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#v2ray-GitHub"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">v2ray GitHub</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-v2ray-vps-vultr-https-tls"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">搭建 v2ray 服务上网安装教程, 简单 10 分钟搞定</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2022-01-09 17:53:55" datetime="2022-01-09T09:53:55.000Z"  itemprop="datePublished">2022-01-09</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/服务器/">服务器</a></li></ul>
+
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>除了使用 <a href="https://wistbean.org/vultr-vps-bbr-ss.html" target="_blank" rel="noopener">ss 搭建的服务</a> 之外，也有一种新的搭建方式，那就是<a href="http://v2ray.com/" target="_blank" rel="noopener">v2ray</a>， v2ray 的加密方式相对稳定，v2ray 提供了各种协议，可以根据自己的需要进行搭建。本篇 <a href="https://wistbean.org/v2ray-vps-vultr-https-tls.html" target="_blank" rel="noopener">v2ray 搭建详细图文教程</a>可以让你少走弯路，通过 v2ray 一键搭建脚本以及安装注意事项可以很快让自己拥有属于自己稳定高效的代理代理服务。</p>
+<h1 id="搭建-v2ray-前的准备"><a href="#搭建-v2ray-前的准备" class="headerlink" title="搭建 v2ray 前的准备"></a>搭建 v2ray 前的准备</h1><h2 id="境外-vps-购买"><a href="#境外-vps-购买" class="headerlink" title="境外 vps 购买"></a>境外 vps 购买</h2><p>关于境外云服务器，对性价比要求高的可以考虑 <a href="https://www.vultr.com/?ref=7532860" target="_blank" rel="noopener">vultr</a> ，vultr 最近在做活动，点击<a href="https://www.vultr.com/?ref=7532860" target="_blank" rel="noopener">获得 100 美元优惠注册</a>。</p>
+<h2 id="注册vultr"><a href="#注册vultr" class="headerlink" title="注册vultr"></a>注册vultr</h2><p>点击 <a href="https://www.vultr.com/?ref=7532860" target="_blank" rel="noopener">vultr官网</a> 进行注册：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://wistbean.org/images/vultr-register.png" alt="注册vultr" title="">
+                </div>
+                <div class="image-caption">注册vultr</div>
+            </figure>
+
+<p>在这里输入你的邮箱和密码，接着点击按钮「Create Account」创建账号，然后 vultr 会给你的注册邮箱发送一份验证邮件，激活就好了。</p>
+<p>接着就可以登录 vultr 官网了：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://wistbean.org/images/vultr-login.png" alt="登录vultr" title="">
+                </div>
+                <div class="image-caption">登录vultr</div>
+            </figure>
+
+
+<h2 id="vultr-购买流程"><a href="#vultr-购买流程" class="headerlink" title="vultr 购买流程"></a>vultr 购买流程</h2><p>vultr 现在有 16 个境外节点，选择一个离你最近的就好了。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://wistbean.org/images/vultr-location.png" alt="登录vultr" title="">
+                </div>
+                <div class="image-caption">登录vultr</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://wistbean.org/images/vultr-buy.gif" alt="购买vultr" title="">
+                </div>
+                <div class="image-caption">购买vultr</div>
+            </figure>
+
+<p>登录进去之后选择左边的 billing 的菜单进行充值，vultr提供的支付方式简直完美，支持信用卡，比特币，paypal，支付宝，微信支付，在这里可以进行充值支付。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://wistbean.org/images/vultr00.png" alt="vultr充值" title="">
+                </div>
+                <div class="image-caption">vultr充值</div>
+            </figure>
+
+<p>充值完成之后，就可以左侧的 Sevrers 菜单，接着可以点击 <code>deploy one</code> 或者右侧的 + 号来选购你要的服务器：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://wistbean.org/images/vultr01.png" alt="vultr充值" title="">
+                </div>
+                <div class="image-caption">vultr充值</div>
+            </figure>
+
+<h3 id="选择服务器的机房位置，一般来说离你越近越好，速度会快那么一丢丢："><a href="#选择服务器的机房位置，一般来说离你越近越好，速度会快那么一丢丢：" class="headerlink" title="选择服务器的机房位置，一般来说离你越近越好，速度会快那么一丢丢："></a>选择服务器的机房位置，一般来说离你越近越好，速度会快那么一丢丢：</h3><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://wistbean.org/images/vultr02.png" alt="vultr服务器位置" title="">
+                </div>
+                <div class="image-caption">vultr服务器位置</div>
+            </figure>
+
+<h3 id="服务器类型选择云服务器："><a href="#服务器类型选择云服务器：" class="headerlink" title="服务器类型选择云服务器："></a>服务器类型选择云服务器：</h3><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/imgase/v2ray-cloude-server" alt="云服务器" title="">
+                </div>
+                <div class="image-caption">云服务器</div>
+            </figure>
+
+<h3 id="选择服务器的系统类型，选择-CentOS-版本："><a href="#选择服务器的系统类型，选择-CentOS-版本：" class="headerlink" title="选择服务器的系统类型，选择 CentOS 版本："></a>选择服务器的系统类型，选择 CentOS 版本：</h3><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://wistbean.org/images/vultr03.png" alt="vultr系统类型" title="">
+                </div>
+                <div class="image-caption">vultr系统类型</div>
+            </figure>
+
+<h3 id="选择服务器的价格和具体配置，自己用的话选最低的就够用了："><a href="#选择服务器的价格和具体配置，自己用的话选最低的就够用了：" class="headerlink" title="选择服务器的价格和具体配置，自己用的话选最低的就够用了："></a>选择服务器的价格和具体配置，自己用的话选最低的就够用了：</h3><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/vps-5.png" alt="vultr配置" title="">
+                </div>
+                <div class="image-caption">vultr配置</div>
+            </figure>
+
+<h3 id="确认购买"><a href="#确认购买" class="headerlink" title="确认购买"></a>确认购买</h3><p>其它步骤可以忽略，然后点击右下角的 Deploy Now：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://wistbean.org/images/vultr05.png" alt="vultr" title="">
+                </div>
+                <div class="image-caption">vultr</div>
+            </figure>
+
+<h3 id="拥有一台服务器"><a href="#拥有一台服务器" class="headerlink" title="拥有一台服务器"></a>拥有一台服务器</h3><p>点击之后你就拥有一台属于你自己的服务器了：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://wistbean.org/images/vultr06.png" alt="vultr" title="">
+                </div>
+                <div class="image-caption">vultr</div>
+            </figure>
+
+<p>点击你的服务器，进去之后你就可以看到你的服务器的ip地址和账号密码了：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://wistbean.org/images/vultr07.png" alt="vultr" title="">
+                </div>
+                <div class="image-caption">vultr</div>
+            </figure>
+
+
+<p>以上信息等会用来从你的电脑连接到你的服务器上。</p>
+<p>选好之后，点击右下角的「Deploy Now」。</p>
+<p>这时候服务器就购买完成了：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/v2ray_image02.png" alt="vultr服务器" title="">
+                </div>
+                <div class="image-caption">vultr服务器</div>
+            </figure>
+
+<p>点进去可以看到你服务器的 IP 地址和密码：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/v2ray_image03.png" alt="vultr服务器" title="">
+                </div>
+                <div class="image-caption">vultr服务器</div>
+            </figure>
+
+
+
+<h2 id="vps-连接"><a href="#vps-连接" class="headerlink" title="vps 连接"></a>vps 连接</h2><p>如果你使用的是 Linux 或者 Mac 系统，可以直接使用 ssh 命令连接 vps:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh root@你的ip地址</span><br></pre></td></tr></table></figure>
+
+<p>如果是 win 用户可以下载连接 vps 的工具，连接工具有很多个，根据你的需要，以下随意下载一个连接工具即可：</p>
+<ul>
+<li><a href="https://www.ssh.com/a/putty-0.70-installer.msi" target="_blank" rel="noopener">PUTTY Windows版本下载</a></li>
+<li><a href="https://www.ssh.com/ssh/putty/mac/" target="_blank" rel="noopener">PUTTY MAC版本下载</a></li>
+<li><a href="https://pan.baidu.com/s/11W4WHjCjmiNw6einQNrcPg" target="_blank" rel="noopener">SecureCRT</a> ,提取码：tyux</li>
+</ul>
+<p>接着打开连接工具，然后输入你刚刚购买的<strong>服务器 ip 地址和端口（端口号是：22），账户名，和密码</strong>就可以连接了。接下来就可以操作你的服务器了。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://wistbean.org/images/linux-panel.png" alt="服务器CentOS系统" title="">
+                </div>
+                <div class="image-caption">服务器CentOS系统</div>
+            </figure>
+
+
+<h1 id="快速搭建-v2ray"><a href="#快速搭建-v2ray" class="headerlink" title="快速搭建 v2ray"></a>快速搭建 v2ray</h1><h2 id="v2ray-一键脚本安装"><a href="#v2ray-一键脚本安装" class="headerlink" title="v2ray 一键脚本安装"></a>v2ray 一键脚本安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash &lt;(curl -sL https://raw.githubusercontent.com/hijkpw/scripts/master/goV2.sh)</span><br></pre></td></tr></table></figure>
+
+<p>执行之后出现以下内容 ，说明安装成功：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://wistbean.org/images/install_v2ray.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+<p>记住端口号和 UUID ，客户端配置的时候需要用到，当然，你也可以使用如下命令查看配置：</p>
+<blockquote>
+<p>cat &#x2F;etc&#x2F;v2ray&#x2F;config.json</p>
+</blockquote>
+<h2 id="使用-v2ray"><a href="#使用-v2ray" class="headerlink" title="使用 v2ray"></a>使用 v2ray</h2><h3 id="同步服务器的时间"><a href="#同步服务器的时间" class="headerlink" title="同步服务器的时间"></a>同步服务器的时间</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum -y install ntpdate</span><br><span class="line">ntpdate ntp1.aliyun.com</span><br></pre></td></tr></table></figure>
+
+<h3 id="开启-v2ray"><a href="#开启-v2ray" class="headerlink" title="开启 v2ray"></a>开启 v2ray</h3><p>输入以下命令开启：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl enable v2ray</span><br><span class="line">systemctl start v2ray</span><br></pre></td></tr></table></figure>
+
+<p>复制好你定义的 port 和 id，等会在客户端中使用。</p>
+<h2 id="解决-v2ray-invalid-user-VMessAEAD可"><a href="#解决-v2ray-invalid-user-VMessAEAD可" class="headerlink" title="解决 v2ray invalid user: VMessAEAD可"></a>解决 v2ray invalid user: VMessAEAD可</h2><p>修改文件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/systemd/system/v2ray.service</span><br></pre></td></tr></table></figure>
+
+<p>将 Execstart 这一行改为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ExecStart=/usr/bin/env v2ray.vmess.aead.forced=false /usr/bin/v2ray/v2ray -config /etc/v2ray/config.json</span><br></pre></td></tr></table></figure>
+
+<p>按下 <code>Esc</code> 然后输入 <code>:wq</code> 保存退出</p>
+<h2 id="重启v2ray："><a href="#重启v2ray：" class="headerlink" title="重启v2ray："></a>重启v2ray：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl daemon-reload</span><br><span class="line">systemctl restart v2ray</span><br></pre></td></tr></table></figure>
+
+<h1 id="客户端使用-v2ray"><a href="#客户端使用-v2ray" class="headerlink" title="客户端使用 v2ray"></a>客户端使用 v2ray</h1><h2 id="Windows-使用-v2ray"><a href="#Windows-使用-v2ray" class="headerlink" title="Windows 使用 v2ray"></a>Windows 使用 v2ray</h2><p>搭建好了之后可以在你的系统使用了，到 <a href="https://github.com/v2ray/v2ray-core/releases" target="_blank" rel="noopener">v2ray 客户端下载</a> ，安装后填入你刚刚在服务器中得到的ip、uuid、port后开启运行即可。</p>
+<h2 id="macos-使用-v2ray"><a href="#macos-使用-v2ray" class="headerlink" title="macos 使用 v2ray"></a>macos 使用 v2ray</h2><p>下载<a href="https://github.com/Cenmrev/V2RayX/releases" target="_blank" rel="noopener">v2rayx</a>, 接着打开菜单下的 Config， 将填入你刚刚在服务器中得到的ip、uuid、port填入后开启运行即可。</p>
+<h2 id="Linux-用户"><a href="#Linux-用户" class="headerlink" title="Linux 用户"></a>Linux 用户</h2><p>在客户端按照上述方法安装 v2ray ，安装完之后将 config.json 文件更改为上述的内容，将服务器的配置信息更改后运行即可。</p>
+<p>配置如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;log&quot;: &#123;</span><br><span class="line">    &quot;loglevel&quot;: &quot;info&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;inbounds&quot;: [</span><br><span class="line">    &#123;</span><br><span class="line">      &quot;port&quot;: 1080,</span><br><span class="line">      &quot;protocol&quot;: &quot;socks&quot;,</span><br><span class="line">      &quot;sniffing&quot;: &#123;</span><br><span class="line">        &quot;enabled&quot;: true,</span><br><span class="line">        &quot;destOverride&quot;: [</span><br><span class="line">          &quot;http&quot;,</span><br><span class="line">          &quot;tls&quot;</span><br><span class="line">        ]</span><br><span class="line">      &#125;,</span><br><span class="line">      &quot;settings&quot;: &#123;</span><br><span class="line">        &quot;udp&quot;: true</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      &quot;port&quot;: 8080,</span><br><span class="line">      &quot;protocol&quot;: &quot;http&quot;,</span><br><span class="line">      &quot;sniffing&quot;: &#123;</span><br><span class="line">        &quot;enabled&quot;: true,</span><br><span class="line">        &quot;destOverride&quot;: [</span><br><span class="line">          &quot;http&quot;,</span><br><span class="line">          &quot;tls&quot;</span><br><span class="line">        ]</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  ],</span><br><span class="line">  &quot;outbounds&quot;: [</span><br><span class="line">    &#123;</span><br><span class="line">      &quot;tag&quot;: &quot;proxy-vmess&quot;,</span><br><span class="line">      &quot;protocol&quot;: &quot;vmess&quot;,</span><br><span class="line">      &quot;settings&quot;: &#123;</span><br><span class="line">        &quot;vnext&quot;: [</span><br><span class="line">          &#123;</span><br><span class="line">            &quot;address&quot;: &quot;你的服务器ip地址&quot;,</span><br><span class="line">            &quot;port&quot;: 你的v2ray端口,</span><br><span class="line">            &quot;users&quot;: [</span><br><span class="line">              &#123;</span><br><span class="line">                &quot;id&quot;: &quot;你的uuid&quot;,</span><br><span class="line">                &quot;alterId&quot;: 4</span><br><span class="line">              &#125;</span><br><span class="line">            ]</span><br><span class="line">          &#125;</span><br><span class="line">        ]</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      &quot;tag&quot;: &quot;direct&quot;,</span><br><span class="line">      &quot;settings&quot;: &#123;&#125;,</span><br><span class="line">      &quot;protocol&quot;: &quot;freedom&quot;</span><br><span class="line">    &#125;</span><br><span class="line">  ],</span><br><span class="line">  &quot;dns&quot;: &#123;</span><br><span class="line">    &quot;server&quot;: [</span><br><span class="line">      &quot;8.8.8.8&quot;,</span><br><span class="line">      &quot;1.1.1.1&quot;</span><br><span class="line">    ]</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  &quot;routing&quot;: &#123;</span><br><span class="line">    &quot;domainStrategy&quot;: &quot;IPOnDemand&quot;,</span><br><span class="line">    &quot;rules&quot;: [</span><br><span class="line">      &#123;</span><br><span class="line">        &quot;type&quot;: &quot;field&quot;,</span><br><span class="line">        &quot;outboundTag&quot;: &quot;proxy-vmess&quot;</span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        &quot;type&quot;: &quot;field&quot;,</span><br><span class="line">        &quot;domain&quot;: [</span><br><span class="line">          &quot;geosite:cn&quot;</span><br><span class="line">        ],</span><br><span class="line">        &quot;outboundTag&quot;: &quot;direct&quot;</span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        &quot;type&quot;: &quot;field&quot;,</span><br><span class="line">        &quot;outboundTag&quot;: &quot;direct&quot;,</span><br><span class="line">        &quot;ip&quot;: [</span><br><span class="line">          &quot;geoip:cn&quot;,</span><br><span class="line">          &quot;geoip:private&quot;</span><br><span class="line">        ]</span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="v2ray-使用相关问题"><a href="#v2ray-使用相关问题" class="headerlink" title="v2ray 使用相关问题"></a>v2ray 使用相关问题</h2><ul>
+<li>客户端突然无法访问了<br>解决：<a href="https://github.com/v2ray/v2ray-core/issues/1871" target="_blank" rel="noopener">https://github.com/v2ray/v2ray-core/issues/1871</a><br>（更换端口）</li>
+</ul>
+<h1 id="V2ray-相关"><a href="#V2ray-相关" class="headerlink" title="V2ray 相关"></a>V2ray 相关</h1><h2 id="v2ray-官网"><a href="#v2ray-官网" class="headerlink" title="v2ray 官网"></a>v2ray 官网</h2><ul>
+<li><a href="https://www.v2ray.com/" target="_blank" rel="noopener">V2Ray 的使用手册</a></li>
+</ul>
+<h2 id="v2ray-GitHub"><a href="#v2ray-GitHub" class="headerlink" title="v2ray GitHub"></a>v2ray GitHub</h2><ul>
+<li><a href="https://github.com/v2ray/v2ray-core" target="_blank" rel="noopener">v2ray 源码</a></li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+      <!--  
+
+        
+        关注公众号「wistbean」，发送「帅书」获取我写的技术电子书
+        
+        -->
+        在公众号「学习 Python 的正确姿势」发送「帅书」领取我写的技术电子书，转载请注明出处：
+        <a href="https://wistbean.github.io/v2ray-vps-vultr-https-tls.html">
+                   wistbean
+        </a>
+    </div>
+    
+    <footer>
+        <a href="https://wistbean.github.io">
+            <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+            wistbean
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu-安装-v2ray/">ubuntu 安装 v2ray</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/v2ray/">v2ray</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/v2ray-ios/">v2ray ios</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/v2ray-一键安装/">v2ray 一键安装</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/v2ray-安卓/">v2ray 安卓</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/v2ray-安装/">v2ray 安装</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/v2ray-客户端/">v2ray 客户端</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/v2ray-怎么用/">v2ray 怎么用</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/v2ray-搭建/">v2ray 搭建</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/v2ray-搭建服务/">v2ray 搭建服务</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/v2ray-搭建脚本/">v2ray 搭建脚本</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/v2ray一键搭建/">v2ray一键搭建</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/v2ray官方一键/">v2ray官方一键</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/v2ray搭建方法/">v2ray搭建方法</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/v2ray搭建详细图文教程/">v2ray搭建详细图文教程</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vps/">vps</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vultr/">vultr</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/搭建v2ray/">搭建v2ray</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/搭建v2ray机场/">搭建v2ray机场</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/搭建v2ray节点/">搭建v2ray节点</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/v2ray-vps-vultr-https-tls.html&title=《搭建 v2ray 服务上网安装教程, 简单 10 分钟搞定》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/v2ray-vps-vultr-https-tls.html&title=《搭建 v2ray 服务上网安装教程, 简单 10 分钟搞定》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/v2ray-vps-vultr-https-tls.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《搭建 v2ray 服务上网安装教程, 简单 10 分钟搞定》 — wistbean&url=https://wistbean.github.io/v2ray-vps-vultr-https-tls.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/v2ray-vps-vultr-https-tls.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/yi-dian-xiang-fa.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">通宵做完这件事后的一点想法</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/bangwagong-vultr-na-ge-hao.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">搬瓦工和vultr哪个好? VPS 对比以及优惠攻略</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>本站已加入 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-知识 4.0  (CC BY-NC-SA 4.0)国际协议 | 转载请注明链接出处</a></span>
+        </p>
+    </div>
+
+        <div class="bottom">
+                <p><span>wistbean &copy; 2015 - 2024</span>
+                    <span>
+                        
+                         <a href="https://wistbean.github.io/">肯定会|wistbean</a>
+                         <a href="https://fxxkpython.com">通往Python高手之路</a>
+                         <a href="https://www.bwh8.net/aff.php?aff=32874" target="_blank">搬瓦工2024优惠码</a>、
+                         <a href="https://www.vultr.com/?ref=7532860" target="_blank">vultr2024优惠码</a>
+                    </span>
+                </p>
+        </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/v2ray-vps-vultr-https-tls.html&title=《搭建 v2ray 服务上网安装教程, 简单 10 分钟搞定》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/v2ray-vps-vultr-https-tls.html&title=《搭建 v2ray 服务上网安装教程, 简单 10 分钟搞定》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/v2ray-vps-vultr-https-tls.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《搭建 v2ray 服务上网安装教程, 简单 10 分钟搞定》 — wistbean&url=https://wistbean.github.io/v2ray-vps-vultr-https-tls.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/v2ray-vps-vultr-https-tls.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACKUlEQVR42u3aQZIiMQwEwPn/p9nrXPBUyUAsdvpENNDt7INCsvTzE6/Hr/X7SvLtsyvJfV68MDAwvpbxWK5nv9mhrpHrfz3dAwYGxgWMJBS24Xh9PQnNyd4wMDAwdhK7NpVMkBgYGBh5urYOuOv7z5JLDAwMjKSIbUlR8fn5WhwDA+MLGfmp++c/v6W/gYGB8VWMR7lmgXV2xFbsCgMD42hGHuBmyOQOUYEalLsYGBinMj4TLtukMz+eG06LYGBgHMF4VcGZvJS82fD0XxgYGEcz2gCaD1XsNBKStigGBsZtjFe1DWbBtx3geHv3AwMD4z9j5OnXzkbbgrYNuxgYGGcz8sOypNDdL2t3QjYGBsbZjLb1mJzMtw9ORjqKZBQDA+MgRj4w0R7o56Xv+onFtAgGBsYFjJ1JhrwVmtSeLRgDA+NmxmwULE8cZ0XsH6khBgbGoYz1pmcd0dkoRtsMwMDAuIGxMxiRh9HXYuqmJgYGxhGMfIv5UNfsuK1tOWBgYNzGyNPBvKCdvaA2rGNgYNzJaJuUeTNypxj+41sMDIzLGG0I3m92tiMaw9QQAwPjCxmPcu00APKQWg9tYGBgHM1oj8ZmgTIJwe9IKzEwME5iJFtsxzJmwXd9n6KIxcDAOJSxk/blLyJhD5EYGBgYo5GLJFyun14UsRgYGBijY7U2xdwZ5sDAwLiB0SZ2eVhst5i/AgwMjHsYeemYD1jsbCIvdzEwMC5g/AM87CLgt21s7gAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

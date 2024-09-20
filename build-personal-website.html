@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131395348-1"></script>
+    <script data-ad-client="ca-pub-9097083609097034" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-131395348-1');
+    </script>
+
+    
+
+    
+
+    
+
+
+<!-- Baidu Push -->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<!-- End Baidu Push -->
+
+
+    <meta charset="utf-8">
+    
+    <meta name="google-site-verification" content="bcJVGqEGcBIay29szBsswzqYxY3qUzWuvu1hfad3-08">
+    
+    
+    
+    
+    <title>hexo搭建个人网站博客完全教程 | wistbean | wistbean</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#B5963F">
+    
+    
+    <meta name="keywords" content="vultr,个人网站,教程,Git,Nginx,hexo,blog,GitHub搭建博客,搭建个人博客教程,技术博客搭建教程,hexo 部署到GitHub,个人网站搭建教程">
+    <meta name="description" content="为什么要有自己的个人网站呢？我觉得现在身处于互联网时代，有自己的个人网站其实就和互联网上的一张名片差不多了，在这里可以不断的记录自己的生活，总结自己的知识，人生思考什么的，以后介绍自己直接把网站扔给对方。一来是可以装下逼，二来是可以让对方更好的了解自己。 再者就是相对的自由了，现在市面上有很多 Blog 系统，你只要注册一下，就可以直接在他们的平台生成一个你自己的blog，虽然很方便，但是你要付出">
+<meta name="keywords" content="vultr,个人网站,教程,Git,Nginx,hexo,blog,GitHub搭建博客,搭建个人博客教程,技术博客搭建教程,hexo 部署到GitHub,个人网站搭建教程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo搭建个人网站博客完全教程">
+<meta property="og:url" content="https://wistbean.github.io/build-personal-website.html">
+<meta property="og:site_name" content="wistbean">
+<meta property="og:description" content="为什么要有自己的个人网站呢？我觉得现在身处于互联网时代，有自己的个人网站其实就和互联网上的一张名片差不多了，在这里可以不断的记录自己的生活，总结自己的知识，人生思考什么的，以后介绍自己直接把网站扔给对方。一来是可以装下逼，二来是可以让对方更好的了解自己。 再者就是相对的自由了，现在市面上有很多 Blog 系统，你只要注册一下，就可以直接在他们的平台生成一个你自己的blog，虽然很方便，但是你要付出">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://wistbean.org/images/blog01.png">
+<meta property="og:image" content="https://wistbean.org/images/blog02.png">
+<meta property="og:image" content="https://wistbean.org/images/blog03.png">
+<meta property="og:image" content="https://wistbean.org/images/blog1.png">
+<meta property="og:image" content="https://wistbean.org/images/blog2.png">
+<meta property="og:image" content="https://wistbean.org/images/blog3.png">
+<meta property="og:image" content="https://wistbean.org/images/blog4.png">
+<meta property="og:image" content="https://wistbean.org/images/domains.png">
+<meta property="og:updated_time" content="2024-01-26T15:14:15.595Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="hexo搭建个人网站博客完全教程">
+<meta name="twitter:description" content="为什么要有自己的个人网站呢？我觉得现在身处于互联网时代，有自己的个人网站其实就和互联网上的一张名片差不多了，在这里可以不断的记录自己的生活，总结自己的知识，人生思考什么的，以后介绍自己直接把网站扔给对方。一来是可以装下逼，二来是可以让对方更好的了解自己。 再者就是相对的自由了，现在市面上有很多 Blog 系统，你只要注册一下，就可以直接在他们的平台生成一个你自己的blog，虽然很方便，但是你要付出">
+<meta name="twitter:image" content="https://wistbean.org/images/blog01.png">
+    
+        <link rel="alternate" type="application/atom+xml" title="wistbean" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(https://wistbean.github.io/images/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">wistbean</h5>
+          <a href="mailto:wistbean.bb@gmail.com" title="wistbean.bb@gmail.com" class="mail">wistbean.bb@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="https://wistbean.org/python-tutorial.html"  >
+                <i class="icon icon-lg icon-coffee"></i>
+                Python零基础入门教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2NzYyNjg2Nw==&action=getalbum&album_id=2448798954764255234#wechat_redirect"  >
+                <i class="icon icon-lg icon-bug"></i>
+                Python爬虫教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://vip.fxxkpython.com/?page_id=18"  >
+                <i class="icon icon-lg icon-code"></i>
+                加入我的VIP
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/aboutMe/"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light off" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">hexo搭建个人网站博客完全教程</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="vultr ss bbr v2ray 100美金">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">hexo搭建个人网站博客完全教程</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-08-30T11:38:13.000Z" itemprop="datePublished" class="page-time">
+  2018-08-30
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/个人网站/">个人网站</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/个人网站/教程/">教程</a></li></ul></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>目录</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#为什么要有自己的个人网站呢？"><span class="post-toc-number">1.</span> <span class="post-toc-text">为什么要有自己的个人网站呢？</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#使用-Hexo-框架来搭建个人网站"><span class="post-toc-number">2.</span> <span class="post-toc-text">使用 Hexo 框架来搭建个人网站</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#开始搭建"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">开始搭建</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#优化-hexo-博客主题"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">优化 hexo 博客主题</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#修改你的网站中的个人信息"><span class="post-toc-number">2.2.1.</span> <span class="post-toc-text">修改你的网站中的个人信息</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#选一个Hexo主题"><span class="post-toc-number">2.2.2.</span> <span class="post-toc-text">选一个Hexo主题</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#下载Hexo主题"><span class="post-toc-number">2.2.3.</span> <span class="post-toc-text">下载Hexo主题</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#配置主题"><span class="post-toc-number">2.2.4.</span> <span class="post-toc-text">配置主题</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#重新生成和运行"><span class="post-toc-number">2.2.5.</span> <span class="post-toc-text">重新生成和运行</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#访问一下看看，是不是比之前好看多了？"><span class="post-toc-number">2.2.6.</span> <span class="post-toc-text">访问一下看看，是不是比之前好看多了？</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#hexo博客的第一篇文章，打上标签和分类"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">hexo博客的第一篇文章，打上标签和分类</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#两种方式来新建你的博文"><span class="post-toc-number">2.3.1.</span> <span class="post-toc-text">两种方式来新建你的博文</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#命令形式"><span class="post-toc-number">2.3.1.1.</span> <span class="post-toc-text">命令形式</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#直接新建方式"><span class="post-toc-number">2.3.1.2.</span> <span class="post-toc-text">直接新建方式</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#给你的文章打上标签"><span class="post-toc-number">2.3.2.</span> <span class="post-toc-text">给你的文章打上标签</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#给你的文章添加分类"><span class="post-toc-number">2.3.3.</span> <span class="post-toc-text">给你的文章添加分类</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#给你的文章添加评论"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">给你的文章添加评论</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#让全世界的人都认识你"><span class="post-toc-number">3.</span> <span class="post-toc-text">让全世界的人都认识你</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#创建-Github-pages-仓库"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">创建 Github pages 仓库</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装-hexo-deployer-git"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">安装 hexo-deployer-git</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#配置你的Git"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">配置你的Git</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#推送你的网站到Github上"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">推送你的网站到Github上</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#访问你的网站"><span class="post-toc-number">3.5.</span> <span class="post-toc-text">访问你的网站</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#要有点个性，绑上你的域名"><span class="post-toc-number">4.</span> <span class="post-toc-text">要有点个性，绑上你的域名</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#购买域名"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">购买域名</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#绑定域名"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">绑定域名</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#添加-CNAME-文件"><span class="post-toc-number">4.2.1.</span> <span class="post-toc-text">添加 CNAME 文件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#在你的域名商后台进行-DNS-解析添加两条记录："><span class="post-toc-number">4.2.2.</span> <span class="post-toc-text">在你的域名商后台进行 DNS 解析添加两条记录：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#GitHub-设置域名"><span class="post-toc-number">4.2.3.</span> <span class="post-toc-text">GitHub 设置域名</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#服务器搞起，完全自主权"><span class="post-toc-number">5.</span> <span class="post-toc-text">服务器搞起，完全自主权</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#购买服务器"><span class="post-toc-number">5.0.1.</span> <span class="post-toc-text">购买服务器</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#使用-Nginx"><span class="post-toc-number">5.0.2.</span> <span class="post-toc-text">使用 Nginx</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#DNS解析到你的服务器"><span class="post-toc-number">5.0.3.</span> <span class="post-toc-text">DNS解析到你的服务器</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#hexo参考文章"><span class="post-toc-number">6.</span> <span class="post-toc-text">hexo参考文章</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-build-personal-website"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">hexo搭建个人网站博客完全教程</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-08-30 19:38:13" datetime="2018-08-30T11:38:13.000Z"  itemprop="datePublished">2018-08-30</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/个人网站/">个人网站</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/个人网站/教程/">教程</a></li></ul></li></ul>
+
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="为什么要有自己的个人网站呢？"><a href="#为什么要有自己的个人网站呢？" class="headerlink" title="为什么要有自己的个人网站呢？"></a>为什么要有自己的个人网站呢？</h1><p>我觉得现在身处于互联网时代，有自己的个人网站其实就和互联网上的一张名片差不多了，在这里可以不断的记录自己的生活，总结自己的知识，人生思考什么的，以后介绍自己直接把网站扔给对方。一来是可以装下逼，二来是可以让对方更好的了解自己。</p>
+<p>再者就是相对的自由了，现在市面上有很多 Blog 系统，你只要注册一下，就可以直接在他们的平台生成一个你自己的blog，虽然很方便，但是你要付出的代价就是：<strong>忍受他们平台在你的 Blog 嵌入一堆广告。受他们的限制与监管，人家不爽就随随便便删了你的文章，没得商量</strong>。</p>
+<p>比如这样：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://wistbean.org/images/blog01.png" alt="知乎" title="">
+                </div>
+                <div class="image-caption">知乎</div>
+            </figure>
+
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://wistbean.org/images/blog02.png" alt="简书" title="">
+                </div>
+                <div class="image-caption">简书</div>
+            </figure>
+
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://wistbean.org/images/blog03.png" alt="微信" title="">
+                </div>
+                <div class="image-caption">微信</div>
+            </figure>
+
+<p>爽吗？反正我是不爽。</p>
+<p>所以自己搞一个完全属于自己的网站，相对来说，没那么苦逼。为什么说相对？ 因为我们也要看大佬的眼色啊。</p>
+<p>但是总比被各种平台恶心好吧。也别幻想什么区块链博客系统，对于目前来说，不现实。</p>
+<h1 id="使用-Hexo-框架来搭建个人网站"><a href="#使用-Hexo-框架来搭建个人网站" class="headerlink" title="使用 Hexo 框架来搭建个人网站"></a>使用 Hexo 框架来搭建个人网站</h1><p>这两天我重新整理了一下自己的 Blog ，因为我之前用的是 Octopress 框架，有些年头了，一些主题和插件并不是很多。</p>
+<p>后来对比了几个框架，发现 Hexo 不错，和 Octopress 差不多，也是可以用 Markdown 写文章，然后生成静态网站，Hexo 主题丰富一些。</p>
+<p>Hexo 是基于 <a href="https://nodejs.cn/" target="_blank" rel="noopener">nodejs</a> 的,搭建起来很简单。那么接下来就说说如何从 0 开始使用 Hexo 搭建个人博客吧。</p>
+<h2 id="开始搭建"><a href="#开始搭建" class="headerlink" title="开始搭建"></a>开始搭建</h2><ol>
+<li><p>因为 hexo 是基于 node 框架的，所以呢，我们首先需要下载安装node，下载地址：<a href="nodejs.cn">nodejs</a></p>
+</li>
+<li><p>安装完之后，我们打开命令窗口，输入 <code>node -v</code> ，如果返回下图所示，那么就说明你安装 node 成功了。</p>
+</li>
+</ol>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://wistbean.org/images/blog1.png" alt="node 版本" title="">
+                </div>
+                <div class="image-caption">node 版本</div>
+            </figure>
+
+<ol start="3">
+<li><p>安装成功后，我们在命令行窗口运行如下命令来安装hexo：</p>
+<pre><code>npm install hexo-cli -g
+</code></pre>
+</li>
+<li><p>初始化博客目录：</p>
+<pre><code>hexo init wistbean.org (这里的wistbean换成你自己的英文名)
+</code></pre>
+</li>
+<li><p>初始化完成后，我们就进入我们的目录：</p>
+<pre><code>cd wistbean.org
+</code></pre>
+</li>
+<li><p>安装</p>
+<pre><code>npm install
+</code></pre>
+</li>
+<li><p>clean一下，然后生成静态页面</p>
+<pre><code>hexo clean
+hexo g
+</code></pre>
+</li>
+</ol>
+<blockquote>
+<p>g 就是<code>generate</code> ,生成的意思</p>
+</blockquote>
+<ol start="8">
+<li><p>把你的网站运行起来</p>
+<p>   hexo s</p>
+</li>
+</ol>
+<blockquote>
+<p>s 就是<code>server</code> ,在服务器运行的意思</p>
+</blockquote>
+<ol start="9">
+<li>打开你的浏览器，输入 <code>localhost:4000</code> 。 自此，你的个人网站就这么速度的搭建起来了！</li>
+</ol>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://wistbean.org/images/blog2.png" alt="hexo" title="">
+                </div>
+                <div class="image-caption">hexo</div>
+            </figure>
+
+<h2 id="优化-hexo-博客主题"><a href="#优化-hexo-博客主题" class="headerlink" title="优化 hexo 博客主题"></a>优化 hexo 博客主题</h2><h3 id="修改你的网站中的个人信息"><a href="#修改你的网站中的个人信息" class="headerlink" title="修改你的网站中的个人信息"></a>修改你的网站中的个人信息</h3><p>进入你的网站目录，打开 _config 文件，这个文件是用来配置你的网站信息的。</p>
+<p>这里列出我的简单配置，具体可以看这个<a href="https://hexo.io/docs/configuration.html" target="_blank" rel="noopener">Hexo配置文档</a></p>
+<pre><code>        title: wistbean
+        subtitle: 肯定会
+        description: wistbean的个人博客，主要涉及到编程（Java，Python，Linux等），个人提升学习，视频教程，《肯定会软件技术》电台节目
+        keywords: wistbean，肯定会，java，python，电台，教程
+        author: wistbean
+        language: zh
+</code></pre>
+<h3 id="选一个Hexo主题"><a href="#选一个Hexo主题" class="headerlink" title="选一个Hexo主题"></a>选一个Hexo主题</h3><p>刚搭建完的网站，是不是觉得有点丑，不符合你的漂亮的脸庞？ 反正我是这么觉得的，那么就选一个主题来装饰一下吧，在这里可以选择你要的主题：<a href="https://www.zhihu.com/question/24422335" target="_blank" rel="noopener">知乎答主们推荐的hexo主题大全</a></p>
+<h3 id="下载Hexo主题"><a href="#下载Hexo主题" class="headerlink" title="下载Hexo主题"></a>下载Hexo主题</h3><p>选择好了你的主题之后，就可以下载主题资源了，比如我这里选择一个 <a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">NEXT</a> 主题来演示一下,在你的目录中输入以下命令：</p>
+<pre><code>      git clone https://github.com/iissnan/hexo-theme-next themes/next
+</code></pre>
+<p>这里主要就是将主题下载到我们的themes目录下。</p>
+<p>如果你还不熟悉 Git 的使用的话，可以看看我之前的 Git 视频教程：<a href="/java-ssm-1-3.html">代码托管Git的使用</a></p>
+<h3 id="配置主题"><a href="#配置主题" class="headerlink" title="配置主题"></a>配置主题</h3><p>主题下载完之后，在你根目录下的 _config.yml 文件中，修改 theme 为你的主题名字：</p>
+<pre><code>      theme: next
+</code></pre>
+<h3 id="重新生成和运行"><a href="#重新生成和运行" class="headerlink" title="重新生成和运行"></a>重新生成和运行</h3><pre><code>      hexo g
+      hexo s
+</code></pre>
+<h3 id="访问一下看看，是不是比之前好看多了？"><a href="#访问一下看看，是不是比之前好看多了？" class="headerlink" title="访问一下看看，是不是比之前好看多了？"></a>访问一下看看，是不是比之前好看多了？</h3><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://wistbean.org/images/blog3.png" alt="hexo next主题" title="">
+                </div>
+                <div class="image-caption">hexo next主题</div>
+            </figure>
+
+<h2 id="hexo博客的第一篇文章，打上标签和分类"><a href="#hexo博客的第一篇文章，打上标签和分类" class="headerlink" title="hexo博客的第一篇文章，打上标签和分类"></a>hexo博客的第一篇文章，打上标签和分类</h2><p>你已经把你的网站打扮的漂亮大方简洁惹人爱了，那么接下来就要好好去写内容了，内容才是重要的。</p>
+<h3 id="两种方式来新建你的博文"><a href="#两种方式来新建你的博文" class="headerlink" title="两种方式来新建你的博文"></a>两种方式来新建你的博文</h3><h4 id="命令形式"><a href="#命令形式" class="headerlink" title="命令形式"></a>命令形式</h4><p>   在你的 blog 目录下使用如下命令：</p>
+<pre><code>      hexo new article （这里的article写上你的文章的名称）
+</code></pre>
+<p>输入这样的命令之后你的 source&#x2F;_posts 下就会生成一个 article.md 文件，在这个文件下就可以写上你的博客内容了。用 <a href="https://baike.baidu.com/item/markdown" target="_blank" rel="noopener">Markdown</a> 的语法去写。</p>
+<h4 id="直接新建方式"><a href="#直接新建方式" class="headerlink" title="直接新建方式"></a>直接新建方式</h4><p>直接点的方式就是直接在<code>source/_posts</code>新建一个 Markdown 文件，其实和命令形式是一个道理，只不过命令形式用了命令来创建。推荐使用命令的方式，毕竟 Geek 一点。</p>
+<h3 id="给你的文章打上标签"><a href="#给你的文章打上标签" class="headerlink" title="给你的文章打上标签"></a>给你的文章打上标签</h3><p>在你的博客中打标签能让你的文章方便检索。</p>
+<p>hexo打开标签功能：</p>
+<pre><code>    hexo new page tags
+</code></pre>
+<p>这时候你的 source&#x2F; 下生成 tags&#x2F;index.md 文件，我们将其打开，然后把它改成：</p>
+<pre><code>    type: &quot;tags&quot;
+    comments: false
+</code></pre>
+<p>这时候你要为你的文章打上标签就可以在文章的头部写上：</p>
+<pre><code>    tags:
+        - Tag1
+        - Tag2
+        - Tag3
+</code></pre>
+<p>比如我现在的这篇文章打的标签就是这样的：</p>
+<pre><code>tags:
+    - 个人网站
+    - 教程
+    - hexo
+    - blog
+    - 搬瓦工
+    - Git
+    - Nginx
+</code></pre>
+<h3 id="给你的文章添加分类"><a href="#给你的文章添加分类" class="headerlink" title="给你的文章添加分类"></a>给你的文章添加分类</h3><p>分类，归档，是你博客的特性之一。把文章分门别类，方便查看。</p>
+<p>打开hexo分类功能：</p>
+<pre><code>      hexo new page categories
+</code></pre>
+<p>同样的，你的 source 目录下生成 categories&#x2F;index.md 文件，我们将其打开，把它改成：</p>
+<pre><code>      type: &quot;categories&quot;
+      comments: false
+</code></pre>
+<p>这时候你就可以给你的文章归类存档了，使用方式就是在你的文章的头部加上：</p>
+<pre><code>      categories:
+               - 分类1
+               - 分类2
+</code></pre>
+<p>比如我现在的这篇文章的分类就是这样的：</p>
+<pre><code>categories:
+    - 个人网站
+    - 教程
+</code></pre>
+<p>注意：标签和分类要确定你的配置文件 _config.yml 是否有打开了 tag_dir: tags 和 category_dir: categories。另外，Markdown 的语法是写作最优雅最简洁最简单的，如果之前没用过的建议去学一下<a href="https://www.appinn.com/markdown/" target="_blank" rel="noopener">Markdown 语法说明</a>，一般一个钟左右就能掌握。因为它和 HTML 那样简单。</p>
+<h2 id="给你的文章添加评论"><a href="#给你的文章添加评论" class="headerlink" title="给你的文章添加评论"></a>给你的文章添加评论</h2><p>当别人看了你的文章，有问题想跟你探讨，没评论怎么行？评论也是你的 Blog 交互的重要方式之一。</p>
+<p>现在很多 hexo 主题都内置了第三方评论的系统。比较常用的有：</p>
+<ul>
+<li>多说 ：<a href="http://duoshuo.com/" target="_blank" rel="noopener">http://duoshuo.com/</a></li>
+<li>畅言 ：<a href="https://changyan.kuaizhan.com/" target="_blank" rel="noopener">https://changyan.kuaizhan.com/</a></li>
+<li>Valine：<a href="https://github.com/xcss/Valine" target="_blank" rel="noopener">https://github.com/xcss/Valine</a></li>
+<li>Disqus：<a href="https://disqus.com/" target="_blank" rel="noopener">https://disqus.com/</a></li>
+<li>友言: <a href="http://www.uyan.cc/" target="_blank" rel="noopener">http://www.uyan.cc/</a></li>
+<li>gitment: <a href="https://github.com/imsun/gitment" target="_blank" rel="noopener">https://github.com/imsun/gitment</a></li>
+</ul>
+<p>自己去看一下，喜欢哪个用哪个，自己的 Blog 就是要自由。</p>
+<p>选好你的评论系统之后，进入平台注册后，平台会给你一个 APPID 和 appkey。拿到这些信息到你的主题下的配置文件下设置。</p>
+<p>以 next 主题和畅言评论为例：进入你的<code>themes/next</code>,打开_config.yml，定位到 changyan ，把 enable 改为 true。</p>
+<pre><code>changyan:
+  enable: true
+  appid: 这里写上你的畅言在appid
+  appkey: 这里写上你的畅言在appkey
+</code></pre>
+<p>设置好之后，重新clean生成一下就有评论啦：</p>
+<pre><code> hexo clean
+ hexo g
+ hexo s
+</code></pre>
+<p>打开你的预览连接看看你的文章下方，已经有评论功能啦。如下图就是我博客的评论功能：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://wistbean.org/images/blog4.png" alt="评论" title="">
+                </div>
+                <div class="image-caption">评论</div>
+            </figure>
+
+<h1 id="让全世界的人都认识你"><a href="#让全世界的人都认识你" class="headerlink" title="让全世界的人都认识你"></a>让全世界的人都认识你</h1><p>已经搞定了个人blog，接下来当然是要部署到网上让人家访问了，如果不想花钱，可以使用<code>GitHub Pages</code>，使用它就可以部署自己的网站啦。</p>
+<p>对于 GitHub 不知道怎么用的童鞋，可以看一下我的这个视频教程：<a href="/java-ssm-1-4.html">GitHub完全使用指南</a></p>
+<h2 id="创建-Github-pages-仓库"><a href="#创建-Github-pages-仓库" class="headerlink" title="创建 Github pages 仓库"></a>创建 Github pages 仓库</h2><p>接着创建一个 xxx.github.io 的 public 仓库，这里的xxx写你的名字，比如我写的是 wistbean.org,那么到时我就可以通过 <code>wistbean.org</code> 来访问我的网站了。</p>
+<p>创建完成之后，那么你就有自己的 Git 地址了。</p>
+<h2 id="安装-hexo-deployer-git"><a href="#安装-hexo-deployer-git" class="headerlink" title="安装 hexo-deployer-git"></a>安装 hexo-deployer-git</h2><p>在你的博客目录下输入如下命令，这样你在本地写的文章才能 push 到 <a href="https://github.com/wistbean/wistbean.org" target="_blank" rel="noopener">GitHub</a> 上面去。</p>
+<pre><code>      npm install hexo-deployer-git --save
+</code></pre>
+<h2 id="配置你的Git"><a href="#配置你的Git" class="headerlink" title="配置你的Git"></a>配置你的Git</h2><p>打开你的配置文件，然后输入你的 git 地址：</p>
+<pre><code>      deploy:
+          type: git
+          repo: https://github.com/xxx/xxxx.github.io.git
+</code></pre>
+<h2 id="推送你的网站到Github上"><a href="#推送你的网站到Github上" class="headerlink" title="推送你的网站到Github上"></a>推送你的网站到Github上</h2><p>直接输入命令 ： hexo d</p>
+<blockquote>
+<p>d 就是 deploy ， 部署上去的意思。</p>
+</blockquote>
+<h2 id="访问你的网站"><a href="#访问你的网站" class="headerlink" title="访问你的网站"></a>访问你的网站</h2><p>push上去之后，你就可以直接在浏览器输入你的 <code>xxx.github.io</code> 就可以访问啦！</p>
+<h1 id="要有点个性，绑上你的域名"><a href="#要有点个性，绑上你的域名" class="headerlink" title="要有点个性，绑上你的域名"></a>要有点个性，绑上你的域名</h1><p>有了自己的网站，当然是要自己的网址，这样才帅嘛，当然有自己的服务器就更帅了。</p>
+<h2 id="购买域名"><a href="#购买域名" class="headerlink" title="购买域名"></a>购买域名</h2><p>关于域名的购买我比较推荐去<a href="http://www.dynadot.com/?s646I7M8XVj7F8S" target="_blank" rel="noopener">dynadot</a>，这是国外的域名商，可以使用支付宝购买，不需要备案，使用起来不错的。我的域名 <code>www.wistbean.com</code> 就是在这里买的。</p>
+<h2 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h2><p>买完你的域名之后，接下来几个步骤轻松搞定：</p>
+<h3 id="添加-CNAME-文件"><a href="#添加-CNAME-文件" class="headerlink" title="添加 CNAME 文件"></a>添加 CNAME 文件</h3><p>在你的博客的 sources 目录下新建一个 CNAME 文件，这个文件里面就写你的域名就可以了，比如我就写： <a href="http://www.wistbean.com./" target="_blank" rel="noopener">www.wistbean.com。</a> 接着将文件push到你的GitHub上，可以使用 <code>hexo d</code> 命令。</p>
+<h3 id="在你的域名商后台进行-DNS-解析添加两条记录："><a href="#在你的域名商后台进行-DNS-解析添加两条记录：" class="headerlink" title="在你的域名商后台进行 DNS 解析添加两条记录："></a>在你的域名商后台进行 DNS 解析添加两条记录：</h3><pre><code> 1. 主机记录： @
+     记录类型：A
+     记录值：192.30.252.154 或者 192.30.252.153
+
+ 2. 主机记录： www
+      记录类型： CNAME
+      记录值： xxx.github.io  (这里就是你的github仓库名称)
+</code></pre>
+<h3 id="GitHub-设置域名"><a href="#GitHub-设置域名" class="headerlink" title="GitHub 设置域名"></a>GitHub 设置域名</h3><p>在你的 GitHub 设置域名，在你的 GitHub 博客项目中点击 Settings，在 GitHub Pages 下的 Custom domain 写上你的域名，然后 save。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://wistbean.org/images/domains.png" alt="GitHub 设置域名" title="">
+                </div>
+                <div class="image-caption">GitHub 设置域名</div>
+            </figure>
+
+<p>至此，你已经搭建好了自己的博客，托管你的网站到 GitHub 了，也绑定了你自己的域名了，那么这时候你的网站就可以被全世界的人看到了。</p>
+<p>but！！！</p>
+<p>因为 GitHub 不让百度爬取索引，也就是说，如果你的朋友想通过百度来搜索你的博客或者你写的文章，是搜索不到的。所以得搞一台自己的服务器，把自己的博客部署到自己的服务器上。</p>
+<h1 id="服务器搞起，完全自主权"><a href="#服务器搞起，完全自主权" class="headerlink" title="服务器搞起，完全自主权"></a>服务器搞起，完全自主权</h1><p>虽然你现在已经可以使用你的域名访问你的网站，但是呢，有自己的服务器托管自己的网站还是爽一点的，GitHub屏蔽了百度的爬虫，也就是说别人通过百度搜索不到你的网站，这你能忍？</p>
+<p>有自己的服务器的话就可以被更多搜索引擎收录，还有呢就是有自己的服务器还可以干些其它的事情。</p>
+<h3 id="购买服务器"><a href="#购买服务器" class="headerlink" title="购买服务器"></a>购买服务器</h3><p>这里的服务器当然推荐要买国外的，这样的话你的域名就不需要备案，不需要被监管，而且还可以搭建 VPN ，一举三得，酸爽。</p>
+<p>我使用的云服务器推荐：<a href="https://wistbean.org/cloud-server.html" target="_blank" rel="noopener">推荐|我用了十几台云服务器VPS后，告诉你哪家云服务产商性价比高,性能稳定</a></p>
+<h3 id="使用-Nginx"><a href="#使用-Nginx" class="headerlink" title="使用 Nginx"></a>使用 Nginx</h3><p>买了服务器之后，那么你就可以用 Nginx 来当做你网站的 web 服务器，搭建也很简单，关于 Nginx 搭建和配置就不多说了，如果之前没玩过可以看这里：<a href="https://wistbean.org/java-ssm-4-2.html" target="_blank" rel="noopener">Nginx使用教程</a></p>
+<h3 id="DNS解析到你的服务器"><a href="#DNS解析到你的服务器" class="headerlink" title="DNS解析到你的服务器"></a>DNS解析到你的服务器</h3><p>在你的域名商，使用 DNS 解析，添加一条 A 记录就可以了，记录值就是你这台服务器的 IP 地址，一般启用后 30 分钟左右就可以访问啦。</p>
+<p>以上你就完全拥有属于自己的个人网站啦。</p>
+<h1 id="hexo参考文章"><a href="#hexo参考文章" class="headerlink" title="hexo参考文章"></a>hexo参考文章</h1><ul>
+<li><a href="https://zhuanlan.zhihu.com/p/26625249" target="_blank" rel="noopener">GitHub+Hexo 搭建个人网站详细教程</a></li>
+<li><a href="https://www.jianshu.com/p/f4dce0e76886" target="_blank" rel="noopener">使用Hexo搭建个人博客</a></li>
+<li><a href="https://juejin.im/post/590b451a0ce46300588c43a0" target="_blank" rel="noopener">hexo高阶教程：教你怎么让你的hexo博客在搜索引擎中排第一</a></li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+      <!--  
+
+        
+        关注公众号「wistbean」，发送「帅书」获取我写的技术电子书
+        
+        -->
+        在公众号「学习 Python 的正确姿势」发送「帅书」领取我写的技术电子书，转载请注明出处：
+        <a href="https://wistbean.github.io/build-personal-website.html">
+                   wistbean
+        </a>
+    </div>
+    
+    <footer>
+        <a href="https://wistbean.github.io">
+            <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+            wistbean
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GitHub搭建博客/">GitHub搭建博客</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nginx/">Nginx</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo-部署到GitHub/">hexo 部署到GitHub</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vultr/">vultr</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/个人网站/">个人网站</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/个人网站搭建教程/">个人网站搭建教程</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术博客搭建教程/">技术博客搭建教程</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/搭建个人博客教程/">搭建个人博客教程</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/教程/">教程</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/build-personal-website.html&title=《hexo搭建个人网站博客完全教程》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/build-personal-website.html&title=《hexo搭建个人网站博客完全教程》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/build-personal-website.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《hexo搭建个人网站博客完全教程》 — wistbean&url=https://wistbean.github.io/build-personal-website.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/build-personal-website.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/backups.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">对于宅男来说，硬盘里的数据就是命</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/java-ssm-2-5.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">「2-5」使用InteliJ IDEA 创建 Maven 聚合工程</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>本站已加入 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-知识 4.0  (CC BY-NC-SA 4.0)国际协议 | 转载请注明链接出处</a></span>
+        </p>
+    </div>
+
+        <div class="bottom">
+                <p><span>wistbean &copy; 2015 - 2024</span>
+                    <span>
+                        
+                         <a href="https://wistbean.github.io/">肯定会|wistbean</a>
+                         <a href="https://fxxkpython.com">通往Python高手之路</a>
+                         <a href="https://www.bwh8.net/aff.php?aff=32874" target="_blank">搬瓦工2024优惠码</a>、
+                         <a href="https://www.vultr.com/?ref=7532860" target="_blank">vultr2024优惠码</a>
+                    </span>
+                </p>
+        </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/build-personal-website.html&title=《hexo搭建个人网站博客完全教程》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/build-personal-website.html&title=《hexo搭建个人网站博客完全教程》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/build-personal-website.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《hexo搭建个人网站博客完全教程》 — wistbean&url=https://wistbean.github.io/build-personal-website.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/build-personal-website.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACL0lEQVR42u3aS27DMBAEUd//0vI6CCRXN2UDGpZWgaPQfFkM5vd64ee4fM7e/P/52cnXf3vbI0OGjMcyyBXPPlk///pk/u+TIUPGDgwSCkmIvA7B/H1+NxkyZMhYOhqngDd8lwwZMmSEV+yKUp6AypAhY09GWliSS5DU8OydL9biMmTIeCCDh8Lf//yV+YYMGTIexTjCh1N5qO1u8uc0GTJkjGbwAEeSti4qdgFXhgwZ+zDIChdf8+qKzO67gupZhgwZgxhltF5olvGU8cNahgwZMkYzutB5/T6B8ZjJR6cyZMiYyiBJIUngSMBNhwFL2yIyZMgYzeDtfn5OulIWN/VkyJAxmnFX042XpulF4yJWhgwZ4xjkJVJYpuNJnvaRoleGDBmzGaTUTL+MJ3O83EUny5AhYyiDDw5JoFwfiJaBWIYMGdsw0iKWB+iVMhjdR4YMGaMZXeOet884phsnyJAhYwdGB+h+7j5Bt5IhQ8ZoRrqrQArL9bYdH52WKxcyZMh4ICNt4qfjRj7m5ClmsDMiQ4aMoQwyGOBpXMorlzBkyJCxDaNb5+KjhXQhIyhiZciQMZRxhE83MFgpZVGIlyFDxmhGGuZIgyxu5VcDiRIjQ4aMxzJIkE0B6fpFV9bKkCFjN0YaKHlbP23e8XCMfiFDhowtGWkbrmu3xVQZMmTIwAGXp5gchpqAMmTI2IDB17bSBdP0ijyKypAhYx/GyqYGHxikgZiHaRkyZIxmvAHnWiy6ycIFpQAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

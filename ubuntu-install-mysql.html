@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131395348-1"></script>
+    <script data-ad-client="ca-pub-9097083609097034" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-131395348-1');
+    </script>
+
+    
+
+    
+
+    
+
+
+<!-- Baidu Push -->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<!-- End Baidu Push -->
+
+
+    <meta charset="utf-8">
+    
+    <meta name="google-site-verification" content="bcJVGqEGcBIay29szBsswzqYxY3qUzWuvu1hfad3-08">
+    
+    
+    
+    
+    <title>ubuntu 安装 Mysql | wistbean | wistbean</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#B5963F">
+    
+    
+    <meta name="keywords" content="ubuntu安装mysql,ubuntu,mysql,安装mysql命令">
+    <meta name="description" content="ubuntu安装mysql命令1sudo apt-get install mysql-server  按 Y 确认安装                                                                                              ubuntu安装mysql               配置 Mysql 密码1sudo my">
+<meta name="keywords" content="ubuntu安装mysql,ubuntu,mysql,安装mysql命令">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ubuntu 安装 Mysql">
+<meta property="og:url" content="https://wistbean.github.io/ubuntu-install-mysql.html">
+<meta property="og:site_name" content="wistbean">
+<meta property="og:description" content="ubuntu安装mysql命令1sudo apt-get install mysql-server  按 Y 确认安装                                                                                              ubuntu安装mysql               配置 Mysql 密码1sudo my">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://wistbean.github.io/images/mysql01.png">
+<meta property="og:image" content="https://wistbean.github.io/images/mysql02.png">
+<meta property="og:image" content="https://wistbean.github.io/images/mysql03.png">
+<meta property="og:image" content="https://wistbean.github.io/images/mysql04.png">
+<meta property="og:image" content="https://wistbean.github.io/images/mysql05.png">
+<meta property="og:updated_time" content="2024-01-26T15:14:15.815Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ubuntu 安装 Mysql">
+<meta name="twitter:description" content="ubuntu安装mysql命令1sudo apt-get install mysql-server  按 Y 确认安装                                                                                              ubuntu安装mysql               配置 Mysql 密码1sudo my">
+<meta name="twitter:image" content="https://wistbean.github.io/images/mysql01.png">
+    
+        <link rel="alternate" type="application/atom+xml" title="wistbean" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(https://wistbean.github.io/images/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">wistbean</h5>
+          <a href="mailto:wistbean.bb@gmail.com" title="wistbean.bb@gmail.com" class="mail">wistbean.bb@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="https://wistbean.org/python-tutorial.html"  >
+                <i class="icon icon-lg icon-coffee"></i>
+                Python零基础入门教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2NzYyNjg2Nw==&action=getalbum&album_id=2448798954764255234#wechat_redirect"  >
+                <i class="icon icon-lg icon-bug"></i>
+                Python爬虫教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://vip.fxxkpython.com/?page_id=18"  >
+                <i class="icon icon-lg icon-code"></i>
+                加入我的VIP
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/aboutMe/"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light off" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">ubuntu 安装 Mysql</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="vultr ss bbr v2ray 100美金">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">ubuntu 安装 Mysql</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2020-03-07T13:15:09.000Z" itemprop="datePublished" class="page-time">
+  2020-03-07
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/ubuntu/">ubuntu</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>目录</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#ubuntu安装mysql命令"><span class="post-toc-number">1.</span> <span class="post-toc-text">ubuntu安装mysql命令</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#配置-Mysql-密码"><span class="post-toc-number">2.</span> <span class="post-toc-text">配置 Mysql 密码</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#检查是否运行"><span class="post-toc-number">3.</span> <span class="post-toc-text">检查是否运行</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#使用-mysql"><span class="post-toc-number">4.</span> <span class="post-toc-text">使用 mysql</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#配置-mysql-远程连接"><span class="post-toc-number">5.</span> <span class="post-toc-text">配置 mysql 远程连接</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-ubuntu-install-mysql"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">ubuntu 安装 Mysql</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2020-03-07 21:15:09" datetime="2020-03-07T13:15:09.000Z"  itemprop="datePublished">2020-03-07</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/ubuntu/">ubuntu</a></li></ul>
+
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="ubuntu安装mysql命令"><a href="#ubuntu安装mysql命令" class="headerlink" title="ubuntu安装mysql命令"></a>ubuntu安装mysql命令</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install mysql-server</span><br></pre></td></tr></table></figure>
+
+<p>按 Y 确认安装</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/mysql01.png" alt="ubuntu安装mysql" title="">
+                </div>
+                <div class="image-caption">ubuntu安装mysql</div>
+            </figure>
+
+<h1 id="配置-Mysql-密码"><a href="#配置-Mysql-密码" class="headerlink" title="配置 Mysql 密码"></a>配置 Mysql 密码</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mysql_secure_installation</span><br></pre></td></tr></table></figure>
+
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/mysql02.png" alt="ubuntu安装mysql" title="">
+                </div>
+                <div class="image-caption">ubuntu安装mysql</div>
+            </figure>
+
+
+<h1 id="检查是否运行"><a href="#检查是否运行" class="headerlink" title="检查是否运行"></a>检查是否运行</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl status mysql.service</span><br></pre></td></tr></table></figure>
+
+<p>提示 <code>Active: active (running</code> 表示正确安装且运行</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/mysql03.png" alt="ubuntu安装mysql" title="">
+                </div>
+                <div class="image-caption">ubuntu安装mysql</div>
+            </figure>
+
+<h1 id="使用-mysql"><a href="#使用-mysql" class="headerlink" title="使用 mysql"></a>使用 mysql</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mysql -uroot -p</span><br></pre></td></tr></table></figure>
+
+<p>输入密码即可使用：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/mysql04.png" alt="ubuntu安装mysql" title="">
+                </div>
+                <div class="image-caption">ubuntu安装mysql</div>
+            </figure>
+
+
+<h1 id="配置-mysql-远程连接"><a href="#配置-mysql-远程连接" class="headerlink" title="配置 mysql 远程连接"></a>配置 mysql 远程连接</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GRANT ALL PRIVILEGES ON *.* TO root@localhost IDENTIFIED BY &quot;你的密码&quot;;</span><br></pre></td></tr></table></figure>
+
+<p><code>*.*</code> 代表所有数据库，如果要设置单个数据库可自行设置。</p>
+<p>设置完后更新一下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flush PRIVILEGES;</span><br></pre></td></tr></table></figure>
+
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/mysql05.png" alt="ubuntu安装mysql" title="">
+                </div>
+                <div class="image-caption">ubuntu安装mysql</div>
+            </figure>
+
+
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+      <!--  
+
+        
+        关注公众号「wistbean」，发送「帅书」获取我写的技术电子书
+        
+        -->
+        在公众号「学习 Python 的正确姿势」发送「帅书」领取我写的技术电子书，转载请注明出处：
+        <a href="https://wistbean.github.io/ubuntu-install-mysql.html">
+                   wistbean
+        </a>
+    </div>
+    
+    <footer>
+        <a href="https://wistbean.github.io">
+            <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+            wistbean
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu/">ubuntu</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu安装mysql/">ubuntu安装mysql</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/安装mysql命令/">安装mysql命令</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/ubuntu-install-mysql.html&title=《ubuntu 安装 Mysql》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/ubuntu-install-mysql.html&title=《ubuntu 安装 Mysql》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/ubuntu-install-mysql.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《ubuntu 安装 Mysql》 — wistbean&url=https://wistbean.github.io/ubuntu-install-mysql.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/ubuntu-install-mysql.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/weixin-shipinhao-jihui.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">微信视频号会是下一个机会吗？</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/python-story-qian-shi-jin-sheng.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">python 的前世今生是怎么样的？</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>本站已加入 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-知识 4.0  (CC BY-NC-SA 4.0)国际协议 | 转载请注明链接出处</a></span>
+        </p>
+    </div>
+
+        <div class="bottom">
+                <p><span>wistbean &copy; 2015 - 2024</span>
+                    <span>
+                        
+                         <a href="https://wistbean.github.io/">肯定会|wistbean</a>
+                         <a href="https://fxxkpython.com">通往Python高手之路</a>
+                         <a href="https://www.bwh8.net/aff.php?aff=32874" target="_blank">搬瓦工2024优惠码</a>、
+                         <a href="https://www.vultr.com/?ref=7532860" target="_blank">vultr2024优惠码</a>
+                    </span>
+                </p>
+        </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/ubuntu-install-mysql.html&title=《ubuntu 安装 Mysql》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/ubuntu-install-mysql.html&title=《ubuntu 安装 Mysql》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/ubuntu-install-mysql.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《ubuntu 安装 Mysql》 — wistbean&url=https://wistbean.github.io/ubuntu-install-mysql.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/ubuntu-install-mysql.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACL0lEQVR42u3aS27jMBAFwNz/0p7tAB4r7zXlAUQWV4atMCwtGuzPz0+8Xh/W37++P3/9zfv37zvfvDAwMB7LeF2uT88k//h6h+SlJM9jYGCcw0gOcf35GpyH1Ov9P36PgYGBMdv6w9HbgI6BgYFxV8Btj5uDMTAwML6YWAalujxJvi0Xx8DAeCAjr7r//89f6W9gYGA8ivEqV1saW9mnOBUGBsbWjDzAteWwNt1NkupfGgwYGBibMvI0tW1PrlDrITMMDIyDGXfliSvNgyhkY2BgHMnI08u2MbkykPHxbBgYGIcx8mD3jWA6e60YGBgnMGajD7MOY5vERjwMDIytGXmRKy/Wzwpns1bBP4puGBgY2zGuN23LcLMd8tAftTAxMDA2ZeQXvrZY1u7WNieKmI2BgfFYRltoWx/5muGjtBkDA2NTxl0jXHm7sb0aRgEaAwNja8bs0WQgbOUSuf5SMDAwdmIMy1vlhbL927pdgYGBsTVjZfRhPfmcjZFFSTIGBsZ2jHzcISGtFPXasl3d5cDAwHg4Y1b0nx1uFid/uThiYGAcw0gSyySY5o2EqMuavBQMDIxNGa9y5e9mdt2cpcoYGBh7M/KVHHp20WwHzuqpNwwMjC0Y7fBEXlzLB8LW01oMDIwTGHngS47bvo42lS1+wMDAOJJRtBXb4n6c4mJgYGB8O+C2oxtRERADA+MAxvrYVtu8vKtpioGBcQJjJXWcDYSt/7rU38DAwHgS4w/nZNE/VZYK1AAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

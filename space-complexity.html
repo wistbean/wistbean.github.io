@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131395348-1"></script>
+    <script data-ad-client="ca-pub-9097083609097034" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-131395348-1');
+    </script>
+
+    
+
+    
+
+    
+
+
+<!-- Baidu Push -->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<!-- End Baidu Push -->
+
+
+    <meta charset="utf-8">
+    
+    <meta name="google-site-verification" content="bcJVGqEGcBIay29szBsswzqYxY3qUzWuvu1hfad3-08">
+    
+    
+    
+    
+    <title>算法中的时间复杂度分析 | wistbean | wistbean</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#B5963F">
+    
+    
+    <meta name="keywords" content="数据结构,算法,修炼内功,复杂度分析">
+    <meta name="description" content="大 O 时间表示法12345678int cal(int n)&amp;#123;        int sum = 0;        int i = 1;        for (; i &amp;lt;= n ; ++i) &amp;#123;            sum += i;        &amp;#125;    &amp;#125;  这一段求和代码中，第 2、3 行分别要执行一个 unit_time 的时间。 第">
+<meta name="keywords" content="数据结构,算法,修炼内功,复杂度分析">
+<meta property="og:type" content="article">
+<meta property="og:title" content="算法中的时间复杂度分析">
+<meta property="og:url" content="https://wistbean.github.io/space-complexity.html">
+<meta property="og:site_name" content="wistbean">
+<meta property="og:description" content="大 O 时间表示法12345678int cal(int n)&amp;#123;        int sum = 0;        int i = 1;        for (; i &amp;lt;= n ; ++i) &amp;#123;            sum += i;        &amp;#125;    &amp;#125;  这一段求和代码中，第 2、3 行分别要执行一个 unit_time 的时间。 第">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2024-01-26T15:14:15.808Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="算法中的时间复杂度分析">
+<meta name="twitter:description" content="大 O 时间表示法12345678int cal(int n)&amp;#123;        int sum = 0;        int i = 1;        for (; i &amp;lt;= n ; ++i) &amp;#123;            sum += i;        &amp;#125;    &amp;#125;  这一段求和代码中，第 2、3 行分别要执行一个 unit_time 的时间。 第">
+    
+        <link rel="alternate" type="application/atom+xml" title="wistbean" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(https://wistbean.github.io/images/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">wistbean</h5>
+          <a href="mailto:wistbean.bb@gmail.com" title="wistbean.bb@gmail.com" class="mail">wistbean.bb@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="https://wistbean.org/python-tutorial.html"  >
+                <i class="icon icon-lg icon-coffee"></i>
+                Python零基础入门教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2NzYyNjg2Nw==&action=getalbum&album_id=2448798954764255234#wechat_redirect"  >
+                <i class="icon icon-lg icon-bug"></i>
+                Python爬虫教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://vip.fxxkpython.com/?page_id=18"  >
+                <i class="icon icon-lg icon-code"></i>
+                加入我的VIP
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/aboutMe/"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light off" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">算法中的时间复杂度分析</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="vultr ss bbr v2ray 100美金">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">算法中的时间复杂度分析</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-01-29T08:42:51.000Z" itemprop="datePublished" class="page-time">
+  2017-01-29
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/数据结构与算法/">数据结构与算法</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>目录</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#大-O-时间表示法"><span class="post-toc-number">1.</span> <span class="post-toc-text">大 O 时间表示法</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#时间复杂度分析"><span class="post-toc-number">2.</span> <span class="post-toc-text">时间复杂度分析</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#常见的复杂度"><span class="post-toc-number">3.</span> <span class="post-toc-text">常见的复杂度</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-space-complexity"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">算法中的时间复杂度分析</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-01-29 16:42:51" datetime="2017-01-29T08:42:51.000Z"  itemprop="datePublished">2017-01-29</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/数据结构与算法/">数据结构与算法</a></li></ul>
+
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="大-O-时间表示法"><a href="#大-O-时间表示法" class="headerlink" title="大 O 时间表示法"></a>大 O 时间表示法</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">cal</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (; i &lt;= n ; ++i) &#123;</span><br><span class="line">            sum += i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>这一段求和代码中，第 2、3 行分别要执行一个 unit_time 的时间。 第 5、6 行分别需要执行 n 个unit_time 的时间。</p>
+<p>整段代码所需要执行的时间T(n) &#x3D; 2*unit_time + 2n*unit_time &#x3D; <code>(2+2n)*unit_time</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">cal2</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> j = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (; i &lt;= n ; ++i) &#123;</span><br><span class="line">            j = <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">for</span> (; j &lt;= n ; ++j) &#123;</span><br><span class="line">                sum = sum + i*j;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>这段代码中，第 3、4、5 分别要执行一个 unit_time 的时间。第 7、8 行分别要执行 n 个 unit_time 的时间。第 9、10 行分别要执行 n<sup>2</sup> 个unit_time 的时间。<br>所以这段代码所需要执行的时间为<code>T(n) = (3+2n+2n^2)*unit_time</code></p>
+<p>由此可见，代码执行时间与数据规模大小有关，从以下这两个公式中可以得出<em>大 O 时间表示法</em>。</p>
+<blockquote>
+<p>T(n) &#x3D; (2+2n)*unit_time<br>T(n) &#x3D; (3+2n+2n<sup>2</sup>)*unit_time</p>
+</blockquote>
+<p><em>T(n) &#x3D; O(&amp;fnof;(n))</em> : 大 O 时间表示法，表示数据规模增长的越高，执行时间越久。因为公式中的常量和系数并不会影响它们之间的关系，所以可以忽略，以上两个公式就可以简写为：</p>
+<blockquote>
+<p>T(n) &#x3D; O(n)<br>T(n) &#x3D; O(n<sup>2</sup>)</p>
+</blockquote>
+<h1 id="时间复杂度分析"><a href="#时间复杂度分析" class="headerlink" title="时间复杂度分析"></a>时间复杂度分析</h1><p>明白了「大 O 时间表示法」之后，来试着分析一下代码的时间复杂度，由于 T(n) &#x3D; O(&amp;fnof;(n)) 中，对常量，系数可以忽略不计，那么在上面两段代码中，只需要去分析代码中循环次数最多的代码就可以了，比如在一段代码中，只需要分析：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (; i &lt;= n ; ++i) &#123;</span><br><span class="line">           sum += i;</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure>
+
+<p>可以得出第一段代码中的时间复杂度为 O(n)。</p>
+<p>在第二段代码中，只需要分析：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (; i &lt;= n ; ++i) &#123;</span><br><span class="line">            j = <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">for</span> (; j &lt;= n ; ++j) &#123;</span><br><span class="line">                sum = sum + i*j;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+
+<p>可以得出第二段代码中的时间复杂度为 O(n<sup>2</sup>)</p>
+<p>那么在一段代码中，有多段循环的代码，怎么分析呢？比如以下这样的代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">cal3</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> sum_1 = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> p = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (; p &lt; <span class="number">100</span>; ++p) &#123;</span><br><span class="line">            sum_1 += p;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> sum_2 = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> q = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (; q &lt; n; ++q) &#123;</span><br><span class="line">            sum_1 += p;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> sum_3 = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> j = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (; i &lt; n; ++i) &#123;</span><br><span class="line">            <span class="keyword">for</span> (; j &lt; n; ++j) &#123;</span><br><span class="line">                sum_3 += j;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> sum_1+sum_2+sum_3;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>这段代码主要是得出sum_1+sum_2+sum_3。通过分析可以得到第一小段代码执行 100 次，是常量，所以时间复杂度是 O(n)。第二小段代码时间复杂度是 O(n)。第三小段代码的时间复杂度是 O(n<sup>2</sup>)。<br>那么这个时候就可以<em>取复杂度最大</em>的，也就是说这整段代码的时间复杂度为 O(n<sup>2</sup>)。</p>
+<blockquote>
+<p>加法法则：当 T1(n) &#x3D; O(f(n)),T2(n) &#x3D; O(g(n)) , 则 T(n) &#x3D; O(max(f(n),g(n)))</p>
+</blockquote>
+<p>还有一种嵌套代码的情况，比如这样的：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">cal4</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">       <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">       <span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">       <span class="keyword">for</span> (; i &lt; n; ++i) &#123;</span><br><span class="line">           sum = sum + f(i);</span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line">       <span class="keyword">return</span> sum;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">       <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">       <span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">       <span class="keyword">for</span> (; i &lt; n; ++i) &#123;</span><br><span class="line">           sum = sum + i;</span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line">       <span class="keyword">return</span> sum;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<p>在第 6 行代码中，去调用了一个时间复杂度为 O(n) 的的函数，而第 5、6 行的时间复杂度本身就是 O(n),所以这整段代码的时间复杂度就是 T(n) &#x3D; O(n) * O(n) &#x3D; O(n<sup>2</sup>)。</p>
+<p>所以，在嵌套代码中，时间复杂度就是嵌套代码内外复杂度的乘积。</p>
+<h1 id="常见的复杂度"><a href="#常见的复杂度" class="headerlink" title="常见的复杂度"></a>常见的复杂度</h1><p>复杂度由低到高如下：</p>
+<ol>
+<li>O(1)</li>
+<li>O(logn)</li>
+<li>O(n)</li>
+<li>O(nlogn)</li>
+<li>O(n<sup>2</sup>)</li>
+</ol>
+<p>对于 O(logn) 复杂度：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">i = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">while</span>(i&lt;n)&#123;</span><br><span class="line">    i = i*<span class="number">2</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在这里循环执行了 i&#x3D;i*2,列出来就是:2<sup>x</sup>&#x3D;n,也就是log<sub>2</sub>n&#x3D;x;底数2可以忽略不计，所以复杂度为O(logn)</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+      <!--  
+
+        
+        关注公众号「wistbean」，发送「帅书」获取我写的技术电子书
+        
+        -->
+        在公众号「学习 Python 的正确姿势」发送「帅书」领取我写的技术电子书，转载请注明出处：
+        <a href="https://wistbean.github.io/space-complexity.html">
+                   wistbean
+        </a>
+    </div>
+    
+    <footer>
+        <a href="https://wistbean.github.io">
+            <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+            wistbean
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/修炼内功/">修炼内功</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/复杂度分析/">复杂度分析</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据结构/">数据结构</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/space-complexity.html&title=《算法中的时间复杂度分析》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/space-complexity.html&title=《算法中的时间复杂度分析》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/space-complexity.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《算法中的时间复杂度分析》 — wistbean&url=https://wistbean.github.io/space-complexity.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/space-complexity.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/start-learning-linux.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Linux 学习启动篇</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/algorithm-and-data-structure.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">修炼内功：数据结构与算法的学习路线</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>本站已加入 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-知识 4.0  (CC BY-NC-SA 4.0)国际协议 | 转载请注明链接出处</a></span>
+        </p>
+    </div>
+
+        <div class="bottom">
+                <p><span>wistbean &copy; 2015 - 2024</span>
+                    <span>
+                        
+                         <a href="https://wistbean.github.io/">肯定会|wistbean</a>
+                         <a href="https://fxxkpython.com">通往Python高手之路</a>
+                         <a href="https://www.bwh8.net/aff.php?aff=32874" target="_blank">搬瓦工2024优惠码</a>、
+                         <a href="https://www.vultr.com/?ref=7532860" target="_blank">vultr2024优惠码</a>
+                    </span>
+                </p>
+        </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/space-complexity.html&title=《算法中的时间复杂度分析》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/space-complexity.html&title=《算法中的时间复杂度分析》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/space-complexity.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《算法中的时间复杂度分析》 — wistbean&url=https://wistbean.github.io/space-complexity.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/space-complexity.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACI0lEQVR42u3aMW7DMAwF0Nz/0u7axeon6RSw9DQFSWzreSBIkZ9PvK5fa/39+p+9ax9bGBgYr2VcyzV5wN0d1ndeX3W7EwwMjAMYySbWG1pflWw6ucPt9xgYGBgtUp4sJp8xMDAwegG3l/blYAwMDIxqEVs9eqsG5X+qxTEwMF7I6B2c/c/nr/Q3MDAwXsW4iqt3cJaHy6u1MDAw9mbkAS5JFntRMSpQkyM8DAyMwxjVsjY5dKsOZKxh0akhBgbGMYwkXFbHL/KN5mMZGBgYezMmCVwOq7YNkgYABgbGmYz8T73Rimqi2dw6BgbGRozeIydHY4X0Lt4DBgbG3oz5jEZe6OZX9UY9MDAwdmVUi9U8aes1OKvfY2BgnMBINtEbnuhtvdcixcDA2JvRG6pohsKHQvltbouBgbEpIz+s7yWRvV+rpS8GBsYJjLwEzUe+JuG4GrIxMDD2ZswnNXojF3kDNSq2MTAwtmZMWpLr47D8yGwyWPZAZxUDA+MljF4RW20GJPcfpaoYGBjHMKoPSJK/b4zJ/nFqiIGBsTWjGnCfCtnz8Q4MDIxdGVdxfeI1aRLkL+WTvyEMDIzXMnrbmjcA8v5qNUnFwMDYldE7SqsGyl6BWnjfGBgYBzCqgS8fnnigs5ogMTAwMMbFZC8QF7JaDAwMjNZAWK+12WyaYmBgHMDIm5STBmfyspKAjoGBcRqjd5ZVTeyqheuziSkGBsZrGT8MlpNh/qOU5AAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

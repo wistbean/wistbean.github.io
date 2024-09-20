@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131395348-1"></script>
+    <script data-ad-client="ca-pub-9097083609097034" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-131395348-1');
+    </script>
+
+    
+
+    
+
+    
+
+
+<!-- Baidu Push -->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<!-- End Baidu Push -->
+
+
+    <meta charset="utf-8">
+    
+    <meta name="google-site-verification" content="bcJVGqEGcBIay29szBsswzqYxY3qUzWuvu1hfad3-08">
+    
+    
+    
+    
+    <title>PyCharm 使用教程：01 安装PyCharm | wistbean | wistbean</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#B5963F">
+    
+    
+    <meta name="keywords" content="python,教程,PyCharm,工具使用">
+    <meta name="description" content="PyCharm 给 Python开发人员提供了很多的基本工具，能够让我们在上面很爽的开发我们的 Python 代码。 Python 出自 jetbrains,如果你开发过 Android 或者 JAVA, 那么你应对 Android Studio 和 Intellij IDEA 不陌生，它们都是基于jetbrains的编辑器。不得不说，各种快捷键和插件真的是牛的一批。 PyCharm 的版本PyC">
+<meta name="keywords" content="python,教程,PyCharm,工具使用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PyCharm 使用教程：01 安装PyCharm">
+<meta property="og:url" content="https://wistbean.github.io/pycharm-01.html">
+<meta property="og:site_name" content="wistbean">
+<meta property="og:description" content="PyCharm 给 Python开发人员提供了很多的基本工具，能够让我们在上面很爽的开发我们的 Python 代码。 Python 出自 jetbrains,如果你开发过 Android 或者 JAVA, 那么你应对 Android Studio 和 Intellij IDEA 不陌生，它们都是基于jetbrains的编辑器。不得不说，各种快捷键和插件真的是牛的一批。 PyCharm 的版本PyC">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://wistbean.github.io/images/pycharm1.png">
+<meta property="og:image" content="https://www.jetbrains.com/help/img/idea/2018.2/py_complete_installation_dialog.png">
+<meta property="og:image" content="https://www.jetbrains.com/help/img/idea/2018.2/py_welcomeScreen.png">
+<meta property="og:updated_time" content="2024-01-26T15:14:15.714Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PyCharm 使用教程：01 安装PyCharm">
+<meta name="twitter:description" content="PyCharm 给 Python开发人员提供了很多的基本工具，能够让我们在上面很爽的开发我们的 Python 代码。 Python 出自 jetbrains,如果你开发过 Android 或者 JAVA, 那么你应对 Android Studio 和 Intellij IDEA 不陌生，它们都是基于jetbrains的编辑器。不得不说，各种快捷键和插件真的是牛的一批。 PyCharm 的版本PyC">
+<meta name="twitter:image" content="https://wistbean.github.io/images/pycharm1.png">
+    
+        <link rel="alternate" type="application/atom+xml" title="wistbean" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(https://wistbean.github.io/images/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">wistbean</h5>
+          <a href="mailto:wistbean.bb@gmail.com" title="wistbean.bb@gmail.com" class="mail">wistbean.bb@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="https://wistbean.org/python-tutorial.html"  >
+                <i class="icon icon-lg icon-coffee"></i>
+                Python零基础入门教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2NzYyNjg2Nw==&action=getalbum&album_id=2448798954764255234#wechat_redirect"  >
+                <i class="icon icon-lg icon-bug"></i>
+                Python爬虫教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://vip.fxxkpython.com/?page_id=18"  >
+                <i class="icon icon-lg icon-code"></i>
+                加入我的VIP
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/aboutMe/"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light off" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">PyCharm 使用教程：01 安装PyCharm</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="vultr ss bbr v2ray 100美金">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">PyCharm 使用教程：01 安装PyCharm</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-09-23T06:21:00.000Z" itemprop="datePublished" class="page-time">
+  2018-09-23
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/python/">python</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/python/PyCharm/">PyCharm</a></li></ul></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>目录</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#PyCharm-的版本"><span class="post-toc-number">1.</span> <span class="post-toc-text">PyCharm 的版本</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#下载安装PyCharm"><span class="post-toc-number">2.</span> <span class="post-toc-text">下载安装PyCharm</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#选择PyCharm主题"><span class="post-toc-number">3.</span> <span class="post-toc-text">选择PyCharm主题</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#下载安装PyCharm插件"><span class="post-toc-number">4.</span> <span class="post-toc-text">下载安装PyCharm插件</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#激活PyCharm"><span class="post-toc-number">5.</span> <span class="post-toc-text">激活PyCharm</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#相关文章"><span class="post-toc-number">6.</span> <span class="post-toc-text">相关文章</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-pycharm-01"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">PyCharm 使用教程：01 安装PyCharm</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-09-23 14:21:00" datetime="2018-09-23T06:21:00.000Z"  itemprop="datePublished">2018-09-23</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/python/">python</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/python/PyCharm/">PyCharm</a></li></ul></li></ul>
+
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>PyCharm 给 Python开发人员提供了很多的基本工具，能够让我们在上面很爽的开发我们的 Python 代码。 Python 出自 <a href="https://www.jetbrains.com/" target="_blank" rel="noopener">jetbrains</a>,如果你开发过 Android 或者 JAVA, 那么你应对 <code>Android Studio</code> 和 <code>Intellij IDEA</code> 不陌生，它们都是基于jetbrains的编辑器。不得不说，各种快捷键和插件真的是牛的一批。</p>
+<h1 id="PyCharm-的版本"><a href="#PyCharm-的版本" class="headerlink" title="PyCharm 的版本"></a>PyCharm 的版本</h1><p>PyCharm 有三个版本，它们分别是：</p>
+<ul>
+<li>Professional</li>
+<li>Community</li>
+<li>Educational</li>
+</ul>
+<p>Community 和 Educational 版本是开源的，可以免费使用，不过呢，能用的功能相对来说就比较少了，Professional 版本提供了一整套优秀的工具。看你自己喜欢，我自己下载的是 Professional 版本。</p>
+<h1 id="下载安装PyCharm"><a href="#下载安装PyCharm" class="headerlink" title="下载安装PyCharm"></a>下载安装PyCharm</h1><p>点击<a href="https://www.jetbrains.com/pycharm/" target="_blank" rel="noopener">PyCharm下载</a>，根据你自己的操作系统选择下载相应的文件。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/pycharm1.png" alt="PyCharm" title="">
+                </div>
+                <div class="image-caption">PyCharm</div>
+            </figure>
+<p>安装完成之后，如果你是第一次使用 PyCharm 的话，那么直接选择「 Do not import settings 」就可以了：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://www.jetbrains.com/help/img/idea/2018.2/py_complete_installation_dialog.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+<h1 id="选择PyCharm主题"><a href="#选择PyCharm主题" class="headerlink" title="选择PyCharm主题"></a>选择PyCharm主题</h1><p>接着 PyCharm 会让你选择主题，有 Default 主题还有 Darcula 的，我这里选择 Darcula ，感觉极客一点。不过现在随便选也没关系，因为等下进入可以自己设置。</p>
+<h1 id="下载安装PyCharm插件"><a href="#下载安装PyCharm插件" class="headerlink" title="下载安装PyCharm插件"></a>下载安装PyCharm插件</h1><p>PyCharm的牛逼之处之一就是拥有丰富的插件，正是有了这些插件才让我们在开发的时候爽歪歪，比如有 MarkDown 插件，Git插件，Vim插件，太多了，如果你现在不太清楚有什么插件用的话，没关系，往后我写篇专门介绍插件的推荐及使用。</p>
+<p>当你安装完成之后， Pycharm 会有一个窗口是这样的，直接点击 「Create New Project」来新建一个项目， open 是打开已有的项目，我们一开始木有，所以先创建吧：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://www.jetbrains.com/help/img/idea/2018.2/py_welcomeScreen.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+<h1 id="激活PyCharm"><a href="#激活PyCharm" class="headerlink" title="激活PyCharm"></a>激活PyCharm</h1><p>如果你用的是 Professional 版本的PyCharm，是需要收费的，不过它有30天免费的试用，激活的方式有三种：</p>
+<ul>
+<li>JetBrains Account</li>
+<li>Activation code</li>
+<li>License server</li>
+</ul>
+<p>如果你是学生党或者老师的话，那么你可以使用你的学生证<a href="https://sales.jetbrains.com/hc/zh-cn/articles/207154369-%E5%AD%A6%E7%94%9F%E6%8E%88%E6%9D%83%E7%94%B3%E8%AF%B7%E6%96%B9%E5%BC%8F" target="_blank" rel="noopener">免费授权</a>申请方式获得专业版本。<br>是不是很良心，不仅如此，官方还给初创公司50%折扣优惠，如果你所在的是创业公司，资金预算不是很多的话，不妨去申请优惠：<a href="https://www.jetbrains.com/shop/eform/startup" target="_blank" rel="noopener">针对创业公司的优惠计划</a></p>
+<p>假如你既不是学生也不是老师，也不在初创公司，钱暂时不是很多的话，可以在公众号「学习python的正确姿势」发送 pycharm 获取激活码。</p>
+<h1 id="相关文章"><a href="#相关文章" class="headerlink" title="相关文章"></a>相关文章</h1><ul>
+<li><a href="https://wistbean.org/python-tutorial.html" target="_blank" rel="noopener">python3入门基础有趣的教程</a></li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+      <!--  
+
+        
+        关注公众号「wistbean」，发送「帅书」获取我写的技术电子书
+        
+        -->
+        在公众号「学习 Python 的正确姿势」发送「帅书」领取我写的技术电子书，转载请注明出处：
+        <a href="https://wistbean.github.io/pycharm-01.html">
+                   wistbean
+        </a>
+    </div>
+    
+    <footer>
+        <a href="https://wistbean.github.io">
+            <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+            wistbean
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PyCharm/">PyCharm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具使用/">工具使用</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/教程/">教程</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/pycharm-01.html&title=《PyCharm 使用教程：01 安装PyCharm》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/pycharm-01.html&title=《PyCharm 使用教程：01 安装PyCharm》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/pycharm-01.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《PyCharm 使用教程：01 安装PyCharm》 — wistbean&url=https://wistbean.github.io/pycharm-01.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/pycharm-01.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/java-ssm-3-2.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">「3-2」使用 PowerDesigner 逆向生成 MySQL 数据库</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/product-thinking.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">为了不跟产品经理干起来，我决定学点产品思维</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>本站已加入 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-知识 4.0  (CC BY-NC-SA 4.0)国际协议 | 转载请注明链接出处</a></span>
+        </p>
+    </div>
+
+        <div class="bottom">
+                <p><span>wistbean &copy; 2015 - 2024</span>
+                    <span>
+                        
+                         <a href="https://wistbean.github.io/">肯定会|wistbean</a>
+                         <a href="https://fxxkpython.com">通往Python高手之路</a>
+                         <a href="https://www.bwh8.net/aff.php?aff=32874" target="_blank">搬瓦工2024优惠码</a>、
+                         <a href="https://www.vultr.com/?ref=7532860" target="_blank">vultr2024优惠码</a>
+                    </span>
+                </p>
+        </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/pycharm-01.html&title=《PyCharm 使用教程：01 安装PyCharm》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/pycharm-01.html&title=《PyCharm 使用教程：01 安装PyCharm》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/pycharm-01.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《PyCharm 使用教程：01 安装PyCharm》 — wistbean&url=https://wistbean.github.io/pycharm-01.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/pycharm-01.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABwElEQVR42u3aQW7EIAwF0Ln/padS1UUXDfnGwETVY1V1EvJWFv7m9YrX+3td/f/3Gv8/2XPBwsXFbXPfw5VsnXCT/cfP4OLinueOC021VI3fvXomKna4uLgP4149Xy15uLi4/4k7hs61Rri4uE/m5s3JHKjTLOHi4p7nVgPTHX9vzHdxcXGL3HdxjQ8fSYM0F6r+vIWLi3uEm3y4GqFWa1F5N1xc3M3c/JJENcjotC43JQwXF3czNzl8RCFm+4hTiGVxcXGPcKshSLXw9WPTVmaDi4tb5Fa3zt+aK1s3++Di4n6I24Guot/kN7i4uMe5+UB0fFbqzHtxcXGfwO2PPeaGpuWxCi4u7nFutRWpfiwPRy7LKC4u7kFu3rR0LmR0bojg4uKe5ObDkv4oNH/r5lu4uLibuZ1jTd7wzF3UwMXF/Sy3E3TmAWsnPMXFxT3PrQaaSaOSH5uSFmsykcXFxZ3iripYeZDaOejg4uKe5FY/1glG80J2+SsuLu5Bbj4mWTV8nbzUhYuL+zDuXNPSGaz+8SsuLu6Duf14ZfJCBi4u7kHu2mHq2qBkslfDxcVtcKuBafUaVoLIn8TFxd3M/QLU50P6/9hGdAAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

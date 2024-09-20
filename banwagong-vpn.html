@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131395348-1"></script>
+    <script data-ad-client="ca-pub-9097083609097034" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-131395348-1');
+    </script>
+
+    
+
+    
+
+    
+
+
+<!-- Baidu Push -->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<!-- End Baidu Push -->
+
+
+    <meta charset="utf-8">
+    
+    <meta name="google-site-verification" content="bcJVGqEGcBIay29szBsswzqYxY3qUzWuvu1hfad3-08">
+    
+    
+    
+    
+    <title>个人VPN搭建教程|使用搬瓦工快速搭建自己的VPN | wistbean | wistbean</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#B5963F">
+    
+    
+    <meta name="keywords" content="搬瓦工,搬瓦工优惠,搭建,搬瓦工搭建vpn,2023 vps">
+    <meta name="description" content="1.使用搬瓦工搭建自己的VPN很多人想要使用 VPN ，不过去购买第三方的「VPN账号」除了不稳定外还怕不安全，有些第三方 VPN 会获取用户的数据做一些坏事，还特么限制网速，不能忍！ 所以想要自己买一台服务器，然后搭建一个完全属于自己的 VPN ，稳定快速又安全！ 那么就在这里教大家使用搬瓦工官网（性价比很高的云服务器提供商）来快速的搭建自己的VPN。而且我还会告诉大家怎么花比别人少的钱购买服务">
+<meta name="keywords" content="搬瓦工,搬瓦工优惠,搭建,搬瓦工搭建vpn,2023 vps">
+<meta property="og:type" content="article">
+<meta property="og:title" content="个人VPN搭建教程|使用搬瓦工快速搭建自己的VPN">
+<meta property="og:url" content="https://wistbean.github.io/banwagong-vpn.html">
+<meta property="og:site_name" content="wistbean">
+<meta property="og:description" content="1.使用搬瓦工搭建自己的VPN很多人想要使用 VPN ，不过去购买第三方的「VPN账号」除了不稳定外还怕不安全，有些第三方 VPN 会获取用户的数据做一些坏事，还特么限制网速，不能忍！ 所以想要自己买一台服务器，然后搭建一个完全属于自己的 VPN ，稳定快速又安全！ 那么就在这里教大家使用搬瓦工官网（性价比很高的云服务器提供商）来快速的搭建自己的VPN。而且我还会告诉大家怎么花比别人少的钱购买服务">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://wistbean.github.io/images/vpn4.png">
+<meta property="og:image" content="https://wistbean.github.io/images/vpn5.png">
+<meta property="og:image" content="https://wistbean.github.io/images/vpn8.png">
+<meta property="og:image" content="https://wistbean.github.io/images/vpn6.png">
+<meta property="og:image" content="https://wistbean.github.io/images/vpn7.png">
+<meta property="og:image" content="https://wistbean.github.io/images/vpn9.png">
+<meta property="og:image" content="https://wistbean.github.io/images/vpn10.png">
+<meta property="og:image" content="https://wistbean.github.io/images/have-not-vpn.png">
+<meta property="og:image" content="https://wistbean.github.io/images/vpn11.png">
+<meta property="og:image" content="https://wistbean.github.io/images/vpn12.png">
+<meta property="og:image" content="https://wistbean.github.io/images/vpn13.png">
+<meta property="og:image" content="https://wistbean.github.io/images/vpn14.png">
+<meta property="og:image" content="https://wistbean.github.io/images/vpn15.png">
+<meta property="og:image" content="https://wistbean.github.io/images/vpn16.png">
+<meta property="og:image" content="https://wistbean.github.io/images/vpn17.png">
+<meta property="og:image" content="https://wistbean.github.io/images/vpn18.png">
+<meta property="og:image" content="https://wistbean.github.io/images/vpn20.png">
+<meta property="og:image" content="https://wistbean.github.io/images/vpn21.png">
+<meta property="og:image" content="https://wistbean.github.io/images/vpn22.png">
+<meta property="og:image" content="https://wistbean.github.io/images/vpn23.png">
+<meta property="og:image" content="https://wistbean.github.io/images/vpn24.png">
+<meta property="og:image" content="https://wistbean.github.io/images/vpn25.png">
+<meta property="og:image" content="https://wistbean.github.io/images/vpn26.png">
+<meta property="og:updated_time" content="2024-01-26T15:14:15.589Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="个人VPN搭建教程|使用搬瓦工快速搭建自己的VPN">
+<meta name="twitter:description" content="1.使用搬瓦工搭建自己的VPN很多人想要使用 VPN ，不过去购买第三方的「VPN账号」除了不稳定外还怕不安全，有些第三方 VPN 会获取用户的数据做一些坏事，还特么限制网速，不能忍！ 所以想要自己买一台服务器，然后搭建一个完全属于自己的 VPN ，稳定快速又安全！ 那么就在这里教大家使用搬瓦工官网（性价比很高的云服务器提供商）来快速的搭建自己的VPN。而且我还会告诉大家怎么花比别人少的钱购买服务">
+<meta name="twitter:image" content="https://wistbean.github.io/images/vpn4.png">
+    
+        <link rel="alternate" type="application/atom+xml" title="wistbean" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(https://wistbean.github.io/images/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">wistbean</h5>
+          <a href="mailto:wistbean.bb@gmail.com" title="wistbean.bb@gmail.com" class="mail">wistbean.bb@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="https://wistbean.org/python-tutorial.html"  >
+                <i class="icon icon-lg icon-coffee"></i>
+                Python零基础入门教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2NzYyNjg2Nw==&action=getalbum&album_id=2448798954764255234#wechat_redirect"  >
+                <i class="icon icon-lg icon-bug"></i>
+                Python爬虫教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://vip.fxxkpython.com/?page_id=18"  >
+                <i class="icon icon-lg icon-code"></i>
+                加入我的VIP
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/aboutMe/"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light off" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">个人VPN搭建教程|使用搬瓦工快速搭建自己的VPN</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="vultr ss bbr v2ray 100美金">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">个人VPN搭建教程|使用搬瓦工快速搭建自己的VPN</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2022-08-01T09:06:26.000Z" itemprop="datePublished" class="page-time">
+  2022-08-01
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/搬瓦工/">搬瓦工</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>目录</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-使用搬瓦工搭建自己的VPN"><span class="post-toc-number">1.</span> <span class="post-toc-text">1.使用搬瓦工搭建自己的VPN</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-使用搬瓦工搭建VPN前的准备"><span class="post-toc-number">2.</span> <span class="post-toc-text">2.使用搬瓦工搭建VPN前的准备</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-购买搬瓦工VPS云服务器"><span class="post-toc-number">3.</span> <span class="post-toc-text">3.购买搬瓦工VPS云服务器</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-1选择搬瓦工VPS服务器"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">3.1选择搬瓦工VPS服务器</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-2拿到搬瓦工优惠码"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">3.2拿到搬瓦工优惠码</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#4-快速搭建搬瓦工VPN"><span class="post-toc-number">4.</span> <span class="post-toc-text">4.快速搭建搬瓦工VPN</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#5-使用搬瓦工openVPN"><span class="post-toc-number">5.</span> <span class="post-toc-text">5.使用搬瓦工openVPN</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#PC端使用搬瓦工VPN"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">PC端使用搬瓦工VPN</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#iPhone端使用搬瓦工VPN"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">iPhone端使用搬瓦工VPN</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Android端使用搬瓦工VPN"><span class="post-toc-number">5.3.</span> <span class="post-toc-text">Android端使用搬瓦工VPN</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#相关文章"><span class="post-toc-number">6.</span> <span class="post-toc-text">相关文章</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-banwagong-vpn"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">个人VPN搭建教程|使用搬瓦工快速搭建自己的VPN</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2022-08-01 17:06:26" datetime="2022-08-01T09:06:26.000Z"  itemprop="datePublished">2022-08-01</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/搬瓦工/">搬瓦工</a></li></ul>
+
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h2 id="1-使用搬瓦工搭建自己的VPN"><a href="#1-使用搬瓦工搭建自己的VPN" class="headerlink" title="1.使用搬瓦工搭建自己的VPN"></a>1.使用搬瓦工搭建自己的VPN</h2><p>很多人想要使用 VPN ，不过去购买第三方的「VPN账号」除了不稳定外还怕不安全，有些第三方 VPN 会获取用户的数据做一些坏事，还特么限制网速，不能忍！</p>
+<p>所以想要自己买一台服务器，然后搭建一个完全属于自己的 VPN ，稳定快速又安全！</p>
+<p>那么就在这里教大家使用<a href="https://bwh89.net/aff.php?aff=32874" target="_blank">搬瓦工官网</a>（性价比很高的云服务器提供商）来快速的搭建自己的VPN。而且我还<br>会告诉大家<strong>怎么花比别人少的钱购买服务器</strong>，下文将会提到怎么获取优惠码，一般人很少知道的！</p>
+<h2 id="2-使用搬瓦工搭建VPN前的准备"><a href="#2-使用搬瓦工搭建VPN前的准备" class="headerlink" title="2.使用搬瓦工搭建VPN前的准备"></a>2.使用搬瓦工搭建VPN前的准备</h2><ol>
+<li><p>一台可以上网的电脑。</p>
+</li>
+<li><p>支付宝或者PayPal账号， 搬瓦工支持支付宝付款。</p>
+</li>
+</ol>
+<h2 id="3-购买搬瓦工VPS云服务器"><a href="#3-购买搬瓦工VPS云服务器" class="headerlink" title="3.购买搬瓦工VPS云服务器"></a>3.购买搬瓦工VPS云服务器</h2><h3 id="3-1选择搬瓦工VPS服务器"><a href="#3-1选择搬瓦工VPS服务器" class="headerlink" title="3.1选择搬瓦工VPS服务器"></a>3.1选择搬瓦工VPS服务器</h3><table>
+<thead>
+<tr>
+<th>搬瓦工配置</th>
+<th>搬瓦工费用</th>
+<th>优惠链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>*SPECIAL 40G KVM PROMO V3 - LOS ANGELES - CN2  * <br>  SSD硬盘: 40  GB RAID-10 <br> RAM内存: 2048   MB <br> CPU处理器: 1x Intel Xeon <br> Transfer流量: 2000  GB&#x2F;月 <br> 连接速度: 1 Gigabit <br> 洛杉矶机房，CN2路线，使用中国的直线路线，速度加快</td>
+<td>$27.99&#x2F;季</td>
+<td><a href="https://www.bwh88.net/aff.php?aff=32874&pid=58" target="_blank" rel="noopener">点击进入</a></td>
+</tr>
+<tr>
+<td>*SPECIAL 20G KVM PROMO V3 - LOS ANGELES - CN2 * <br>  SSD硬盘: 20 GB RAID-10 <br> RAM内存: 1024  MB <br> CPU处理器: 1x Intel Xeon <br> Transfer流量: 1000  GB&#x2F;月 <br> 连接速度: 1 Gigabit <br> 洛杉矶机房，CN2路线，使用中国的直线路线，速度加快</td>
+<td>$29.99 &#x2F;半年</td>
+<td><a href="https://www.bwh88.net/aff.php?aff=32874&pid=57" target="_blank" rel="noopener">点击进入</a></td>
+</tr>
+<tr>
+<td><em>80G KVM – PROMO</em> <br> SSD硬盘: 80 GB RAID-10<br>RAM内存: 4 GB<br>CPU处理器: 4x Intel Xeon<br>Transfer流量: 3 TB&#x2F;mo<br>连接速度: 1 Gigabit<br>Multiple locations</td>
+<td>$19.99&#x2F;月</td>
+<td><a href="https://www.bwh88.net/aff.php?aff=32874&pid=46" target="_blank" rel="noopener">点击进入</a></td>
+</tr>
+<tr>
+<td><em>20G KVM – PROMO</em> <br> SSD硬盘: 20 GB RAID-10 <br>RAM内存: 1024 MB <br>CPU处理器: 2x Intel Xeon <br>Transfer流量: 1 TB&#x2F;mo <br>连接速度: 1 Gigabit <br>Multiple locations</td>
+<td>$49.99&#x2F;年</td>
+<td><a href="https://www.bwh88.net/aff.php?aff=32874&pid=44" target="_blank" rel="noopener">点击进入</a></td>
+</tr>
+<tr>
+<td><em>40G KVM – PROMO</em> <br> SSD硬盘: 40 GB RAID-10 <br>RAM内存: 2 GB <br>CPU处理器: 3x Intel Xeon <br>Transfer流量: 2 TB&#x2F;mo <br>连接速度: 1 Gigabit <br>Multiple locations</td>
+<td>$99.99&#x2F;年</td>
+<td><a href="https://www.bwh88.net/aff.php?aff=32874&pid=45" target="_blank" rel="noopener">点击进入</a></td>
+</tr>
+<tr>
+<td><em>160G KVM – PROMO</em> <br> SSD硬盘: 160 GB RAID-10<br>RAM内存: 8 GB<br>CPU处理器: 5x Intel Xeon<br>Transfer流量: 4 TB&#x2F;mo<br>连接速度: 1 Gigabit<br>Multiple locations</td>
+<td>$39.99&#x2F;月</td>
+<td><a href="https://www.bwh88.net/aff.php?aff=32874&pid=47" target="_blank" rel="noopener">点击进入</a></td>
+</tr>
+<tr>
+<td><em>3200G KVM – PROMO</em> <br> SSD硬盘: 320 GB RAID-10<br>RAM内存: 16 GB<br>CPU处理器: 6x Intel Xeon<br>Transfer流量: 5 TB&#x2F;mo<br>连接速度: 1 Gigabit<br>Multiple locations</td>
+<td>$79.99&#x2F;月</td>
+<td><a href="https://www.bwh88.net/aff.php?aff=32874&pid=48" target="_blank" rel="noopener">点击进入</a></td>
+</tr>
+</tbody></table>
+<h3 id="3-2拿到搬瓦工优惠码"><a href="#3-2拿到搬瓦工优惠码" class="headerlink" title="3.2拿到搬瓦工优惠码"></a>3.2拿到搬瓦工优惠码</h3><p>当你进到这个页面的时候呢，别急着点击「Add to Cart」添加到购物车，这里面暗藏着一个优惠码，很多人不知道，使用浏览器查看源代码，chrome浏览器的话按F12，然后搜索「code」，你会发现有一个 「Try this promo code: xxxx 」，这个xxxx就是优惠码，你把他复制下来，待会有用。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/vpn4.png" alt="使用搬瓦工搭建VPN" title="">
+                </div>
+                <div class="image-caption">使用搬瓦工搭建VPN</div>
+            </figure>
+
+<p>页面的 Location 就是选择服务器的地址，到时访问谷歌的时候会显示你当前访问的地址。好了，我们点击「Add to Cart」。</p>
+<p>接下来，进入结算页面，我们刚才复制的优惠码就派上用场了，将你刚刚复制的优惠码复制进去然后点击 「Validate Code」，看！是不是优惠了！一般人不知道这种操作:</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/vpn5.png" alt="使用搬瓦工搭建VPN" title="">
+                </div>
+                <div class="image-caption">使用搬瓦工搭建VPN</div>
+            </figure>
+
+<p>接着点击「CheckOut」完成付款即可。付款的时候选择 Alipay 就可以使用支付宝付款。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/vpn8.png" alt="使用搬瓦工搭建VPN" title="">
+                </div>
+                <div class="image-caption">使用搬瓦工搭建VPN</div>
+            </figure>
+
+<h2 id="4-快速搭建搬瓦工VPN"><a href="#4-快速搭建搬瓦工VPN" class="headerlink" title="4.快速搭建搬瓦工VPN"></a>4.快速搭建搬瓦工VPN</h2><p>购买完毕后你就拥有一台你自己的服务器了，接着点击Services下的MyServices，可以看到你的服务器：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/vpn6.png" alt="使用搬瓦工搭建VPN" title="">
+                </div>
+                <div class="image-caption">使用搬瓦工搭建VPN</div>
+            </figure>
+
+<p>我们点击「KiwiVM Control Panel」进入管理界面：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/vpn7.png" alt="使用搬瓦工搭建VPN" title="">
+                </div>
+                <div class="image-caption">使用搬瓦工搭建VPN</div>
+            </figure>
+
+<p>可以看到你服务器的信息:</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/vpn9.png" alt="使用搬瓦工搭建VPN" title="">
+                </div>
+                <div class="image-caption">使用搬瓦工搭建VPN</div>
+            </figure>
+
+<p>接着我们点击 「OpenVPN Server」：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/vpn10.png" alt="使用搬瓦工搭建VPN" title="">
+                </div>
+                <div class="image-caption">使用搬瓦工搭建VPN</div>
+            </figure>
+
+<p>可能有些朋友在这里的时候发现没有 OpenVPN 这个菜单：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/have-not-vpn.png" alt="openvpn" title="">
+                </div>
+                <div class="image-caption">openvpn</div>
+            </figure>
+
+<p>那么这个时候可以访问：<a href="https://kiwivm.64clouds.com/preloader.php?load=/main-exec.php?mode=extras_openvpn" target="_blank" rel="noopener">搬瓦工一键安装OpenVPN</a></p>
+<p>接着点击：「Install and configer OpenVPN Server」，搬瓦工会自动帮我们在服务器安装和配置，不需要自己手动敲命令了：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/vpn11.png" alt="使用搬瓦工搭建VPN" title="">
+                </div>
+                <div class="image-caption">使用搬瓦工搭建VPN</div>
+            </figure>
+
+<p>等一会就搭建好VPN了，就问你快不？</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/vpn12.png" alt="使用搬瓦工搭建VPN" title="">
+                </div>
+                <div class="image-caption">使用搬瓦工搭建VPN</div>
+            </figure>
+
+<h2 id="5-使用搬瓦工openVPN"><a href="#5-使用搬瓦工openVPN" class="headerlink" title="5.使用搬瓦工openVPN"></a>5.使用搬瓦工openVPN</h2><h3 id="PC端使用搬瓦工VPN"><a href="#PC端使用搬瓦工VPN" class="headerlink" title="PC端使用搬瓦工VPN"></a>PC端使用搬瓦工VPN</h3><p>首先我们下载我们的VPN文件所需的配置文件，点击「Download key Files」下载，然后再下载openVPN的客户端：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/vpn13.png" alt="使用搬瓦工搭建VPN" title="">
+                </div>
+                <div class="image-caption">使用搬瓦工搭建VPN</div>
+            </figure>
+
+<p>接着将配置文件解压到openVPN客户端的config文件夹下：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/vpn14.png" alt="使用搬瓦工搭建VPN" title="">
+                </div>
+                <div class="image-caption">使用搬瓦工搭建VPN</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/vpn15.png" alt="使用搬瓦工搭建VPN" title="">
+                </div>
+                <div class="image-caption">使用搬瓦工搭建VPN</div>
+            </figure>
+
+<p>接着再openvpn目录下的bin目录双击打开openvpn-gui，然后Connect连接，连接完成右下角的openVPN会成为绿色状态，然后就可以访问外网了，速度很快：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/vpn16.png" alt="使用搬瓦工搭建VPN" title="">
+                </div>
+                <div class="image-caption">使用搬瓦工搭建VPN</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/vpn17.png" alt="使用搬瓦工搭建VPN" title="">
+                </div>
+                <div class="image-caption">使用搬瓦工搭建VPN</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/vpn18.png" alt="使用搬瓦工搭建VPN" title="">
+                </div>
+                <div class="image-caption">使用搬瓦工搭建VPN</div>
+            </figure>
+
+<h3 id="iPhone端使用搬瓦工VPN"><a href="#iPhone端使用搬瓦工VPN" class="headerlink" title="iPhone端使用搬瓦工VPN"></a>iPhone端使用搬瓦工VPN</h3><p>同样，手机也需要安装一个openVPN的客户端，不过你在中国区的 AppleStore 下载不到 openVPN 的，你需要注册一个美区的苹果账号，然后搜索 openVPN 下载：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/vpn20.png" alt="使用搬瓦工搭建VPN" title="">
+                </div>
+                <div class="image-caption">使用搬瓦工搭建VPN</div>
+            </figure>
+
+<p>接着电脑端下载 iTunes ，打开 iTunes ，手机用数据线连接电脑，点击文件共享：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/vpn21.png" alt="使用搬瓦工搭建VPN" title="">
+                </div>
+                <div class="image-caption">使用搬瓦工搭建VPN</div>
+            </figure>
+
+<p>将刚刚下载的vpn文件解压，然后添加到OpenVPN客户端：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/vpn22.png" alt="使用搬瓦工搭建VPN" title="">
+                </div>
+                <div class="image-caption">使用搬瓦工搭建VPN</div>
+            </figure>
+
+<p>手机打开OpenVPN APP， 点击 + 这个按钮：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/vpn23.png" alt="使用搬瓦工搭建VPN" title="">
+                </div>
+                <div class="image-caption">使用搬瓦工搭建VPN</div>
+            </figure>
+
+<p>然后就可以连接了：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/vpn24.png" alt="使用搬瓦工搭建VPN" title="">
+                </div>
+                <div class="image-caption">使用搬瓦工搭建VPN</div>
+            </figure>
+
+<p>访问速度杠杠的：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/vpn25.png" alt="使用搬瓦工搭建VPN" title="">
+                </div>
+                <div class="image-caption">使用搬瓦工搭建VPN</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/vpn26.png" alt="使用搬瓦工搭建VPN" title="">
+                </div>
+                <div class="image-caption">使用搬瓦工搭建VPN</div>
+            </figure>
+
+<h3 id="Android端使用搬瓦工VPN"><a href="#Android端使用搬瓦工VPN" class="headerlink" title="Android端使用搬瓦工VPN"></a>Android端使用搬瓦工VPN</h3><p>Android手机使用搬瓦工openVpn同上，下载openVpn App ，然后把配置文件传上去就行了。</p>
+<h2 id="相关文章"><a href="#相关文章" class="headerlink" title="相关文章"></a>相关文章</h2><ul>
+<li><a href="/banwagong-quick-build-ss.html">搬瓦工vps一键搭建ss并开启BBR代理加速科学上网，傻瓜式1分钟搞定</a></li>
+<li><a href="/banwagong-15-1000G-vps.html">搬瓦工19美元服务器没货了，但提供了15美元1000GB的vps</a></li>
+<li><a href="https://wistbean.org/ipsec,l2tp_vpn.html" target="_blank" rel="noopener">CentOS快速搭建一个属于自己的IPsec&#x2F;L2TP VPN</a></li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+      <!--  
+
+        
+        关注公众号「wistbean」，发送「帅书」获取我写的技术电子书
+        
+        -->
+        在公众号「学习 Python 的正确姿势」发送「帅书」领取我写的技术电子书，转载请注明出处：
+        <a href="https://wistbean.github.io/banwagong-vpn.html">
+                   wistbean
+        </a>
+    </div>
+    
+    <footer>
+        <a href="https://wistbean.github.io">
+            <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+            wistbean
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/2023-vps/">2023 vps</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/搬瓦工/">搬瓦工</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/搬瓦工优惠/">搬瓦工优惠</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/搬瓦工搭建vpn/">搬瓦工搭建vpn</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/搭建/">搭建</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/banwagong-vpn.html&title=《个人VPN搭建教程|使用搬瓦工快速搭建自己的VPN》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/banwagong-vpn.html&title=《个人VPN搭建教程|使用搬瓦工快速搭建自己的VPN》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/banwagong-vpn.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《个人VPN搭建教程|使用搬瓦工快速搭建自己的VPN》 — wistbean&url=https://wistbean.github.io/banwagong-vpn.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/banwagong-vpn.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/ri-ru-10w.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">日入十万！</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/er-jiu.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">可惜了，二舅</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>本站已加入 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-知识 4.0  (CC BY-NC-SA 4.0)国际协议 | 转载请注明链接出处</a></span>
+        </p>
+    </div>
+
+        <div class="bottom">
+                <p><span>wistbean &copy; 2015 - 2024</span>
+                    <span>
+                        
+                         <a href="https://wistbean.github.io/">肯定会|wistbean</a>
+                         <a href="https://fxxkpython.com">通往Python高手之路</a>
+                         <a href="https://www.bwh8.net/aff.php?aff=32874" target="_blank">搬瓦工2024优惠码</a>、
+                         <a href="https://www.vultr.com/?ref=7532860" target="_blank">vultr2024优惠码</a>
+                    </span>
+                </p>
+        </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/banwagong-vpn.html&title=《个人VPN搭建教程|使用搬瓦工快速搭建自己的VPN》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/banwagong-vpn.html&title=《个人VPN搭建教程|使用搬瓦工快速搭建自己的VPN》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/banwagong-vpn.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《个人VPN搭建教程|使用搬瓦工快速搭建自己的VPN》 — wistbean&url=https://wistbean.github.io/banwagong-vpn.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/banwagong-vpn.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLUlEQVR42u3aQW4CMQwFUO5/aSp1VYkO8+1kquJ5WSEKjF8WrmPn8YjX83sdvf75ztF3X1fv15YWBgbGxzKeb1fygNf3jwLNtyaPDQMD4z6M5DHJA/Ks+H4r89gwMDAwkgSaYPLgMDAwMPYyemVl9ZMYGBgYeSg5Y6XRdvlZHAMD4wMZ64OB617/6XwDAwPjXzKexVUtDfMG3FJUGBgYoxkrTfnqEXTXfZBChYuBgTGC0Tua5le+qq3/5Fj7S7LGwMAYzUguda2k5l3tuei4i4GBMZpRTaD5X3eVnuWRAAYGxjhGftlipfirHnebZ3EMDIxxjGr6Sxr61SNob8D5y3wDAwNjKKMXdC/55p9f2UoMDIx5jF7CrbbbLm/VYWBgjGbk7fhqSVcYPcbIky3AwMC4DaPa4k8S6N4R5sllCwwMjKGMaHoQJMq8sHsU19JlCwwMjA9nXJFSdyXxQuGIgYExmtELaz3o3tgg+l+BgYExlFENZddVjF4le/I7GBgY4xj5QDFJuPmAszcGOGRjYGDchrE+yFy5VJGDTxIuBgbGOEbhcNgqCpMEmj832mIMDIxxjGdxVdtk1QZcNWVjYGDcgbHrukMCTr6bNOaq5SYGBsYMRjXJ7hpP9ngnk1gMDIzRjDzJVqej1S3oHZ4xMDAweofPlWFAtWDFwMDAyMeZ+WCgOio4+S4GBsYNGNcNA6LCLv78YQwYGBijGSuDgepG9C5z9IpODAyMEYwvmssUGV9pWfoAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

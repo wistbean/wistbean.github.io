@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131395348-1"></script>
+    <script data-ad-client="ca-pub-9097083609097034" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-131395348-1');
+    </script>
+
+    
+
+    
+
+    
+
+
+<!-- Baidu Push -->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<!-- End Baidu Push -->
+
+
+    <meta charset="utf-8">
+    
+    <meta name="google-site-verification" content="bcJVGqEGcBIay29szBsswzqYxY3qUzWuvu1hfad3-08">
+    
+    
+    
+    
+    <title>「6-7」码农商城前端页面优化 | wistbean | wistbean</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#B5963F">
+    
+    
+    <meta name="keywords" content="码农商城,httpclient,freemarker,商城首页,电商商品数据,商品数据">
+    <meta name="description" content="前言之前我们使用的前端页面只有一个首页，我又懒得去写一个完整的前端静态页面，所以在 GitHub 上面找了一个仿天猫首页的页面来讲解。 但是那个首页还不是很好，代码有点冗长，而且只有一个页面，没有商品详情页等。 所以我重新在 GitHub 上面 clone 了一个仿天猫的静态页面。 Tmall-pages 除了有首页之外，还有详情页，购物车页面等。">
+<meta name="keywords" content="码农商城,httpclient,freemarker,商城首页,电商商品数据,商品数据">
+<meta property="og:type" content="article">
+<meta property="og:title" content="「6-7」码农商城前端页面优化">
+<meta property="og:url" content="https://wistbean.github.io/java-ssm-6-7.html">
+<meta property="og:site_name" content="wistbean">
+<meta property="og:description" content="前言之前我们使用的前端页面只有一个首页，我又懒得去写一个完整的前端静态页面，所以在 GitHub 上面找了一个仿天猫首页的页面来讲解。 但是那个首页还不是很好，代码有点冗长，而且只有一个页面，没有商品详情页等。 所以我重新在 GitHub 上面 clone 了一个仿天猫的静态页面。 Tmall-pages 除了有首页之外，还有详情页，购物车页面等。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://wistbean.github.io/images/tmall-detail.png">
+<meta property="og:image" content="https://wistbean.github.io/images/manong-product-detail.png">
+<meta property="og:updated_time" content="2024-01-26T15:14:15.674Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="「6-7」码农商城前端页面优化">
+<meta name="twitter:description" content="前言之前我们使用的前端页面只有一个首页，我又懒得去写一个完整的前端静态页面，所以在 GitHub 上面找了一个仿天猫首页的页面来讲解。 但是那个首页还不是很好，代码有点冗长，而且只有一个页面，没有商品详情页等。 所以我重新在 GitHub 上面 clone 了一个仿天猫的静态页面。 Tmall-pages 除了有首页之外，还有详情页，购物车页面等。">
+<meta name="twitter:image" content="https://wistbean.github.io/images/tmall-detail.png">
+    
+        <link rel="alternate" type="application/atom+xml" title="wistbean" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(https://wistbean.github.io/images/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">wistbean</h5>
+          <a href="mailto:wistbean.bb@gmail.com" title="wistbean.bb@gmail.com" class="mail">wistbean.bb@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="https://wistbean.org/python-tutorial.html"  >
+                <i class="icon icon-lg icon-coffee"></i>
+                Python零基础入门教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2NzYyNjg2Nw==&action=getalbum&album_id=2448798954764255234#wechat_redirect"  >
+                <i class="icon icon-lg icon-bug"></i>
+                Python爬虫教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://vip.fxxkpython.com/?page_id=18"  >
+                <i class="icon icon-lg icon-code"></i>
+                加入我的VIP
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/aboutMe/"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light off" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">「6-7」码农商城前端页面优化</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="vultr ss bbr v2ray 100美金">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">「6-7」码农商城前端页面优化</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-04-07T08:24:06.000Z" itemprop="datePublished" class="page-time">
+  2019-04-07
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Java/">Java</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Java/Java-SSM视频教程/">Java SSM视频教程</a></li></ul></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>目录</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#前言"><span class="post-toc-number">1.</span> <span class="post-toc-text">前言</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#更改静态页面"><span class="post-toc-number">2.</span> <span class="post-toc-text">更改静态页面</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#java-ssm-视频教程目录"><span class="post-toc-number">3.</span> <span class="post-toc-text">java ssm 视频教程目录</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-java-ssm-6-7"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">「6-7」码农商城前端页面优化</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-04-07 16:24:06" datetime="2019-04-07T08:24:06.000Z"  itemprop="datePublished">2019-04-07</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Java/">Java</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Java/Java-SSM视频教程/">Java SSM视频教程</a></li></ul></li></ul>
+
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>之前我们使用的前端页面只有一个首页，我又懒得去写一个完整的前端静态页面，所以在 GitHub 上面找了一个仿天猫首页的页面来讲解。</p>
+<p>但是那个首页还不是很好，代码有点冗长，而且只有一个页面，没有商品详情页等。</p>
+<p>所以我重新在 GitHub 上面 clone 了一个仿天猫的静态页面。 <a href="https://github.com/Catsugar/Tmall-pages" target="_blank" rel="noopener">Tmall-pages</a> 除了有首页之外，还有详情页，购物车页面等。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/tmall-detail.png" alt="详情页" title="">
+                </div>
+                <div class="image-caption">详情页</div>
+            </figure>
+
+
+<h1 id="更改静态页面"><a href="#更改静态页面" class="headerlink" title="更改静态页面"></a>更改静态页面</h1><p>1、首先将我们之前在 portal 下的静态资源删除：</p>
+<blockquote>
+<p>rm -rf css&#x2F;<br>rm -rf js&#x2F;<br>rm -rf ftl&#x2F;*.ftl</p>
+</blockquote>
+<p>2、复制我们 clone 下来的静态资源到项目中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">├── css</span><br><span class="line">│   ├── main.css</span><br><span class="line">│   ├── _notes</span><br><span class="line">│   │   └── reset.css.mno</span><br><span class="line">│   ├── reset.css</span><br><span class="line">│   └── toTop.css</span><br><span class="line">├── font</span><br><span class="line">│   ├── demo1.css</span><br><span class="line">│   ├── demo1.html</span><br><span class="line">│   ├── demo2.css</span><br><span class="line">│   ├── demo2.html</span><br><span class="line">│   ├── demo3.css</span><br><span class="line">│   ├── demo3.html</span><br><span class="line">│   ├── demo.css</span><br><span class="line">│   ├── demo.html</span><br><span class="line">│   ├── iconfont1.css</span><br><span class="line">│   ├── iconfont1.eot</span><br><span class="line">│   ├── iconfont1.svg</span><br><span class="line">│   ├── iconfont1.ttf</span><br><span class="line">│   ├── iconfont1.woff</span><br><span class="line">│   ├── iconfont2.css</span><br><span class="line">│   ├── iconfont2.eot</span><br><span class="line">│   ├── iconfont2.svg</span><br><span class="line">│   ├── iconfont2.ttf</span><br><span class="line">│   ├── iconfont2.woff</span><br><span class="line">│   ├── iconfont3.css</span><br><span class="line">│   ├── iconfont3.eot</span><br><span class="line">│   ├── iconfont3.svg</span><br><span class="line">│   ├── iconfont3.ttf</span><br><span class="line">│   ├── iconfont3.woff</span><br><span class="line">│   ├── iconfont.css</span><br><span class="line">│   ├── iconfont.eot</span><br><span class="line">│   ├── iconfont.svg</span><br><span class="line">│   ├── iconfont.ttf</span><br><span class="line">│   └── iconfont.woff</span><br><span class="line">├── ftl</span><br><span class="line">│   ├── comment.ftl</span><br><span class="line">│   ├── detail.ftl</span><br><span class="line">│   ├── index.ftl</span><br><span class="line">│   ├── login.ftl</span><br><span class="line">│   ├── Product.ftl</span><br><span class="line">│   ├── Select.ftl</span><br><span class="line">│   └── shopcar.ftl</span><br><span class="line">├── js</span><br><span class="line">│   ├── banner.js</span><br><span class="line">│   ├── main.js</span><br><span class="line">│   ├── top_bg.png</span><br><span class="line">│   ├── totop.gif</span><br><span class="line">│   └── toTop.js</span><br><span class="line">└── web.xml</span><br></pre></td></tr></table></figure>
+
+<p>为了让图片更加容易访问到，直接把 images 放到 webapp 目录下。</p>
+<p>3、 添加商品分类数据</p>
+<p>我们使用 Product.ftl 这个页面，将 rest 传来的数据用 Freemark 展示。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!----banner区--------------------------------------------&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"comWidth clearfix Products"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"Products_left fl"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"leftNav"</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"nav_content"</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">#list</span> <span class="attr">categories.categories</span> <span class="attr">as</span> <span class="attr">c1</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">h3</span>&gt;</span>$&#123;c1.name&#125;<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"nav_content_list clearfix"</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">#list</span> <span class="attr">c1.sub_cetegories</span> <span class="attr">as</span> <span class="attr">c2</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>$&#123;c2.name&#125;<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;/<span class="name">#list</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;/<span class="name">#list</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>4、 商品展示</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"Products_show"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"Products_title"</span>&gt;</span><span class="tag">&lt;<span class="name">h3</span>&gt;</span>最新产品<span class="tag">&lt;/<span class="name">h3</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"Products_list"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">#list</span> <span class="attr">products</span> <span class="attr">as</span> <span class="attr">product</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"Products_item"</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item_img"</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"http://65.49.227.129:8888/$&#123;product.imgUrl&#125;"</span> <span class="attr">alt</span>=<span class="string">"手机"</span> <span class="attr">width</span>=<span class="string">"200px"</span>/&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item_cont"</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span> &gt;</span>$&#123;product.name&#125;<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;<span class="name">br</span> /&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"money"</span>&gt;</span>¥$&#123;product.price&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">#list</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>效果如下</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/manong-product-detail.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+
+
+<h1 id="java-ssm-视频教程目录"><a href="#java-ssm-视频教程目录" class="headerlink" title="java ssm 视频教程目录"></a>java ssm 视频教程目录</h1><ul>
+<li><a href="https://wistbean.org/java-ssm-video.html#SSM%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%9B%AE%E5%BD%95" target="_blank" rel="noopener">SSM视频教程目录</a></li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+      <!--  
+
+        
+        关注公众号「wistbean」，发送「帅书」获取我写的技术电子书
+        
+        -->
+        在公众号「学习 Python 的正确姿势」发送「帅书」领取我写的技术电子书，转载请注明出处：
+        <a href="https://wistbean.github.io/java-ssm-6-7.html">
+                   wistbean
+        </a>
+    </div>
+    
+    <footer>
+        <a href="https://wistbean.github.io">
+            <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+            wistbean
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/freemarker/">freemarker</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/httpclient/">httpclient</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/商品数据/">商品数据</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/商城首页/">商城首页</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/电商商品数据/">电商商品数据</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/码农商城/">码农商城</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/java-ssm-6-7.html&title=《「6-7」码农商城前端页面优化》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/java-ssm-6-7.html&title=《「6-7」码农商城前端页面优化》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/java-ssm-6-7.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《「6-7」码农商城前端页面优化》 — wistbean&url=https://wistbean.github.io/java-ssm-6-7.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/java-ssm-6-7.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/java-ssm-6-8.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">「6-8」码农商城商品详情页的展示</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/offer-digitalocean-create-vps.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">优惠购买境外服务器digitalocean vps，免费获取100美元教程</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>本站已加入 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-知识 4.0  (CC BY-NC-SA 4.0)国际协议 | 转载请注明链接出处</a></span>
+        </p>
+    </div>
+
+        <div class="bottom">
+                <p><span>wistbean &copy; 2015 - 2024</span>
+                    <span>
+                        
+                         <a href="https://wistbean.github.io/">肯定会|wistbean</a>
+                         <a href="https://fxxkpython.com">通往Python高手之路</a>
+                         <a href="https://www.bwh8.net/aff.php?aff=32874" target="_blank">搬瓦工2024优惠码</a>、
+                         <a href="https://www.vultr.com/?ref=7532860" target="_blank">vultr2024优惠码</a>
+                    </span>
+                </p>
+        </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/java-ssm-6-7.html&title=《「6-7」码农商城前端页面优化》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/java-ssm-6-7.html&title=《「6-7」码农商城前端页面优化》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/java-ssm-6-7.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《「6-7」码农商城前端页面优化》 — wistbean&url=https://wistbean.github.io/java-ssm-6-7.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/java-ssm-6-7.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACOklEQVR42u3aQW7DMAwF0dz/0u62QCJnPqkWMDVaFalj+2nBkBRfL7yuxfr93/frySfv93m/ctuSIUPGYxnX7Vpds3q5/kbcP3dJlSFDxgGM1YN5uEy/VbvD8nMZMmTIAIH1/j73dyDBV4YMGTJqt+YJZfqJDBkyZNSK2Ptv8fI13bLNtbgMGTIeyODNsv//+0/ON2TIkPEoxhUuHhzTcHk1lgwZMmYz0lZampzxcpcU1V9aeDJkyBjNSNv9vOAkr0XGwjbkvDJkyBjEqA1Y9I8ByLMCngwZMgYxamUqafqnDf1WqJUhQ8ZoBk8H0/C6a/yic3QqQ4aMeYygBd8A87GMYnNNhgwZQxlp6sYTSj4EVitlP5xvyJAhYxyDP4YfSaYHA7Ui9sPMiAwZMo5h8IBbC6C1w9Evd5YhQ8ZoxraQV6qbeWiOx79kyJAxiJEOb9VacrwcLQZoGTJkHMYgZWraUCPbUfuVkCFDxgkMnqKloXZbMOVpogwZMkYz7ptZ/SEJHnA3bIoMGTKGMngh2unnBdMf4cGnDBkyzmH0jyRJcCSlcvFnQIYMGQcweEBMjxNqZTBPQGXIkDGbcYWL701/OCxIJWXIkDGakRar5OVIolm7Pm0CypAhYxKDBFk+hNHfuWKwliFDxgEMUoKmgTJtt7WQMmTIkBEWsekRZjrAsWy6yZAhQ0apSUdehSeawUmsDBkyxjFIEcuHt3jyRxLHze02GTJkPJDBE7vahEMN1h/1kCFDxgjGDx/2S6kDLji4AAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

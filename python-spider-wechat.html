@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131395348-1"></script>
+    <script data-ad-client="ca-pub-9097083609097034" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-131395348-1');
+    </script>
+
+    
+
+    
+
+    
+
+
+<!-- Baidu Push -->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<!-- End Baidu Push -->
+
+
+    <meta charset="utf-8">
+    
+    <meta name="google-site-verification" content="bcJVGqEGcBIay29szBsswzqYxY3qUzWuvu1hfad3-08">
+    
+    
+    
+    
+    <title>python爬取微信好友数据，分析后我好像知道了些什么 | wistbean | wistbean</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#B5963F">
+    
+    
+    <meta name="keywords" content="python,教程,python爬虫,python基础">
+    <meta name="description" content="前言每天都在使用微信，在移动互联网到来之时，腾讯内部组建了三支团队，同时开发同样的产品————微信，最后是广州做邮箱出身的团队赢了，杀入了移动互联网这片红海。 微信第一次出现在我们面前的时候，是在 2011 年，那时候更多人是使用 QQ ,对微信没什么好感，直到附近的人，摇一摇这些约炮功能的出现，让人们爱不释手，如果说这是资本原罪，那么朋友圈这个功能的出现，着实满足了用户内心深处的窥探欲望，再到公">
+<meta name="keywords" content="python,教程,python爬虫,python基础">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python爬取微信好友数据，分析后我好像知道了些什么">
+<meta property="og:url" content="https://wistbean.github.io/python-spider-wechat.html">
+<meta property="og:site_name" content="wistbean">
+<meta property="og:description" content="前言每天都在使用微信，在移动互联网到来之时，腾讯内部组建了三支团队，同时开发同样的产品————微信，最后是广州做邮箱出身的团队赢了，杀入了移动互联网这片红海。 微信第一次出现在我们面前的时候，是在 2011 年，那时候更多人是使用 QQ ,对微信没什么好感，直到附近的人，摇一摇这些约炮功能的出现，让人们爱不释手，如果说这是资本原罪，那么朋友圈这个功能的出现，着实满足了用户内心深处的窥探欲望，再到公">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://wistbean.org/images/sp-wechat1.png">
+<meta property="og:image" content="https://wistbean.org/images/py-wechat02.png">
+<meta property="og:image" content="https://wistbean.org/images/py-wechat03.png">
+<meta property="og:image" content="https://wistbean.org/images/py-wechat04.png">
+<meta property="og:image" content="https://wistbean.org/images/py-wechat05.png">
+<meta property="og:updated_time" content="2024-01-26T15:14:15.724Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="python爬取微信好友数据，分析后我好像知道了些什么">
+<meta name="twitter:description" content="前言每天都在使用微信，在移动互联网到来之时，腾讯内部组建了三支团队，同时开发同样的产品————微信，最后是广州做邮箱出身的团队赢了，杀入了移动互联网这片红海。 微信第一次出现在我们面前的时候，是在 2011 年，那时候更多人是使用 QQ ,对微信没什么好感，直到附近的人，摇一摇这些约炮功能的出现，让人们爱不释手，如果说这是资本原罪，那么朋友圈这个功能的出现，着实满足了用户内心深处的窥探欲望，再到公">
+<meta name="twitter:image" content="https://wistbean.org/images/sp-wechat1.png">
+    
+        <link rel="alternate" type="application/atom+xml" title="wistbean" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(https://wistbean.github.io/images/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">wistbean</h5>
+          <a href="mailto:wistbean.bb@gmail.com" title="wistbean.bb@gmail.com" class="mail">wistbean.bb@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="https://wistbean.org/python-tutorial.html"  >
+                <i class="icon icon-lg icon-coffee"></i>
+                Python零基础入门教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2NzYyNjg2Nw==&action=getalbum&album_id=2448798954764255234#wechat_redirect"  >
+                <i class="icon icon-lg icon-bug"></i>
+                Python爬虫教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://vip.fxxkpython.com/?page_id=18"  >
+                <i class="icon icon-lg icon-code"></i>
+                加入我的VIP
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/aboutMe/"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light off" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">python爬取微信好友数据，分析后我好像知道了些什么</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="vultr ss bbr v2ray 100美金">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">python爬取微信好友数据，分析后我好像知道了些什么</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-11-07T14:43:43.000Z" itemprop="datePublished" class="page-time">
+  2018-11-07
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/python/">python</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/python/python爬虫/">python爬虫</a></li></ul></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>目录</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#前言"><span class="post-toc-number">1.</span> <span class="post-toc-text">前言</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#我微信好友中的性别比例"><span class="post-toc-number">2.</span> <span class="post-toc-text">我微信好友中的性别比例</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#我微信好友中的态度"><span class="post-toc-number">3.</span> <span class="post-toc-text">我微信好友中的态度</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#我微信好友中的情感"><span class="post-toc-number">4.</span> <span class="post-toc-text">我微信好友中的情感</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#我微信好友都住在哪里"><span class="post-toc-number">5.</span> <span class="post-toc-text">我微信好友都住在哪里</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#相关"><span class="post-toc-number">6.</span> <span class="post-toc-text">相关</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-python-spider-wechat"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">python爬取微信好友数据，分析后我好像知道了些什么</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-11-07 22:43:43" datetime="2018-11-07T14:43:43.000Z"  itemprop="datePublished">2018-11-07</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/python/">python</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/python/python爬虫/">python爬虫</a></li></ul></li></ul>
+
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>每天都在使用微信，在移动互联网到来之时，腾讯内部组建了三支团队，同时开发同样的产品————微信，最后是广州做邮箱出身的团队赢了，杀入了移动互联网这片红海。</p>
+<p>微信第一次出现在我们面前的时候，是在 2011 年，那时候更多人是使用 QQ ,对微信没什么好感，直到<code>附近的人</code>，<code>摇一摇</code>这些约炮功能的出现，让人们爱不释手，如果说这是资本原罪，那么<code>朋友圈</code>这个功能的出现，着实满足了用户内心深处的窥探欲望，再到公众号的出现，微信已经牛的一批了。</p>
+<p>我的微信好友中，有些朋友是熟悉的，有些朋友是不太熟悉的，比如看了我的文章或 blog 添加的我，不过没关系，在茫茫人海中相遇便是缘。那么我在想，把我的微信好友的数据用 Python 爬取下来，分析一下，应该会很有趣。</p>
+<p>微信有个网页版的登录，那么可以从这里入手，有个牛逼的<a href="https://pypi.org/project/itchat/" target="_blank" rel="noopener">itchat</a>模块，两行代码，就能让我们登录并且获取好友信息了：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 微信登录</span></span><br><span class="line">    itchat.auto_login(hotReload=<span class="keyword">True</span>)</span><br><span class="line">    friends = itchat.get_friends(update=<span class="keyword">True</span>)</span><br></pre></td></tr></table></figure>
+
+<p>当我扫码登录完之后呢，就可以获取到我的好友数据了：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://wistbean.org/images/sp-wechat1.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+<h1 id="我微信好友中的性别比例"><a href="#我微信好友中的性别比例" class="headerlink" title="我微信好友中的性别比例"></a>我微信好友中的性别比例</h1><p>在返回的数据中，有一个叫做 Sex 的字段，就是性别，简单的分析可以知道 <code>0未知 1男 2女</code> ,将所有好友中的性别数据提取出来，接着使用 matplotlib 画个饼图:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">sexs = list(map(<span class="keyword">lambda</span> x:x[<span class="string">'Sex'</span>],friends[<span class="number">1</span>:]))</span><br><span class="line">counts = Counter(sexs).items()</span><br><span class="line">counts = sorted(counts, key=<span class="keyword">lambda</span> x:x[<span class="number">0</span>], reverse=<span class="keyword">False</span>)</span><br><span class="line">counts = list(map(<span class="keyword">lambda</span> x:x[<span class="number">1</span>],counts))</span><br><span class="line"><span class="comment"># 0未知 1男 2女</span></span><br><span class="line">labels = [<span class="string">'未知'</span>,<span class="string">'小哥哥'</span>,<span class="string">'小姐姐'</span>]</span><br><span class="line">colors = [<span class="string">'yellowgreen'</span>,<span class="string">'darkslateblue'</span>,<span class="string">'orangered'</span>]</span><br><span class="line">plt.figure(figsize=(<span class="number">8</span>,<span class="number">5</span>), dpi=<span class="number">80</span>)</span><br><span class="line">plt.axes(aspect=<span class="number">1</span>)</span><br><span class="line">plt.pie(counts,</span><br><span class="line">        labels=labels,</span><br><span class="line">        colors=colors,</span><br><span class="line">        labeldistance = <span class="number">1.1</span>,</span><br><span class="line">        autopct = <span class="string">'%3.1f%%'</span>,</span><br><span class="line">        shadow = <span class="keyword">False</span>,</span><br><span class="line">        startangle = <span class="number">90</span>,</span><br><span class="line">        pctdistance = <span class="number">0.6</span></span><br><span class="line">)</span><br><span class="line">plt.legend(loc=<span class="string">'upper right'</span>,)</span><br><span class="line">plt.title(<span class="string">u'%s的微信好友性别比例'</span> % friends[<span class="number">0</span>][<span class="string">'NickName'</span>])</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<p>得出结果：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://wistbean.org/images/py-wechat02.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+<p>挖槽，小哥哥那么多，我的妹纸们呢？女神呢？</p>
+<p>不过想想，我的微信好友大多是程序员&#x2F;破涕为笑，也就平复下心情了，妹纸快加我微信啊，让我的饼图好看一些 - -</p>
+<h1 id="我微信好友中的态度"><a href="#我微信好友中的态度" class="headerlink" title="我微信好友中的态度"></a>我微信好友中的态度</h1><p>微信有个<code>个性签名</code>的东西,每个人会把自己的座右铭，或者喜欢的话语写上，试着来分析一下我的好友中用到最多的词是什么，把语句进行结巴分词，然后搞一张云词出来，应该不错。</p>
+<p>在获取到好友的数据中，有个 <code>signature</code> 的字段，就是好友的个签了，有些朋友会加上一些表情什么的，先把它们过滤掉，然后再使用 SnowNLP 分析，通过结巴分词分析完就可以用 wordcloud 生成云图了：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">analyseSignature</span><span class="params">(friends)</span>:</span></span><br><span class="line">    signatures = <span class="string">''</span></span><br><span class="line">    emotions = []</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> friend <span class="keyword">in</span> friends:</span><br><span class="line">        <span class="comment"># 获取好友的签名</span></span><br><span class="line">        signature = friend[<span class="string">'Signature'</span>]</span><br><span class="line">        <span class="keyword">if</span> (signature != <span class="keyword">None</span>):</span><br><span class="line">            <span class="comment"># 过滤掉标签和表情</span></span><br><span class="line">            signature = signature.strip().replace(<span class="string">'span'</span>, <span class="string">''</span>).replace(<span class="string">'class'</span>, <span class="string">''</span>).replace(<span class="string">'emoji'</span>, <span class="string">''</span>)</span><br><span class="line">            signature = re.sub(<span class="string">r'1f(\d.+)'</span>, <span class="string">''</span>, signature)</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (len(signature) &gt; <span class="number">0</span>):</span><br><span class="line">                <span class="comment"># 分析标签</span></span><br><span class="line">                nlp = SnowNLP(signature)</span><br><span class="line">                <span class="comment"># 获取情绪值</span></span><br><span class="line">                emotions.append(nlp.sentiments)</span><br><span class="line">                <span class="comment"># 结巴分析</span></span><br><span class="line">                signatures += <span class="string">' '</span>.join(jieba.analyse.extract_tags(signature, <span class="number">5</span>))</span><br><span class="line"></span><br><span class="line">    back_coloring = np.array(Image.open(<span class="string">'baseketball.jpg'</span>))</span><br><span class="line">    wordcloud = WordCloud(</span><br><span class="line">        ...</span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 生成云词</span></span><br><span class="line">    wordcloud.generate(signatures)</span><br><span class="line">    plt.imshow(wordcloud)</span><br><span class="line">    plt.axis(<span class="string">"off"</span>)</span><br><span class="line">    plt.show()</span><br><span class="line">    wordcloud.to_file(<span class="string">'signatures.jpg'</span>)</span><br></pre></td></tr></table></figure>
+
+<p>生成结果：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://wistbean.org/images/py-wechat03.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+<p>可以看得出来，我的朋友们还是挺正能量，努力，坚持，生活，人生是出现的比较多的词。多跟正能量的人在一起，互相传递能量，挺好。</p>
+<h1 id="我微信好友中的情感"><a href="#我微信好友中的情感" class="headerlink" title="我微信好友中的情感"></a>我微信好友中的情感</h1><p>SnowNLP 可以获取 sentiments，我理解为情绪值，从0到1，值越高说明越正能量，可以通过这个值，画一个图，看看我微信好友们的情感是怎么样的：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">count_good = len(list(filter(<span class="keyword">lambda</span> x: x &gt; <span class="number">0.66</span>, emotions)))</span><br><span class="line">count_normal = len(list(filter(<span class="keyword">lambda</span> x: x &gt;= <span class="number">0.33</span> <span class="keyword">and</span> x &lt;= <span class="number">0.66</span>, emotions)))</span><br><span class="line">count_bad = len(list(filter(<span class="keyword">lambda</span> x: x &lt; <span class="number">0.33</span>, emotions)))</span><br><span class="line">labels = [<span class="string">u'负能量'</span>, <span class="string">u'中性'</span>, <span class="string">u'正能量满满'</span>]</span><br><span class="line">values = (count_bad, count_normal, count_good)</span><br><span class="line">plt.rcParams[<span class="string">'font.sans-serif'</span>] = [<span class="string">'simHei'</span>]</span><br><span class="line">plt.rcParams[<span class="string">'axes.unicode_minus'</span>] = <span class="keyword">False</span></span><br><span class="line">plt.xlabel(<span class="string">u'情感判断'</span>)</span><br><span class="line">plt.ylabel(<span class="string">u'频数'</span>)</span><br><span class="line">plt.xticks(range(<span class="number">3</span>), labels)</span><br><span class="line">plt.legend(loc=<span class="string">'upper right'</span>, )</span><br><span class="line">plt.bar(range(<span class="number">3</span>), values, color=<span class="string">'rgb'</span>)</span><br><span class="line">plt.title(<span class="string">u'%s的微信好友签名信息情感分析'</span> % friends[<span class="number">0</span>][<span class="string">'NickName'</span>])</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://wistbean.org/images/py-wechat04.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+<p>可以看到，负能量的人还是少数的，大多都正能量满满，我喜欢。</p>
+<h1 id="我微信好友都住在哪里"><a href="#我微信好友都住在哪里" class="headerlink" title="我微信好友都住在哪里"></a>我微信好友都住在哪里</h1><p>在返回的微信好友数据中，有一个 Province 字段，用来说明用户所处的省份，那么用这个字段，就可以统计出，我的微信好友在哪里，把这些数据统计出来，然后显示在中国地图上，应该会很直观，这里我使用到了 pyecharts 模块来进行地图可视化：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">analyseLocation</span><span class="params">(friends)</span>:</span></span><br><span class="line">    keys = []</span><br><span class="line">    values = []</span><br><span class="line">    province = list(map(<span class="keyword">lambda</span> x: x[<span class="string">'Province'</span>], friends[<span class="number">1</span>:]))</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> set(province):</span><br><span class="line">        keys.append(i)</span><br><span class="line">        values.append(province.count(i))</span><br><span class="line"></span><br><span class="line">    maps = Map(<span class="string">"中国地图"</span>, <span class="string">'中国地图'</span>, width=<span class="number">1200</span>, height=<span class="number">600</span>)</span><br><span class="line">    maps.add(<span class="string">""</span>, keys, values, visual_range=[<span class="number">0</span>, <span class="number">50</span>], maptype=<span class="string">'china'</span>, is_visualmap=<span class="keyword">True</span>,</span><br><span class="line">            visual_text_color=<span class="string">'#000'</span>)</span><br><span class="line">    maps.show_config()</span><br><span class="line">    maps.render(path=<span class="string">"localtion.html"</span>)</span><br></pre></td></tr></table></figure>
+
+<p>结果如下：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://wistbean.org/images/py-wechat05.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+<p>哇塞！我的好友快要遍布整个中国了，就差新疆，青海，宁夏，天津和宝岛台湾了，以后我是不是就不用学习数理化也可以走遍中国都不怕了哈哈哈！</p>
+<p>ok~ 我主要从微信好友的性别，态度，情感和位置进行了分析，除了觉得我的微信好友中女生比较少之外，其它都挺不错的，继续努力，希望以后我的朋友们越来越牛逼！</p>
+<p>ps：如果你也想分析下你的微信好友，想要获取源码的话可以在公众号后台发送「微信」获取。</p>
+<h1 id="相关"><a href="#相关" class="headerlink" title="相关"></a>相关</h1><ol>
+<li><a href="https://wistbean.org/python-tutorial.html" target="_blank" rel="noopener">python3入门基础有趣的教程</a></li>
+<li><a href="https://wistbean.org/python-spider-meizi.html" target="_blank" rel="noopener">Python爬虫基础：爬取妹子图片并保存到本地</a></li>
+<li><a href="https://wistbean.org/how-to-learn-python-spider.html" target="_blank" rel="noopener">python 爬虫应该学习什么知识点？</a></li>
+<li><a href="https://wistbean.org/how-to-learn-python-dangdang.html" target="_blank" rel="noopener">python 爬取当当网最受欢迎的500本书</a></li>
+</ol>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+      <!--  
+
+        
+        关注公众号「wistbean」，发送「帅书」获取我写的技术电子书
+        
+        -->
+        在公众号「学习 Python 的正确姿势」发送「帅书」领取我写的技术电子书，转载请注明出处：
+        <a href="https://wistbean.github.io/python-spider-wechat.html">
+                   wistbean
+        </a>
+    </div>
+    
+    <footer>
+        <a href="https://wistbean.github.io">
+            <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+            wistbean
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python基础/">python基础</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python爬虫/">python爬虫</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/教程/">教程</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/python-spider-wechat.html&title=《python爬取微信好友数据，分析后我好像知道了些什么》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/python-spider-wechat.html&title=《python爬取微信好友数据，分析后我好像知道了些什么》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/python-spider-wechat.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《python爬取微信好友数据，分析后我好像知道了些什么》 — wistbean&url=https://wistbean.github.io/python-spider-wechat.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/python-spider-wechat.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/shuangshiyi.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">双十一剁手之前，先了解这些骚操作能让你省很多钱</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/spider-qiniu.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">七牛云要回收了我的测试域名，只能把我的博客图片爬下来了</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>本站已加入 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-知识 4.0  (CC BY-NC-SA 4.0)国际协议 | 转载请注明链接出处</a></span>
+        </p>
+    </div>
+
+        <div class="bottom">
+                <p><span>wistbean &copy; 2015 - 2024</span>
+                    <span>
+                        
+                         <a href="https://wistbean.github.io/">肯定会|wistbean</a>
+                         <a href="https://fxxkpython.com">通往Python高手之路</a>
+                         <a href="https://www.bwh8.net/aff.php?aff=32874" target="_blank">搬瓦工2024优惠码</a>、
+                         <a href="https://www.vultr.com/?ref=7532860" target="_blank">vultr2024优惠码</a>
+                    </span>
+                </p>
+        </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/python-spider-wechat.html&title=《python爬取微信好友数据，分析后我好像知道了些什么》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/python-spider-wechat.html&title=《python爬取微信好友数据，分析后我好像知道了些什么》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/python-spider-wechat.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《python爬取微信好友数据，分析后我好像知道了些什么》 — wistbean&url=https://wistbean.github.io/python-spider-wechat.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/python-spider-wechat.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJ0lEQVR42u3abaqDQAxG4e5/094FiHreZLxg5viriLTzWAj5+v3wdZyu8/3z8+QO+bZllwwZMj7LOG6ve8bVETsv4v53L6kyZMjYgHH1w/efa0/Wvu3hzDJkyJARJn8kpBK8DBkyZKwNuPy4KViGDBkyeBHbCY6kDCbF84JaXIYMGR9k8K77/39+Zb4hQ4aMTzGO8OqkhjxQxqeSIUPGaEZ/AJl+Q9puI+eRIUPGbEZ/taIWoDkPjSVkyJCxDaNT0PYHA+laxmXAlSFDxjhGuirBQ2daxHLeQxCXIUPGaAZJFvmoktwhLbwYIEOGjHEMvh6RUh86fKWQLUOGjD0Z6dIDab3VGme1RPByviFDhoxBDJ7MdVK9TlBG92XIkLEBoxMu07Zabf0i2BaRIUPGOAZZmEjHjelYlB8dNd1kyJAxlEHmBulCRtp0Iy8i+E9kyJAxiJEWsbUwnTb641cmQ4aMDRjpKLG/olpLQIuTWBkyZHycQQIxP0QaOteukcmQIWM2gxyisxJRC7LpcFSGDBm7MThgbcmajhNkyJCxG2Pt4cjrWDzylCFDxlDGEV79FJBXncWkUIYMGeMYtWFnLUDzo/DnWzNbGTJkfIrRD7I8KeyMS4NaXIYMGUMZQdULEsE0vWs12mTIkCEDBFByiPeaejJkyJDBUz2+KsHvk1UMGTJk7MPga1u1FLDW7n+lFpchQ8YHGZ1NjVpiRw7Bw7QMGTJGM/4AC20i4Kx3RpYAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

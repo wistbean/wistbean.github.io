@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131395348-1"></script>
+    <script data-ad-client="ca-pub-9097083609097034" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-131395348-1');
+    </script>
+
+    
+
+    
+
+    
+
+
+<!-- Baidu Push -->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<!-- End Baidu Push -->
+
+
+    <meta charset="utf-8">
+    
+    <meta name="google-site-verification" content="bcJVGqEGcBIay29szBsswzqYxY3qUzWuvu1hfad3-08">
+    
+    
+    
+    
+    <title>01 使用 VirtualBox 创建 CentOS 虚拟机 | wistbean | wistbean</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#B5963F">
+    
+    
+    <meta name="keywords" content="教程,Linux,VirtualBox,CentOS,虚拟机">
+    <meta name="description" content="这是 Linux 学习的第一篇，对于刚开始学习 Linux 的我们没必要直接马上将 Linux 装到我们电脑上，我们可以先在虚拟机中使用，等熟练到一定程度的时候，再将 Linux 安装到我们的电脑上也不迟。那么我们就先将 CentOS 虚拟机创建起来吧。 在看本篇文章之前你需要下载：  VirtualBox虚拟机，地址：https://www.virtualbox.org/wiki/Downloa">
+<meta name="keywords" content="教程,Linux,VirtualBox,CentOS,虚拟机">
+<meta property="og:type" content="article">
+<meta property="og:title" content="01 使用 VirtualBox 创建 CentOS 虚拟机">
+<meta property="og:url" content="https://wistbean.github.io/use-virtualbox-install-centos.html">
+<meta property="og:site_name" content="wistbean">
+<meta property="og:description" content="这是 Linux 学习的第一篇，对于刚开始学习 Linux 的我们没必要直接马上将 Linux 装到我们电脑上，我们可以先在虚拟机中使用，等熟练到一定程度的时候，再将 Linux 安装到我们的电脑上也不迟。那么我们就先将 CentOS 虚拟机创建起来吧。 在看本篇文章之前你需要下载：  VirtualBox虚拟机，地址：https://www.virtualbox.org/wiki/Downloa">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://wistbean.github.io/images/2017-04-02-use-virtualbox-install-centos/VirtualBox.png">
+<meta property="og:image" content="https://wistbean.github.io/images/2017-04-02-use-virtualbox-install-centos/install-vb01.png">
+<meta property="og:image" content="https://wistbean.github.io/images/2017-04-02-use-virtualbox-install-centos/install-vb02.png">
+<meta property="og:image" content="https://wistbean.github.io/images/2017-04-02-use-virtualbox-install-centos/install-vb05.png">
+<meta property="og:image" content="https://wistbean.github.io/images/2017-04-02-use-virtualbox-install-centos/install-vb07.png">
+<meta property="og:image" content="https://wistbean.github.io/images/2017-04-02-use-virtualbox-install-centos/create_sys01.png">
+<meta property="og:image" content="https://wistbean.github.io/images/2017-04-02-use-virtualbox-install-centos/create_sys02.png">
+<meta property="og:image" content="https://wistbean.github.io/images/2017-04-02-use-virtualbox-install-centos/create_sys03.png">
+<meta property="og:image" content="https://wistbean.github.io/images/2017-04-02-use-virtualbox-install-centos/create_sys04.png">
+<meta property="og:image" content="https://wistbean.github.io/images/2017-04-02-use-virtualbox-install-centos/create_sys05.png">
+<meta property="og:image" content="https://wistbean.github.io/images/2017-04-02-use-virtualbox-install-centos/create_sys06.png">
+<meta property="og:image" content="https://wistbean.github.io/images/2017-04-02-use-virtualbox-install-centos/create_sys07.png">
+<meta property="og:image" content="https://wistbean.github.io/images/2017-04-02-use-virtualbox-install-centos/create_sys08.png">
+<meta property="og:updated_time" content="2024-01-26T15:14:15.820Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="01 使用 VirtualBox 创建 CentOS 虚拟机">
+<meta name="twitter:description" content="这是 Linux 学习的第一篇，对于刚开始学习 Linux 的我们没必要直接马上将 Linux 装到我们电脑上，我们可以先在虚拟机中使用，等熟练到一定程度的时候，再将 Linux 安装到我们的电脑上也不迟。那么我们就先将 CentOS 虚拟机创建起来吧。 在看本篇文章之前你需要下载：  VirtualBox虚拟机，地址：https://www.virtualbox.org/wiki/Downloa">
+<meta name="twitter:image" content="https://wistbean.github.io/images/2017-04-02-use-virtualbox-install-centos/VirtualBox.png">
+    
+        <link rel="alternate" type="application/atom+xml" title="wistbean" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(https://wistbean.github.io/images/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">wistbean</h5>
+          <a href="mailto:wistbean.bb@gmail.com" title="wistbean.bb@gmail.com" class="mail">wistbean.bb@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="https://wistbean.org/python-tutorial.html"  >
+                <i class="icon icon-lg icon-coffee"></i>
+                Python零基础入门教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2NzYyNjg2Nw==&action=getalbum&album_id=2448798954764255234#wechat_redirect"  >
+                <i class="icon icon-lg icon-bug"></i>
+                Python爬虫教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://vip.fxxkpython.com/?page_id=18"  >
+                <i class="icon icon-lg icon-code"></i>
+                加入我的VIP
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/aboutMe/"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light off" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">01 使用 VirtualBox 创建 CentOS 虚拟机</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="vultr ss bbr v2ray 100美金">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">01 使用 VirtualBox 创建 CentOS 虚拟机</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-04-02T04:00:33.000Z" itemprop="datePublished" class="page-time">
+  2017-04-02
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Linux/">Linux</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>目录</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#为什么使用VirtualBox虚拟机"><span class="post-toc-number">1.</span> <span class="post-toc-text">为什么使用VirtualBox虚拟机</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#安装VirtualBox虚拟机"><span class="post-toc-number">2.</span> <span class="post-toc-text">安装VirtualBox虚拟机</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#创建虚拟系统"><span class="post-toc-number">3.</span> <span class="post-toc-text">创建虚拟系统</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-use-virtualbox-install-centos"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">01 使用 VirtualBox 创建 CentOS 虚拟机</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-04-02 12:00:33" datetime="2017-04-02T04:00:33.000Z"  itemprop="datePublished">2017-04-02</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Linux/">Linux</a></li></ul>
+
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>这是 Linux 学习的第一篇，对于刚开始学习 Linux 的我们没必要直接马上将 Linux 装到我们电脑上，我们可以先在虚拟机中使用，等熟练到一定程度的时候，再将 Linux 安装到我们的电脑上也不迟。那么我们就先将 CentOS 虚拟机创建起来吧。</p>
+<p>在看本篇文章之前你需要下载：</p>
+<ul>
+<li>VirtualBox虚拟机，地址：<a href="https://www.virtualbox.org/wiki/Downloads" target="_blank" rel="noopener">https://www.virtualbox.org/wiki/Downloads</a></li>
+<li>CentOS7镜像文件，地址：<a href="http://mirrors.163.com/centos/7.3.1611/isos/x86_64/" target="_blank" rel="noopener">http://mirrors.163.com/centos/7.3.1611/isos/x86_64/</a></li>
+</ul>
+<blockquote>
+<p>tips：CentOS7有4G大小，VirtualBox有117MB大小。CentOS7镜像文件将会在下一篇文章用到。</p>
+</blockquote>
+<h1 id="为什么使用VirtualBox虚拟机"><a href="#为什么使用VirtualBox虚拟机" class="headerlink" title="为什么使用VirtualBox虚拟机"></a>为什么使用VirtualBox虚拟机</h1><p>现在市面上比较流行的虚拟就有<a href="https://my.vmware.com/zh/web/vmware/downloads" target="_blank" rel="noopener">VMware</a>，<a href="https://www.virtualbox.org/wiki/Downloads" target="_blank" rel="noopener">VirtualBox</a>。由于VMware是收费的，而VirtualBox是开源免费的，就凭这一点，我们就选择使用VirtualBox了哈，当然除了开源免费外，它还要诸多优点的，比如它跨平台：可以运行在 Windows, Mac OS X 和 Linux&#x2F;UNIX平台上，可以虚拟出我们常见系统等等，所以完全够我们使用。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/2017-04-02-use-virtualbox-install-centos/VirtualBox.png" alt="VirtualBox" title="">
+                </div>
+                <div class="image-caption">VirtualBox</div>
+            </figure>
+
+
+
+
+<hr>
+<h1 id="安装VirtualBox虚拟机"><a href="#安装VirtualBox虚拟机" class="headerlink" title="安装VirtualBox虚拟机"></a>安装VirtualBox虚拟机</h1><ol>
+<li>双击运行我们下载好的VirtualBox虚拟机：</li>
+</ol>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/2017-04-02-use-virtualbox-install-centos/install-vb01.png" alt="VirtualBox" title="">
+                </div>
+                <div class="image-caption">VirtualBox</div>
+            </figure>
+
+
+<ol start="2">
+<li>点击next后，注意这里一般不选择默认的系统盘，我这里选择D盘：</li>
+</ol>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/2017-04-02-use-virtualbox-install-centos/install-vb02.png" alt="VirtualBox" title="">
+                </div>
+                <div class="image-caption">VirtualBox</div>
+            </figure>
+
+<ol start="3">
+<li>再点击next，next，yes后进行安装，安装过程中会弹出提示安装设备软件，我们选择安装：</li>
+</ol>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/2017-04-02-use-virtualbox-install-centos/install-vb05.png" alt="VirtualBox" title="">
+                </div>
+                <div class="image-caption">VirtualBox</div>
+            </figure>
+
+<ol start="4">
+<li>安装完成后运行VirtualBox：</li>
+</ol>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/2017-04-02-use-virtualbox-install-centos/install-vb07.png" alt="VirtualBox" title="">
+                </div>
+                <div class="image-caption">VirtualBox</div>
+            </figure>
+
+
+<hr>
+<h1 id="创建虚拟系统"><a href="#创建虚拟系统" class="headerlink" title="创建虚拟系统"></a>创建虚拟系统</h1><ol>
+<li>点击左上角的新建按钮，弹出对话框，名称输入「CentOS」，类型为Linux，版本为Red Hat（64bit）：</li>
+</ol>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/2017-04-02-use-virtualbox-install-centos/create_sys01.png" alt="VirtualBox" title="">
+                </div>
+                <div class="image-caption">VirtualBox</div>
+            </figure>
+
+<ol start="2">
+<li>点击下一步，选择虚拟内存大小，这里设置：（4096MB）4G：</li>
+</ol>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/2017-04-02-use-virtualbox-install-centos/create_sys02.png" alt="VirtualBox" title="">
+                </div>
+                <div class="image-caption">VirtualBox</div>
+            </figure>
+
+<ol start="3">
+<li>点击下一步，创建虚拟硬盘，我们选择 “现在创建虚拟硬盘” ，然后点击创建：</li>
+</ol>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/2017-04-02-use-virtualbox-install-centos/create_sys03.png" alt="VirtualBox" title="">
+                </div>
+                <div class="image-caption">VirtualBox</div>
+            </figure>
+
+<ol start="4">
+<li>点击创建之后，会让我们选择硬盘的类型，这里我们选择：VDI（VitrtualBox 磁盘映像）：</li>
+</ol>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/2017-04-02-use-virtualbox-install-centos/create_sys04.png" alt="VirtualBox" title="">
+                </div>
+                <div class="image-caption">VirtualBox</div>
+            </figure>
+
+<ol start="5">
+<li>设置硬盘的分配方式，这里我们选择：动态分配</li>
+</ol>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/2017-04-02-use-virtualbox-install-centos/create_sys05.png" alt="VirtualBox" title="">
+                </div>
+                <div class="image-caption">VirtualBox</div>
+            </figure>
+
+<ol start="6">
+<li>选择文件的位置和大小，我们先选择大小，这里设置为100GB：</li>
+</ol>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/2017-04-02-use-virtualbox-install-centos/create_sys06.png" alt="VirtualBox" title="">
+                </div>
+                <div class="image-caption">VirtualBox</div>
+            </figure>
+
+<ol start="7">
+<li>点击又上角的文件夹按钮，存放到你想放的位置上，这里我放在G:\vmdisk上：</li>
+</ol>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/2017-04-02-use-virtualbox-install-centos/create_sys07.png" alt="VirtualBox" title="">
+                </div>
+                <div class="image-caption">VirtualBox</div>
+            </figure>
+
+<ol start="8">
+<li>点击创建后，我们的虚拟机系统就创建完成了：</li>
+</ol>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/2017-04-02-use-virtualbox-install-centos/create_sys08.png" alt="VirtualBox" title="">
+                </div>
+                <div class="image-caption">VirtualBox</div>
+            </figure>
+
+
+
+<hr>
+<p>我们已将将 CentOS 的虚拟机创建好了，那么下一章就开始对基于我们现在的虚拟机来安装 CentOS 系统和配置。所以你赶紧把 CentOS7 镜像文件下载好吧?坐等下一章我们一起安装！</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+      <!--  
+
+        
+        关注公众号「wistbean」，发送「帅书」获取我写的技术电子书
+        
+        -->
+        在公众号「学习 Python 的正确姿势」发送「帅书」领取我写的技术电子书，转载请注明出处：
+        <a href="https://wistbean.github.io/use-virtualbox-install-centos.html">
+                   wistbean
+        </a>
+    </div>
+    
+    <footer>
+        <a href="https://wistbean.github.io">
+            <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+            wistbean
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CentOS/">CentOS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VirtualBox/">VirtualBox</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/教程/">教程</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/虚拟机/">虚拟机</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/use-virtualbox-install-centos.html&title=《01 使用 VirtualBox 创建 CentOS 虚拟机》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/use-virtualbox-install-centos.html&title=《01 使用 VirtualBox 创建 CentOS 虚拟机》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/use-virtualbox-install-centos.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《01 使用 VirtualBox 创建 CentOS 虚拟机》 — wistbean&url=https://wistbean.github.io/use-virtualbox-install-centos.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/use-virtualbox-install-centos.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/install-centos.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">02 在VirtualBox虚拟机安装配置CentOS系统</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/start-learning-linux.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Linux 学习启动篇</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>本站已加入 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-知识 4.0  (CC BY-NC-SA 4.0)国际协议 | 转载请注明链接出处</a></span>
+        </p>
+    </div>
+
+        <div class="bottom">
+                <p><span>wistbean &copy; 2015 - 2024</span>
+                    <span>
+                        
+                         <a href="https://wistbean.github.io/">肯定会|wistbean</a>
+                         <a href="https://fxxkpython.com">通往Python高手之路</a>
+                         <a href="https://www.bwh8.net/aff.php?aff=32874" target="_blank">搬瓦工2024优惠码</a>、
+                         <a href="https://www.vultr.com/?ref=7532860" target="_blank">vultr2024优惠码</a>
+                    </span>
+                </p>
+        </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/use-virtualbox-install-centos.html&title=《01 使用 VirtualBox 创建 CentOS 虚拟机》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/use-virtualbox-install-centos.html&title=《01 使用 VirtualBox 创建 CentOS 虚拟机》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/use-virtualbox-install-centos.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《01 使用 VirtualBox 创建 CentOS 虚拟机》 — wistbean&url=https://wistbean.github.io/use-virtualbox-install-centos.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/use-virtualbox-install-centos.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACK0lEQVR42u3aQY7jMAwEwPn/p7PAnvZip5vyLGCpdAocR3blQJAif37i9fm7rq7/u66uX915v8/DCwMD47WM5GH3W18B2j/ifrcvVAwMjAMYycvdb5281v3OybeX1zEwMDCCpC1/uSTcY2BgYKwE3AQ5C7IYGBgY94yVhC+/vy13f6UWx8DAeCGjbQz8z8+/2N/AwMB4CePz0EoO+vNQWz8dAwNja0Z+lJYfxiXlaJLktW1UDAyMXRmzYa88gcuDctIkuHx/DAyMAxjtMVbeyJyF9bqgxcDAOICRlJo5OClxk0Zmfh0DA+M0RhIc25Rx+HJ5qoqBgXEko03pEnaSjA6HOTAwMI5k5KNaT018zJJODAyMMxltKZuPSvxGuRtFdAwMjC0YbTNy1sjM/6y6jYGBgbE1oz1Ky9O4leI2Cbv1pBsGBsZrGfUAVnms34bp/H4MDIzTGEnATRqNK+CVgI6BgbE3oy0R801XhsySxsMlEgMDY1PGSqk5O9zPn1WUxxgYGAcwZuMRbTuhDeh56wIDA+MExnrAne2WMB4YucDAwHg544GfBYlgUprOwjcGBsbejE+52lK2PUpr2RgYGCcwZiXrLBFsxzhWnouBgbEfIw+yyfDELBDPhi2Ksz0MDIwtGCtBtgXMGhJf0koMDAyMePQhD81tgviFjYGBgRGka20y14ZjDAwMjLYZMGs9zsrmh2txDAyMFzLWz7Law7hk+iPfAQMDY2vGH3BN2xml0P/AAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

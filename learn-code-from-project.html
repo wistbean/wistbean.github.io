@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131395348-1"></script>
+    <script data-ad-client="ca-pub-9097083609097034" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-131395348-1');
+    </script>
+
+    
+
+    
+
+    
+
+
+<!-- Baidu Push -->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<!-- End Baidu Push -->
+
+
+    <meta charset="utf-8">
+    
+    <meta name="google-site-verification" content="bcJVGqEGcBIay29szBsswzqYxY3qUzWuvu1hfad3-08">
+    
+    
+    
+    
+    <title>编程中的逆向学习法 | wistbean | wistbean</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#B5963F">
+    
+    
+    <meta name="keywords" content="学习方法,学习,编程,逆向学习法">
+    <meta name="description" content="当你作为一个新人进入一个开发团队的时候，最常听到的话可能是：  那谁谁，你把咱们的项目熟悉一下吧。  然后你 clone好了项目，接着就开始进入了一段相当长时间的懵逼状态中，可能你会面临这么几种情况：   感觉项目好复杂 好多是你不会的 项目怎么跑起来都不知道等等…   甚至你还会抱怨：  这写的什么垃圾代码？我不会是来背锅的吧？  我想大部分人都遇到过类似的情况，我以前就常常遇到，我最开始接手别">
+<meta name="keywords" content="学习方法,学习,编程,逆向学习法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="编程中的逆向学习法">
+<meta property="og:url" content="https://wistbean.github.io/learn-code-from-project.html">
+<meta property="og:site_name" content="wistbean">
+<meta property="og:description" content="当你作为一个新人进入一个开发团队的时候，最常听到的话可能是：  那谁谁，你把咱们的项目熟悉一下吧。  然后你 clone好了项目，接着就开始进入了一段相当长时间的懵逼状态中，可能你会面临这么几种情况：   感觉项目好复杂 好多是你不会的 项目怎么跑起来都不知道等等…   甚至你还会抱怨：  这写的什么垃圾代码？我不会是来背锅的吧？  我想大部分人都遇到过类似的情况，我以前就常常遇到，我最开始接手别">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2024-01-26T15:14:15.686Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="编程中的逆向学习法">
+<meta name="twitter:description" content="当你作为一个新人进入一个开发团队的时候，最常听到的话可能是：  那谁谁，你把咱们的项目熟悉一下吧。  然后你 clone好了项目，接着就开始进入了一段相当长时间的懵逼状态中，可能你会面临这么几种情况：   感觉项目好复杂 好多是你不会的 项目怎么跑起来都不知道等等…   甚至你还会抱怨：  这写的什么垃圾代码？我不会是来背锅的吧？  我想大部分人都遇到过类似的情况，我以前就常常遇到，我最开始接手别">
+    
+        <link rel="alternate" type="application/atom+xml" title="wistbean" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(https://wistbean.github.io/images/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">wistbean</h5>
+          <a href="mailto:wistbean.bb@gmail.com" title="wistbean.bb@gmail.com" class="mail">wistbean.bb@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="https://wistbean.org/python-tutorial.html"  >
+                <i class="icon icon-lg icon-coffee"></i>
+                Python零基础入门教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2NzYyNjg2Nw==&action=getalbum&album_id=2448798954764255234#wechat_redirect"  >
+                <i class="icon icon-lg icon-bug"></i>
+                Python爬虫教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://vip.fxxkpython.com/?page_id=18"  >
+                <i class="icon icon-lg icon-code"></i>
+                加入我的VIP
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/aboutMe/"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light off" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">编程中的逆向学习法</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="vultr ss bbr v2ray 100美金">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">编程中的逆向学习法</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2020-11-30T09:16:19.000Z" itemprop="datePublished" class="page-time">
+  2020-11-30
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/学习方法/">学习方法</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+
+<article id="post-learn-code-from-project"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">编程中的逆向学习法</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2020-11-30 17:16:19" datetime="2020-11-30T09:16:19.000Z"  itemprop="datePublished">2020-11-30</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/学习方法/">学习方法</a></li></ul>
+
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>当你作为一个新人进入一个开发团队的时候，最常听到的话可能是：</p>
+<blockquote>
+<p>那谁谁，你把咱们的项目熟悉一下吧。</p>
+</blockquote>
+<p>然后你 clone<br>好了项目，接着就开始进入了一段相当长时间的懵逼状态中，可能你会面临这么几种情况：</p>
+<blockquote>
+<ol>
+<li>感觉项目好复杂</li>
+<li>好多是你不会的</li>
+<li>项目怎么跑起来都不知道<br>等等…</li>
+</ol>
+</blockquote>
+<p>甚至你还会抱怨：</p>
+<blockquote>
+<p>这写的什么垃圾代码？我不会是来背锅的吧？</p>
+</blockquote>
+<p>我想大部分人都遇到过类似的情况，我以前就常常遇到，我最开始接手别人的项目的时候，我也是慌得一笔，哪哪都觉得别扭，哪哪都想骂娘。</p>
+<p>但后来有一次经历改变了我这种想法，我竟然变成了这样：</p>
+<blockquote>
+<p>要是我再能接手别人的新项目就好了！</p>
+</blockquote>
+<p>事情是这样的，我那会刚工作的时候，做的是 Android<br>开发，表现还可以，后来上面就找到我说， Java web 后台的人手不够了，问我能不能上？</p>
+<blockquote>
+<p>生活告诉我，要么上，要么被生活上。</p>
+</blockquote>
+<p>所以我就只能笑嘻嘻的给答应下来了，不过心理慌得一笔，因为那会我对 Java web<br>那些框架完全没有学过，一窍不通啊！</p>
+<p>当我开始着手这件事的时候，我得到的只有这么些：</p>
+<blockquote>
+<p> 一堆项目源码文件，写了一半的接口文档，以及用了什么技术选型，什么框架（现在依稀记得是<br> ssh…），然后就没有然后了…</p>
+</blockquote>
+<p>当我试图把源码导入编辑器，跑起来的时候，发现我还是太天真了，各种库缺失，各种环境没搭建好…</p>
+<blockquote>
+<p>是的，我特么连项目都跑不起来，写个鸡腿儿啊！？</p>
+</blockquote>
+<p>后来加班了一个大晚上，各种搜索，各种安装，最后才勉强把项目跑起来，当我看到后台首页运行在浏览器的时候，才长舒一口气，嘴里不断的说着一句老潮汕话：</p>
+<blockquote>
+<p>老爷保佑…老爷保佑…老爷保佑…老爷保佑.. </p>
+</blockquote>
+<p>接下来几天基本没怎么敲键盘，就是看代码，搜索相关框架的教程，然后看着看着有那么几个瞬间，让我虎躯震了又震，我在感叹：</p>
+<blockquote>
+<p>这项目分的好清晰啊，各个模块都安排的刚刚好啊，高内聚低耦合啊，接口代码也写的很简洁啊…哦，原来商品订单的<br>SQL<br>语句是这样写的啊，积分优惠条件的语句是这么写的啊，自定义的工具包有这么多好用的东西啊…</p>
+</blockquote>
+<p>后来发现新增功能也不难嘛，照着之前的模块写就好了，虽然业务不同，但是低层是怎么调用的，<br>SQL 语句在哪里写，在那里被调用等等，其实都差不多一个写法。</p>
+<p>那时候我才发现，我以前做项目的时候，都是从无到有，从框架一步一步搭建写起来的，是一种很正向的方式，而这次，却是：</p>
+<blockquote>
+<p>逆向的，直接从项目开始！</p>
+</blockquote>
+<p>而这种逆向学习法，反而给我带来了很大的进步，或者说，相对进步的比较快，还挺神奇的。以至于到后面，我都挺期待接手大佬写的项目，因为我总能从中寻找到宝藏。</p>
+<blockquote>
+<p>有些事情其实很简单，但是你不知道这事的操作方法，你就会一直觉得这事很比登天还难。</p>
+</blockquote>
+<p>通过已有的项目反向学习，给我之前带来挺大用处的，所以我想把这种方法分享给你，可能你会说，那是你运气好，能遇到大佬的优秀项目。</p>
+<p>我想说的是，没有完美的项目，我当然也有发现一些不合理的地方，人无完人嘛～多发现别人好的方面，学习它们，让它们成为我们自己的一部分，就够了。再说了，GitHub上面的优秀项目是不是很多，找一两个适合现在你的去逆向学习吧，相信我，在这个过程中你也会像我之前那样：虎躯震了又震！</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+      <!--  
+
+        
+        关注公众号「wistbean」，发送「帅书」获取我写的技术电子书
+        
+        -->
+        在公众号「学习 Python 的正确姿势」发送「帅书」领取我写的技术电子书，转载请注明出处：
+        <a href="https://wistbean.github.io/learn-code-from-project.html">
+                   wistbean
+        </a>
+    </div>
+    
+    <footer>
+        <a href="https://wistbean.github.io">
+            <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+            wistbean
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习方法/">学习方法</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/编程/">编程</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/逆向学习法/">逆向学习法</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/learn-code-from-project.html&title=《编程中的逆向学习法》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/learn-code-from-project.html&title=《编程中的逆向学习法》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/learn-code-from-project.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《编程中的逆向学习法》 — wistbean&url=https://wistbean.github.io/learn-code-from-project.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/learn-code-from-project.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/fa-xian-le-yi-ge-shen-qi.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">一个命令，让你的内网穿透</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/oh-my-zsh.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">命令行神器：oh-my-zsh</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>本站已加入 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-知识 4.0  (CC BY-NC-SA 4.0)国际协议 | 转载请注明链接出处</a></span>
+        </p>
+    </div>
+
+        <div class="bottom">
+                <p><span>wistbean &copy; 2015 - 2024</span>
+                    <span>
+                        
+                         <a href="https://wistbean.github.io/">肯定会|wistbean</a>
+                         <a href="https://fxxkpython.com">通往Python高手之路</a>
+                         <a href="https://www.bwh8.net/aff.php?aff=32874" target="_blank">搬瓦工2024优惠码</a>、
+                         <a href="https://www.vultr.com/?ref=7532860" target="_blank">vultr2024优惠码</a>
+                    </span>
+                </p>
+        </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/learn-code-from-project.html&title=《编程中的逆向学习法》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/learn-code-from-project.html&title=《编程中的逆向学习法》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/learn-code-from-project.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《编程中的逆向学习法》 — wistbean&url=https://wistbean.github.io/learn-code-from-project.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/learn-code-from-project.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACH0lEQVR42u3aSW7DMAwF0Nz/0um2QGH7k7ILmHpaBYgHvSwYDvp84vX9s86//X3N0V2/v02uvGFhYGC8lvE9XUcvSO5Krjx6cvUtGBgYOzCSUHh+Vy+knj8neSYGBgZGEgSTLSbbTZAYGBgY1cBXLVPXwzEGBsbOjF5h2StW83TwkVocAwPjhYy86/7/nx+Zb2BgYLyK0QuRvfK1GnALu8LAwBjNyANcNTmrJpfVgIuBgbEPY70132ux5YE7GpdiYGBszMiLyYSat/PKxzIwMDBGM6qhc31DObg6/sTAwJjKeCK85pgHj1lgYGAMYvQOOlQxeezvBWsMDIzZjOeGlL0WW7WUvUgNMTAwxjF6KV3S0G9OVvOxBAYGxmhGswUfN8gKPb/1NBEDA2M0oxo01wHrLTYMDIzdGPkr8xK32g3LE9CL1BADA2Moo1dYriSL1TS0MMjEwMAYx8jTu5WGfrXdv3RmBAMDYxyjd8AiSQTzUJ639i6SQgwMjA0YyaV5Kz8vWW9r6mFgYGzAyDeXjzbXB5PlthoGBsZoRp6QPTEG6LX/Lv43MDAwRjC+xfWJV37XDQfOMDAwRjNWtpW8bB22PuzEwMCYwUiCbK+U/bRWc/yAgYGxASMPfPlWnkj1DpEYGBgYrWvON5e37cq/HAYGBkZ8V16U9g683hBwMTAwXsW46+hqLynMD6JhYGDsybg378q3u164YmBgbMD4AeQak2GTiecZAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

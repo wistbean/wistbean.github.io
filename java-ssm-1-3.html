@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131395348-1"></script>
+    <script data-ad-client="ca-pub-9097083609097034" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-131395348-1');
+    </script>
+
+    
+
+    
+
+    
+
+
+<!-- Baidu Push -->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<!-- End Baidu Push -->
+
+
+    <meta charset="utf-8">
+    
+    <meta name="google-site-verification" content="bcJVGqEGcBIay29szBsswzqYxY3qUzWuvu1hfad3-08">
+    
+    
+    
+    
+    <title>「1-3」代码托管Git的使用 | wistbean | wistbean</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#B5963F">
+    
+    
+    <meta name="keywords" content="教程,Git,Java,Java视频教程,项目实战,分布式,SSM,IntelliJ IDEA,码农商城">
+    <meta name="description" content="SSM视频教程第1-3节:代码托管Git的使用   访问不了Youtube？1.点击搭建自己的ss并开启bbr快速上网教程轻松访问1080p高清Youtube视频。2.点击本节b站视频教程地址观看。  SSM视频教程第1-3节课程概要Git代码的版本控制管理系统 Git可以干什么呢？ 防止代码丢失 远程同步代码 团队合作利器 代码还原 记录代码版本  安装GitGit的常用的操作命令 git in">
+<meta name="keywords" content="教程,Git,Java,Java视频教程,项目实战,分布式,SSM,IntelliJ IDEA,码农商城">
+<meta property="og:type" content="article">
+<meta property="og:title" content="「1-3」代码托管Git的使用">
+<meta property="og:url" content="https://wistbean.github.io/java-ssm-1-3.html">
+<meta property="og:site_name" content="wistbean">
+<meta property="og:description" content="SSM视频教程第1-3节:代码托管Git的使用   访问不了Youtube？1.点击搭建自己的ss并开启bbr快速上网教程轻松访问1080p高清Youtube视频。2.点击本节b站视频教程地址观看。  SSM视频教程第1-3节课程概要Git代码的版本控制管理系统 Git可以干什么呢？ 防止代码丢失 远程同步代码 团队合作利器 代码还原 记录代码版本  安装GitGit的常用的操作命令 git in">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2024-01-26T15:14:15.640Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="「1-3」代码托管Git的使用">
+<meta name="twitter:description" content="SSM视频教程第1-3节:代码托管Git的使用   访问不了Youtube？1.点击搭建自己的ss并开启bbr快速上网教程轻松访问1080p高清Youtube视频。2.点击本节b站视频教程地址观看。  SSM视频教程第1-3节课程概要Git代码的版本控制管理系统 Git可以干什么呢？ 防止代码丢失 远程同步代码 团队合作利器 代码还原 记录代码版本  安装GitGit的常用的操作命令 git in">
+    
+        <link rel="alternate" type="application/atom+xml" title="wistbean" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(https://wistbean.github.io/images/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">wistbean</h5>
+          <a href="mailto:wistbean.bb@gmail.com" title="wistbean.bb@gmail.com" class="mail">wistbean.bb@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="https://wistbean.org/python-tutorial.html"  >
+                <i class="icon icon-lg icon-coffee"></i>
+                Python零基础入门教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2NzYyNjg2Nw==&action=getalbum&album_id=2448798954764255234#wechat_redirect"  >
+                <i class="icon icon-lg icon-bug"></i>
+                Python爬虫教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://vip.fxxkpython.com/?page_id=18"  >
+                <i class="icon icon-lg icon-code"></i>
+                加入我的VIP
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/aboutMe/"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light off" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">「1-3」代码托管Git的使用</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="vultr ss bbr v2ray 100美金">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">「1-3」代码托管Git的使用</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-08-29T09:25:20.000Z" itemprop="datePublished" class="page-time">
+  2018-08-29
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Java/">Java</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Java/Java-SSM视频教程/">Java SSM视频教程</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Java/Java-SSM视频教程/Git/">Git</a></li></ul></li></ul></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>目录</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#SSM视频教程第1-3节-代码托管Git的使用"><span class="post-toc-number">1.</span> <span class="post-toc-text">SSM视频教程第1-3节:代码托管Git的使用</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#SSM视频教程第1-3节课程概要"><span class="post-toc-number">2.</span> <span class="post-toc-text">SSM视频教程第1-3节课程概要</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Git"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">Git</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Git可以干什么呢？"><span class="post-toc-number">2.1.1.</span> <span class="post-toc-text">Git可以干什么呢？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#安装Git"><span class="post-toc-number">2.1.2.</span> <span class="post-toc-text">安装Git</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Git的常用的操作命令"><span class="post-toc-number">2.1.3.</span> <span class="post-toc-text">Git的常用的操作命令</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#SSM视频教程目录"><span class="post-toc-number">3.</span> <span class="post-toc-text">SSM视频教程目录</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-java-ssm-1-3"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">「1-3」代码托管Git的使用</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-08-29 17:25:20" datetime="2018-08-29T09:25:20.000Z"  itemprop="datePublished">2018-08-29</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Java/">Java</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Java/Java-SSM视频教程/">Java SSM视频教程</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Java/Java-SSM视频教程/Git/">Git</a></li></ul></li></ul></li></ul>
+
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="SSM视频教程第1-3节-代码托管Git的使用"><a href="#SSM视频教程第1-3节-代码托管Git的使用" class="headerlink" title="SSM视频教程第1-3节:代码托管Git的使用"></a>SSM视频教程第1-3节:代码托管Git的使用</h1><iframe width="100%" height="315" src="https://www.youtube.com/embed/fx8jcmsfQSg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<blockquote>
+<p>访问不了Youtube？<br>1.点击<a href="https://wistbean.org/vultr-vps-bbr-ss.html" target="_blank" rel="noopener">搭建自己的ss并开启bbr快速上网教程</a>轻松访问1080p高清Youtube视频。<br>2.点击<a href="https://www.bilibili.com/video/av23710837/" target="_blank" rel="noopener">本节b站视频教程地址</a>观看。</p>
+</blockquote>
+<h1 id="SSM视频教程第1-3节课程概要"><a href="#SSM视频教程第1-3节课程概要" class="headerlink" title="SSM视频教程第1-3节课程概要"></a>SSM视频教程第1-3节课程概要</h1><h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><p>代码的版本控制管理系统</p>
+<h3 id="Git可以干什么呢？"><a href="#Git可以干什么呢？" class="headerlink" title="Git可以干什么呢？"></a>Git可以干什么呢？</h3><ol>
+<li>防止代码丢失</li>
+<li>远程同步代码</li>
+<li>团队合作利器</li>
+<li>代码还原</li>
+<li>记录代码版本</li>
+</ol>
+<h3 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h3><h3 id="Git的常用的操作命令"><a href="#Git的常用的操作命令" class="headerlink" title="Git的常用的操作命令"></a>Git的常用的操作命令</h3><ul>
+<li>git init 初始化git仓库</li>
+<li>git status 查看状态</li>
+<li>git add 将文件添加到git仓库的暂存区</li>
+<li>git commit 将添加到暂存区的文件提交到git仓库</li>
+<li>git log 查看日志</li>
+<li>git branch 查看当前的分支</li>
+<li>git branch hi 创建一个叫做“hi”的分支</li>
+<li>git checkout hi 切换分支到“hi”分支</li>
+<li>git branch -d hi 删除“hi”分支</li>
+</ul>
+<h1 id="SSM视频教程目录"><a href="#SSM视频教程目录" class="headerlink" title="SSM视频教程目录"></a>SSM视频教程目录</h1><ul>
+<li><a href="https://wistbean.org/java-ssm-video.html#SSM%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%9B%AE%E5%BD%95" target="_blank" rel="noopener">SSM视频教程目录</a></li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+      <!--  
+
+        
+        关注公众号「wistbean」，发送「帅书」获取我写的技术电子书
+        
+        -->
+        在公众号「学习 Python 的正确姿势」发送「帅书」领取我写的技术电子书，转载请注明出处：
+        <a href="https://wistbean.github.io/java-ssm-1-3.html">
+                   wistbean
+        </a>
+    </div>
+    
+    <footer>
+        <a href="https://wistbean.github.io">
+            <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+            wistbean
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/IntelliJ-IDEA/">IntelliJ IDEA</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java视频教程/">Java视频教程</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SSM/">SSM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/分布式/">分布式</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/教程/">教程</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/码农商城/">码农商城</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/项目实战/">项目实战</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/java-ssm-1-3.html&title=《「1-3」代码托管Git的使用》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/java-ssm-1-3.html&title=《「1-3」代码托管Git的使用》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/java-ssm-1-3.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《「1-3」代码托管Git的使用》 — wistbean&url=https://wistbean.github.io/java-ssm-1-3.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/java-ssm-1-3.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/java-ssm-1-4.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">「1-4」GitHub完全使用指南</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/java-ssm-1-2.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">「1-2」传统的集群架构和分布式架构区别</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>本站已加入 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-知识 4.0  (CC BY-NC-SA 4.0)国际协议 | 转载请注明链接出处</a></span>
+        </p>
+    </div>
+
+        <div class="bottom">
+                <p><span>wistbean &copy; 2015 - 2024</span>
+                    <span>
+                        
+                         <a href="https://wistbean.github.io/">肯定会|wistbean</a>
+                         <a href="https://fxxkpython.com">通往Python高手之路</a>
+                         <a href="https://www.bwh8.net/aff.php?aff=32874" target="_blank">搬瓦工2024优惠码</a>、
+                         <a href="https://www.vultr.com/?ref=7532860" target="_blank">vultr2024优惠码</a>
+                    </span>
+                </p>
+        </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/java-ssm-1-3.html&title=《「1-3」代码托管Git的使用》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/java-ssm-1-3.html&title=《「1-3」代码托管Git的使用》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/java-ssm-1-3.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《「1-3」代码托管Git的使用》 — wistbean&url=https://wistbean.github.io/java-ssm-1-3.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/java-ssm-1-3.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACI0lEQVR42u3aQW7DMAwEwP7/0+k1QGp3SaoFLI1OhpPYGh0YkdTXVzxeb+P9zud19c7ncz6/uWxgYGA8lvG6HatemTz/6vr+txgYGOcwrl6cX+ef3k/o/gmX9zEwMDCCl90/5z4058uEgYGBkT961Yaymh5jYGCczMiTzKtf5enrqiXDwMA4h5EXy/7/+k/6GxgYGI9ivIqjGnzzcPkaDAwMjL0ZeYDrbdESUpSgJiU8DAyMTRmrWgJJ2K1SCzAMDIytGdXSWL5BXHUnX1AMDIwTGHkhrNq8zLeDy0ItBgbGRoyk+DWvw68KuJefYmBgbM3Ip5gnnL3DFpPIiYGBcQIjKY3NU9O8YZAkxj/MFgMDY1NGtchVTW5HndVgWTEwME5m5C+rpqD3U8wbD7/8Y2BgYGzEWBbyioBk29fscmBgYBzA6IXa+aTnARoDA+McRq8lOW9/9sIrBgYGRpJe9hoJzWCaIDEwMA5jzI9TJCWzBFxYFAwMjE0Zk1L+pEk5bwP80OXAwMDYmjHZ2OW/7ZXtotCMgYFxDKN63SPNN6DRyzAwMLZg9JoB1ZZkr9BW2EpiYGBszchHNSwmAb36/cmGFQMD4+mM6qGK6oGJXhpcDtYYGBgHMPLktpeyFgpnPSQGBgbGooNi+dLkyTMGBgZGtTE5KdUlG81CJxYDA2M7Ru9oae/IRfVwxuJyGwYGxgMZ1WlVD1L0YGuPfWBgYDyW8Q0Co9sZ6xYvpAAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

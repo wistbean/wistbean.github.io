@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131395348-1"></script>
+    <script data-ad-client="ca-pub-9097083609097034" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-131395348-1');
+    </script>
+
+    
+
+    
+
+    
+
+
+<!-- Baidu Push -->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<!-- End Baidu Push -->
+
+
+    <meta charset="utf-8">
+    
+    <meta name="google-site-verification" content="bcJVGqEGcBIay29szBsswzqYxY3qUzWuvu1hfad3-08">
+    
+    
+    
+    
+    <title>别再 pip install 了！ | wistbean | wistbean</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#B5963F">
+    
+    
+    <meta name="keywords" content="python,pip,虚拟环境">
+    <meta name="description" content="你在写 Python 项目的时候是不是常常会使用 pip install 来安装相关的依赖，但这其实到后面会产生一些不必要的麻烦，最近看到了篇《Why you should use python -m pip》，作者非常苦口婆心的劝人们一定要使用 python -m pip 而不是直接 pip，我觉得写得挺好的，随即给翻译了一波，希望对你有帮助。 什么是 python -m pip?首先，当你执行">
+<meta name="keywords" content="python,pip,虚拟环境">
+<meta property="og:type" content="article">
+<meta property="og:title" content="别再 pip install 了！">
+<meta property="og:url" content="https://wistbean.github.io/python-m-pip.html">
+<meta property="og:site_name" content="wistbean">
+<meta property="og:description" content="你在写 Python 项目的时候是不是常常会使用 pip install 来安装相关的依赖，但这其实到后面会产生一些不必要的麻烦，最近看到了篇《Why you should use python -m pip》，作者非常苦口婆心的劝人们一定要使用 python -m pip 而不是直接 pip，我觉得写得挺好的，随即给翻译了一波，希望对你有帮助。 什么是 python -m pip?首先，当你执行">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2023-01-27T13:17:42.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="别再 pip install 了！">
+<meta name="twitter:description" content="你在写 Python 项目的时候是不是常常会使用 pip install 来安装相关的依赖，但这其实到后面会产生一些不必要的麻烦，最近看到了篇《Why you should use python -m pip》，作者非常苦口婆心的劝人们一定要使用 python -m pip 而不是直接 pip，我觉得写得挺好的，随即给翻译了一波，希望对你有帮助。 什么是 python -m pip?首先，当你执行">
+    
+        <link rel="alternate" type="application/atom+xml" title="wistbean" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(https://wistbean.github.io/images/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">wistbean</h5>
+          <a href="mailto:wistbean.bb@gmail.com" title="wistbean.bb@gmail.com" class="mail">wistbean.bb@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="https://wistbean.org/python-tutorial.html"  >
+                <i class="icon icon-lg icon-coffee"></i>
+                Python零基础入门教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2NzYyNjg2Nw==&action=getalbum&album_id=2448798954764255234#wechat_redirect"  >
+                <i class="icon icon-lg icon-bug"></i>
+                Python爬虫教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://vip.fxxkpython.com/?page_id=18"  >
+                <i class="icon icon-lg icon-code"></i>
+                加入我的VIP
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/aboutMe/"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light off" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">别再 pip install 了！</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="vultr ss bbr v2ray 100美金">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">别再 pip install 了！</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2023-02-01T11:38:13.000Z" itemprop="datePublished" class="page-time">
+  2023-02-01
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>目录</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#什么是-python-m-pip"><span class="post-toc-number">1.</span> <span class="post-toc-text">什么是 python -m pip?</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#为啥要使用-python-m-pip-而不是直接-pip-x2F-pip3-呢？"><span class="post-toc-number">2.</span> <span class="post-toc-text">为啥要使用 python -m pip 而不是直接 pip/pip3 呢？</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#那我在激活环境应该怎么搞？"><span class="post-toc-number">3.</span> <span class="post-toc-text">那我在激活环境应该怎么搞？</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#不要啥都安装到你的全局解释器里面"><span class="post-toc-number">4.</span> <span class="post-toc-text">不要啥都安装到你的全局解释器里面</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#如果你需要安装工具"><span class="post-toc-number">5.</span> <span class="post-toc-text">如果你需要安装工具</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#如果你的项目需要一个环境（没有使用-conda-的情况下）"><span class="post-toc-number">6.</span> <span class="post-toc-text">如果你的项目需要一个环境（没有使用 conda 的情况下）</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#如果你是-conda-用户"><span class="post-toc-number">7.</span> <span class="post-toc-text">如果你是 conda  用户</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#容器"><span class="post-toc-number">8.</span> <span class="post-toc-text">容器</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#重复一下我的观点，真的想让大家明白这一点"><span class="post-toc-number">9.</span> <span class="post-toc-text">重复一下我的观点，真的想让大家明白这一点</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-python-m-pip"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">别再 pip install 了！</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2023-02-01 19:38:13" datetime="2023-02-01T11:38:13.000Z"  itemprop="datePublished">2023-02-01</time>
+
+            
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>你在写 Python 项目的时候是不是常常会使用 pip install 来安装相关的依赖，但这其实到后面会产生一些不必要的麻烦，最近看到了篇<a href="https://snarky.ca/why-you-should-use-python-m-pip/" target="_blank" rel="noopener">《Why you should use <code>python -m pip</code>》</a>，作者非常苦口婆心的劝人们一定要使用 <em>python -m pip</em> 而不是直接 <em>pip</em>，我觉得写得挺好的，随即给翻译了一波，希望对你有帮助。</p>
+<h1 id="什么是-python-m-pip"><a href="#什么是-python-m-pip" class="headerlink" title="什么是 python -m pip?"></a>什么是 python -m pip?</h1><p>首先，当你执行 <em>python -m pip</em> 的时候，是在指定 Python 解释器来执行 pip。</p>
+<p>比如当你这么执行：</p>
+<blockquote>
+<p>&#x2F;usr&#x2F;bin&#x2F;python3.7 -m pip</p>
+</blockquote>
+<p>就是在指定在 &#x2F;usr&#x2F;bin&#x2F;python3.7 下的解释器来执行 pip。</p>
+<h1 id="为啥要使用-python-m-pip-而不是直接-pip-x2F-pip3-呢？"><a href="#为啥要使用-python-m-pip-而不是直接-pip-x2F-pip3-呢？" class="headerlink" title="为啥要使用 python -m pip 而不是直接 pip&#x2F;pip3 呢？"></a>为啥要使用 python -m pip 而不是直接 pip&#x2F;pip3 呢？</h1><p>你可能会说，“行了行了，我都知道，但我就是想直接通过 pip 命令来执行 pip，你吹啊？”</p>
+<p>答案是：“可以啊，不过呢，但你这么做的话，你到时候会很乱很麻烦”。</p>
+<p>我来给你举个例子。</p>
+<p>比如说我的电脑现在安装了两个 Python 的版本（可能还更多），分别是 Python3.7 和 3.8，那么现在，我直接在终端执行 pip 去 install，请问它会为哪个版本的 Python 解释器进行安装？</p>
+<p>我想你可能会一脸懵逼，因为没有更多的细节，所以你不知道。</p>
+<p>首先你要知道我的环境变量 PATH 设置的是什么，比如 &#x2F;usr&#x2F;bin 和 &#x2F;usr&#x2F;local&#x2F;bin，谁在前谁在后。</p>
+<p>这时候你可能会说，我只要记住我在不同的目录分别安装了 Python3.7 和 Python3.8，我就会知道 PATH 上哪个 Python 版本在前面。</p>
+<p>但假设你手动安装了两个 Python 版本，也许你的系统本身带有了 Python3.7.3 版本，然后你还安装了 Python3.7.5，这时候两个版本都安装在了 &#x2F;usr&#x2F;local&#x2F;bin 下，那么你现在能知道 pip 和 哪个 Python 解释器相关么？</p>
+<p>答案就是你依然不知道，除非你知道什么时候安装了什么 Python 版本，并且知道最后一次写入 &#x2F;usr&#x2F;local&#x2F;bin&#x2F;pip 的是哪个，否则你压根不会知道执行 pip 的时候用的是哪个版本的解释器。</p>
+<p>你又要说了，那我总是安装最新的版本不就好了，比如我安装最新的 Python3.8.0，它比 3.7.5 要新。</p>
+<p>好吧，但是当 Python3.7.6 版本出来的时候会怎么样呢？你的 pip 命令会将使用 Python3.8 转化为 Python3.7。</p>
+<p>而当你使用 <em>python -m pip</em> ，上面所有的歧义立马消失，比如说我使用 python3.8 -m pip，那么我肯定知道 pip 用的是 Python3.8 解释器来安装使用。</p>
+<p>如果你是 Windows 用户，你使用 python -m pip 还有一个好处，那就是可以让 pip 自我更新。</p>
+<p>因为当你直接执行 pip install –upgrade pip 的时候，Windows 系统不会让你覆盖 pip.exe, 但你在前面加个 python -m，你就可以避免这个问题，因为这时候运行的是 python.exe，而不是 pip.exe。</p>
+<h1 id="那我在激活环境应该怎么搞？"><a href="#那我在激活环境应该怎么搞？" class="headerlink" title="那我在激活环境应该怎么搞？"></a>那我在激活环境应该怎么搞？</h1><p>通常当我向一群人解释这一点时，难免会有人说，“我都是在虚拟环境中操作的，所以你说的这一点根本不适合我”。</p>
+<p>总是使用虚拟环境这点做得不错，但老实说，即使在完全没有必要的情况下，我仍然主张使用 <em>python -m pip</em>。</p>
+<p>首先，如果你使用的是 Windows 系统，你还是需要使用 python -m pip，这样你才可以在你当前环境中更新它。</p>
+<p>其次，即使你使用的是其他系统，我还是会说应该使用 <em>python -m pip</em>，因为它在任何情况都能工作。不仅仅是在你忘记激活虚拟环境时防止发生错误，而且还意味着任何看到你这么操作的人都能学到这一点。就我个人来说，我不认为你少打几个字就能在最佳的实践中走捷径。它还可以防止你在忘记激活虚拟环境的时候，写一下自动化脚本而发生错误。</p>
+<p>就说我自己吧，我使用任何依赖于解释器的工具，我都会使用 <em>-m</em>，不管是不是激活了环境，都能非常有目的且清晰的说明我希望使用什么 Python 解释器。</p>
+<h1 id="不要啥都安装到你的全局解释器里面"><a href="#不要啥都安装到你的全局解释器里面" class="headerlink" title="不要啥都安装到你的全局解释器里面"></a>不要啥都安装到你的全局解释器里面</h1><p>虽然我们在谈论如何避免弄乱你的 Python 安装，但我还要指出一点：当你在本地开发的时候，永远不要把东西安装到你的全局 Python 解释器里面去。如果它是你系统安装的 Python，那么你安装了一个操作系统所依赖的不兼容版本的库，可能会破坏你的系统。</p>
+<p>即使你安装了自己的 Python 版本，我仍然强烈建议你不要在本地开发的时候直接都把包安装进去。因为你最终会在你的项目之间混合各种可能互相冲突的包，你对每个项目真正的依赖都会很模糊，等等。</p>
+<p>所以使用环境将你的个人项目和工具互相隔离开来要好很多。在 Python 社区中有两种环境的类型：虚拟环境和 conda 环境。</p>
+<p>甚至还有一种方法可以以隔离的方式来安装 Python 工具。</p>
+<h1 id="如果你需要安装工具"><a href="#如果你需要安装工具" class="headerlink" title="如果你需要安装工具"></a>如果你需要安装工具</h1><p>为了让 Python 工具得到隔离，我会使用 <em>pipx</em> 来安装，因为每个安装的工具都会拥有自己的虚拟环境，所以它们不会互相冲突。如果你想单独安装 Black 模块，你可以直接安装，不会意外破坏你安装的 mypy 模块。</p>
+<h1 id="如果你的项目需要一个环境（没有使用-conda-的情况下）"><a href="#如果你的项目需要一个环境（没有使用-conda-的情况下）" class="headerlink" title="如果你的项目需要一个环境（没有使用 conda 的情况下）"></a>如果你的项目需要一个环境（没有使用 conda 的情况下）</h1><p>当你需要为项目创建虚拟环境时，我个人总会使用 venv 和虚拟环境。它包含在 Python 的标准库中，所以它始终可以通过 <em>python -m venv</em> 获取的。</p>
+<p>一丢丢小历史：我实际上删除了用来创建虚拟环境的 pyvenv 命令，这正是你应该使用 python -m pip 而不是 pip 的原因；仅从命令看，你无法知道 pyvenv 命令为哪个解释器创建了一个虚拟环境；记住，你可以不用激活环境来使用其中的解释器；执行 .venv&#x2F;bin&#x2F;python 和你激活了环境并输入 python 一样有效。</p>
+<p>现在有人仍然喜欢 virtualenv，因为它在 Python2 上可用，并且有一些其他的额外功能。就我个人而言，我不需要这些额外的功能，并且拥有 venv 集成，就意味着我不需要使用 pipx 在每台机器安装 virtualenv。但是如果你创建虚拟环境还需要 venv 一些不能够满足的需求，那么你可以看看 virtualenv 是否满足你的需求。</p>
+<h1 id="如果你是-conda-用户"><a href="#如果你是-conda-用户" class="headerlink" title="如果你是 conda  用户"></a>如果你是 conda  用户</h1><p>如果你是 conda 用户，那么你可以使用 conda environments 来达到与 venv 所提供的虚拟环境同样的效果。我不打算谈论你是否应该针对你的请款使用 conda 而不是 venv。但如果你在使用 conda 时，你应该知道你可以为你的项目创建 conda 环境而不是将所有的东西都安装在你的基础环境中，并且能够清楚的知道你的项目依赖了什么。（这也是为什么说要使用 miniconda 而不是 anaconda，因为前者大小还没有后者的十分之一。）</p>
+<h1 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h1><p>在容器中工作是另一种选择，因为此时你可以跳过环境，因为整个「机器」就是环境，只要你没有将 Python 安装到容器系统中，你就可以自由地进行全局暗转个，以保持容器的简单清晰。</p>
+<h1 id="重复一下我的观点，真的想让大家明白这一点"><a href="#重复一下我的观点，真的想让大家明白这一点" class="headerlink" title="重复一下我的观点，真的想让大家明白这一点"></a>重复一下我的观点，真的想让大家明白这一点</h1><p>不要安装到全局的 Python 解释器中！在本地开发的时候，一定要使用一个环境！</p>
+<p>我无法计算我有多少次不得不帮助那些 pip 安装错地方的人。还有那些破坏自己系统，或者想知道为什么他们安装东西会产生冲突等等，因为他们呢懒得在本地机器上设置环境。</p>
+<p>所以，请理智一点，使用 <em>python -m pip</em>，并始终使用虚拟环境。</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+      <!--  
+
+        
+        关注公众号「wistbean」，发送「帅书」获取我写的技术电子书
+        
+        -->
+        在公众号「学习 Python 的正确姿势」发送「帅书」领取我写的技术电子书，转载请注明出处：
+        <a href="https://wistbean.github.io/python-m-pip.html">
+                   wistbean
+        </a>
+    </div>
+    
+    <footer>
+        <a href="https://wistbean.github.io">
+            <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+            wistbean
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pip/">pip</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/虚拟环境/">虚拟环境</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/python-m-pip.html&title=《别再 pip install 了！》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/python-m-pip.html&title=《别再 pip install 了！》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/python-m-pip.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《别再 pip install 了！》 — wistbean&url=https://wistbean.github.io/python-m-pip.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/python-m-pip.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/jishuren.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">为什么我不建议你成为这样的技术人</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/wo-suo-li-jie-de-bian-cheng.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">我所理解的编程</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>本站已加入 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-知识 4.0  (CC BY-NC-SA 4.0)国际协议 | 转载请注明链接出处</a></span>
+        </p>
+    </div>
+
+        <div class="bottom">
+                <p><span>wistbean &copy; 2015 - 2024</span>
+                    <span>
+                        
+                         <a href="https://wistbean.github.io/">肯定会|wistbean</a>
+                         <a href="https://fxxkpython.com">通往Python高手之路</a>
+                         <a href="https://www.bwh8.net/aff.php?aff=32874" target="_blank">搬瓦工2024优惠码</a>、
+                         <a href="https://www.vultr.com/?ref=7532860" target="_blank">vultr2024优惠码</a>
+                    </span>
+                </p>
+        </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/python-m-pip.html&title=《别再 pip install 了！》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/python-m-pip.html&title=《别再 pip install 了！》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/python-m-pip.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《别再 pip install 了！》 — wistbean&url=https://wistbean.github.io/python-m-pip.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/python-m-pip.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACN0lEQVR42u3a0WrDMAwF0P7/T2evhRL3SnYHsY+fRtjiHA+ELOn1itf1tj6f3/1+8uT9+d0uyxYGBsZjGddwjbccY5Jdxm9Lvg0DA+Mcxjho9gLrOMgmQTzfFwMDAyNP7MZBcxyOMTAwMFYxrmDl19Re0omBgXEmI79k5sW4u/evOjIMDIxzGHnV/f9//kl/AwMD41GMq7jGsHHal7yttzAwMPZm9BqQvbCYp3e978HAwNiVkRfCekEzvwCPL8NfnmBgYBzGyEco8qbmzJOoLYqBgbE1IynuJxvMDIH1GgC3QRwDA2NTRm/Q4RfhtXdYGBgYezPyS2k+BtEbtugNjWFgYJzAKJS0imWyPLGrHmUhQcTAwNiIMQ6deQNgptmZhOOoE4uBgbEdI99yJqT2srjC8WFgYGzNqAbQvNG4dtRscdENAwPjgYxq+JsvuhWGJ3r/EwwMjO0Y+UBYMhjRG6qoppWFTiwGBsYWjPkN8mGy+c5j1MLEwMA4gDHTAKiWzObHyDAwME5gVAte1XQwv8TOfBUGBsYJjJmAO9P4XPUeDAyMMxnJ65KDyIt01Zbnq3quGBgYD2RcxbWqxlVtPHxJFjEwMLZm9DqDMx+at0h7f4uBgbErIwmy1VdXW5jz12MMDIwTGDOBsprerUJGUxgYGBhHMnofkYxiVEt7GBgYGL3yVlKq67VLf5IaYmBgPIqRXGKrrcokKCd/u/gujoGB8UBGHkbzK2uVmieRU41MDAyM5zH+AJYV+giwCeyLAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

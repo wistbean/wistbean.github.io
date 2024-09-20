@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131395348-1"></script>
+    <script data-ad-client="ca-pub-9097083609097034" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-131395348-1');
+    </script>
+
+    
+
+    
+
+    
+
+
+<!-- Baidu Push -->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<!-- End Baidu Push -->
+
+
+    <meta charset="utf-8">
+    
+    <meta name="google-site-verification" content="bcJVGqEGcBIay29szBsswzqYxY3qUzWuvu1hfad3-08">
+    
+    
+    
+    
+    <title>跟我一起通往 Python 高手之路 | wistbean | wistbean</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#B5963F">
+    
+    
+    <meta name="keywords" content="python,通往Python高手之路,小帅b,vip,python学习,私密之地">
+    <meta name="description" content="我自己搭了一台子你好，我是小帅b，我和大多数人一样，出身平凡，而且负二代。喜欢装逼，喜欢美女…确实，我有一些不良的嗜好。当然，我也追求进步，爱折腾，爱分享… 我之前说过这么一句话：  装逼，是人类永恒的需求！  说是「人类」有点夸张了，但不知道这是不是大部分人天性，还是「遗传」因素？ 反正，我爸就挺爱装逼的，所以我自己爱装逼这事，我觉得有一部分原因是要怪我父亲的。我看过我爸年轻时的照片，那渣男烫的">
+<meta name="keywords" content="python,通往Python高手之路,小帅b,vip,python学习,私密之地">
+<meta property="og:type" content="article">
+<meta property="og:title" content="跟我一起通往 Python 高手之路">
+<meta property="og:url" content="https://wistbean.github.io/learn-python-with-me.html">
+<meta property="og:site_name" content="wistbean">
+<meta property="og:description" content="我自己搭了一台子你好，我是小帅b，我和大多数人一样，出身平凡，而且负二代。喜欢装逼，喜欢美女…确实，我有一些不良的嗜好。当然，我也追求进步，爱折腾，爱分享… 我之前说过这么一句话：  装逼，是人类永恒的需求！  说是「人类」有点夸张了，但不知道这是不是大部分人天性，还是「遗传」因素？ 反正，我爸就挺爱装逼的，所以我自己爱装逼这事，我觉得有一部分原因是要怪我父亲的。我看过我爸年轻时的照片，那渣男烫的">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://wistbean.github.io/images/vip1.png">
+<meta property="og:image" content="https://wistbean.github.io/images/vip2.png">
+<meta property="og:image" content="https://wistbean.github.io/images/vip3.png">
+<meta property="og:image" content="https://wistbean.github.io/images/vip4.png">
+<meta property="og:updated_time" content="2021-03-05T17:05:44.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="跟我一起通往 Python 高手之路">
+<meta name="twitter:description" content="我自己搭了一台子你好，我是小帅b，我和大多数人一样，出身平凡，而且负二代。喜欢装逼，喜欢美女…确实，我有一些不良的嗜好。当然，我也追求进步，爱折腾，爱分享… 我之前说过这么一句话：  装逼，是人类永恒的需求！  说是「人类」有点夸张了，但不知道这是不是大部分人天性，还是「遗传」因素？ 反正，我爸就挺爱装逼的，所以我自己爱装逼这事，我觉得有一部分原因是要怪我父亲的。我看过我爸年轻时的照片，那渣男烫的">
+<meta name="twitter:image" content="https://wistbean.github.io/images/vip1.png">
+    
+        <link rel="alternate" type="application/atom+xml" title="wistbean" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(https://wistbean.github.io/images/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">wistbean</h5>
+          <a href="mailto:wistbean.bb@gmail.com" title="wistbean.bb@gmail.com" class="mail">wistbean.bb@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="https://wistbean.org/python-tutorial.html"  >
+                <i class="icon icon-lg icon-coffee"></i>
+                Python零基础入门教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2NzYyNjg2Nw==&action=getalbum&album_id=2448798954764255234#wechat_redirect"  >
+                <i class="icon icon-lg icon-bug"></i>
+                Python爬虫教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://vip.fxxkpython.com/?page_id=18"  >
+                <i class="icon icon-lg icon-code"></i>
+                加入我的VIP
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/aboutMe/"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light off" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">跟我一起通往 Python 高手之路</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="vultr ss bbr v2ray 100美金">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">跟我一起通往 Python 高手之路</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2021-03-05T16:49:30.000Z" itemprop="datePublished" class="page-time">
+  2021-03-06
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/python/">python</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>目录</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#我自己搭了一台子"><span class="post-toc-number">1.</span> <span class="post-toc-text">我自己搭了一台子</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#什么是-fxxk？"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">什么是 fxxk？</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#我到底会在这里写什么呢？"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">我到底会在这里写什么呢？</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#那么，你能从这里得到什么？"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">那么，你能从这里得到什么？</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#如何订阅小帅b的-VIP"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">如何订阅小帅b的 VIP</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-learn-python-with-me"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">跟我一起通往 Python 高手之路</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2021-03-06 00:49:30" datetime="2021-03-05T16:49:30.000Z"  itemprop="datePublished">2021-03-06</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/python/">python</a></li></ul>
+
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="我自己搭了一台子"><a href="#我自己搭了一台子" class="headerlink" title="我自己搭了一台子"></a>我自己搭了一台子</h1><p>你好，我是小帅b，我和大多数人一样，出身平凡，而且负二代。喜欢装逼，喜欢美女…确实，我有一些不良的嗜好。当然，我也追求进步，爱折腾，爱分享…</p>
+<p>我之前说过这么一句话：</p>
+<blockquote>
+<p>装逼，是人类永恒的需求！</p>
+</blockquote>
+<p>说是「人类」有点夸张了，但不知道这是不是大部分人天性，还是「遗传」因素？</p>
+<p>反正，我爸就挺爱装逼的，所以我自己爱装逼这事，我觉得有一部分原因是要怪我父亲的。我看过我爸年轻时的照片，那渣男烫的发型和现在的我基本一致…</p>
+<blockquote>
+<p>在我还是个毛头小子的时候，我的社交网上，有 80% 是我的自拍照，那会还顶着一头酒红色的毛发，可把自己差点给帅死了…</p>
+</blockquote>
+<p>不过，「生活」总会到一定的时间，开始教我们做人：</p>
+<blockquote>
+<p>这人，还是不能太装！</p>
+</blockquote>
+<p>后来，我就给自己做了个约定：</p>
+<blockquote>
+<p>咱们，要装，就装那些通过自己努力得到的逼。</p>
+</blockquote>
+<p>我这人说话有点俗，你别想歪，我想要表达的关键词是「自己」、「努力」。</p>
+<p>说这话，是因为我之前把这句话作为我的「个签」，然后不久就被长辈误解了，后来索性就改成了：</p>
+<blockquote>
+<p>答应自己的事情，就要做到！</p>
+</blockquote>
+<p>这下可好，亲戚说我这样去相亲的话才容易找到对象。。。（好像有点跑题了）</p>
+<p>我主要想说的是，因为我爱装逼的性格，所以才会不断的去折腾，自学，分享…</p>
+<blockquote>
+<p>比如，以前大家都玩 qq 空间，我当时就研究怎么让自己的 qq 空间主题搞得非主流一点，别人发说说，我就写日志发自拍，骗同学们点赞;</p>
+<p>比如，大家都玩 Android 手机的时候，我就开始自学怎么刷机，各种定制 rom 各种玩耍，差点变成砖，还整天拿给朋友臭显摆；</p>
+<p>比如，有一些工具我用着不爽，我会自己去开发一个适合自己的，顺便发朋友圈吹牛逼；</p>
+<p>比如，以前和同学参加比赛的时候，需要投票，就自己给自己的团队通过一点小手段刷到第一，因为无知，所以成员觉得我好厉害，后来被发现毙掉了- -；</p>
+<p>比如，酒量差的我，因为有女生在场，所以死不认怂，最好把自己喝到吐；</p>
+<p>比如，别人在使用第三方博客平台的时候，我就折腾自己搭建一个，那会用的还是Octopress；</p>
+<p>比如，以前情人节魔改了小游戏给女票玩，恨不得让她的朋友都知道；</p>
+<p>比如，现在有些业务上的需要，会想办法开发小机器人去「应付」，让同事开心一会;</p>
+<p>比如…太多了，列举不完，就先不举了，反正你从公众号也多少能够看得出…我有点不一样。</p>
+</blockquote>
+<p>也正因如此，我现在手上拥有的大部分东西，包括你看到我呈现出来的东西，都是我从 0 开始，通过折腾和自学出来的。</p>
+<p>在一年多之前，有小伙伴建议我开个「知识星球」，其实我很早就有玩过这玩意，后来发现它不太适合我这种发教程文章的，它更适合用来像「发朋友圈」那样发贴，而且，我总觉得有被束缚的感觉，所以后来想了下，我何不：</p>
+<blockquote>
+<p>自己搭一台子！</p>
+</blockquote>
+<p>我个性比较自由，所以在自己的地盘，可以尽可能的写一些比较私密的东西。</p>
+<p>所以，也就有了：</p>
+<blockquote>
+<p>fxxkpython.com</p>
+</blockquote>
+<p>从这域名你也能看得出来些什么？</p>
+<p>不过，我还是想解释一下：</p>
+<h2 id="什么是-fxxk？"><a href="#什么是-fxxk？" class="headerlink" title="什么是 fxxk？"></a>什么是 fxxk？</h2><p>有时候我在起项目名称的时候，我喜欢在前面加一个「fxxk」，其实我真没那意思，它对我来说是一种「态度」，我知道，不管做什么事情，总会遇到这样那样的麻烦或者意外，我想传达的是这个意思：fxxk是一种态度——搞定它，干！</p>
+<p>在这里，成为了我和加入 VIP 的朋友们的私密之地…</p>
+<p>也许你会问：</p>
+<h2 id="我到底会在这里写什么呢？"><a href="#我到底会在这里写什么呢？" class="headerlink" title="我到底会在这里写什么呢？"></a>我到底会在这里写什么呢？</h2><p>在 Python 学习的路上，我和你一样，我走过一些路，所以，我懂你，我在这里要写的东西，更多的是站在你的角度，循序渐进的写着你的需要，比如，自学需要什么样的方法？为什么需要心里建设？怎么协作？怎么找源代码？在 GitHub 查找源代码的技巧？想要快速入门 Python，最需要掌握哪些内容？在什么阶段可以做什么事情？Python进阶知识是什么？如何掌握？知识体系是怎么样的？甚至于工具的使用，如何打造 Python 专用的 Vim 编辑器？再回归基础理论？数据结构算法，数据库，如何通过项目进行学习？等等…</p>
+<p>这些我都会在接下来的 VIP 中写到，事实上，大部分内容，其实已经在里面更新了。</p>
+<p>你可以进入 <a href="https://vip.fxxkpython.com，通过目录查看已经更新的相关类目，只不过具体文章内容非公开，但你可以检索到相关的文章标题和部分预览内容：" target="_blank" rel="noopener">https://vip.fxxkpython.com，通过目录查看已经更新的相关类目，只不过具体文章内容非公开，但你可以检索到相关的文章标题和部分预览内容：</a></p>
+<img src="/images/vip1.png" style="zoom:50%;">
+
+
+
+
+<p>值得说的一点是，里面所有涉及到的例子，都是我亲自运行觉得没毛病才会分享出来的，之前是，接下来也是！</p>
+<h2 id="那么，你能从这里得到什么？"><a href="#那么，你能从这里得到什么？" class="headerlink" title="那么，你能从这里得到什么？"></a>那么，你能从这里得到什么？</h2><p>我依然会使用小帅b的风格，尽量像个朋友一样，用比较易懂的方式，用心的让你明白，理解一些东西。就像已经加入的他们一样：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/vip2.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+<img src="/images/vip3.png" alt="截屏2021-02-28 上午4.31.26" style="zoom:50%;">
+
+<p>当你成功订阅了小帅b 的 VIP，全网的内容立即解锁，你可以看个够，不仅如此，你接下来的一年里还将会持续得到推送，享受到我写的私密非公开的内容教程。</p>
+<p>我更希望你能通过这里，受到我一些正面的影响，带给你一些价值，希望你可以洗得一技之长，能够利用它来解决你自己生活和工作上的问题。</p>
+<blockquote>
+<p>互相陪伴，一起成长！</p>
+</blockquote>
+<p>除吃之外，接下来我还会尝试做一些衍生的产品出来，不用多说，对 VIP 的朋友肯定会有最高的利益。</p>
+<h2 id="如何订阅小帅b的-VIP"><a href="#如何订阅小帅b的-VIP" class="headerlink" title="如何订阅小帅b的 VIP"></a>如何订阅小帅b的 VIP</h2><p>你可以扫下方二维码或点击<a href="https://vip.fxxkpython.com/?page_id=18" target="_blank" rel="noopener">申请VIP</a>进入购买订阅，越早加入越有优势，你懂的：</p>
+<p><img src="/images/vip4.png"></p>
+<blockquote>
+<p>来吧，我等你！</p>
+</blockquote>
+<p>最后，送给即将加入或者已经加入的朋友们一句话：</p>
+<p>不懂，无所谓，不行动，才是可怕，可是：</p>
+<blockquote>
+<p>一怕，就输了一辈子！</p>
+</blockquote>
+<p>共勉，下回见，peace！</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+      <!--  
+
+        
+        关注公众号「wistbean」，发送「帅书」获取我写的技术电子书
+        
+        -->
+        在公众号「学习 Python 的正确姿势」发送「帅书」领取我写的技术电子书，转载请注明出处：
+        <a href="https://wistbean.github.io/learn-python-with-me.html">
+                   wistbean
+        </a>
+    </div>
+    
+    <footer>
+        <a href="https://wistbean.github.io">
+            <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+            wistbean
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python学习/">python学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vip/">vip</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小帅b/">小帅b</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/私密之地/">私密之地</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/通往Python高手之路/">通往Python高手之路</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/learn-python-with-me.html&title=《跟我一起通往 Python 高手之路》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/learn-python-with-me.html&title=《跟我一起通往 Python 高手之路》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/learn-python-with-me.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《跟我一起通往 Python 高手之路》 — wistbean&url=https://wistbean.github.io/learn-python-with-me.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/learn-python-with-me.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/gong-zuo-she-bei-tui-jian.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">我正在使用的设备</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2021-nian-zhong-zong-jie.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">wistbean的2021年终总结</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>本站已加入 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-知识 4.0  (CC BY-NC-SA 4.0)国际协议 | 转载请注明链接出处</a></span>
+        </p>
+    </div>
+
+        <div class="bottom">
+                <p><span>wistbean &copy; 2015 - 2024</span>
+                    <span>
+                        
+                         <a href="https://wistbean.github.io/">肯定会|wistbean</a>
+                         <a href="https://fxxkpython.com">通往Python高手之路</a>
+                         <a href="https://www.bwh8.net/aff.php?aff=32874" target="_blank">搬瓦工2024优惠码</a>、
+                         <a href="https://www.vultr.com/?ref=7532860" target="_blank">vultr2024优惠码</a>
+                    </span>
+                </p>
+        </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/learn-python-with-me.html&title=《跟我一起通往 Python 高手之路》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/learn-python-with-me.html&title=《跟我一起通往 Python 高手之路》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/learn-python-with-me.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《跟我一起通往 Python 高手之路》 — wistbean&url=https://wistbean.github.io/learn-python-with-me.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/learn-python-with-me.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACNklEQVR42u3aQZLCMAwFUe5/6cyWBXb6SwNVkTsrKmViXhZCsvR64et6u97vkJWr9atnrp78D5cMGTIey7i2F9mSbLxfv3pB5LfJkCHjHMZq4/3n/bd4OCb73uwiQ4YMGTgg8rSSP1+GDBkyUkZa6HKADBkyZOwZpIitHZaREvSntbgMGTIeyOCn7r///JX+hgwZMh7FuMKLB18eatMg++FpMmTIGM3oFKj9MB0UqOT3yJAhYyijc4jG13QaBggmQ4aMIxlp8tdpDHSaEzcBV4YMGYMYtdHVWmBN16ABMhkyZBzAiANc+zSevJrWtIgMGTIGMcjxPRmSIGExbQnwYC1DhozZDJ7koRQNszvIm9RQhgwZQxk84UvTxE6TIFgvQ4aMYxhpGRmPbZWSwmBaRIYMGUMZ6WhFOjbRGR3jx4IyZMiYzeDpXS0pTIvVYoCWIUPGAYxaI7N2PIcSu/CAT4YMGacx0oZl/046ELacGZEhQ8ZQRtqGTMcg0iGM/YsrDl7IkCFjBIO3BDpHbHz4rHgMJ0OGjAMYZIPvlbu8kRD0Y2XIkDGOwRuHJFnkLYQa4OZ/Q4YMGYMYnQGv2iEaCbW8hEaVrgwZMh7OqKViJE0kkb6/PsbIkCHjsYx+QzFtYfIEtNiPlSFDxlBGUPXiV8DTO/4PsETKkCFDBmgJdAIrL3HROZwMGTJk4JZA/36QbsqQIeMARjpykaaDHVhrZkSGDBkjGLURBxKO+VhGrXCVIUPGAYw/SdmyUNlgaQkAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
