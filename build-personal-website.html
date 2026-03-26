@@ -51,13 +51,13 @@
     
     
     <meta name="keywords" content="vultr,个人网站,教程,Git,Nginx,hexo,blog,GitHub搭建博客,搭建个人博客教程,技术博客搭建教程,hexo 部署到GitHub,个人网站搭建教程">
-    <meta name="description" content="为什么要有自己的个人网站呢？我觉得现在身处于互联网时代，有自己的个人网站其实就和互联网上的一张名片差不多了，在这里可以不断的记录自己的生活，总结自己的知识，人生思考什么的，以后介绍自己直接把网站扔给对方。一来是可以装下逼，二来是可以让对方更好的了解自己。 再者就是相对的自由了，现在市面上有很多 Blog 系统，你只要注册一下，就可以直接在他们的平台生成一个你自己的blog，虽然很方便，但是你要付出">
-<meta name="keywords" content="vultr,个人网站,教程,Git,Nginx,hexo,blog,GitHub搭建博客,搭建个人博客教程,技术博客搭建教程,hexo 部署到GitHub,个人网站搭建教程">
+    <meta name="description" content="从 0 开始使用 Hexo 搭建个人网站博客的完整教程，涵盖安装、初始化、主题选择、部署与优化。">
+<meta name="keywords" content="Hexo, 个人网站, 个人博客, 搭建教程, GitHub Pages, Nginx, Node.js, 静态博客, Hexo 主题">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo搭建个人网站博客完全教程">
 <meta property="og:url" content="https://wistbean.github.io/build-personal-website.html">
 <meta property="og:site_name" content="wistbean">
-<meta property="og:description" content="为什么要有自己的个人网站呢？我觉得现在身处于互联网时代，有自己的个人网站其实就和互联网上的一张名片差不多了，在这里可以不断的记录自己的生活，总结自己的知识，人生思考什么的，以后介绍自己直接把网站扔给对方。一来是可以装下逼，二来是可以让对方更好的了解自己。 再者就是相对的自由了，现在市面上有很多 Blog 系统，你只要注册一下，就可以直接在他们的平台生成一个你自己的blog，虽然很方便，但是你要付出">
+<meta property="og:description" content="从 0 开始使用 Hexo 搭建个人网站博客的完整教程，涵盖安装、初始化、主题选择、部署与优化。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://wistbean.org/images/blog01.png">
 <meta property="og:image" content="https://wistbean.org/images/blog02.png">
@@ -67,10 +67,10 @@
 <meta property="og:image" content="https://wistbean.org/images/blog3.png">
 <meta property="og:image" content="https://wistbean.org/images/blog4.png">
 <meta property="og:image" content="https://wistbean.org/images/domains.png">
-<meta property="og:updated_time" content="2024-01-26T15:14:15.595Z">
+<meta property="og:updated_time" content="2026-03-26T07:41:22.288Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo搭建个人网站博客完全教程">
-<meta name="twitter:description" content="为什么要有自己的个人网站呢？我觉得现在身处于互联网时代，有自己的个人网站其实就和互联网上的一张名片差不多了，在这里可以不断的记录自己的生活，总结自己的知识，人生思考什么的，以后介绍自己直接把网站扔给对方。一来是可以装下逼，二来是可以让对方更好的了解自己。 再者就是相对的自由了，现在市面上有很多 Blog 系统，你只要注册一下，就可以直接在他们的平台生成一个你自己的blog，虽然很方便，但是你要付出">
+<meta name="twitter:description" content="从 0 开始使用 Hexo 搭建个人网站博客的完整教程，涵盖安装、初始化、主题选择、部署与优化。">
 <meta name="twitter:image" content="https://wistbean.org/images/blog01.png">
     
         <link rel="alternate" type="application/atom+xml" title="wistbean" href="/atom.xml">
@@ -193,7 +193,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>目录</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#为什么要有自己的个人网站呢？"><span class="post-toc-number">1.</span> <span class="post-toc-text">为什么要有自己的个人网站呢？</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#使用-Hexo-框架来搭建个人网站"><span class="post-toc-number">2.</span> <span class="post-toc-text">使用 Hexo 框架来搭建个人网站</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#开始搭建"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">开始搭建</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#优化-hexo-博客主题"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">优化 hexo 博客主题</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#修改你的网站中的个人信息"><span class="post-toc-number">2.2.1.</span> <span class="post-toc-text">修改你的网站中的个人信息</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#选一个Hexo主题"><span class="post-toc-number">2.2.2.</span> <span class="post-toc-text">选一个Hexo主题</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#下载Hexo主题"><span class="post-toc-number">2.2.3.</span> <span class="post-toc-text">下载Hexo主题</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#配置主题"><span class="post-toc-number">2.2.4.</span> <span class="post-toc-text">配置主题</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#重新生成和运行"><span class="post-toc-number">2.2.5.</span> <span class="post-toc-text">重新生成和运行</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#访问一下看看，是不是比之前好看多了？"><span class="post-toc-number">2.2.6.</span> <span class="post-toc-text">访问一下看看，是不是比之前好看多了？</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#hexo博客的第一篇文章，打上标签和分类"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">hexo博客的第一篇文章，打上标签和分类</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#两种方式来新建你的博文"><span class="post-toc-number">2.3.1.</span> <span class="post-toc-text">两种方式来新建你的博文</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#命令形式"><span class="post-toc-number">2.3.1.1.</span> <span class="post-toc-text">命令形式</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#直接新建方式"><span class="post-toc-number">2.3.1.2.</span> <span class="post-toc-text">直接新建方式</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#给你的文章打上标签"><span class="post-toc-number">2.3.2.</span> <span class="post-toc-text">给你的文章打上标签</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#给你的文章添加分类"><span class="post-toc-number">2.3.3.</span> <span class="post-toc-text">给你的文章添加分类</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#给你的文章添加评论"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">给你的文章添加评论</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#让全世界的人都认识你"><span class="post-toc-number">3.</span> <span class="post-toc-text">让全世界的人都认识你</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#创建-Github-pages-仓库"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">创建 Github pages 仓库</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装-hexo-deployer-git"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">安装 hexo-deployer-git</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#配置你的Git"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">配置你的Git</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#推送你的网站到Github上"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">推送你的网站到Github上</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#访问你的网站"><span class="post-toc-number">3.5.</span> <span class="post-toc-text">访问你的网站</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#要有点个性，绑上你的域名"><span class="post-toc-number">4.</span> <span class="post-toc-text">要有点个性，绑上你的域名</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#购买域名"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">购买域名</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#绑定域名"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">绑定域名</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#添加-CNAME-文件"><span class="post-toc-number">4.2.1.</span> <span class="post-toc-text">添加 CNAME 文件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#在你的域名商后台进行-DNS-解析添加两条记录："><span class="post-toc-number">4.2.2.</span> <span class="post-toc-text">在你的域名商后台进行 DNS 解析添加两条记录：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#GitHub-设置域名"><span class="post-toc-number">4.2.3.</span> <span class="post-toc-text">GitHub 设置域名</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#服务器搞起，完全自主权"><span class="post-toc-number">5.</span> <span class="post-toc-text">服务器搞起，完全自主权</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#购买服务器"><span class="post-toc-number">5.0.1.</span> <span class="post-toc-text">购买服务器</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#使用-Nginx"><span class="post-toc-number">5.0.2.</span> <span class="post-toc-text">使用 Nginx</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#DNS解析到你的服务器"><span class="post-toc-number">5.0.3.</span> <span class="post-toc-text">DNS解析到你的服务器</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#hexo参考文章"><span class="post-toc-number">6.</span> <span class="post-toc-text">hexo参考文章</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#为什么要有自己的个人网站呢？"><span class="post-toc-number">1.</span> <span class="post-toc-text">为什么要有自己的个人网站呢？</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#使用-Hexo-框架搭建个人网站-x2F-博客"><span class="post-toc-number">2.</span> <span class="post-toc-text">使用 Hexo 框架搭建个人网站/博客</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#开始搭建"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">开始搭建</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#优化-hexo-博客主题"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">优化 hexo 博客主题</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#修改你的网站中的个人信息"><span class="post-toc-number">2.2.1.</span> <span class="post-toc-text">修改你的网站中的个人信息</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#选一个Hexo主题"><span class="post-toc-number">2.2.2.</span> <span class="post-toc-text">选一个Hexo主题</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#下载Hexo主题"><span class="post-toc-number">2.2.3.</span> <span class="post-toc-text">下载Hexo主题</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#配置主题"><span class="post-toc-number">2.2.4.</span> <span class="post-toc-text">配置主题</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#重新生成和运行"><span class="post-toc-number">2.2.5.</span> <span class="post-toc-text">重新生成和运行</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#访问一下看看，是不是比之前好看多了？"><span class="post-toc-number">2.2.6.</span> <span class="post-toc-text">访问一下看看，是不是比之前好看多了？</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#hexo博客的第一篇文章，打上标签和分类"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">hexo博客的第一篇文章，打上标签和分类</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#两种方式来新建你的博文"><span class="post-toc-number">2.3.1.</span> <span class="post-toc-text">两种方式来新建你的博文</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#命令形式"><span class="post-toc-number">2.3.1.1.</span> <span class="post-toc-text">命令形式</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#直接新建方式"><span class="post-toc-number">2.3.1.2.</span> <span class="post-toc-text">直接新建方式</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#给你的文章打上标签"><span class="post-toc-number">2.3.2.</span> <span class="post-toc-text">给你的文章打上标签</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#给你的文章添加分类"><span class="post-toc-number">2.3.3.</span> <span class="post-toc-text">给你的文章添加分类</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#给你的文章添加评论"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">给你的文章添加评论</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#自己搭建评论系统（不依赖第三方）"><span class="post-toc-number">2.4.1.</span> <span class="post-toc-text">自己搭建评论系统（不依赖第三方）</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#让全世界的人都认识你"><span class="post-toc-number">3.</span> <span class="post-toc-text">让全世界的人都认识你</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#创建-Github-pages-仓库"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">创建 Github pages 仓库</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装-hexo-deployer-git"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">安装 hexo-deployer-git</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#配置你的Git"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">配置你的Git</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#推送你的网站到Github上"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">推送你的网站到Github上</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#访问你的网站"><span class="post-toc-number">3.5.</span> <span class="post-toc-text">访问你的网站</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#要有点个性，绑上你的域名"><span class="post-toc-number">4.</span> <span class="post-toc-text">要有点个性，绑上你的域名</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#购买域名"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">购买域名</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#绑定域名"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">绑定域名</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#添加-CNAME-文件"><span class="post-toc-number">4.2.1.</span> <span class="post-toc-text">添加 CNAME 文件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#在你的域名商后台进行-DNS-解析添加两条记录："><span class="post-toc-number">4.2.2.</span> <span class="post-toc-text">在你的域名商后台进行 DNS 解析添加两条记录：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#GitHub-设置域名"><span class="post-toc-number">4.2.3.</span> <span class="post-toc-text">GitHub 设置域名</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#服务器搞起，完全自主权"><span class="post-toc-number">5.</span> <span class="post-toc-text">服务器搞起，完全自主权</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#购买服务器"><span class="post-toc-number">5.0.1.</span> <span class="post-toc-text">购买服务器</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#使用-Nginx"><span class="post-toc-number">5.0.2.</span> <span class="post-toc-text">使用 Nginx</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#DNS解析到你的服务器"><span class="post-toc-number">5.0.3.</span> <span class="post-toc-text">DNS解析到你的服务器</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#hexo参考文章"><span class="post-toc-number">6.</span> <span class="post-toc-text">hexo参考文章</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#常见问题-FAQ"><span class="post-toc-number">6.1.</span> <span class="post-toc-text">常见问题 FAQ</span></a></li></ol></li></ol>
         </nav>
     </aside>
 
@@ -215,7 +215,22 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h1 id="为什么要有自己的个人网站呢？"><a href="#为什么要有自己的个人网站呢？" class="headerlink" title="为什么要有自己的个人网站呢？"></a>为什么要有自己的个人网站呢？</h1><p>我觉得现在身处于互联网时代，有自己的个人网站其实就和互联网上的一张名片差不多了，在这里可以不断的记录自己的生活，总结自己的知识，人生思考什么的，以后介绍自己直接把网站扔给对方。一来是可以装下逼，二来是可以让对方更好的了解自己。</p>
+            <p>本文是「Hexo 搭建个人网站&#x2F;个人博客」的完整入门指南，从环境准备、Hexo 初始化、主题选择到部署与优化，适合零基础快速上手。</p>
+<p><strong>适合人群</strong>：想用 Hexo 从 0 搭建个人网站&#x2F;个人博客、需要 GitHub Pages 部署、希望了解 Nginx 与域名解析的新手。</p>
+<p><strong>核心步骤清单</strong>：</p>
+<ol>
+<li>安装 Node.js 与 Hexo CLI</li>
+<li>初始化 Hexo 项目并生成静态页面</li>
+<li>选择主题并配置站点信息</li>
+<li>写第一篇博客并设置标签&#x2F;分类</li>
+<li>部署到 GitHub Pages 或服务器</li>
+</ol>
+<p>相关内容：</p>
+<ul>
+<li><a href="/tags/hexo/">Hexo 标签页</a></li>
+<li><a href="/categories/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/">个人网站分类</a></li>
+</ul>
+<h1 id="为什么要有自己的个人网站呢？"><a href="#为什么要有自己的个人网站呢？" class="headerlink" title="为什么要有自己的个人网站呢？"></a>为什么要有自己的个人网站呢？</h1><p>我觉得现在身处于互联网时代，有自己的个人网站其实就和互联网上的一张名片差不多了，在这里可以不断的记录自己的生活，总结自己的知识，人生思考什么的，以后介绍自己直接把网站扔给对方。一来是可以装下逼，二来是可以让对方更好的了解自己。</p>
 <p>再者就是相对的自由了，现在市面上有很多 Blog 系统，你只要注册一下，就可以直接在他们的平台生成一个你自己的blog，虽然很方便，但是你要付出的代价就是：<strong>忍受他们平台在你的 Blog 嵌入一堆广告。受他们的限制与监管，人家不爽就随随便便删了你的文章，没得商量</strong>。</p>
 <p>比如这样：</p>
 <figure class="image-bubble">
@@ -245,7 +260,7 @@
 <p>爽吗？反正我是不爽。</p>
 <p>所以自己搞一个完全属于自己的网站，相对来说，没那么苦逼。为什么说相对？ 因为我们也要看大佬的眼色啊。</p>
 <p>但是总比被各种平台恶心好吧。也别幻想什么区块链博客系统，对于目前来说，不现实。</p>
-<h1 id="使用-Hexo-框架来搭建个人网站"><a href="#使用-Hexo-框架来搭建个人网站" class="headerlink" title="使用 Hexo 框架来搭建个人网站"></a>使用 Hexo 框架来搭建个人网站</h1><p>这两天我重新整理了一下自己的 Blog ，因为我之前用的是 Octopress 框架，有些年头了，一些主题和插件并不是很多。</p>
+<h1 id="使用-Hexo-框架搭建个人网站-x2F-博客"><a href="#使用-Hexo-框架搭建个人网站-x2F-博客" class="headerlink" title="使用 Hexo 框架搭建个人网站&#x2F;博客"></a>使用 Hexo 框架搭建个人网站&#x2F;博客</h1><p>这两天我重新整理了一下自己的 Blog ，因为我之前用的是 Octopress 框架，有些年头了，一些主题和插件并不是很多。</p>
 <p>后来对比了几个框架，发现 Hexo 不错，和 Octopress 差不多，也是可以用 Markdown 写文章，然后生成静态网站，Hexo 主题丰富一些。</p>
 <p>Hexo 是基于 <a href="https://nodejs.cn/" target="_blank" rel="noopener">nodejs</a> 的,搭建起来很简单。那么接下来就说说如何从 0 开始使用 Hexo 搭建个人博客吧。</p>
 <h2 id="开始搭建"><a href="#开始搭建" class="headerlink" title="开始搭建"></a>开始搭建</h2><ol>
@@ -417,6 +432,132 @@ hexo g
                 <div class="image-caption">评论</div>
             </figure>
 
+<h3 id="自己搭建评论系统（不依赖第三方）"><a href="#自己搭建评论系统（不依赖第三方）" class="headerlink" title="自己搭建评论系统（不依赖第三方）"></a>自己搭建评论系统（不依赖第三方）</h3><p>如果你不想用第三方评论平台，可以自建一个简单的评论服务（API + 数据存储），再在主题里配置接口地址。</p>
+<p><strong>流程概览：</strong></p>
+<ol>
+<li>在服务器上运行评论服务（Node&#x2F;Java&#x2F;Python 均可）</li>
+<li>用 Nginx 反代到一个二级域名（如 <code>comments.example.com</code>）</li>
+<li>在主题配置里填入 <code>api_base</code>（使用 HTTPS 域名，不要写真实服务器 IP）</li>
+</ol>
+<p><strong>服务器端搭建示例（Node 版，完整可用示例）：</strong></p>
+<ol>
+<li><p>安装 Node（示例为 Node 20）：</p>
+<pre><code> curl -fsSL https://rpm.nodesource.com/setup_20.x | sudo bash -
+ sudo yum install -y nodejs
+</code></pre>
+</li>
+<li><p>创建评论服务目录并写入 <code>server.js</code>（完整示例）：</p>
+<pre><code> sudo mkdir -p /opt/comment-server/data
+ cd /opt/comment-server
+
+ cat &gt; server.js &lt;&lt;&#39;EOF&#39;
+ import express from &#39;express&#39;;
+ import cors from &#39;cors&#39;;
+ import { Low } from &#39;lowdb&#39;;
+ import { JSONFile } from &#39;lowdb/node&#39;;
+ import { nanoid } from &#39;nanoid&#39;;
+ import path from &#39;path&#39;;
+ import { fileURLToPath } from &#39;url&#39;;
+
+ const __filename = fileURLToPath(import.meta.url);
+ const __dirname = path.dirname(__filename);
+
+ const PORT = Number(process.env.PORT || 4000);
+ const DATA_FILE = process.env.DATA_FILE || path.join(__dirname, &#39;data&#39;, &#39;db.json&#39;);
+ const CORS_ORIGIN = process.env.CORS_ORIGIN || &#39;*&#39;;
+
+ const adapter = new JSONFile(DATA_FILE);
+ const db = new Low(adapter, { comments: [] });
+
+ await db.read();
+ db.data ||= { comments: [] };
+ await db.write();
+
+ const app = express();
+ app.use(express.json({ limit: &#39;50kb&#39; }));
+ app.use(
+     cors({
+         origin: CORS_ORIGIN === &#39;*&#39; ? true : CORS_ORIGIN.split(&#39;,&#39;).map((i) =&gt; i.trim())
+     })
+ );
+
+ app.get(&#39;/api/health&#39;, (req, res) =&gt; {
+     res.json({ ok: true });
+ });
+
+ app.get(&#39;/api/comments&#39;, async (req, res) =&gt; {
+     const postId = String(req.query.postId || &#39;&#39;).trim();
+     if (!postId) return res.status(400).json({ error: &#39;postId required&#39; });
+
+     await db.read();
+     const items = db.data.comments.filter((c) =&gt; c.postId === postId);
+     res.json({ items });
+ });
+
+ app.post(&#39;/api/comments&#39;, async (req, res) =&gt; {
+     const postId = String(req.body.postId || &#39;&#39;).trim();
+     const author = String(req.body.author || &#39;&#39;).trim();
+     const content = String(req.body.content || &#39;&#39;).trim();
+
+     if (!postId || !author || !content) {
+         return res.status(400).json({ error: &#39;postId, author and content required&#39; });
+     }
+
+     const comment = {
+         id: nanoid(),
+         postId,
+         author,
+         email: String(req.body.email || &#39;&#39;).trim(),
+         website: String(req.body.website || &#39;&#39;).trim(),
+         content,
+         createdAt: new Date().toISOString()
+     };
+
+     await db.read();
+     db.data.comments.push(comment);
+     await db.write();
+
+     res.json({ ok: true, item: comment });
+ });
+
+ app.listen(PORT, () =&gt; {
+     console.log(`Comment server running on http://localhost:${PORT}`);
+ });
+ EOF
+</code></pre>
+</li>
+<li><p>安装依赖并启动服务（示例端口 4000）：</p>
+<pre><code> npm install
+ npm run start
+</code></pre>
+</li>
+<li><p>Nginx 反代到子域名（示例）：</p>
+<pre><code> server {
+     listen 80;
+     server_name comments.example.com;
+
+     location / {
+         proxy_pass http://127.0.0.1:4000;
+         proxy_set_header Host $host;
+         proxy_set_header X-Real-IP $remote_addr;
+     }
+ }
+</code></pre>
+</li>
+<li><p>给子域名加 HTTPS，再把主题配置里的 <code>api_base</code> 指向 <code>https://comments.example.com</code>。</p>
+</li>
+</ol>
+<p><strong>示例配置（不包含真实地址）：</strong></p>
+<pre><code>    custom_comments:
+        enable: true
+        api_base: https://comments.example.com
+</code></pre>
+<p><strong>建议：</strong></p>
+<ul>
+<li>开启限流（如每分钟 3 次）</li>
+<li>加关键词过滤或审核机制</li>
+<li>用 HTTPS 防止混合内容被浏览器拦截</li>
+</ul>
 <h1 id="让全世界的人都认识你"><a href="#让全世界的人都认识你" class="headerlink" title="让全世界的人都认识你"></a>让全世界的人都认识你</h1><p>已经搞定了个人blog，接下来当然是要部署到网上让人家访问了，如果不想花钱，可以使用<code>GitHub Pages</code>，使用它就可以部署自己的网站啦。</p>
 <p>对于 GitHub 不知道怎么用的童鞋，可以看一下我的这个视频教程：<a href="/java-ssm-1-4.html">GitHub完全使用指南</a></p>
 <h2 id="创建-Github-pages-仓库"><a href="#创建-Github-pages-仓库" class="headerlink" title="创建 Github pages 仓库"></a>创建 Github pages 仓库</h2><p>接着创建一个 xxx.github.io 的 public 仓库，这里的xxx写你的名字，比如我写的是 wistbean.org,那么到时我就可以通过 <code>wistbean.org</code> 来访问我的网站了。</p>
@@ -465,7 +606,10 @@ hexo g
 <h3 id="使用-Nginx"><a href="#使用-Nginx" class="headerlink" title="使用 Nginx"></a>使用 Nginx</h3><p>买了服务器之后，那么你就可以用 Nginx 来当做你网站的 web 服务器，搭建也很简单，关于 Nginx 搭建和配置就不多说了，如果之前没玩过可以看这里：<a href="https://wistbean.org/java-ssm-4-2.html" target="_blank" rel="noopener">Nginx使用教程</a></p>
 <h3 id="DNS解析到你的服务器"><a href="#DNS解析到你的服务器" class="headerlink" title="DNS解析到你的服务器"></a>DNS解析到你的服务器</h3><p>在你的域名商，使用 DNS 解析，添加一条 A 记录就可以了，记录值就是你这台服务器的 IP 地址，一般启用后 30 分钟左右就可以访问啦。</p>
 <p>以上你就完全拥有属于自己的个人网站啦。</p>
-<h1 id="hexo参考文章"><a href="#hexo参考文章" class="headerlink" title="hexo参考文章"></a>hexo参考文章</h1><ul>
+<h1 id="hexo参考文章"><a href="#hexo参考文章" class="headerlink" title="hexo参考文章"></a>hexo参考文章</h1><h2 id="常见问题-FAQ"><a href="#常见问题-FAQ" class="headerlink" title="常见问题 FAQ"></a>常见问题 FAQ</h2><p><strong>Q：Hexo 搭建个人网站一定要服务器吗？</strong><br>不一定。小站点可以直接部署到 GitHub Pages，稳定且免费；有更高自由度需求再上服务器。</p>
+<p><strong>Q：Hexo 博客部署失败常见原因是什么？</strong><br>常见原因包括 GitHub 权限问题、仓库地址配置错误、未安装 <code>hexo-deployer-git</code>。</p>
+<p><strong>Q：个人博客怎么做 SEO 更容易收录？</strong><br>保证文章有清晰的标题层级、合理关键词、持续更新，并提交站点地图到搜索引擎。</p>
+<ul>
 <li><a href="https://zhuanlan.zhihu.com/p/26625249" target="_blank" rel="noopener">GitHub+Hexo 搭建个人网站详细教程</a></li>
 <li><a href="https://www.jianshu.com/p/f4dce0e76886" target="_blank" rel="noopener">使用Hexo搭建个人博客</a></li>
 <li><a href="https://juejin.im/post/590b451a0ce46300588c43a0" target="_blank" rel="noopener">hexo高阶教程：教你怎么让你的hexo博客在搜索引擎中排第一</a></li>
@@ -642,8 +786,8 @@ hexo g
                         
                          <a href="https://wistbean.github.io/">肯定会|wistbean</a>
                          <a href="https://fxxkpython.com">通往Python高手之路</a>
-                         <a href="https://www.bwh8.net/aff.php?aff=32874" target="_blank">搬瓦工2024优惠码</a>、
-                         <a href="https://www.vultr.com/?ref=7532860" target="_blank">vultr2024优惠码</a>
+                         <a href="https://www.bwh8.net/aff.php?aff=32874" target="_blank">搬瓦工优惠码</a>、
+                         <a href="https://www.vultr.com/?ref=7532860" target="_blank">vultr优惠码</a>
                     </span>
                 </p>
         </div>

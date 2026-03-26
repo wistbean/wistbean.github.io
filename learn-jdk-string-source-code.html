@@ -51,13 +51,13 @@
     
     
     <meta name="keywords" content="Java,String">
-    <meta name="description" content="话说之前对代码的编写大多都是直接使用jdk里面的对象，有时候也对一些对象直接封装之后就使用了，很少去了解源码中具体细节是怎么实现的，这样显然不符合我这么帅的人的做事风格，所以我现在就来对源码进行学习学习，可能篇幅略长，不过会慢慢记录下我学习的过程和总结一下，希望对自己有帮助的同时，也能够帮助到和我一样，希望更进一步去理解java的小伙伴们！！ String类的大概面貌废话不多说了，先打开我的 In">
-<meta name="keywords" content="Java,String">
+    <meta name="description" content="话说之前对代码的编写大多都是直接使用jdk里面的对象，有时候也对一些对象直接封装之后就使用了，很少去了解源码中具体细节是怎么实现的，这样显然不符合我这么帅的人的做事风格，所以我现在就来对源码进行学习学习，可能篇幅略长，不过会慢慢记录下我学习">
+<meta name="keywords" content="Java, String">
 <meta property="og:type" content="article">
 <meta property="og:title" content="解析Java中的 String 源码">
 <meta property="og:url" content="https://wistbean.github.io/learn-jdk-string-source-code.html">
 <meta property="og:site_name" content="wistbean">
-<meta property="og:description" content="话说之前对代码的编写大多都是直接使用jdk里面的对象，有时候也对一些对象直接封装之后就使用了，很少去了解源码中具体细节是怎么实现的，这样显然不符合我这么帅的人的做事风格，所以我现在就来对源码进行学习学习，可能篇幅略长，不过会慢慢记录下我学习的过程和总结一下，希望对自己有帮助的同时，也能够帮助到和我一样，希望更进一步去理解java的小伙伴们！！ String类的大概面貌废话不多说了，先打开我的 In">
+<meta property="og:description" content="话说之前对代码的编写大多都是直接使用jdk里面的对象，有时候也对一些对象直接封装之后就使用了，很少去了解源码中具体细节是怎么实现的，这样显然不符合我这么帅的人的做事风格，所以我现在就来对源码进行学习学习，可能篇幅略长，不过会慢慢记录下我学习">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://wistbean.github.io/images/3.png">
 <meta property="og:image" content="https://wistbean.github.io/images/describeString.png">
@@ -70,10 +70,10 @@
 <meta property="og:image" content="https://wistbean.github.io/images/s02.png">
 <meta property="og:image" content="https://wistbean.github.io/images/endwith.png">
 <meta property="og:image" content="https://wistbean.github.io/images/char.png">
-<meta property="og:updated_time" content="2024-01-26T15:14:15.687Z">
+<meta property="og:updated_time" content="2026-03-26T07:41:22.510Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="解析Java中的 String 源码">
-<meta name="twitter:description" content="话说之前对代码的编写大多都是直接使用jdk里面的对象，有时候也对一些对象直接封装之后就使用了，很少去了解源码中具体细节是怎么实现的，这样显然不符合我这么帅的人的做事风格，所以我现在就来对源码进行学习学习，可能篇幅略长，不过会慢慢记录下我学习的过程和总结一下，希望对自己有帮助的同时，也能够帮助到和我一样，希望更进一步去理解java的小伙伴们！！ String类的大概面貌废话不多说了，先打开我的 In">
+<meta name="twitter:description" content="话说之前对代码的编写大多都是直接使用jdk里面的对象，有时候也对一些对象直接封装之后就使用了，很少去了解源码中具体细节是怎么实现的，这样显然不符合我这么帅的人的做事风格，所以我现在就来对源码进行学习学习，可能篇幅略长，不过会慢慢记录下我学习">
 <meta name="twitter:image" content="https://wistbean.github.io/images/3.png">
     
         <link rel="alternate" type="application/atom+xml" title="wistbean" href="/atom.xml">
@@ -591,8 +591,8 @@
                         
                          <a href="https://wistbean.github.io/">肯定会|wistbean</a>
                          <a href="https://fxxkpython.com">通往Python高手之路</a>
-                         <a href="https://www.bwh8.net/aff.php?aff=32874" target="_blank">搬瓦工2024优惠码</a>、
-                         <a href="https://www.vultr.com/?ref=7532860" target="_blank">vultr2024优惠码</a>
+                         <a href="https://www.bwh8.net/aff.php?aff=32874" target="_blank">搬瓦工优惠码</a>、
+                         <a href="https://www.vultr.com/?ref=7532860" target="_blank">vultr优惠码</a>
                     </span>
                 </p>
         </div>
