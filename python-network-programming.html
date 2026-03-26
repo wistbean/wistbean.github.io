@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131395348-1"></script>
+    <script data-ad-client="ca-pub-9097083609097034" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-131395348-1');
+    </script>
+
+    
+
+    
+
+    
+
+
+<!-- Baidu Push -->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<!-- End Baidu Push -->
+
+
+    <meta charset="utf-8">
+    
+    <meta name="google-site-verification" content="bcJVGqEGcBIay29szBsswzqYxY3qUzWuvu1hfad3-08">
+    
+    
+    
+    
+    <title>Python 零基础入门（6/6）：TCP/UDP 网络编程与打包 | wistbean | wistbean</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#B5963F">
+    
+    
+    <meta name="keywords" content="python,教程,网络编程">
+    <meta name="description" content="通过可运行示例掌握 Python Socket TCP/UDP 编程，理解客户端与服务端通信，并学会用 PyInstaller 打包 exe。">
+<meta name="keywords" content="python socket教程, python tcp udp示例, python网络编程入门, pyinstaller打包exe, python客户端服务端">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python 零基础入门（6&#x2F;6）：TCP&#x2F;UDP 网络编程与打包">
+<meta property="og:url" content="https://wistbean.github.io/python-network-programming.html">
+<meta property="og:site_name" content="wistbean">
+<meta property="og:description" content="通过可运行示例掌握 Python Socket TCP/UDP 编程，理解客户端与服务端通信，并学会用 PyInstaller 打包 exe。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2026-03-26T04:00:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python 零基础入门（6&#x2F;6）：TCP&#x2F;UDP 网络编程与打包">
+<meta name="twitter:description" content="通过可运行示例掌握 Python Socket TCP/UDP 编程，理解客户端与服务端通信，并学会用 PyInstaller 打包 exe。">
+    
+        <link rel="alternate" type="application/atom+xml" title="wistbean" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(https://wistbean.github.io/images/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">wistbean</h5>
+          <a href="mailto:wistbean.bb@gmail.com" title="wistbean.bb@gmail.com" class="mail">wistbean.bb@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="https://wistbean.org/python-tutorial.html"  >
+                <i class="icon icon-lg icon-coffee"></i>
+                Python零基础入门教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2NzYyNjg2Nw==&action=getalbum&album_id=2448798954764255234#wechat_redirect"  >
+                <i class="icon icon-lg icon-bug"></i>
+                Python爬虫教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://vip.fxxkpython.com/?page_id=18"  >
+                <i class="icon icon-lg icon-code"></i>
+                加入我的VIP
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://mp.weixin.qq.com/s/m9LVoUdcLTO0YpQom5jjIA"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于我
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light off" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Python 零基础入门（6/6）：TCP/UDP 网络编程与打包</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="vultr ss bbr v2ray 100美金">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Python 零基础入门（6/6）：TCP/UDP 网络编程与打包</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2026-03-26T03:25:00.000Z" itemprop="datePublished" class="page-time">
+  2026-03-26
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/python/">python</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>目录</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#学习目标速览（点击跳转）"><span class="post-toc-number">1.</span> <span class="post-toc-text">学习目标速览（点击跳转）</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#章节导航"><span class="post-toc-number">2.</span> <span class="post-toc-text">章节导航</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-TCP-客户端示例"><span class="post-toc-number">3.</span> <span class="post-toc-text">1. TCP 客户端示例</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-TCP-服务端示例"><span class="post-toc-number">4.</span> <span class="post-toc-text">2. TCP 服务端示例</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-UDP-示例"><span class="post-toc-number">5.</span> <span class="post-toc-text">3. UDP 示例</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#4-打包为-exe"><span class="post-toc-number">6.</span> <span class="post-toc-text">4. 打包为 exe</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#学习路线闭环"><span class="post-toc-number">7.</span> <span class="post-toc-text">学习路线闭环</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#学习-FAQ（统一）"><span class="post-toc-number">8.</span> <span class="post-toc-text">学习 FAQ（统一）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#TCP-和-UDP-在入门阶段怎么选？"><span class="post-toc-number">8.1.</span> <span class="post-toc-text">TCP 和 UDP 在入门阶段怎么选？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#本地-socket-示例连不上通常是什么原因？"><span class="post-toc-number">8.2.</span> <span class="post-toc-text">本地 socket 示例连不上通常是什么原因？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#PyInstaller-打包后运行闪退怎么排查？"><span class="post-toc-number">8.3.</span> <span class="post-toc-text">PyInstaller 打包后运行闪退怎么排查？</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#系列文章导航（双向互链）"><span class="post-toc-number">9.</span> <span class="post-toc-text">系列文章导航（双向互链）</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-python-network-programming"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Python 零基础入门（6/6）：TCP/UDP 网络编程与打包</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2026-03-26 11:25:00" datetime="2026-03-26T03:25:00.000Z"  itemprop="datePublished">2026-03-26</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/python/">python</a></li></ul>
+
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <blockquote>
+<p>本文是 Python 分篇学习路线第 6 篇。<br>总览入口：<a href="/python-tutorial.html">&#x2F;python-tutorial.html</a></p>
+</blockquote>
+<h2 id="学习目标速览（点击跳转）"><a href="#学习目标速览（点击跳转）" class="headerlink" title="学习目标速览（点击跳转）"></a>学习目标速览（点击跳转）</h2><ul>
+<li><a href="#lesson6-tcp-client">跑通 TCP 客户端与服务端示例</a></li>
+<li><a href="#lesson6-udp">理解 UDP 的最小可用写法</a></li>
+<li><a href="#lesson6-packaging">掌握 <code>PyInstaller</code> 打包基础流程</a></li>
+</ul>
+<h2 id="章节导航"><a href="#章节导航" class="headerlink" title="章节导航"></a>章节导航</h2><ul>
+<li><a href="#lesson6-tcp-client">1. TCP 客户端示例</a></li>
+<li><a href="#lesson6-tcp-server">2. TCP 服务端示例</a></li>
+<li><a href="#lesson6-udp">3. UDP 示例</a></li>
+<li><a href="#lesson6-packaging">4. 打包为 exe</a></li>
+</ul>
+<p><a id="lesson6-tcp-client"></a></p>
+<h2 id="1-TCP-客户端示例"><a href="#1-TCP-客户端示例" class="headerlink" title="1. TCP 客户端示例"></a>1. TCP 客户端示例</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> socket</span><br><span class="line"></span><br><span class="line">s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)</span><br><span class="line">s.connect((<span class="string">"example.com"</span>, <span class="number">80</span>))</span><br><span class="line">s.send(<span class="string">b"GET / HTTP/1.1\r\nHost: example.com\r\nConnection: close\r\n\r\n"</span>)</span><br><span class="line">print(s.recv(<span class="number">1024</span>))</span><br><span class="line">s.close()</span><br></pre></td></tr></table></figure>
+
+<p><a id="lesson6-tcp-server"></a></p>
+<h2 id="2-TCP-服务端示例"><a href="#2-TCP-服务端示例" class="headerlink" title="2. TCP 服务端示例"></a>2. TCP 服务端示例</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> socket</span><br><span class="line"></span><br><span class="line">server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)</span><br><span class="line">server.bind((<span class="string">"127.0.0.1"</span>, <span class="number">8888</span>))</span><br><span class="line">server.listen(<span class="number">1</span>)</span><br><span class="line">conn, addr = server.accept()</span><br><span class="line">conn.send(<span class="string">b"hello"</span>)</span><br><span class="line">conn.close()</span><br></pre></td></tr></table></figure>
+
+<p><a id="lesson6-udp"></a></p>
+<h2 id="3-UDP-示例"><a href="#3-UDP-示例" class="headerlink" title="3. UDP 示例"></a>3. UDP 示例</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> socket</span><br><span class="line"></span><br><span class="line">udp = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)</span><br><span class="line">udp.sendto(<span class="string">b"hello"</span>, (<span class="string">"127.0.0.1"</span>, <span class="number">9999</span>))</span><br><span class="line">udp.close()</span><br></pre></td></tr></table></figure>
+
+<p><a id="lesson6-packaging"></a></p>
+<h2 id="4-打包为-exe"><a href="#4-打包为-exe" class="headerlink" title="4. 打包为 exe"></a>4. 打包为 exe</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python -m pip install pyinstaller</span><br><span class="line">pyinstaller -F app.py</span><br></pre></td></tr></table></figure>
+
+<p>打包后可执行文件通常在 <code>dist/</code> 目录。</p>
+<h2 id="学习路线闭环"><a href="#学习路线闭环" class="headerlink" title="学习路线闭环"></a>学习路线闭环</h2><p>你现在可以回到总览页复习并按需查漏补缺：<a href="/python-tutorial.html">&#x2F;python-tutorial.html</a></p>
+<h2 id="学习-FAQ（统一）"><a href="#学习-FAQ（统一）" class="headerlink" title="学习 FAQ（统一）"></a>学习 FAQ（统一）</h2><h3 id="TCP-和-UDP-在入门阶段怎么选？"><a href="#TCP-和-UDP-在入门阶段怎么选？" class="headerlink" title="TCP 和 UDP 在入门阶段怎么选？"></a>TCP 和 UDP 在入门阶段怎么选？</h3><p>要求可靠传输（顺序、重传）选 TCP；追求低延迟且可容忍丢包时选 UDP。</p>
+<h3 id="本地-socket-示例连不上通常是什么原因？"><a href="#本地-socket-示例连不上通常是什么原因？" class="headerlink" title="本地 socket 示例连不上通常是什么原因？"></a>本地 socket 示例连不上通常是什么原因？</h3><p>常见是端口被占用、服务端未先启动、地址写错（<code>127.0.0.1</code> 与局域网 IP 混用）。</p>
+<h3 id="PyInstaller-打包后运行闪退怎么排查？"><a href="#PyInstaller-打包后运行闪退怎么排查？" class="headerlink" title="PyInstaller 打包后运行闪退怎么排查？"></a>PyInstaller 打包后运行闪退怎么排查？</h3><p>先在命令行启动 exe 看报错，再检查资源路径与第三方依赖是否被正确打包。</p>
+<h2 id="系列文章导航（双向互链）"><a href="#系列文章导航（双向互链）" class="headerlink" title="系列文章导航（双向互链）"></a>系列文章导航（双向互链）</h2><ul>
+<li><a href="/python-tutorial.html">总览：Python3 零基础入门教程</a></li>
+<li><a href="/python-quickstart-installation.html">第一篇：安装与第一个程序</a></li>
+<li><a href="/python-basic-syntax-data-types.html">第二篇：变量、数据类型与运算符</a></li>
+<li><a href="/python-control-flow-functions.html">第三篇：条件、循环与函数</a></li>
+<li><a href="/python-oop-exceptions.html">第四篇：模块、面向对象与异常处理</a></li>
+<li><a href="/python-io-data-structures.html">第五篇：数据结构与文件 IO</a></li>
+<li><a href="/python-network-programming.html">第六篇：TCP&#x2F;UDP 网络编程与打包</a></li>
+</ul>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Python 零基础入门（6/6）：TCP/UDP 网络编程与打包",
+  "description": "通过可运行示例掌握 Python Socket TCP/UDP 编程，理解客户端与服务端通信，并学会用 PyInstaller 打包 exe。",
+  "author": {
+    "@type": "Person",
+    "name": "wistbean"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "wistbean"
+  },
+  "datePublished": "2026-03-26T11:25:00+08:00",
+  "dateModified": "2026-03-26T12:00:00+08:00",
+  "mainEntityOfPage": "https://wistbean.org/python-network-programming.html",
+  "inLanguage": "zh-CN"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "TCP 和 UDP 在入门阶段怎么选？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "要求可靠传输（顺序、重传）选 TCP；追求低延迟且可容忍丢包时选 UDP。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "本地 socket 示例连不上通常是什么原因？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "常见是端口被占用、服务端未先启动、地址写错（127.0.0.1 与局域网 IP 混用）。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "PyInstaller 打包后运行闪退怎么排查？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "先在命令行启动 exe 看报错，再检查资源路径与第三方依赖是否被正确打包。"
+      }
+    }
+  ]
+}
+</script>
+
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+      <!--  
+
+        
+        关注公众号「wistbean」，发送「帅书」获取我写的技术电子书
+        
+        -->
+        在公众号「帅彬老仙」发送「帅书」领取我写的技术电子书，转载请注明出处：
+        <a href="https://wistbean.github.io/python-network-programming.html">
+                   wistbean
+        </a>
+    </div>
+    
+    <footer>
+        <a href="https://wistbean.github.io">
+            <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|帅彬老仙">
+            wistbean
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/教程/">教程</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/网络编程/">网络编程</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/python-network-programming.html&title=《Python 零基础入门（6/6）：TCP/UDP 网络编程与打包》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/python-network-programming.html&title=《Python 零基础入门（6/6）：TCP/UDP 网络编程与打包》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/python-network-programming.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Python 零基础入门（6/6）：TCP/UDP 网络编程与打包》 — wistbean&url=https://wistbean.github.io/python-network-programming.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/python-network-programming.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/python-io-data-structures.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Python 零基础入门（5/6）：数据结构与文件 IO</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="comments" id="comments">
+  <div class="custom-comments" data-api-base="https://comments.fxxkpython.com" data-post-id-key="path" data-page-size="20" data-require-email="true" data-require-website="false" data-placeholder="说点什么...">
+    <div class="custom-comments__list"></div>
+    <form class="custom-comments__form">
+      <div class="custom-comments__row">
+        <input class="custom-comments__input" name="author" type="text" placeholder="昵称" required>
+        <input class="custom-comments__input" name="email" type="email" placeholder="邮箱">
+        <input class="custom-comments__input" name="website" type="url" placeholder="网站">
+      </div>
+      <textarea class="custom-comments__textarea" name="content" rows="4" placeholder=""></textarea>
+      <div class="custom-comments__actions">
+        <button class="custom-comments__submit" type="submit">提交评论</button>
+        <span class="custom-comments__status"></span>
+      </div>
+    </form>
+  </div>
+</section>
+<script src="/js/custom-comments.js"></script>
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>本站已加入 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-知识 4.0  (CC BY-NC-SA 4.0)国际协议 | 转载请注明链接出处</a></span>
+        </p>
+    </div>
+
+        <div class="bottom">
+                <p><span>wistbean &copy; 2015 - 2026</span>
+                    <span>
+                        
+                         <a href="https://wistbean.github.io/">肯定会|wistbean</a>
+                         <a href="https://fxxkpython.com">通往Python高手之路</a>
+                         <a href="https://www.bwh8.net/aff.php?aff=32874" target="_blank">搬瓦工优惠码</a>、
+                         <a href="https://www.vultr.com/?ref=7532860" target="_blank">vultr优惠码</a>
+                    </span>
+                </p>
+        </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/python-network-programming.html&title=《Python 零基础入门（6/6）：TCP/UDP 网络编程与打包》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/python-network-programming.html&title=《Python 零基础入门（6/6）：TCP/UDP 网络编程与打包》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/python-network-programming.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Python 零基础入门（6/6）：TCP/UDP 网络编程与打包》 — wistbean&url=https://wistbean.github.io/python-network-programming.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/python-network-programming.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACKElEQVR42u3aQW7DMAwEwPz/0+61QGF5STlGLY1PhZNUGh0IiuTnEz/Hr+fs07M3Z7/9+368yg0PBgbGaxnH8BkvOb/KGTvfGwYGxj6McRjNSc1NBOte7BkDAwMjCK/596sHgYGBgTETcKsJZbIKBgYGxswldiY4jlPDR+/iGBgYL2TkxbLn//5KfwMDA+NVjKP49BK7aogs7woDA2NpRrWUNpOc9VoLheEPDAyMRRl5+T4f/OqF13F57uINBgbGNoz8x+P31cLZDQMfGBgYSzPyreQBNx+qyA8oamFiYGBsw6imidWraX5YZQAGBsaijOroQ+FimZ9fMRnFwMDYkzETOu8qnPWO4OIujoGBsQQj+dd5ynjXEVQLfBgYGGszqiNcM0nezPjFxQ4xMDC2YfRKbNULbd6k/PrMCAYGxksY1W31ynPVVsFtM24YGBhLMMZX0JmmY6+QVw3W0U0aAwNjCUaeovUCaI5pFuYwMDCWZlSDb+/OWB2k6PEwMDDWZvTCbi9BvGv49eIujoGBsSgjT/Kq7c9mY7KX52JgYGzDyNuZ4+9UA2ge3DEwMPZhHMVnvuiWD1LkSScGBsbajPlmZ1KynynbPdSzxcDA+PeMfLQiTwdngmM1DcXAwNiH0RuqmB84q1KjFiYGBsb2jGThXvuzWgTEwMDAyBk5qdcqiFqbGBgYGzCS1K062lUdp+hdnjEwMHZg9PKuamI3Bs+HbAwMjEUZPy7tVYO15wNxAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

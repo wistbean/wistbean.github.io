@@ -61,7 +61,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://wistbean.github.io/images/oop1.png">
 <meta property="og:image" content="https://wistbean.github.io/images/oop2.png">
-<meta property="og:updated_time" content="2026-03-26T07:41:22.578Z">
+<meta property="og:updated_time" content="2026-03-26T10:26:37.409Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="谈谈java中的面向对象编程思想">
 <meta name="twitter:description" content="java对象英语：Object-oriented programming，缩写：OOP； 我们开发的程序是给用户使用的，而我们的程序是使用对象来完成产生的。对象可以看成是对问题的描述的一种解决方案，它与问题空间之间一一映射。也就是将问题抽取成为对象集合。 在java中以class关键字来定义类的对象，类包含了元素和功能，是一种引用类型，和Int、Float等类型是一样的道理，只不过Int、Floa">
@@ -187,7 +187,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>目录</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#java对象"><span class="post-toc-number">1.</span> <span class="post-toc-text">java对象</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#java面向对象的服务提供者"><span class="post-toc-number">2.</span> <span class="post-toc-text">java面向对象的服务提供者</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#java面向对象的封装"><span class="post-toc-number">3.</span> <span class="post-toc-text">java面向对象的封装</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#java对象组合"><span class="post-toc-number">4.</span> <span class="post-toc-text">java对象组合</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#java面向对象的继承"><span class="post-toc-number">5.</span> <span class="post-toc-text">java面向对象的继承</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#java面向对象的多态"><span class="post-toc-number">6.</span> <span class="post-toc-text">java面向对象的多态</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#对象存储"><span class="post-toc-number">7.</span> <span class="post-toc-text">对象存储</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#对象生命周期"><span class="post-toc-number">8.</span> <span class="post-toc-text">对象生命周期</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#相关资料"><span class="post-toc-number">9.</span> <span class="post-toc-text">相关资料</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#java对象"><span class="post-toc-number">1.</span> <span class="post-toc-text">java对象</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#java面向对象的服务提供者"><span class="post-toc-number">2.</span> <span class="post-toc-text">java面向对象的服务提供者</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#java面向对象的封装"><span class="post-toc-number">3.</span> <span class="post-toc-text">java面向对象的封装</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#java对象组合"><span class="post-toc-number">4.</span> <span class="post-toc-text">java对象组合</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#java面向对象的继承"><span class="post-toc-number">5.</span> <span class="post-toc-text">java面向对象的继承</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#java面向对象的多态"><span class="post-toc-number">6.</span> <span class="post-toc-text">java面向对象的多态</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#对象存储"><span class="post-toc-number">7.</span> <span class="post-toc-text">对象存储</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#对象生命周期"><span class="post-toc-number">8.</span> <span class="post-toc-text">对象生命周期</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#相关资料"><span class="post-toc-number">9.</span> <span class="post-toc-text">相关资料</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#相关阅读"><span class="post-toc-number">9.1.</span> <span class="post-toc-text">相关阅读</span></a></li></ol></li></ol>
         </nav>
     </aside>
 
@@ -252,6 +252,12 @@
 <li><a href="http://wiki.jikexueyuan.com/project/java-interview-bible/OOP.html" target="_blank" rel="noopener">面向对象编程</a></li>
 <li><a href="https://zh.wikipedia.org/zh-hans/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1" target="_blank" rel="noopener">面向对象程序设计</a></li>
 <li><a href="https://www.zhihu.com/question/31021366" target="_blank" rel="noopener">什么是面向对象编程思想？</a></li>
+</ul>
+<!-- internal-links:start -->
+<h2 id="相关阅读"><a href="#相关阅读" class="headerlink" title="相关阅读"></a>相关阅读</h2><ul>
+<li><a href="/offer-digitalocean-create-vps.html">优惠购买境外服务器digitalocean vps，免费获取100美元教程</a></li>
+<li><a href="/oh-my-zsh.html">命令行神器：oh-my-zsh</a></li>
+<li><a href="/passive-income-myth.html">被动收入不是逃避劳动，而是结果的副产品</a><!-- internal-links:end --></li>
 </ul>
 
         </div>
