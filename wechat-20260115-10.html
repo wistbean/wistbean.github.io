@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131395348-1"></script>
+    <script data-ad-client="ca-pub-9097083609097034" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-131395348-1');
+    </script>
+
+    
+
+    
+
+    
+
+
+<!-- Baidu Push -->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<!-- End Baidu Push -->
+
+
+    <meta charset="utf-8">
+    
+    <meta name="google-site-verification" content="bcJVGqEGcBIay29szBsswzqYxY3qUzWuvu1hfad3-08">
+    
+    
+    
+    
+    <title>如何写出牛逼的 AI 提示词？ | wistbean | wistbean</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#B5963F">
+    
+    
+    <meta name="keywords" content="学习方法,AI,个人成长,编程成长">
+    <meta name="description" content="答案是，让 AI 自己帮你优化提示词。通过结构化框架与追问机制，能显著提升输出质量。">
+<meta name="keywords" content="如何写出牛逼的 AI 提示词？, 快速学习, 编程学习, AI, 实战, 效率提升, 个人成长">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何写出牛逼的 AI 提示词？">
+<meta property="og:url" content="https://wistbean.github.io/wechat-20260115-10.html">
+<meta property="og:site_name" content="wistbean">
+<meta property="og:description" content="答案是，让 AI 自己帮你优化提示词。通过结构化框架与追问机制，能显著提升输出质量。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2026-04-03T09:45:20.154Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="如何写出牛逼的 AI 提示词？">
+<meta name="twitter:description" content="答案是，让 AI 自己帮你优化提示词。通过结构化框架与追问机制，能显著提升输出质量。">
+    
+        <link rel="alternate" type="application/atom+xml" title="wistbean" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(https://wistbean.github.io/images/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|肯定会">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">wistbean</h5>
+          <a href="mailto:wistbean.bb@gmail.com" title="wistbean.bb@gmail.com" class="mail">wistbean.bb@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="https://wistbean.org/python-tutorial.html"  >
+                <i class="icon icon-lg icon-coffee"></i>
+                Python零基础入门教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2NzYyNjg2Nw==&action=getalbum&album_id=2448798954764255234#wechat_redirect"  >
+                <i class="icon icon-lg icon-bug"></i>
+                Python爬虫教程
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://vip.fxxkpython.com/?page_id=18"  >
+                <i class="icon icon-lg icon-code"></i>
+                加入我的VIP
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://mp.weixin.qq.com/s/m9LVoUdcLTO0YpQom5jjIA"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于我
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light off" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">如何写出牛逼的 AI 提示词？</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="vultr ss bbr v2ray 100美金">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">如何写出牛逼的 AI 提示词？</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2026-01-15T07:38:00.000Z" itemprop="datePublished" class="page-time">
+  2026-01-15
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/AI与编程/">AI与编程</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>目录</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#关键洞察"><span class="post-toc-number">1.</span> <span class="post-toc-text">关键洞察</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#具体路径"><span class="post-toc-number">2.</span> <span class="post-toc-text">具体路径</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#最后总结"><span class="post-toc-number">3.</span> <span class="post-toc-text">最后总结</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#相关阅读"><span class="post-toc-number">4.</span> <span class="post-toc-text">相关阅读</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-wechat-20260115-10"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">如何写出牛逼的 AI 提示词？</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2026-01-15 15:38:00" datetime="2026-01-15T07:38:00.000Z"  itemprop="datePublished">2026-01-15</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/AI与编程/">AI与编程</a></li></ul>
+
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h2 id="关键洞察"><a href="#关键洞察" class="headerlink" title="关键洞察"></a>关键洞察</h2><p>答案是，让 AI 自己来。</p>
+<p>我通常会使用两个以上的电脑屏幕，其中一个屏幕打开的窗口不为别的，就是只打开一个 AI 窗口，我把它当作我的「AI 提示词教练」，专门帮我优化模糊提示词。</p>
+<p>好处在于：AI 更懂 AI。</p>
+<p>比如目前业界公认效果较好的提示词框架之一：CRISPE。</p>
+<p>Context (背景)，</p>
+<p>Role (角色)，</p>
+<p>Input(输入信息)，</p>
+<p>Specification(任务要求)，</p>
+<p>Process(过程要求)，</p>
+<p>Evaluation(输出标准)。</p>
+<p>举个例子，比如我想知道如何根据我现有的情况降低体脂，那么这时候我会先问：</p>
+<h2 id="具体路径"><a href="#具体路径" class="headerlink" title="具体路径"></a>具体路径</h2><p>「你现在是一名资深的 AI 提示词教练。我会给你一个模糊的任务想法，请你基于 CRISPE 框架（背景、角色、输入、限制、输出）将其重写为一个高质量的提示词。</p>
+<p>在生成最终提示词之前，请先问我 3 个能帮助你完善这个提示词的关键问题。</p>
+<p>明白了请回复：明白」</p>
+<p>这时候它会追问你自己遗漏的信息，你回答完它三个问题，得到的提示词会变得高效精准些，基本可用。</p>
+<p>如果对于你更加看重的需求，还可以继续「递归」下去，让它继续追问你。帮你把提示词打磨得越来越牛逼，直到完全符合你的需求。</p>
+<p>例子使用前：我想要降低体脂率</p>
+<p>使用后：</p>
+<p>(角色) 你是一位拥有 10 年经验的资深运动营养师及人体美学塑形教练，擅长为具有健身基础的个体制定精细化的“刷脂刻画”方案。</p>
+<p>(背景)</p>
+<p>个人数据：男性，身高 xxCM，体重 xxKG，当前体脂率 xx%。</p>
+<p>健身水平：有健身习惯，每周训练 4-5 天。</p>
+<p>目标：在保留肌肉的前提下，进一步降低体脂率（目标 10%-12%），使腹肌和肌肉线条更加清晰可见。</p>
+<h2 id="最后总结"><a href="#最后总结" class="headerlink" title="最后总结"></a>最后总结</h2><p>(任务) 请根据我的情况，设计一套系统化的饮食方案，包含：</p>
+<p>宏量营养素计算： 给出刷脂期间每日建议摄入的总热量、蛋白质、碳水化合物和脂肪的克数。</p>
+<p>训练 vs 非训练日策略：针对我每周 4 天训练的节奏，说明两天在热量或碳水摄入上的差异化处理（碳水循环思路）。</p>
+<p>全天饮食模板。提供一份详细的一日五餐（含练。练后补剂或加餐）示例，要求食材易于获取，且注重饱腹感。</p>
+<p>(限制与要求)</p>
+<p>专业性：蛋白质比例需维持 2.0g-2.2g&#x2F;kg 体重以防掉肌肉。</p>
+<p>渐进性： 热量缺口设置要温和，避免代谢大幅下降或训练状态崩盘。</p>
+<p>结构化： 输出必须逻辑清晰，使用表格呈现营养参数，使用清单呈现食谱。</p>
+<p>(输出要求) 请直接输出该方案，并在结尾给出 3 条关于“如何判断刷脂进度（除体重外）”的专业建议。</p>
+<p>相当清晰~</p>
+<!-- internal-links:start -->
+<h2 id="相关阅读"><a href="#相关阅读" class="headerlink" title="相关阅读"></a>相关阅读</h2><ul>
+<li><a href="/xin-shou-you-ai-hai-yao-xue-bian-cheng-ma.html">对于新手来说，有了 AI，还需要学编程么？</a></li>
+<li><a href="/wei-shen-me-zong-you-ren-zhuo-zhu-yi-ju-hua-bu-fang.html">为什么总有人揪住一句话不放？</a></li>
+<li><a href="/bu-yao-mei-hua-ni-mei-you-xuan-ze-de-lu.html">不要美化你没有选择的路：与后悔和解</a><!-- internal-links:end --></li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+      <!--  
+
+        
+        关注公众号「wistbean」，发送「帅书」获取我写的技术电子书
+        
+        -->
+        在公众号「帅彬老仙」发送「帅书」领取我写的技术电子书，转载请注明出处：
+        <a href="https://wistbean.github.io/wechat-20260115-10.html">
+                   wistbean
+        </a>
+    </div>
+    
+    <footer>
+        <a href="https://wistbean.github.io">
+            <img src="https://wistbean.github.io/img/avatar.jpg" alt="wistbean|帅彬老仙">
+            wistbean
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AI/">AI</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/个人成长/">个人成长</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习方法/">学习方法</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/编程成长/">编程成长</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/wechat-20260115-10.html&title=《如何写出牛逼的 AI 提示词？》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/wechat-20260115-10.html&title=《如何写出牛逼的 AI 提示词？》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/wechat-20260115-10.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《如何写出牛逼的 AI 提示词？》 — wistbean&url=https://wistbean.github.io/wechat-20260115-10.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/wechat-20260115-10.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/wechat-20260116-01.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">贾老板又开始了...为什么他会做出这样的反应？</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/wechat-20260114-09.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">如果你想开发一个软件，让用户在里面定制自己完美的 AI 虚拟伴侣……</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="comments" id="comments">
+  <div class="custom-comments" data-api-base="https://comments.fxxkpython.com" data-post-id-key="path" data-page-size="20" data-require-email="true" data-require-website="false" data-placeholder="说点什么...">
+    <div class="custom-comments__list"></div>
+    <form class="custom-comments__form">
+      <div class="custom-comments__row">
+        <input class="custom-comments__input" name="author" type="text" placeholder="昵称" required>
+        <input class="custom-comments__input" name="email" type="email" placeholder="邮箱">
+        <input class="custom-comments__input" name="website" type="url" placeholder="网站">
+      </div>
+      <textarea class="custom-comments__textarea" name="content" rows="4" placeholder=""></textarea>
+      <div class="custom-comments__actions">
+        <button class="custom-comments__submit" type="submit">提交评论</button>
+        <span class="custom-comments__status"></span>
+      </div>
+    </form>
+  </div>
+</section>
+<script src="/js/custom-comments.js"></script>
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>本站已加入 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-知识 4.0  (CC BY-NC-SA 4.0)国际协议 | 转载请注明链接出处</a></span>
+        </p>
+    </div>
+
+        <div class="bottom">
+                <p><span>wistbean &copy; 2015 - 2026</span>
+                    <span>
+                        
+                         <a href="https://wistbean.github.io/">肯定会|wistbean</a>
+                         <a href="https://fxxkpython.com">通往Python高手之路</a>
+                         <a href="https://www.bwh8.net/aff.php?aff=32874" target="_blank">搬瓦工优惠码</a>、
+                         <a href="https://www.vultr.com/?ref=7532860" target="_blank">vultr优惠码</a>
+                    </span>
+                </p>
+        </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://wistbean.github.io/wechat-20260115-10.html&title=《如何写出牛逼的 AI 提示词？》 — wistbean&pic=https://wistbean.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wistbean.github.io/wechat-20260115-10.html&title=《如何写出牛逼的 AI 提示词？》 — wistbean&source=wistbean" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wistbean.github.io/wechat-20260115-10.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《如何写出牛逼的 AI 提示词？》 — wistbean&url=https://wistbean.github.io/wechat-20260115-10.html&via=https://wistbean.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://wistbean.github.io/wechat-20260115-10.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJ0lEQVR42u3ay07DMBAFUP7/p8sWCVLu9QTU2scrpKROThbDPPzxEa/Hxfp69fud33e42vn5b29bGBgYb8t4PF3JA5IH5ztfXb3aAQMD4xxGEgrzByeYq/uT3TAwMDDa7ZJwfPW6edKJgYGBMQ+4edr30v83MDAwXpjRBr68rdYG5T+vxTEwMN6QkXfd///vP5lvYGBgvBXjUa62iM13y4PsD/tgYGBszZgPINcOUkxGC5eJKQYGxtaMtgRti8x8YNAWxlEmi4GB8eaM0cgwGBgkYXd+DwYGxt6MNu3LryavlZesRYaLgYGxHSM/BjEfQN41qvzhDTEwMA5j3NUym7fqioNiGBgYWzPmx8LWGvd54pjzMDAwdmVMys42TK+NJKOkEwMD4wBGm5zlAXey52K/EAMDY2vGPHTOg2w7QMXAwDiH0QbEtbJzbYQZBWgMDIytGfcGwcmh1buSSwwMjF0Z87ZafsAiwbTHyDAwME5mJJi1wec8rbw8OYKBgbE1I0/I8k/QgvNPcJkaYmBgHMB4nqi1Tbe7QnAdcDEwMDZltI2wtnG/9iGKsSsGBsamjEe5kqDcvmJ7aPWXkQAGBsZ2jLVitU3v1o6L5c0+DAyMExhJoFwbMbaDh0lZi4GBcQKjHV6uBei2YC5GERgYGBhlc60NrIvDAAwMDIylOrhNMW9LNzEwMA5gTI5tzYvetU+AgYFxDiMvHdtEcI2djwcwMDAOYHwCMc5Lqb16z2UAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
